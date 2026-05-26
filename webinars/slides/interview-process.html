@@ -1,0 +1,658 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The AI Engineering Interview Process</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css">
+<style>
+  .reveal h1, .reveal h2, .reveal h3 { text-transform: none; }
+  .reveal h1 { font-size: 2.2em; }
+  .reveal h2 { font-size: 1.6em; }
+  .reveal h3 { font-size: 1.2em; }
+  .reveal { font-size: 32px; }
+  .reveal ul, .reveal ol { text-align: left; }
+  .reveal li { margin-bottom: 0.3em; }
+  .reveal .big-number { font-size: 3em; color: #60a5fa; font-weight: bold; }
+  .reveal .medium-number { font-size: 2em; color: #60a5fa; font-weight: bold; }
+  .reveal table { margin: 0 auto; font-size: 0.8em; }
+  .reveal th, .reveal td { padding: 0.3em 0.8em; }
+  .reveal .subtitle { color: #666; font-size: 0.7em; }
+  .reveal .section-title { color: #60a5fa; font-size: 0.6em; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0; }
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ==================== TITLE ==================== -->
+
+<section>
+  <h1>The AI Engineering<br>Interview Process</h1>
+  <p>Alexey Grigorev</p>
+  <p class="subtitle">March 3, 2026</p>
+</section>
+
+<!-- Agenda -->
+<section>
+  <h2>Today's Agenda</h2>
+  <ol>
+    <li>The research - dataset and sources</li>
+    <li>Interview process - typical steps and what to expect</li>
+    <li>Questions - theory, coding, project deep dive, system design, behavioral</li>
+    <li>Skills that get you hired</li>
+    <li>After the interview</li>
+  </ol>
+</section>
+
+
+<!-- ==================== THE RESEARCH ==================== -->
+
+<section>
+  <p class="section-title">Part 1</p>
+  <h1>The Research</h1>
+  <p><a href="https://github.com/alexeygrigorev/ai-engineering-field-guide/tree/main/interview">interview/</a></p>
+</section>
+
+<!-- Dataset -->
+<section>
+  <h2>Data Sources</h2>
+  <table>
+    <tr><th>Source</th><th>Count</th></tr>
+    <tr><td>Job descriptions</td><td>1,500+</td></tr>
+    <tr><td>URLs across 100+ domains</td><td>700+</td></tr>
+    <tr><td>Reddit discussions</td><td>100+</td></tr>
+    <tr><td>Hacker News discussions</td><td>60+</td></tr>
+    <tr><td>Twitter/X posts</td><td>50+</td></tr>
+    <tr><td>Personal blogs &amp; articles</td><td>35+</td></tr>
+    <tr><td>YouTube videos</td><td>20</td></tr>
+  </table>
+</section>
+
+<!-- ==================== INTERVIEW PROCESS ==================== -->
+
+<section>
+  <p class="section-title">Part 2</p>
+  <h1>Interview Process</h1>
+  <p><a href="https://github.com/alexeygrigorev/ai-engineering-field-guide/blob/main/interview/01-interview-process.md">interview/01-interview-process.md</a></p>
+</section>
+
+<!-- Typical steps -->
+<section>
+  <h2>Most Common Steps</h2>
+  <ol>
+    <li>Recruiter/talent screen - 15-30 min</li>
+    <li>Technical interview - live coding, system design, or code review</li>
+    <li>Hiring manager interview - 45-60 min deep dive</li>
+    <li>Behavioral interview - values and culture</li>
+    <li>Take-home challenge - typically 2-3 hours</li>
+    <li>Panel interview - multiple interviewers</li>
+    <li>CEO/founder interview - 15-30 min, usually final</li>
+  </ol>
+</section>
+
+<!-- Company example -->
+<section>
+  <h2>Example:<br>Doctolib, Senior AI Engineer</h2>
+  <ol>
+    <li>Recruiter interview</li>
+    <li>Feature building interview</li>
+    <li>AI system design interview</li>
+    <li>Behavioral interview</li>
+    <li>Reference check and offer</li>
+  </ol>
+  <br>
+  <p>More examples:</p>
+  <p class="subtitle"><a href="https://github.com/alexeygrigorev/ai-engineering-field-guide/blob/main/interview/01-interview-process.md">interview/01-interview-process.md</a></p>
+</section>
+
+<!-- ==================== QUESTIONS ==================== -->
+
+<!-- Master question bank -->
+<section>
+  <p class="section-title">Part 3</p>
+  <h1>Questions</h1>
+  <p>100+ sources:</p>
+  <ul>
+    <li>Blog posts</li>
+    <li>YouTube transcripts</li>
+    <li>Reddit threads</li>
+    <li>Medium articles</li>
+    <li>Interview guides</li>
+  </ul>
+  <p>Then split into categories and cleaned up</p>
+  <p class="subtitle"><a href="https://github.com/alexeygrigorev/ai-engineering-field-guide/blob/main/interview/questions/questions.md">interview/questions/questions.md</a></p>
+</section>
+
+<!-- ==================== THEORY ==================== -->
+
+<section>
+  <p class="section-title">Part 3 &middot; Questions</p>
+  <h1>Theory</h1>
+  <p><a href="https://github.com/alexeygrigorev/ai-engineering-field-guide/blob/main/interview/questions/01-theory.md">questions/01-theory.md</a></p>
+</section>
+
+<!-- Theory format -->
+<section>
+  <h2>Theory: Format</h2>
+  <p>45-60 minutes, conversational</p>
+  <br>
+  <p>No coding or whiteboard - just discussion</p>
+  <br>
+  <p>Rarely a standalone round.</p>
+</section>
+
+<!-- Theory topics -->
+<section>
+  <h2>Theory: Topics</h2>
+  <table>
+    <tr><th>Topic</th><th>Focus</th></tr>
+    <tr><td>LLM Practice</td><td>Temperature, context windows, memory</td></tr>
+    <tr><td>RAG Systems</td><td>Process, search types, failure points, scaling</td></tr>
+    <tr><td>Agents &amp; Tool Use</td><td>Components, tool selection, termination, security</td></tr>
+    <tr><td>Testing &amp; Evaluation</td><td>Metrics, golden datasets, hallucination detection</td></tr>
+    <tr><td>Monitoring</td><td>Production metrics, drift, model testing</td></tr>
+    <tr><td>Cost &amp; Latency</td><td>Token costs, model tiering, caching</td></tr>
+    <tr><td>Safety &amp; Guardrails</td><td>Prompt injection, PII, policy detection</td></tr>
+  </table>
+  <p class="subtitle"><a href="https://github.com/alexeygrigorev/ai-engineering-field-guide/blob/main/interview/questions/01-theory.md">questions/01-theory.md</a></p>
+</section>
+
+<!-- Theory: RAG sample questions -->
+<section>
+  <h2>Theory: RAG Questions</h2>
+  <ul>
+    <li>Explain the complete RAG process</li>
+    <li>Text vs vector search - when would you use each?</li>
+    <li>How would you process huge PDF reports?</li>
+    <li>How do you handle hallucinations when no info is found in context?</li>
+    <li>What are common RAG failure points and how do you debug them?</li>
+    <li>How do you scale a RAG system to 10M+ articles?</li>
+  </ul>
+</section>
+
+<!-- Theory: Agents sample questions -->
+<section>
+  <h2>Theory: Agent Questions</h2>
+  <ul>
+    <li>What makes an AI system agentic?</li>
+    <li>How do agents decide which tool to use?</li>
+    <li>When is an agent the wrong solution?</li>
+    <li>How do you detect and stop infinite planning loops?</li>
+    <li>How do you handle tool failures, retries, and idempotency?</li>
+    <li>What are the biggest security risks with tool-using agents?</li>
+  </ul>
+</section>
+
+<!-- Theory: Eval + Cost sample questions -->
+<section>
+  <h2>Theory: Evaluation &amp; Cost</h2>
+  <ul>
+    <li>How do you evaluate a chatbot?</li>
+    <li>How do you build a golden dataset for evaluation?</li>
+    <li>How do you detect and mitigate hallucinations?</li>
+    <li>How do you reduce token costs?</li>
+    <li>What is model tiering? When small model vs large LLM?</li>
+    <li>Your app gets 1M queries/day - how do you optimize cost?</li>
+  </ul>
+</section>
+
+<!-- Theory: More questions -->
+<section>
+  <h2>Theory: More Questions</h2>
+  <ul>
+    <li>Monitoring</li>
+    <li>Safety and guardrails</li>
+    <li>Fine-tuning and training</li>
+    <li>LLM theory (transformers, attention, tokenization)</li>
+    <li>ML fundamentals</li>
+  </ul>
+  <br>
+  <p class="subtitle"><a href="https://github.com/alexeygrigorev/ai-engineering-field-guide/blob/main/interview/questions/01-theory.md">questions/01-theory.md</a></p>
+</section>
+
+<!-- Theory: How to prepare -->
+<section>
+  <h2>Theory: How to Prepare</h2>
+  <p>Focus on practice over theory</p>
+  <br>
+  <p>Priority topics:</p>
+  <ul>
+    <li>RAG systems - build a working pipeline end-to-end</li>
+    <li>Agents - full architecture: planning, tool use, memory, termination</li>
+    <li>Testing and evaluation - how to build golden datasets</li>
+  </ul>
+</section>
+
+<!-- Theory: Common mistakes -->
+<section>
+  <h2>Theory: Common Mistakes</h2>
+  <ul>
+    <li>Describing how to build but not how to evaluate or monitor</li>
+    <li>Not explaining trade-offs - knowing "what" but not "when"</li>
+  </ul>
+</section>
+
+
+<!-- ==================== CODING ==================== -->
+
+<section>
+  <p class="section-title">Part 3 &middot; Questions</p>
+  <h1>Coding</h1>
+  <p><a href="https://github.com/alexeygrigorev/ai-engineering-field-guide/blob/main/interview/questions/02-coding.md">questions/02-coding.md</a></p>
+</section>
+
+<!-- Coding formats -->
+<section>
+  <h2>Coding: Two Formats</h2>
+  <table>
+    <tr><th></th><th>Implementation</th><th>Algorithm</th></tr>
+    <tr><td>Duration</td><td>45-90 min</td><td>25-70 min</td></tr>
+    <tr><td>Style</td><td>Progressive, multi-level</td><td>LeetCode-style</td></tr>
+    <tr><td>Evaluates</td><td>Code quality, extensibility</td><td>Problem-solving, DSA</td></tr>
+  </table>
+</section>
+
+<!-- Implementation rounds -->
+<section>
+  <h2>Coding: Implementation Rounds</h2>
+  <p>Single problem with multiple levels that build on each other</p>
+  <br>
+  <ul>
+    <li>Build a website crawler</li>
+    <li>Refactor 100-120 lines of convoluted code</li>
+    <li>Build a key-value database (SET/GET/DELETE)</li>
+    <li>Unix cd command with symbolic link resolution</li>
+    <li>In-memory database with SQL-like operations</li>
+    <li>Credits management system with complex rules</li>
+  </ul>
+</section>
+
+<!-- Algorithm rounds -->
+<section>
+  <h2>Coding: Algorithm Rounds</h2>
+  <ul>
+    <li>RLE encoding</li>
+    <li>Prime numbers between 0 and 100</li>
+    <li>LRU Cache with O(1) time complexity</li>
+    <li>Reverse a linked list (AI-assisted round)</li>
+    <li>Excel column name from column number</li>
+  </ul>
+</section>
+
+<!-- RLE example -->
+<section>
+  <h2>Coding: RLE Encoding</h2>
+  <p><code>aaabbcca</code> &rarr; <code>a3b2c2a1</code></p>
+</section>
+
+<!-- Coding: How to prepare -->
+<section>
+  <h2>Coding: How to Prepare</h2>
+  <ul>
+    <li>Solve 75+ easy/medium LeetCode problems</li>
+    <li>Focus on: lists, sets, hash maps, tries, linked lists</li>
+    <li>Build projects with incremental complexity layers</li>
+    <li>Practice narrating your reasoning out loud</li>
+  </ul>
+  <br>
+  <p>AI tools are increasingly allowed. Interviewers watch how you use them.</p>
+</section>
+
+<!-- Coding: Common mistakes -->
+<section>
+  <h2>Coding: Common Mistakes</h2>
+  <ul>
+    <li>Not clarifying requirements first</li>
+    <li>Writing rigid code that breaks with new requirements</li>
+    <li>Blindly pasting AI output without understanding it</li>
+  </ul>
+</section>
+
+
+<!-- ==================== PROJECT DEEP DIVE ==================== -->
+
+<section>
+  <p class="section-title">Part 3 &middot; Questions</p>
+  <h1>Project Deep Dive</h1>
+  <p><a href="https://github.com/alexeygrigorev/ai-engineering-field-guide/blob/main/interview/questions/03-project-deep-dive.md">questions/03-project-deep-dive.md</a></p>
+</section>
+
+<!-- Deep dive format -->
+<section>
+  <h2>Project Deep Dive: Format</h2>
+  <p>30-60 minutes. Dialogue, not monologue.</p>
+  <br>
+  <ul>
+    <li>Conversational deep dive (more common)</li>
+    <li>Prepared presentation (less common)</li>
+  </ul>
+</section>
+
+<!-- Deep dive questions -->
+<section>
+  <h2>Project Deep Dive: Questions</h2>
+  <ul>
+    <li>Walk me through an AI project you built end-to-end</li>
+    <li>Walk me through your most technically challenging project</li>
+    <li>Tell me about a recent/favorite project and some difficulties</li>
+    <li>Describe a challenging prompt engineering problem you solved</li>
+    <li>Tell me about a project you're most proud of</li>
+  </ul>
+</section>
+
+<!-- Follow-up probes -->
+<section>
+  <h2>Project Deep Dive: Follow-up Probes</h2>
+  <table>
+    <tr><th>Category</th><th>Example probes</th></tr>
+    <tr><td>Business context</td><td>What problem? Why priority? Your actual role?</td></tr>
+    <tr><td>Decisions</td><td>Why this approach vs alternatives? Trade-offs?</td></tr>
+    <tr><td>Problems</td><td>What went wrong? How did you debug production issues?</td></tr>
+    <tr><td>Results</td><td>Did it work? How do you know? Actual eval or vibes?</td></tr>
+    <tr><td>Reflection</td><td>What would you do differently? What would you explore next?</td></tr>
+  </table>
+</section>
+
+<!-- ==================== AI SYSTEM DESIGN ==================== -->
+
+<section>
+  <p class="section-title">Part 3 &middot; Questions</p>
+  <h1>AI System Design</h1>
+  <p><a href="https://github.com/alexeygrigorev/ai-engineering-field-guide/blob/main/interview/questions/04-ai-system-design.md">questions/04-ai-system-design.md</a></p>
+</section>
+
+<!-- AI SD format -->
+<section>
+  <h2>AI System Design: Format</h2>
+  <p>Typically 45-60 minutes</p>
+  <br>
+  <table>
+    <tr><th>Phase</th><th>Time</th></tr>
+    <tr><td>Clarify requirements</td><td>~5 min</td></tr>
+    <tr><td>High-level architecture</td><td>10-15 min</td></tr>
+    <tr><td>Deep dive into components</td><td>15-20 min</td></tr>
+    <tr><td>Trade-offs and bottlenecks</td><td>5-10 min</td></tr>
+    <tr><td>Follow-up scenarios</td><td>Remaining</td></tr>
+  </table>
+</section>
+
+<!-- AI SD questions -->
+<section>
+  <h2>AI System Design: Questions</h2>
+  <ul>
+    <li>Design an AI chatbot (ChatGPT, Claude chat service)</li>
+    <li>Design a Document Q&A / RAG system</li>
+    <li>Design an AI co-pilot like GitHub Copilot</li>
+    <li>Design a Hospital Voice Assistant</li>
+    <li>Design ChatGPT's cross-conversation memory</li>
+    <li>Design a multi-step agentic workflow</li>
+    <li>Design a Perplexity.ai / real-time LLM search engine</li>
+  </ul>
+</section>
+
+<!-- Real production systems -->
+<section>
+  <h2>Real Production AI Systems</h2>
+  <table>
+    <tr><th>Company</th><th>System</th></tr>
+    <tr><td>Doctolib</td><td>Agentic AI for customer support, ~17K daily messages</td></tr>
+    <tr><td>Uber</td><td>GenAI Gateway, unified LLM platform, 60+ use cases</td></tr>
+    <tr><td>Perplexity</td><td>200M daily queries, RAG on Vespa.ai</td></tr>
+    <tr><td>Airbnb</td><td>LLM conversational AI with Chain of Thought</td></tr>
+    <tr><td>Anthropic</td><td>Multi-agent research: Opus + Sonnet subagents</td></tr>
+    <tr><td>DoorDash</td><td>AI evaluation flywheel, hierarchical RAG</td></tr>
+  </table>
+  <p class="subtitle">Study these for pattern inspiration</p>
+</section>
+
+<!-- AI SD vs traditional -->
+<section>
+  <h2>AI System Design vs Traditional</h2>
+  <table>
+    <tr><th></th><th>AI System Design</th><th>ML System Design</th></tr>
+    <tr><td>Data</td><td>Context engineering, chunking</td><td>Feature stores, training data</td></tr>
+    <tr><td>Output</td><td>Open-ended text, code</td><td>Scores, classifications</td></tr>
+    <tr><td>Determinism</td><td>Non-deterministic</td><td>Generally deterministic</td></tr>
+    <tr><td>Evaluation</td><td>LLM-as-judge, human eval</td><td>Precision/recall/F1</td></tr>
+    <tr><td>Cost</td><td>Per-token (continuous)</td><td>Training compute (periodic)</td></tr>
+    <tr><td>Failures</td><td>Hallucination, injection</td><td>Data drift, skew</td></tr>
+    <tr><td>Iteration</td><td>Fast (change prompt)</td><td>Slow (retrain model)</td></tr>
+  </table>
+</section>
+
+<!-- AI SD: How to prepare -->
+<section>
+  <h2>AI System Design: How to Prepare</h2>
+  <p>Five-step structure:</p>
+  <ol>
+    <li>Problem framing - users, constraints, guardrails</li>
+    <li>High-level architecture - components and data paths</li>
+    <li>Deep dive - RAG, tool use, memory, evaluation, safety</li>
+    <li>Trade-offs - what breaks, detection, graceful degradation</li>
+    <li>Conclusion - summarize, risks, next iteration</li>
+  </ol>
+  <br>
+  <p>Four repeatable patterns: RAG, feedback loops, hallucination mitigation, scalability/cost optimization</p>
+</section>
+
+<!-- AI SD: Common mistakes -->
+<section>
+  <h2>AI System Design: Common Mistakes</h2>
+  <ul>
+    <li>Jumping to solution without clarifying requirements</li>
+    <li>Treating LLM as source of truth instead of grounding with retrieval/tools</li>
+    <li>Designing only the happy path - no failure modes or monitoring</li>
+    <li>Over-indexing on tool names ("I'd use LangChain") vs explaining why</li>
+    <li>Ignoring cost and latency - token budgets, caching strategies</li>
+    <li>Ignoring safety - prompt injection, data leakage</li>
+    <li>Choosing agents because exciting, not because problem requires autonomy</li>
+  </ul>
+</section>
+
+
+<!-- ==================== BEHAVIORAL ==================== -->
+
+<section>
+  <p class="section-title">Part 3 &middot; Questions</p>
+  <h1>Behavioral</h1>
+  <p><a href="https://github.com/alexeygrigorev/ai-engineering-field-guide/blob/main/interview/questions/05-behavioral.md">questions/05-behavioral.md</a></p>
+</section>
+
+<!-- Behavioral format -->
+<section>
+  <h2>Behavioral: Format</h2>
+  <p>30-60 minutes, "tell me about a time you..."</p>
+</section>
+
+<!-- Behavioral: Question categories -->
+<section>
+  <h2>Behavioral: Question Categories</h2>
+  <table>
+    <tr><th>Category</th><th>Example</th></tr>
+    <tr><td>AI-specific</td><td>What side projects have you built with AI?</td></tr>
+    <tr><td>Conflict</td><td>Tell me about a specific conflict with another person</td></tr>
+    <tr><td>Leadership</td><td>Time you led an initiative or took ownership</td></tr>
+    <tr><td>Decisions</td><td>Technical misjudgment that led to a delay</td></tr>
+    <tr><td>Failure</td><td>Mistake you made and what you learned</td></tr>
+    <tr><td>Motivation</td><td>Why this company? Why change now?</td></tr>
+  </table>
+</section>
+
+<!-- Behavioral: How to prepare -->
+<section>
+  <h2>Behavioral: How to Prepare</h2>
+  <ul>
+    <li>Find the company's values</li>
+    <li>For each value, prepare 2-3 stories</li>
+    <li>Use STAR format (Situation, Task, Action, Result)</li>
+    <li>No public values? Use Amazon's Leadership Principles as starting point</li>
+  </ul>
+</section>
+
+<!-- Question categories recap -->
+<section>
+  <h2>Question Categories</h2>
+  <ol>
+    <li><a href="https://github.com/alexeygrigorev/ai-engineering-field-guide/blob/main/interview/questions/01-theory.md">Theory</a> - LLMs, RAG, agents, evaluation, cost/latency</li>
+    <li><a href="https://github.com/alexeygrigorev/ai-engineering-field-guide/blob/main/interview/questions/02-coding.md">Coding</a> - implementation rounds, algorithm problems</li>
+    <li><a href="https://github.com/alexeygrigorev/ai-engineering-field-guide/blob/main/interview/questions/03-project-deep-dive.md">Project Deep Dive</a> - past project walkthroughs</li>
+    <li><a href="https://github.com/alexeygrigorev/ai-engineering-field-guide/blob/main/interview/questions/04-ai-system-design.md">AI System Design</a> - designing AI applications</li>
+    <li><a href="https://github.com/alexeygrigorev/ai-engineering-field-guide/blob/main/interview/questions/05-behavioral.md">Behavioral</a> - values, leadership, failure stories</li>
+    <li>Home Assignments - next webinar!</li>
+  </ol>
+</section>
+
+<!-- ==================== HOME ASSIGNMENTS ==================== -->
+
+<section>
+  <h2>Home Assignments</h2>
+  <p class="big-number">Next Webinar</p>
+  <p>March 9, 2026</p>
+  <br>
+  <p>17 take-home assignments analyzed in detail</p>
+  <p class="subtitle"><a href="https://github.com/alexeygrigorev/ai-engineering-field-guide/blob/main/interview/questions/06-home-assignments.md">questions/06-home-assignments.md</a></p>
+</section>
+
+
+<!-- ==================== SKILLS THAT GET YOU HIRED ==================== -->
+
+<section>
+  <p class="section-title">Part 4</p>
+  <h1>Skills That<br>Get You Hired</h1>
+  <p><a href="https://github.com/alexeygrigorev/ai-engineering-field-guide/blob/main/interview/03-get-hired.md">interview/03-get-hired.md</a></p>
+</section>
+
+<!-- Baseline skills -->
+<section>
+  <h2>Baseline (Expected of Everyone)</h2>
+  <ul>
+    <li>RAG: Design/implementation questions</li>
+    <li>Vector DBs: Trade-off discussions (Pinecone vs FAISS vs Qdrant)</li>
+    <li>Tool Calling: Agent system design, function calling</li>
+    <li>Python: Coding rounds, project implementations</li>
+    <li>APIs: Integration questions, deployment considerations</li>
+  </ul>
+</section>
+
+<!-- Differentiators -->
+<section>
+  <h2>Differentiators</h2>
+  <ul>
+    <li>Evaluation frameworks</li>
+    <li>Cost &amp; latency awareness</li>
+    <li>Observability</li>
+    <li>System diagrams</li>
+    <li>Production experience</li>
+    <li>AI fluency</li>
+  </ul>
+</section>
+
+<!-- What separates candidates -->
+<section>
+  <h2>What Separates Candidates Who Get Hired</h2>
+  <p class="subtitle">From 50+ AI engineer interviews (Fonzi AI)</p>
+  <br>
+  <ul>
+    <li>First 5 minutes decide everything. Lead with impact</li>
+    <li>Talk like a builder, not a researcher. Trade-off thinking wins</li>
+    <li>Cost awareness is a superpower. Before/after cost breakdowns impress</li>
+    <li>Honesty about gaps beats bluffing</li>
+    <li>You don't need to be a unicorn - depth in 1-2 areas is enough</li>
+  </ul>
+</section>
+
+<!-- Portfolio strategy -->
+<section>
+  <h2>Portfolio Strategy (2026)</h2>
+  <ul>
+    <li>Single high-quality project > multiple certifications</li>
+    <li>Show optimization: prototype to cost-efficient production</li>
+    <li>Clean GitHub: exhaustive README, demos, documentation</li>
+    <li>Include evaluation: every RAG system should have an eval harness</li>
+  </ul>
+</section>
+
+<!-- Preparation advice -->
+<section>
+  <h2>Preparation Advice</h2>
+  <ol>
+    <li>Build 2-3 end-to-end projects: RAG app, agent, something deployed</li>
+    <li>Practice explaining trade-offs aloud - fluency signals experience</li>
+    <li>Learn evaluation early: Ragas, DeepEval, LLM-as-judge</li>
+    <li>Show production readiness: Docker, CI/CD, monitoring</li>
+    <li>Understand cost/latency: caching, batching, model routing</li>
+    <li>Practice storytelling, not memorized answers</li>
+  </ol>
+</section>
+
+<!-- ==================== AFTER THE INTERVIEW ==================== -->
+
+<section>
+  <p class="section-title">Part 5</p>
+  <h1>After the Interview</h1>
+  <p><a href="https://github.com/alexeygrigorev/ai-engineering-field-guide/blob/main/interview/04-after-the-interview.md">interview/04-after-the-interview.md</a></p>
+</section>
+
+<!-- Rejections -->
+<section>
+  <h2>Handling Rejections</h2>
+  <ul>
+    <li>Don't take it personally</li>
+    <li>Do a retrospective: understand what went wrong</li>
+    <li>Often nothing was wrong with you - someone was just better, or budget changed, or priorities shifted</li>
+    <li>If you lack a skill, build a project to improve it</li>
+  </ul>
+</section>
+
+<!-- Offers and negotiation -->
+<section>
+  <h2>Handling Offers &amp; Negotiation</h2>
+  <ul>
+    <li>Don't rush into agreeing immediately</li>
+    <li>If you have other interviews, finish them first</li>
+    <li>Tell other companies about your offer to speed up their process</li>
+    <li>Multiple offers = ideal negotiation position</li>
+  </ul>
+</section>
+
+
+<!-- ==================== KEY TAKEAWAYS ==================== -->
+
+<section>
+  <h2>Key Takeaways</h2>
+  <ul>
+    <li>Median process: 4 steps, 2-6 weeks</li>
+    <li>Theory questions focus on RAG, agents, evaluation - practice over theory</li>
+    <li>Coding: implementation rounds (progressive) + algorithm rounds (LeetCode)</li>
+    <li>Project deep dive: the "why" behind decisions matters most</li>
+    <li>AI system design: emerging distinct category, not traditional SD</li>
+    <li>Evaluations are the differentiator - everyone can build, few can measure</li>
+    <li>Lead with impact, not technology names</li>
+  </ul>
+</section>
+
+<!-- End -->
+<section>
+  <h2>AI Engineering Field Guide</h2>
+  <p><a href="https://github.com/alexeygrigorev/ai-engineering-field-guide">github.com/alexeygrigorev/ai-engineering-field-guide</a></p>
+  <p>&#11088; Star the repo to keep an eye on updates</p>
+  <br>
+  <p>Newsletter: <a href="https://alexeyondata.substack.com/">alexeyondata.substack.com</a></p>
+</section>
+
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script>
+Reveal.initialize({
+  hash: true,
+  slideNumber: true,
+  transition: 'slide',
+  width: 1200,
+  height: 700,
+});
+</script>
+</body>
+</html>
