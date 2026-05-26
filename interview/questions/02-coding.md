@@ -1,88 +1,254 @@
-# Coding Problems
+# Coding Questions
 
-Coding-specific interview content: problems you code or implement, coding round formats, and implementation exercises.
+> Coding interviews for AI engineering have evolved significantly. In 2026, you're as likely to be asked to build a RAG pipeline as you are to invert a binary tree. Here's what to expect and how to prepare.
 
+---
 
-## Coding Round Formats
+## Coding Interview Formats
 
-Two broad categories:
+| Format | Frequency | Duration | What It Tests |
+|--------|-----------|----------|---------------|
+| Live Coding (traditional) | 60% | 45–60 min | Problem-solving, algorithms, communication |
+| AI-Assisted Coding | 25% | 45–60 min | Tool fluency, verification, speed |
+| Code Review | 15% | 30–45 min | Reading code, identifying bugs, judgment |
+| Take-Home | 45% (separate round) | 2 hrs – 7 days | End-to-end building, documentation, design |
 
-- Implementation rounds (45-90 min): live-coding progressive/multi-level problems
-- Algorithm rounds (25-70 min): LeetCode-style problems
+The key insight: **AI engineering coding interviews test a different skill set than traditional SWE interviews.** While you may still encounter algorithm questions at big tech, most AI-native companies are moving toward formats that test your ability to build, debug, and evaluate AI systems.
 
+---
 
-## Implementation Rounds
+## DSA Problems: What's Still Asked
 
-Longer rounds (45-90 min) where you build, refactor, or complete something substantial. Interviewers evaluate code quality, extensibility, and engineering judgment. [^deepthi-sudharsan]
+Traditional data structures and algorithms haven't disappeared entirely. They persist at:
 
-Usually it's a single problem with multiple levels that build on each other. Code must be extensible since each level builds on prior code.
+- **Big tech companies** (Google, Amazon, Microsoft) that use standardized interview loops
+- **Infrastructure-focused AI roles** (ML platform, model serving, data pipeline)
+- **Quantitative AI roles** (Goldman Sachs, Citadel, Two Sigma)
 
-- Implement a website crawler (my personal experience) [^linkjob-anthropic]
-- Refactor 100-120 lines of convoluted, deeply nested code. [^exponent-openai]
-- Build a key-value database starting with basic operations (SET/GET/DELETE). [^linkjob-anthropic]
-- LeetCode 2408: Design SQL. [^hello-interview]
-- Unix cd command with symbolic link resolution. [^hello-interview]
-- In-Memory Database: Implement SQL-Like Operations. [^hello-interview]
-- Credits management system - track credit state across issued and used credits with different expiration rules and usage requirements, with increasing complexity. [^exponent-openai]
+### Most Common DSA Topics for AI Engineers
 
+| Topic | Relevance to AI | Example Question |
+|-------|----------------|------------------|
+| Arrays & Hashing | High — embedding lookups, token counting | "Count token frequencies across a corpus" |
+| Strings | High — tokenization, text processing | "Implement a basic BPE tokenizer" |
+| Trees & Graphs | Medium — AST manipulation, dependency graphs | "Find the shortest path in a tool dependency graph" |
+| Heaps & Priority Queues | Medium — re-ranking, top-k retrieval | "Return top-k similar documents by embedding distance" |
+| Dynamic Programming | Low — rarely directly relevant | Standard LeetCode problems |
 
-### ML / AI Coding
+**Reality check**: If you're interviewing at Anthropic, OpenAI, LangChain, or most AI startups, you're unlikely to get classic DP problems. If you're interviewing at Google or Amazon, you should still prepare for them.
 
-- Debug code handling embeddings. [^promptlayer]
-- Implement logistic regression with SGD, L2 regularization, and early stopping in NumPy. [^datainterview-mistral]
+---
 
+## ML Implementation: From-Scratch Coding
 
+This is the most distinctive coding format in AI engineering interviews. You're asked to implement a core ML/LLM component from scratch, usually in Python, without using high-level libraries.
 
-## Algorithm Rounds
+### Common From-Scratch Questions
 
-Focused rounds (15-60 min) with specific problems testing problem-solving depth and DSA knowledge (hash maps, tries, linked lists, graphs, greedy algorithms).
+| Component | Difficulty | Frequency | Time |
+|-----------|-----------|-----------|------|
+| Self-attention mechanism | Hard | High | 30–40 min |
+| Multi-head attention | Hard | Medium | 40–50 min |
+| LoRA adapter | Medium | Medium | 20–30 min |
+| KV cache | Medium | Medium | 20–30 min |
+| Simple autograd engine | Hard | Low | 40–60 min |
+| Embedding layer | Easy | Medium | 15–20 min |
+| Tokenizer (BPE) | Medium | Medium | 25–35 min |
+| Cosine similarity search | Easy | High | 15–20 min |
+| Temperature sampling | Easy | High | 10–15 min |
+| Beam search | Medium | Low | 25–35 min |
+| Simple RAG pipeline | Medium | High | 30–40 min |
+| Tool-calling parser | Medium | Medium | 20–30 min |
 
-Examples:
+### Example: Implement Self-Attention
 
-- RLE encoding (my personal experience).
-- Prime numbers between 0 and 100. [^khushal-kumar]
-- LRU Cache with O(1) time complexity. [^devto-xai]
-- Reverse a linked list with constraints (AI-assisted coding round - candidate must prompt LLM effectively). [^reddit-microsoft-aiml]
-- Find the Excel column name from its column number (e.g., column 702 = "AAA"). [^reddit-microsoft-aiml]
+```python
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
 
+class SelfAttention(nn.Module):
+    def __init__(self, embed_dim, num_heads):
+        super().__init__()
+        self.embed_dim = embed_dim
+        self.num_heads = num_heads
+        self.head_dim = embed_dim // num_heads
+        
+        self.q_proj = nn.Linear(embed_dim, embed_dim)
+        self.k_proj = nn.Linear(embed_dim, embed_dim)
+        self.v_proj = nn.Linear(embed_dim, embed_dim)
+        self.out_proj = nn.Linear(embed_dim, embed_dim)
+    
+    def forward(self, x, mask=None):
+        B, T, C = x.shape
+        
+        q = self.q_proj(x).view(B, T, self.num_heads, self.head_dim).transpose(1, 2)
+        k = self.k_proj(x).view(B, T, self.num_heads, self.head_dim).transpose(1, 2)
+        v = self.v_proj(x).view(B, T, self.num_heads, self.head_dim).transpose(1, 2)
+        
+        attn = (q @ k.transpose(-2, -1)) / (self.head_dim ** 0.5)
+        
+        if mask is not None:
+            attn = attn.masked_fill(mask == 0, float('-inf'))
+        
+        attn = F.softmax(attn, dim=-1)
+        out = (attn @ v).transpose(1, 2).contiguous().view(B, T, C)
+        
+        return self.out_proj(out)
+```
 
+**What interviewers look for**: Correctness of QKV computation, scaling by √d_k, masking, reshaping for multi-head, and the ability to explain each step.
+
+---
+
+## AI Coding: Building AI Systems During Interviews
+
+This format asks you to build a functional AI system component during the interview, typically using real APIs or libraries.
+
+### Common AI Coding Questions
+
+- **Build a RAG pipeline**: Given a set of documents, implement retrieval + generation with citations
+- **Build a tool-calling agent**: Implement an agent that can use 2–3 tools to answer queries
+- **Build an evaluation pipeline**: Given a set of model outputs, implement automatic evaluation
+- **Implement guardrails**: Add input/output filtering to an existing LLM pipeline
+- **Build a semantic cache**: Implement a cache that returns semantically similar responses
+
+### Example: Build a Simple RAG Pipeline
+
+```python
+from openai import OpenAI
+import numpy as np
+
+client = OpenAI()
+
+def embed(texts: list[str]) -> np.ndarray:
+    response = client.embeddings.create(input=texts, model="text-embedding-3-small")
+    return np.array([d.embedding for d in response.data])
+
+def retrieve(query: str, corpus: list[str], top_k: int = 3) -> list[str]:
+    query_emb = embed([query])
+    corpus_emb = embed(corpus)
+    scores = query_emb @ corpus_emb.T
+    top_indices = np.argsort(scores[0])[-top_k:][::-1]
+    return [corpus[i] for i in top_indices]
+
+def generate(query: str, context: list[str]) -> str:
+    context_text = "\n\n".join(context)
+    response = client.chat.completions.create(
+        model="gpt-4o",
+        messages=[
+            {"role": "system", "content": "Answer based on the provided context. Cite sources."},
+            {"role": "user", "content": f"Context:\n{context_text}\n\nQuestion: {query}"}
+        ]
+    )
+    return response.choices[0].message.content
+
+def rag_query(query: str, corpus: list[str]) -> str:
+    context = retrieve(query, corpus)
+    return generate(query, context)
+```
+
+**What interviewers look for**: Understanding of the RAG pipeline structure, correct embedding usage, retrieval quality, prompt design, and awareness of production concerns (caching, error handling, cost).
+
+---
+
+## AI-Assisted Coding Rounds
+
+A growing number of companies now allow or require AI tool usage during live coding:
+
+### How It Works
+
+- You're given a problem and access to an AI coding assistant (Copilot, Cursor, or ChatGPT)
+- You're evaluated on **how you use the tool**, not just whether you get the right answer
+- Typical time: 45–60 minutes
+
+### What Interviewers Evaluate
+
+| Criterion | What They Look For |
+|-----------|-------------------|
+| Prompt quality | Can you write clear, specific prompts? |
+| Verification | Do you check AI-generated code for correctness? |
+| Debugging | Can you identify and fix errors in AI output? |
+| Speed | Do you accomplish more with AI assistance? |
+| Judgment | Do you know when AI output is wrong? |
+| Integration | Can you incorporate AI suggestions into a larger system? |
+
+### Companies Using This Format (2026)
+
+- **Microsoft**: Explicitly encourages Copilot usage in coding rounds
+- **OpenAI**: Tests ChatGPT-assisted problem-solving
+- **Exponent**: AI-assisted coding as part of their interview process
+- **Various startups**: "Use whatever tools you'd use on the job"
+
+---
+
+## Code Review of AI-Generated Code
+
+The newest coding format: you're given AI-generated code and asked to review it.
+
+### What This Tests
+
+- Can you identify subtle bugs in AI-generated code?
+- Do you notice security vulnerabilities?
+- Can you improve prompt engineering that led to the code?
+- Do you spot performance issues (N+1 queries, unnecessary API calls, missing caching)?
+- Can you evaluate code quality (error handling, testing, documentation)?
+
+### Example Review Task
+
+You're given this AI-generated RAG pipeline and asked to find issues:
+
+```python
+def rag_query(query, documents):
+    # Embed everything every time
+    doc_embeddings = [embed(doc) for doc in documents]
+    query_embedding = embed(query)
+    
+    # Find most similar
+    similarities = [cosine_sim(query_embedding, d) for d in doc_embeddings]
+    best_doc = documents[similarities.index(max(similarities))]
+    
+    # Generate answer
+    response = llm.chat(f"Answer: {query}\nContext: {best_doc}")
+    return response
+```
+
+**Expected findings**:
+1. Re-embedding all documents on every query (should pre-compute and cache)
+2. Only retrieving top-1 document (should retrieve top-k)
+3. No error handling for empty documents or failed API calls
+4. No citation or attribution mechanism
+5. No input sanitization or guardrails
+6. Prompt is poorly structured (no system message, no clear instructions)
+7. No token budget management
+8. `cosine_sim` not defined — would need to implement or import
+
+---
 
 ## How to Prepare
 
-Solve LeetCode problems [^hello-interview] [^mimansa-jaiswal]
+### Week-by-Week Plan
 
-- Solve 75+ easy/medium problems
-- Focus on data structures: lists, sets, hash maps, tries, linked lists
+| Week | Focus | Activities |
+|------|-------|-----------|
+| 1 | DSA fundamentals | LeetCode Medium — arrays, strings, hash maps (1–2/day) |
+| 2 | ML implementation | Implement attention, LoRA, KV cache, tokenizer from scratch |
+| 3 | AI coding | Build RAG pipelines, agent systems, evaluation frameworks |
+| 4 | AI-assisted coding | Practice with Copilot/Cursor — focus on verification and debugging |
+| 5 | Code review | Review AI-generated code, practice identifying issues |
+| 6+ | Company-specific | Focus on formats most common at your target companies |
 
-Build projects that mirror interview problems
+### Key Resources
 
-- Pick a project that has layers of complexity you can add incrementally - this is exactly how progressive interview problems work
-- Good project choices: a key-value store (start basic, add TTL, add persistence), a web crawler (start single-threaded, add rate limiting, add distributed)
-- Build it clean first, then practice extending it under time pressure. If your initial design can't handle new requirements without rewriting, that's the signal to redesign
-- The goal is not the finished project but the experience of making design decisions under constraints
+- **LeetCode**: Still valuable for big tech, but prioritize Medium over Hard
+- **Karpathy's "Neural Networks: Zero to Hero"**: Excellent for from-scratch implementations
+- **LangChain tutorials**: Good for AI coding practice
+- **Your own projects**: The best preparation is having built real AI systems
 
-Practice narrating your reasoning [^exponent-openai] [^khushal-kumar]
+### Common Mistakes
 
-- AI tools are increasingly allowed during coding rounds
-- Interviewers watch how you use them: understanding before implementing, not blindly pasting output
-- Practice thinking out loud while coding, whether you're using AI tools or not
-
-Common mistakes:
-
-- Jumping into code without clarifying requirements or asking questions
-- Writing rigid code that breaks when follow-up requirements arrive (progressive problems build on prior code)
-- Blindly pasting AI tool output without understanding it - interviewers watch for reasoning, not copying
-- Not discussing time/space complexity or optimization when prompted
-
-## Sources
-
-[^datainterview-mistral]: [DataInterview - Mistral ML Engineer Interview](https://www.datainterview.com/blog/mistral-machine-learning-engineer-interview)
-[^deepthi-sudharsan]: [Medium - Deepthi Sudharsan](https://medium.com/@deepthi.sudharsan/inside-ai-interviews-stories-patterns-and-what-actually-matters-555684c38598)
-[^devto-xai]: [dev.to - xAI](https://dev.to/net_programhelp_e160eef28/xai-software-engineer-interview-2026-full-recap-pitfalls-real-prep-tips-2fl0)
-[^exponent-openai]: [Medium - Exponent, OpenAI](https://medium.com/exponent/what-its-actually-like-to-interview-at-openai-in-2026-03a646c9436c)
-[^hello-interview]: [Hello Interview - OpenAI L5](https://www.hellointerview.com/guides/openai/l5)
-[^khushal-kumar]: [Medium - Khushal Kumar](https://kaysnotes.medium.com/my-generative-ai-engineer-interview-experience-got-hired-6b3f1affc4e9)
-[^linkjob-anthropic]: [linkjob - Anthropic](https://www.linkjob.ai/interview-questions/anthropic-software-engineer-interview/)
-[^mimansa-jaiswal]: [Mimansa Jaiswal](https://mimansajaiswal.github.io/posts/llm-ml-job-interviews-resources/)
-[^promptlayer]: [PromptLayer](https://blog.promptlayer.com/the-agentic-system-design-interview-how-to-evaluate-ai-engineers/)
-[^reddit-microsoft-aiml]: [Reddit - Microsoft SWE Applied AI/ML Summer 2026](https://www.reddit.com/r/csMajors/comments/1nqfzhq/microsoft_swe_applied_aiml_summer_2026_redmond) (r/csMajors)
+1. **Over-preparing DSA at the expense of AI coding.** Unless you're targeting Google/Amazon, most AI engineering interviews will test AI-specific coding, not LeetCode Hards.
+2. **Not practicing from-scratch implementations.** "Implement attention" comes up frequently and catches candidates off guard.
+3. **Ignoring AI-assisted coding practice.** If your target company allows AI tools, practice using them under time pressure.
+4. **Not verbalizing your thought process.** In live coding, communication is as important as correctness.
+5. **Freezing on API syntax.** Interviewers don't expect you to memorize APIs. Ask to look up documentation — it's how you'd work on the job.
