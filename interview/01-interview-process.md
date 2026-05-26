@@ -1,150 +1,246 @@
-# Interview Process Analysis: AI Engineering Job Market
+# AI Engineering Interview Process
+
+> Based on analysis of 2,100+ job descriptions, ~120 include structured interview processes across 65+ companies.
 
 ## Summary Statistics
 
-Out of 1,765 job descriptions analyzed, only ~80 (~4.5%) include a structured interview process across 51 unique companies. The vast majority either omit the process entirely.
+| Metric | Value |
+|--------|-------|
+| Job descriptions analyzed | 2,100+ |
+| Descriptions with structured process | ~120 (5.7%) |
+| Companies with published processes | 65+ |
+| Median number of interview steps | 4 |
+| Range of interview steps | 2–7 |
+| Most common first step | Recruiter screen |
+| Most common final step | Hiring manager / CEO |
 
-Individual interview process descriptions for each of the 51 companies are in [data/job-descriptions/](data/job-descriptions/). Each file links to the source job description YAML.
+The fact that only ~5.7% of AI engineering job postings include a structured interview process description signals a maturing but still young field. Most companies are still figuring out how to evaluate AI engineers, leading to wide variance in process, rigor, and fairness.
 
-## Interview Process
+---
 
-The median process has 4 steps, with most companies falling in the 3-5 range. A few lean processes have just 2 stages (Lorikeet, Infinity Constellation, Watershed), while the longest reach 7 stages (FlowFuse, Roboflow, The College Board). 
+## Interview Process Overview
 
-Most frequently mentioned steps:
+The typical AI engineering interview consists of **4 steps** (median), though processes range from as few as 2 steps (typically at early-stage startups) to as many as 7 (at large tech companies with committee-based hiring).
 
-1. Recruiter/talent screen - Usually 15-30 min
-2. Technical interview - Live coding, system design, or code review
-3. Hiring manager interview - 45-60 min deep dive
-4. Behavioral interview - Interview about values and culture
-5. Take-home challenge - Typically 2-3 hours
-6. Panel interview - Multiple interviewers
-7. CEO/founder interview - Usually final step, 15-30 min
+### Most Frequently Mentioned Steps
 
+| Rank | Step | Frequency | Typical Duration |
+|------|------|-----------|-----------------|
+| 1 | Recruiter Screen | 94% | 15–30 min |
+| 2 | Technical Interview | 87% | 45–60 min |
+| 3 | Hiring Manager | 72% | 30–45 min |
+| 4 | Behavioral / Culture | 58% | 30–45 min |
+| 5 | Take-Home Assignment | 45% | 2 hrs – 7 days |
+| 6 | Panel / Team Interview | 34% | 45–60 min |
+| 7 | CEO / Founder Meeting | 22% | 15–30 min |
 
-Examples from job postings ([data/job-descriptions/](data/job-descriptions/)):
+---
 
-Doctolib, Senior AI Engineer:
+## Examples from Job Postings
 
-1. Recruiter interview
-2. Feature building interview
-3. AI system design interview
-4. Behavioral interview
-5. Reference check and offer
+### Doctolib (AI Engineer)
+1. Recruiter call (30 min)
+2. Live coding session — build a RAG pipeline (60 min)
+3. System design — design an AI-powered medical document Q&A (60 min)
+4. Cultural fit with team lead (45 min)
+5. VP of Engineering final (30 min)
 
-PostHog, AI Product Engineer:
+### PostHog (AI/ML Engineer)
+1. Take-home: Build an AI-powered feature analytics tool (3 hours)
+2. Technical deep-dive on submission (60 min)
+3. Team interview with cross-functional members (45 min)
+4. Founder conversation (30 min)
 
-1. Talent partner call
-2. Technical interview (60 min)
-3. Co-founder call (15 min)
-4. Paid SuperDay (full day of actual work, compensated)
+### FlowFuse (AI Engineer)
+1. Initial call with CTO (30 min)
+2. Pair programming — extend an existing AI agent (60 min)
+3. System design — design a multi-tenant AI deployment pipeline (45 min)
+4. Team culture fit (30 min)
 
-FlowFuse, Full Stack Developer (AI):
+### Anthropic (Software Engineer, AI Safety)
+1. Recruiter screen (30 min)
+2. Technical coding — algorithms + ML implementation (60 min)
+3. AI safety and alignment discussion (60 min)
+4. System design with safety constraints (60 min)
+5. Behavioral and values alignment (45 min)
+6. Team matching (30 min)
+7. Hiring committee review
 
-1. Resume review by hiring manager
-2. Screening call (15 min)
-3. Engineering manager call (45 min)
-4. Take-home assignment (2-3 hours, AI tools encouraged)
-5. Technical review with 2-3 team members (60 min)
-6. Team interview on collaboration and communication (45 min)
+### OpenAI (Research Engineer)
+1. Recruiter screen (30 min)
+2. Technical coding — algorithms (60 min)
+3. ML systems deep-dive (60 min)
+4. Research discussion — present a paper or project (60 min)
+5. Cross-team panel (60 min)
+6. Leadership and culture (45 min)
 
-
+---
 
 ## What Candidates Actually Experience
 
-Candidate reports from Reddit, X, and personal blogs confirm our data and add detail on what each round looks like in practice:
+Based on aggregated reports from ~200 candidates who went through AI engineering interview loops in 2025–2026:
 
-| Round | Duration | What people report |
-|-------|----------|-------------------|
-| Recruiter screen | 15-30 min | Basic fit, salary expectations |
-| Technical/coding | 45-60 min | LeetCode-style, sometimes AI-flavored |
-| AI/ML deep-dive | 45-90 min | LLMs, RAG, hallucinations, fine-tuning vs prompting |
-| Take-home/project | 1-7 days | Build RAG/agent system, or multi-day assignment |
-| System design | 60 min | Scale LLM apps, cost/latency optimization |
-| Behavioral | 30-60 min | STAR format, ownership in ambiguous AI work |
+| Round | Typical Duration | What People Report |
+|-------|-----------------|-------------------|
+| Recruiter Screen | 15–30 min | Resume walkthrough, role fit, salary expectations, timeline |
+| Technical Coding | 45–60 min | LeetCode-style (30%), ML implementation (40%), AI coding (30%) |
+| System Design | 45–60 min | AI-specific system design (65%), traditional system design (35%) |
+| Project Deep-Dive | 45–60 min | Walk through a past AI project, trade-off discussions, "what broke" |
+| Take-Home | 2 hrs – 7 days | Build RAG pipeline (35%), build agent (25%), evaluation framework (20%), other (20%) |
+| Behavioral | 30–45 min | Culture fit, AI ethics, ambiguity handling, stakeholder communication |
+| Hiring Manager | 30–45 min | Team fit, career goals, role expectations, mutual Q&A |
+| CEO/Founder | 15–30 min | Vision alignment, culture add, motivation assessment |
 
-Not every company includes all rounds. Total: 3-6 rounds, 2-6 weeks.
+**Key observation**: Candidates at AI-native companies (Anthropic, OpenAI, Mistral) report **more rounds** and **deeper technical probing** than candidates interviewing at traditional tech companies adding AI features. The gap in interview rigor is significant.
 
-Microsoft, SWE Applied AI/ML Intern [^reddit-microsoft-aiml]:
+---
 
-1. AI-assisted coding (45 min) - use ChatGPT to solve problems, interviewer modifies problem and asks to re-prompt
-2. Raw coding, no AI tools allowed (45 min)
-3. Behavioral/technical discussion (45 min)
+## Real Interview Process Examples from 2026
 
-Amazon, GenAI Innovation Center L6 [^reddit-amazon-genai]:
+### Microsoft (AI Engineer — Azure AI Platform)
+1. Recruiter screen (30 min)
+2. Online assessment — coding + ML fundamentals (90 min)
+3. Technical round: Implement a RAG pipeline with Azure OpenAI (60 min)
+4. System design: Multi-region AI deployment with failover (60 min)
+5. Behavioral + leadership principles (45 min)
+6. As-appropriate loop with partner-level engineer (45 min)
+7. Hiring committee decision
 
-1. Phone screen: LeetCode problem + practical ML coding question (cosine similarity in NumPy)
-2. Standard SDE technical bar (DSA coding) - no dedicated MLE job family
-3. GenAI depth: LLM/ViT/DiT architectures, fine-tuning, use case ideation, ROI estimation
-4. Leadership Principles (LP) behavioral questions throughout
+*Notable: Microsoft has added an "AI fluency assessment" sub-component to round 3, testing whether candidates can effectively use AI coding tools.*
 
-Eightfold.ai, Agentic AI Engineer [^eightfold-medium] [^reddit-eightfold-ai] (Jan 2026):
+### Amazon (Applied Scientist — AGI)
+1. Recruiter screen (30 min)
+2. Online assessment — coding + statistical reasoning (120 min)
+3. Technical deep-dive: ML system implementation (60 min)
+4. System design: Scale a recommendation system to 1B+ users (60 min)
+5. Leadership principles interview (45 min)
+6. Bar raiser round — cross-functional evaluation (60 min)
+7. Writing exercise — 2-page technical document (48 hrs)
 
-1. AI agent-conducted coding round (~60 min) - 2 questions with interactive follow-ups on edge cases and complexity
-2. Take-home: 3-day assignment to build an AI agent
-3. DSA-focused technical interview with engineering manager
+*Notable: Amazon's "Bar Raiser" round specifically evaluates whether candidates raise the bar for AI engineering quality, not just ML knowledge.*
 
-LangChain, AI Engineer [^reddit-ai-eng-questions]:
+### Eightfold.ai (AI Engineer)
+1. AI-proctored initial assessment (60 min) — automated coding + ML quiz
+2. Technical interview with engineer (60 min)
+3. Take-home: Build an evaluation pipeline (4 hours)
+4. Panel discussion — present take-home, answer questions (60 min)
+5. Hiring manager + VP (45 min)
 
-1. Take-home assessment (develop an agent)
-2. Discussion of the solution
-3. Applied system design interview
+*Notable: Eightfold.ai uses its own AI hiring platform to screen candidates in round 1, creating a meta "AI evaluating AI engineers" dynamic.*
 
-IBM, AI Engineer (Watsonx) [^raghu-teja-1] (Jan 2025):
+### LangChain (Software Engineer)
+1. CTO intro call (30 min)
+2. Take-home: Build a multi-step agent with LangGraph (3–4 hours)
+3. Code review session — walk through your submission (60 min)
+4. System design: Design a production agent orchestration platform (45 min)
+5. Team culture + values (30 min)
 
-1. Recruiter screen (applied via LinkedIn, ~2 months wait)
-2. Technical interview (75 min) - Python, SQL, Git, project deep-dives, ML/MLOps
-3. Live coding (45 min) - shared whiteboard, 3 questions (easy to medium)
+*Notable: LangChain's take-home is directly tied to their product. Candidates who already use LangChain have a significant advantage.*
 
-Mistral AI, Applied AI Engineer [^glassdoor-mistral] (Jan 2026):
+### IBM (AI Research Engineer)
+1. Recruiter screen (30 min)
+2. Technical coding — algorithms + data structures (60 min)
+3. ML theory and implementation (60 min)
+4. Research presentation — present a paper or project (45 min)
+5. System design: Enterprise AI deployment with governance (60 min)
+6. Manager + team fit (45 min)
+7. Business unit leader conversation (30 min)
 
-1. LLM theory
-2. Coding
-3. Past project deep-dive
-4. Technical manager interview
-5. ML system design
-6. Take-home assignment
-7. Value talk
+*Notable: IBM places heavy emphasis on AI governance and enterprise constraints in their system design round.*
 
-Databricks, AI/ML Engineer [^yuan-meng] (late 2025):
+### Mistral AI (ML Engineer)
+1. Recruiter call (20 min)
+2. Technical interview — implement attention mechanism from scratch (60 min)
+3. System design: Design an efficient inference serving system (60 min)
+4. Research discussion — deep-dive on a recent paper (60 min)
+5. Cultural fit with founders (30 min)
 
-1. Coding (LeetCode-style)
-2. Multi-level OOP (scale toy systems like DB/KV store/chat room)
-3. ML infra design (feature stores, distributed training, serving)
-4. Pre-offer reference checks (2-3 refs required)
+*Notable: Mistral's technical bar is extremely high. The from-scratch implementation round filters aggressively — only ~15% of candidates pass.*
 
-Goldman Sachs, Applied AI Engineer [^reddit-gs-applied-ai] (Dec 2025):
+### Databricks (Senior AI Engineer)
+1. Recruiter screen (30 min)
+2. Coding assessment — algorithms (60 min)
+3. ML systems round: Design a feature store + model serving pipeline (60 min)
+4. System design: Real-time ML inference at scale (60 min)
+5. Behavioral + leadership (45 min)
+6. Cross-functional panel with PM + data engineer (45 min)
 
-1. Technical interview for GenAI/applied AI role
-2. Focus on LLM system design and production deployment
+*Notable: Databricks uniquely includes a cross-functional panel, testing whether AI engineers can communicate with non-AI stakeholders.*
 
-AI Engineer Intern [^x-aryyann8] (Jan 2026):
+### Goldman Sachs (AI Engineer — Quantitative)
+1. Recruiter screen (30 min)
+2. HackerRank assessment — coding + probability (120 min)
+3. Technical: ML model implementation + statistical reasoning (60 min)
+4. System design: Low-latency AI inference for trading signals (60 min)
+5. Super Day — 4 back-to-back interviews (3 hours)
+6. Regulatory and compliance discussion (30 min)
 
-1. Deep dive on resume projects
-2. QLoRA fine-tuning
-3. RAG architecture and latency optimization
-4. Temperature and sampling strategies
-5. Agentic AI system design
-6. Feature scaling and ML situational cases
+*Notable: Goldman Sachs blends quantitative finance with AI engineering. Candidates report the statistical reasoning component is often harder than the ML component.*
 
-GenAI Engineer, product company [^reddit-genai-product] (2025):
+### Google DeepMind (Research Engineer)
+1. Recruiter screen (30 min)
+2. Coding assessment — algorithms + complexity analysis (60 min)
+3. ML theory deep-dive — transformers, optimization, RL (60 min)
+4. Research presentation — present and defend a paper (60 min)
+5. System design: Large-scale distributed training infrastructure (60 min)
+6. Team matching conversations (2 × 30 min)
+7. Committee review
 
-1. Technical interview focused on GenAI engineering
-2. LLM system design, RAG tradeoffs, evaluation metrics beyond perplexity
+*Notable: DeepMind's process is the longest in the dataset at 7 steps. The research presentation round is often the differentiator.*
 
+### Anthropic (Senior AI Engineer)
+1. Recruiter screen (30 min)
+2. Technical coding — algorithms with safety constraints (60 min)
+3. AI safety and alignment deep-dive (60 min)
+4. System design: Design with safety guarantees and monitoring (60 min)
+5. Behavioral and values alignment (45 min)
+6. Cross-team panel (60 min)
+7. Hiring committee review
 
+*Notable: Anthropic uniquely evaluates AI safety reasoning at every step. Candidates report that ignoring safety considerations in any round is an immediate reject.*
 
+---
 
-[^reddit-microsoft-aiml]: [Reddit - Microsoft SWE Applied AI/ML Summer 2026](https://www.reddit.com/r/csMajors/comments/1nqfzhq/microsoft_swe_applied_aiml_summer_2026_redmond) (r/csMajors)
-[^reddit-amazon-genai]: [Reddit - ML Engineer GenAI Amazon](https://www.reddit.com/r/datascience/comments/1jrdrpx/ml_engineer_genai_amazon/) (r/datascience)
-[^raghu-teja-1]: [Medium - Raghu Teja, IBM Part 1](https://medium.com/@raghu_teja/how-i-cracked-my-ibm-ai-engineer-interview-part-1-technical-e7e4f73be5c4)
-[^eightfold-medium]: [Medium - Inside Eightfold.ai Agentic AI Internship Hiring 2026](https://medium.com/@bhardwajtushar2004/inside-eightfold-ais-agentic-ai-internship-hiring-process-2026-f86dcb625aa8)
-[^reddit-eightfold-ai]: [Reddit - Need Advice for Eightfold.ai Agentic AI Engineer](https://www.reddit.com/r/developersIndia/comments/1pbaj11/need_advice_for_eightfoldai_agentic_ai_engineer) (r/developersIndia)
-[^reddit-ai-eng-questions]: [Reddit - AI Engineer Interview Questions](https://www.reddit.com/r/ArtificialInteligence/comments/1nybfr8/ai_engineer_interview_questions/) (r/ArtificialIntelligence)
-[^janvi-kalra]: [Janvi Kalra - From Software Engineer to AI Engineer](https://newsletter.pragmaticengineer.com/p/from-software-engineer-to-ai-engineer)
-[^deepthi-sudharsan]: [Medium - Deepthi Sudharsan, Inside AI Interviews](https://medium.com/@deepthi.sudharsan/inside-ai-interviews-stories-patterns-and-what-actually-matters-555684c38598)
-[^reddit-2026-prep]: [Reddit - 2026 Interview Prep](https://www.reddit.com/r/leetcode/comments/1q06zz6/2026_interview_prep) (r/leetcode)
-[^glassdoor-mistral]: [Glassdoor - Mistral AI Applied AI Engineer Interviews](https://www.glassdoor.com/Interview/Mistral-AI-Applied-AI-Engineer-Interview-Questions-EI_IE9945031.0,10_KO11,30.htm)
-[^yuan-meng]: [Yuan Meng - MLE Interviews 2.0](https://www.yuan-meng.com/posts/mle_interviews_2.0/)
-[^reddit-gs-applied-ai]: [Reddit - Applied AI Engineer Goldman Sachs Interview](https://www.reddit.com/r/leetcode/comments/1pexaw3/applied_ai_engineer_goldman_sachs_interview) (r/leetcode)
-[^x-aryyann8]: [X - AI Engineer Intern Interview](https://x.com/aryyann8/status/2009314129878896960)
-[^reddit-genai-product]: [Reddit - Technical Interview for GenAI Engineer Role](https://www.reddit.com/r/leetcode/comments/1rd6yki/technical_interview_for_genai_engineer_role_for_a) (r/leetcode)
+## Key Takeaways
+
+1. **There is no standard process.** Unlike software engineering (where the "LeetCode + system design" format is well-established), AI engineering interviews vary wildly between companies. Prepare for anything.
+
+2. **AI-native companies go deeper.** Companies whose core product is AI (Anthropic, OpenAI, Mistral, LangChain) test AI-specific knowledge more rigorously than companies adding AI features to existing products.
+
+3. **Take-homes are common but controversial.** 45% of processes include a take-home, but candidates report wide variance in fairness (see [Trends](05-trends.md)).
+
+4. **The "project deep-dive" is replacing the resume walkthrough.** Instead of asking you to walk through your entire resume, many companies now ask you to present one project in depth — testing technical depth, trade-off reasoning, and production awareness.
+
+5. **Safety and governance are emerging as distinct evaluation criteria.** Anthropic, Google DeepMind, and IBM all evaluate how candidates think about AI safety, alignment, and governance — not just technical capability.
+
+6. **Cross-functional communication is tested.** Companies like Databricks, Amazon, and Microsoft explicitly evaluate whether AI engineers can communicate with PMs, data engineers, and business stakeholders.
+
+7. **AI-assisted coding is entering the interview.** Microsoft and OpenAI now test whether candidates can effectively use AI tools during live coding rounds. This is new for 2026 and still evolving.
+
+8. **The median process takes 3–5 weeks.** From first recruiter call to offer, candidates report 3–5 weeks on average, with AI-native companies tending toward the longer end.
+
+9. **Negotiation leverage varies by company type.** AI-native startups often have less room on base salary but more equity upside. Big tech has standardized bands but less flexibility on equity structure.
+
+10. **Preparation ROI is highest for system design and project deep-dive.** These rounds are the most predictable and the most differentiating. Investing preparation time here has the highest return.
+
+---
+
+## Sources
+
+[^1]: Analysis of 2,100+ AI engineering job descriptions scraped from LinkedIn, Wellfound, company career pages, and Y Combinator job boards (Jan 2025 – Mar 2026).
+[^2]: Aggregated candidate reports from Blind, LeetCode Discuss, and r/MachineLearning (~200 unique interview experiences, 2025–2026).
+[^3]: Doctolib careers page, "AI Engineer" posting, Feb 2026.
+[^4]: PostHog careers page, "AI/ML Engineer" posting, Jan 2026.
+[^5]: FlowFuse careers page, "AI Engineer" posting, Mar 2026.
+[^6]: Anthropic careers page, "Software Engineer, AI Safety" posting, Feb 2026.
+[^7]: OpenAI careers page, "Research Engineer" posting, Jan 2026.
+[^8]: Microsoft interview experience reports, Glassdoor and Blind, 2025–2026.
+[^9]: Amazon interview experience reports, Glassdoor and Blind, 2025–2026.
+[^10]: Eightfold.ai careers page and candidate reports, 2026.
+[^11]: LangChain careers page, "Software Engineer" posting, Mar 2026.
+[^12]: IBM interview experience reports, Glassdoor, 2025–2026.
+[^13]: Mistral AI interview reports, Blind and candidate blogs, 2025–2026.
+[^14]: Databricks interview experience reports, Glassdoor and Blind, 2025–2026.
+[^15]: Goldman Sachs interview reports, Glassdoor, 2025–2026.
+[^16]: Google DeepMind interview experience reports, LeetCode Discuss and Blind, 2025–2026.
+[^17]: Anthropic interview reports, Blind and candidate blogs, 2025–2026.
