@@ -4,8 +4,6 @@
 
 Everything here is based on real data: 3,100+ actual job descriptions, real interview experiences, and real stories from practitioners. This is not AI-generated filler dumped into a repo — every insight comes from analyzing actual data and synthesizing patterns from it.
 
-This is an updated and expanded version of [Alexey Grigorev's AI Engineering Field Guide](https://github.com/alexeygrigorev/ai-engineering-field-guide), refreshed with the latest market data, technology landscape, and interview trends as of May 2026.
-
 ## What's New in This Edition (May 2026)
 
 - **Updated job market data**: 3,100+ job descriptions analyzed (up from 2,445), covering additional regions including Singapore and remote-first roles
@@ -58,14 +56,6 @@ This is an updated and expanded version of [Alexey Grigorev's AI Engineering Fie
 - [Project ideas](portfolio/README.md) — real project examples that demonstrate AI engineering skills
 
 
-## Job Market Data
-
-3,100+ job descriptions scraped from builtin.com, LinkedIn, and Wellfound covering LA, NY, London, Amsterdam, Berlin, Singapore, and remote-first positions.
-
-- [Structured job descriptions](job-market/data_structured/) — YAML files grouped by scrape date
-- [Raw extracted postings](job-market/data_raw/) — original extracted data grouped by scrape date
-
-
 ## [Awesome AI Engineering](awesome.md)
 
 Curated collection of resources compiled while researching content for this field guide:
@@ -77,13 +67,6 @@ Curated collection of resources compiled while researching content for this fiel
 - Case study collections
 
 See [awesome.md](awesome.md) for the list.
-
-
-## Coming Soon
-
-- Salary analysis with interactive compensation explorer
-- Community-contributed interview experiences
-- AI engineering certification landscape analysis
 
 
 ## Webinars
