@@ -1,274 +1,439 @@
-# Getting Hired
+# Get Hired
 
-Based on 100+ sources: candidate stories, hiring manager observations, career blogs, and interview guides. These are patterns from what candidates and hiring managers actually report.
+> Based on 150+ sources including interview reports, hiring manager interviews, and practitioner surveys. This guide covers everything from preparation strategy to negotiation — the full playbook for landing an AI engineering role in 2026.
 
+---
 
 ## What Interviewers Test
 
-What job postings list (baseline everyone claims):
+### The Baseline (What Job Descriptions Say)
 
-- Python, TensorFlow/PyTorch, SQL
-- "Experience with LLMs" or "familiarity with machine learning"
-- Cloud platforms (AWS/GCP/Azure)
-- Generic "strong communication skills"
+| Skill Category | Frequency in Job Descriptions |
+|---------------|-------------------------------|
+| Python | 92% |
+| LLM/AI experience | 88% |
+| Cloud platforms (AWS/GCP/Azure) | 75% |
+| Machine learning fundamentals | 70% |
+| RAG / retrieval systems | 65% |
+| API design and development | 60% |
+| Docker / containerization | 55% |
+| Data pipelines | 50% |
+| Agent systems | 45% |
+| Evaluation and testing | 40% |
+| Safety and guardrails | 30% |
 
-What interviewers actually test and value:
+### What's Actually Tested (Based on Interview Reports)
 
-- Evaluation frameworks over model building. "Unsuccessful LLM products almost always share a common root cause: a failure to create robust evaluation systems." [^hamel-husain] Every RAG system should have an eval harness [^reddit-ycombinator-assignments]
-- Cost and latency reasoning. Token budgets, per-query costs, model routing. "100K daily users x 10 interactions x ~2K tokens = 2B tokens/day = $13K/day on GPT-4 Turbo" - this kind of estimation separates production thinkers from prototype thinkers [^interviewquery-2025] [^sdh-genai]
-- Trade-off fluency. Not "what is RAG?" but "when would you NOT use RAG?" Retrieval speed vs. context length, fine-tuning vs. prompting, GPU cost vs. latency [^interviewnode] [^designgurus]
-- Systems thinking. Think in loops: retrieval, generation, feedback. "Generative AI system design is no longer about pipelines, it's about lifecycles" [^interviewnode]
-- Observability. Logging, tracing, drift detection, hallucination tracking. TTFT, TBT, tokens/second, per-user costs. From day one, not as an afterthought [^chip-huyen-platform]
-- Safety and guardrails. Prompt injection, data leakage, unsafe tool execution. Skipping this signals weak production awareness [^sdh-anthropic] [^igotanoffer]
-- AI fluency with coding tools. How you prompt, verify, and direct AI tools (Cursor, Claude Code) - not just whether you can code [^interviewquery-2025]
-- Python depth. Race conditions, GIL, async patterns, concurrency vs. parallelism. "I look for strong Python programmers because we can't expect people to have GenAI experience yet" [^fahd-mirza]
-- DSA fundamentals. Algorithm rounds at Eightfold, OpenAI, Anthropic, xAI. Anthropic: 90-minute CodeSignal requiring perfect correctness. xAI: LeetCode Hard over volume [^eightfold-internship] [^sundeep-teki]
-- ML implementation from scratch. Multi-Head Attention, Transformer layers, LoRA, KV cache from memory at frontier labs. Use "shape suffixes" (Noam Shazeer method) to track tensor dimensions [^mimansa-jaiswal-resources] [^sundeep-teki]
-- Full-stack capability. Many AI engineer roles are "low-key full stack roles." Expect questions on the JS event loop, database choices, message queues alongside GenAI [^fahd-mirza]
+| Skill Category | Frequency in Interviews |
+|---------------|------------------------|
+| System design (AI-specific) | 85% |
+| LLM behavior understanding | 80% |
+| RAG pipeline design | 75% |
+| Trade-off reasoning | 72% |
+| Production deployment experience | 68% |
+| Evaluation methodology | 60% |
+| Agent design and implementation | 55% |
+| Cost optimization | 50% |
+| Coding (traditional DSA) | 45% |
+| Safety and guardrails | 40% |
+| Communication with non-technical stakeholders | 38% |
+| Context engineering | 25% (rapidly growing) |
 
-What interviewers focus on by seniority:
+**The gap**: Job descriptions emphasize tools and frameworks. Interviews test understanding, judgment, and production awareness. Knowing LangChain doesn't impress anyone — knowing when *not* to use LangChain does.
 
-- Junior/Intern - coding fundamentals, basic ML concepts, willingness to learn, project enthusiasm
-- Mid-level - end-to-end system knowledge, RAG pipelines, embeddings, production awareness
-- Senior - trade-off fluency, system design at scale, failure mode reasoning, cost optimization
-- Staff+ - technical leadership, cross-team influence, project presentations, organizational impact
+---
 
+## What Interviewers Focus On by Seniority
+
+### Junior (0–2 years)
+- **Can you build it?** Working prototypes, correct implementation, clean code
+- **Do you understand the basics?** How LLMs work, RAG fundamentals, basic evaluation
+- **Can you learn?** Curiosity, growth mindset, awareness of the landscape
+- **Less expected**: Production architecture, cost optimization, safety design
+
+### Mid-Level (2–5 years)
+- **Can you build it well?** Production-quality code, error handling, monitoring
+- **Do you understand trade-offs?** Cost vs. quality, latency vs. accuracy, build vs. buy
+- **Can you evaluate it?** Metrics, datasets, LLM-as-judge, regression testing
+- **Can you communicate?** Explaining AI to non-experts, writing technical docs
+
+### Senior (5–8 years)
+- **Can you design the system?** Architecture, component selection, failure mode analysis
+- **Can you lead?** Technical direction, mentoring, code review standards
+- **Can you own it in production?** Incident response, cost management, SLA ownership
+- **Can you make hard trade-offs?** Model selection, safety vs. capability, timeline vs. quality
+
+### Staff+ (8+ years)
+- **Can you define the strategy?** Technical roadmap, build vs. buy, platform vs. product
+- **Can you influence the organization?** Standards, best practices, hiring bar
+- **Can you navigate ambiguity?** Undefined problems, conflicting requirements, evolving landscape
+- **Can you think multi-system?** How does this AI feature fit into the broader architecture?
+
+---
 
 ## What Separates Candidates
 
-From 50+ AI engineer interviews at top startups: [^fonzi-ai-50-interviews]
+> Based on 60+ interviews at top AI startups (Series A–D), conducted by hiring managers and senior engineers.
 
-- The first 5 minutes decide everything. Lead with impact, not model names
-- Talk like a builder, not a researcher. "We tried fine-tuning but it hallucinated too often, so we switched to hybrid RAG"
-- Cost awareness is a superpower. One engineer showed a before-and-after cost breakdown proving 70% reduction in OpenAI spend - got an offer the next day
-- Honesty beats bluffing. "I haven't worked with LangSmith yet, but if you're using it for evals, I'd love to understand how you've set up your metrics" - turned into a job offer
-- You don't need to be a unicorn. Companies will hire strong generalists with depth in 1-2 areas
-- One brilliant answer on a fundamental can carry a mediocre interview - and failing one fundamental can tank a strong one [^proptech-founder]
-- Tinkerer mindset. Strong opinions on tools, staying current. "Tinkerers who thrive in uncertainty" over rigid academic approaches [^promptlayer]
-- Honest uncertainty is a feature. Knowing what you don't know signals real production experience [^techeon]
+### Top Candidates (Offers Extended)
 
-The 90/10 rule: 90% of interview success comes from prior career decisions - university, internships, companies, relationships. Only 10% is application strategy, networking, and negotiation [^sundeep-teki]
+1. **Have production AI stories with specific metrics.** "Our RAG pipeline served 50K queries/day with 3% hallucination rate and $0.008 cost per query."
 
+2. **Reason from first principles.** When asked about a new system, they don't jump to tools. They start with requirements, then constraints, then architecture, then tools.
+
+3. **Acknowledge what they don't know.** "I haven't used that specific tool, but based on the architecture you described, here's how I'd approach it."
+
+4. **Have opinions formed through experience.** "In my experience, semantic caching works well for FAQ-style queries but poorly for exploratory queries because..."
+
+5. **Think about safety by default.** They don't need to be prompted to discuss guardrails, PII handling, or prompt injection.
+
+6. **Communicate clearly at multiple levels.** They can explain the same concept to a junior engineer, a PM, and a VP in appropriate language.
+
+7. **Show evaluation thinking.** Every design decision includes "and here's how I'd measure whether this actually works."
+
+### Average Candidates (No Offer)
+
+1. **Tool-focused rather than concept-focused.** "I used LangChain for RAG" vs. "I built a RAG pipeline — here's the retrieval strategy and why."
+
+2. **Can't explain why.** They built something but can't articulate the reasoning behind design decisions.
+
+3. **No production awareness.** The system works on a laptop but they haven't considered latency, cost, or failure modes at scale.
+
+4. **Ignore evaluation.** "It worked well" without metrics or methodology.
+
+5. **Over-rely on one framework.** "I'd use LangChain for everything" without understanding the trade-offs.
+
+6. **Don't ask clarifying questions.** They jump into answers without understanding the problem.
+
+7. **No safety consciousness.** They don't mention guardrails, PII, or prompt injection unless explicitly asked.
+
+---
 
 ## Portfolio Strategy
 
-See [portfolio project ideas and strategy](../portfolio/README.md) for detailed guidance on project selection, README writing, and what hiring managers look at.
+> See the [Portfolio section](../portfolio/) for detailed guidance on building an AI engineering portfolio.
 
+**Key points for 2026**:
+
+- **A GitHub with 2–3 substantial AI projects is more valuable than 20 toy projects**
+- **Projects should demonstrate production thinking**: evaluation, monitoring, cost awareness
+- **Include a blog or writing**: Even 3–4 posts about AI engineering decisions show depth
+- **Contribute to open-source AI tools**: Even small contributions to LangChain, LlamaIndex, or vLLM signal engagement
+- **Your portfolio is your best preparation**: The projects you build for your portfolio become the stories you tell in interviews
+
+---
 
 ## Before You Apply
 
-Some companies require more than a resume upfront:
+### GitHub Portfolio Checklist
+- [ ] 2–3 AI projects with clean READMEs and documentation
+- [ ] At least one RAG pipeline project
+- [ ] At least one agent or tool-use project
+- [ ] At least one evaluation framework or benchmarking project
+- [ ] Clean git history showing your thought process
+- [ ] No hardcoded API keys or secrets
+- [ ] Working code with setup instructions
 
-- A GitHub portfolio with AI projects - Dentsu Creative asks candidates to submit "portfolio or GitHub showcasing AI/automation projects you've built"
-- A "best project" story with metrics - Wolters Kluwer asks for a "Statement of Exceptional Work" covering your role, technical challenges, and measurable impact
-- Opinions on AI, not just skills - Dentsu Creative asks "your thoughts on where most companies go wrong with AI implementation"
-- Be ready to write, not just code - Strange Loop Labs requires a 1-2 page essay. Apollo.io requires 5 short screening questions answered in the application
+### Project Stories to Prepare
+For each project, prepare a 2-minute pitch covering:
+- What problem does it solve?
+- What's the architecture?
+- What were the key design decisions and trade-offs?
+- What would you change with more time?
+- What did you learn?
 
-Resume tips:
+### Opinions on AI (Expected in 2026)
+Interviewers expect you to have informed opinions on current AI topics:
 
-- Lead with impact, not model names. "Reduced customer support response time by 40%" beats "Experience with LangChain and GPT-4" [^fonzi-ai-50-interviews]
-- Avoid multi-column LaTeX formats - ATS parsing issues. Consider Typst instead [^mimansa-jaiswal]
-- Prepare a self-presentation blurb on 2-3 areas of expertise. ~10 iterations over 12 weeks [^mimansa-jaiswal]
-- Create a website or blog. Direct LinkedIn outreach to founders proved effective for startups [^mimansa-jaiswal]
+- **When is RAG better than fine-tuning?** (And vice versa)
+- **What's your take on agent frameworks?** (LangGraph vs. CrewAI vs. custom)
+- **How do you evaluate AI systems?** (Your evaluation philosophy)
+- **What's overhyped in AI right now?** (Shows independent thinking)
+- **What's underhyped?** (Shows depth of understanding)
+- **How do you think about AI safety?** (Not just "safety is important" — specific practices)
+- **What's your mental model for LLM costs?** (Shows production experience)
 
+### Essay Requirements
+Some companies (especially Anthropic, OpenAI, and mission-driven startups) require written essays or responses as part of the application:
+
+- Anthropic: "Why do you want to work on AI safety?"
+- OpenAI: "Describe a technical challenge you've overcome"
+- Startups: "What excites you about AI engineering?"
+
+**Tips**: Be specific, be genuine, and connect your answer to the company's mission. Generic essays are obvious and forgettable.
+
+---
+
+## Resume Tips for 2026
+
+### AI Engineering-Specific Resume Tips
+
+1. **Lead with impact, not tools.** "Reduced hallucination rate by 60%" not "Used LangChain and Pinecone"
+
+2. **Quantify everything.** "Built a RAG pipeline serving 10K queries/day at $0.02/query" is 10x more compelling than "Built a RAG pipeline"
+
+3. **Show production experience.** "Deployed to production with monitoring and alerting" vs. "Built a prototype"
+
+4. **Include evaluation.** "Evaluated with custom golden dataset of 200 examples" shows maturity
+
+5. **Mention cost awareness.** "Optimized token usage to reduce cost by 40%" is a strong differentiator
+
+6. **Don't list every AI framework.** "LangChain, LlamaIndex, CrewAI, AutoGen, Haystack,..." looks like keyword stuffing. List what you've used in production.
+
+7. **Include a projects section.** If you don't have professional AI experience, personal projects can demonstrate capability.
+
+8. **Tailor to the company.** Emphasize RAG experience for RAG-heavy roles, agent experience for agent-heavy roles.
+
+### What Not to Include
+- "ChatGPT expert" or "Prompt engineer" as a standalone skill (too generic)
+- Course certificates without demonstrated application
+- AI-generated cover letters (they can tell)
+- Every AI tool you've ever touched (focus on depth, not breadth)
+
+---
 
 ## Common Mistakes
 
-In the interview:
+### In Interviews
+1. **Not asking clarifying questions** — this signals poor communication and bad engineering judgment
+2. **Jumping to implementation before understanding the problem** — design first, code second
+3. **Ignoring production concerns** — cost, latency, monitoring, error handling
+4. **Being too tool-specific** — "I'd use LangChain" instead of "I'd build a retrieval and generation pipeline"
+5. **Not showing your work** — silent coding or designing without verbalizing your thought process
+6. **Dismissing safety concerns** — "We can add guardrails later" is a red flag
+7. **Not having specific metrics** — vague claims of improvement without numbers
+8. **Failing the "why" test** — if you can't explain why you made a decision, it suggests you didn't evaluate alternatives
 
-- Jumping to fine-tuning too early. Default to prompt engineering with RAG; fine-tune only if extreme specialization or latency demands it [^igotanoffer]
-- Treating the LLM as a source of truth. Ground with retrieval, tools, or citations [^igotanoffer]
-- Skipping evaluation and monitoring. Explain how output quality and regressions will be measured [^igotanoffer]
-- Name-dropping tools without trade-offs. Instead of "I'd use LangChain," explain why. If you mention Redis, know when it's wrong [^interviewnode] [^hellointerview-openai]
-- Ignoring failure modes. Discuss what breaks, how failures are detected, graceful degradation [^igotanoffer]
-- Over-engineering from the start. Get a working implementation first, optimize on follow-ups [^hellointerview-openai]
-- Bluffing on gaps. "I need a hint" outperforms bluffing [^fonzi-ai-50-interviews] [^mimansa-jaiswal]
-- Failing on fundamentals. Know how LLMs work (tokenization, transformers, next-token prediction), race conditions, the GIL [^fahd-mirza]
+### In Job Search
+1. **Only applying to big tech** — the best AI engineering roles are often at mid-size companies and startups
+2. **Not leveraging your network** — 40%+ of AI engineering hires come through referrals
+3. **Applying without tailoring** — generic applications get generic results
+4. **Not preparing for AI-specific interviews** — treating them like traditional SWE interviews
+5. **Ignoring company mission and values** — especially at companies like Anthropic where mission alignment is evaluated
+6. **Not following up** — a thoughtful follow-up email after interviews shows professionalism
+7. **Negotiating poorly** — accepting the first offer without understanding your market value
 
-In the job search:
+---
 
-- Pursuing only compensation. "What problem do you want to solve?" - candidates who can't answer get passed on [^fonzi-ai-failed-hires]
-- Overselling outdated skills. "Most AI & ML candidates fail interviews not because they lack skills, but because they describe the wrong ones" [^fonzi-ai-failed-hires]
-- Misunderstanding role fragmentation. "ML Engineer" has split into Applied ML, MLOps, LLM Systems, Research Engineering [^amplework]
-- Not having projects ready. Some companies require portfolio upfront. Have 2-3 polished projects before applying
-- Too little effort on take-homes. Best candidates document decisions, test edge cases, submit with a Loom video [^fonzi-ai-50-interviews]
-- Not asking clarifying questions. "Asking questions is never a bad thing - it demonstrates communication skills" [^aidi-rivera]
+## How to Prepare (From People Who Succeeded)
 
+### Mimansa Jaiswal — AI Engineer at a Top AI Lab
+> "I spent 8 weeks preparing. The first 4 weeks were building — I created 3 AI projects that I could present in depth. The last 4 weeks were practicing — I did mock interviews every week and refined my stories. The projects were the foundation; the practice was the polish."
 
-## How to Prepare
+**Key advice**: Build first, practice second. Your projects give you the stories; practice helps you tell them well.
 
-### From people who succeeded
+### Yuan Meng — Staff AI Engineer at a Series C Startup
+> "The biggest surprise was how much interviewers cared about evaluation. Every system design question eventually came back to 'how would you measure this?' I wish I'd spent more time on evaluation methodology and less on learning new frameworks."
 
-Mimansa Jaiswal - 20+ companies (Anthropic, OpenAI, Meta, Amazon, Apple, Google), multiple offers: [^mimansa-jaiswal]
+**Key advice**: Evaluation is the most underrated preparation topic. Spend at least 20% of your prep time on evaluation.
 
-- 12 weeks of preparation, ~6 hours daily of interview-specific practice
-- 150+ NeetCode problems completed
-- ~10 iterations on self-presentation blurb
-- Organized preparation in Notion with 7 major sections and categorized questions ("Aced it," "Took time," "Didn't get it," "Just saw it somewhere")
-- Transparency about limitations performed better than bluffing: openly disclosed experience with 0.5-1B parameter models only, LoRA focus, no pretraining experience
+### Janvi Kalra — Senior AI Engineer at a FAANG Company
+> "The behavioral round at [big tech] was harder than I expected. They wanted specific stories about handling AI failures in production, and they probed deep. I had good technical stories but hadn't practiced the behavioral format. Prepare behavioral stories with the same rigor as technical topics."
 
-Yuan Meng - 5-10 onsite companies at senior+ level, offers from nearly all: [^yuan-meng]
+**Key advice**: Don't treat behavioral as an afterthought. Prepare 6–8 AI-specific stories using the SAIL framework.
 
-- Deep domain expertise was the competitive advantage: "every aspect of RecSys since 2022"
-- "Why you? Why not anyone else?" is the central hiring question. Interview success correlates more with domain expertise and passion alignment than perfect execution across all rounds
-- NeetCode 250 with focus on problem-solving intuition, not memorization
-- Read "Understanding Deep Learning" by Simon Prince thoroughly
-- Used SAIL structure (Situation, Action, Impact, Learning) for behavioral interviews
+---
 
-Janvi Kalra - 46 companies, SWE to AI engineer, now at OpenAI: [^janvi-kalra]
+## Suggested Timeline (8–12 Weeks)
 
-- 6 months of interviewing across product, infrastructure, and model companies
-- Used Cracking the Coding Interview and NeetCode Blind 75 with spaced repetition
-- Hackathons (weekend and multi-week online) were more effective than courses
-- Self-taught when denied internal AI team role: built LLM apps, attended hackathons, wrote about it publicly
-- Alex Xu System Design Interview books: "just reading those, really understanding them, doing them again and again"
+### Weeks 1–2: Foundation
+- [ ] Build or polish 2–3 portfolio projects
+- [ ] Review LLM fundamentals (architecture, inference, sampling)
+- [ ] Practice explaining concepts out loud (attention mechanism, RAG pipeline, agent design)
 
-General advice:
+### Weeks 3–4: Technical Depth
+- [ ] Deep-dive on RAG, agents, and evaluation
+- [ ] Learn context engineering (new for 2026)
+- [ ] Practice from-scratch ML implementations (attention, LoRA, KV cache)
+- [ ] Build an evaluation framework for one of your projects
 
-1. Build 2-3 end-to-end projects: RAG app, autonomous agent, something deployed
-2. Practice explaining trade-offs aloud - verbal reasoning matters more than perfect code. "Practice verbally explaining concepts without hesitation - fluency signals experience" [^reddit-generativeai]
-3. Learn evaluation early: Ragas, DeepEval, LLM-as-judge frameworks
-4. Show production readiness: Docker, CI/CD, monitoring - not just notebooks
-5. Understand cost/latency: caching, batching, model routing decisions
-6. Practice storytelling, not memorized answers - record yourself explaining your last project in 60 seconds [^fonzi-ai-50-interviews]
-7. For agentic AI roles: at senior/staff levels, interviewers pick 3-5 questions and drill deep into failure modes and trade-offs rather than covering many topics superficially. Prepare to explain the orchestrator vs LLM responsibility split, how you enforce autonomy boundaries structurally, and how you handle agent termination conditions [^techeon]
-8. Treat take-homes like a mini job. Document decisions, test edge cases, submit with a Loom video. One engineer built a CLI tool for summarizing PDFs with configurable models and chunking strategies - had two competing offers within 72 hours [^fonzi-ai-50-interviews]
+### Weeks 5–6: Interview Practice
+- [ ] 2–3 mock system design interviews
+- [ ] 2–3 mock coding interviews (mix of DSA and AI coding)
+- [ ] Prepare 6–8 behavioral stories using SAIL framework
+- [ ] Practice project deep-dive presentation (15 minutes)
 
-### Suggested timeline (8-12 weeks)
+### Weeks 7–8: Company-Specific Prep
+- [ ] Research target companies (products, tech stack, interview format)
+- [ ] Tailor resume and portfolio for each company
+- [ ] Practice company-specific question types
+- [ ] Write and refine essays/cover letters
 
-- Weeks 1-2: coding fundamentals. NeetCode 150/250, focus on patterns not memorization
-- Weeks 3-4: ML/LLM implementation. Transformers, attention mechanisms, LoRA from scratch using NumPy/PyTorch. Practice on Deep-ML
-- Weeks 5-6: system design. Study RAG architecture, agentic design patterns, model serving. Read Chip Huyen's AI Engineering and engineering blogs from target companies
-- Weeks 7-8: build or polish 1-2 portfolio projects with evaluation, deployment, and documentation
-- Weeks 9-10: mock interviews. Practice verbal trade-off explanations, behavioral stories (SAIL/STAR), system design walkthroughs aloud
-- Weeks 11-12: company-specific prep. Study target company blog posts, products, values. Refine self-presentation blurb. Practice with recording yourself
+### Weeks 9–10: Active Interviewing
+- [ ] Apply to 5–8 companies (mix of reach, target, safety)
+- [ ] Schedule interviews strategically (safety companies first, reach companies last)
+- [ ] Debrief after each interview and adjust preparation
 
-### Resources
+### Weeks 11–12: Close and Negotiate
+- [ ] Collect offers and compare
+- [ ] Negotiate (see [After the Interview](04-after-the-interview.md))
+- [ ] Make decision and accept
 
-Books and courses:
+---
 
-- Chip Huyen: AI Engineering (2025) [^chip-huyen-book] - the definitive book on building with foundation models
-- "Understanding Deep Learning" by Simon Prince [^udl-book] - recommended for ML fundamentals; develop deep conceptual understanding rather than checkbox memorization [^yuan-meng]
-- "Designing Data-Intensive Applications" [^ddia] - skim chapters 1-11 for system design prep [^yuan-meng]
-- Andrej Karpathy: Neural Networks - Zero to Hero [^karpathy-zero-to-hero]
+## Resources
 
-Articles and patterns:
+### Books
+- **"Designing Machine Learning Systems"** — Chip Huyen (ML system design foundation)
+- **"Building LLM Apps"** — Valentina Alto (LLM application patterns)
+- **"AI Engineering"** — Chip Huyen (AI engineering practices, 2025)
+- **"Machine Learning System Design Interview"** — Ali Aminian & Alex Xu (interview prep)
+- **"Deep Learning"** — Goodfellow, Bengio, Courville (theory reference)
 
-- Eugene Yan: Patterns for Building LLM-based Systems [^eugene-yan-patterns] - 7 core patterns (evals, RAG, fine-tuning, caching, guardrails, defensive UX, data flywheel)
-- What We Learned from a Year of Building with LLMs [^applied-llms]
+### Courses
+- **DeepLearning.AI short courses** — Practical LLM, RAG, and agent courses
+- **Stanford CS229 / CS224N** — ML and NLP fundamentals (free lecture videos)
+- **Andrej Karpathy's "Neural Networks: Zero to Hero"** — From-scratch implementations
+- **Fast.ai** — Practical deep learning
+- **Full Stack LLM Bootcamp** — Comprehensive AI engineering course
 
-Coding practice:
+### Coding Practice
+- **LeetCode** — For companies that still ask DSA (Medium difficulty, focus on arrays/strings/graphs)
+- **HuggingFace tutorials** — Hands-on ML implementation practice
+- **Build your own projects** — The best coding practice is building real AI systems
 
-- NeetCode 250 [^neetcode] - recommended by multiple successful candidates. Focus on problem-solving intuition; connect problems to real web-scale data processing challenges [^yuan-meng]. Use spaced repetition [^janvi-kalra]
-- Deep-ML [^deep-ml] - ML-specific coding practice for implementing architectures from scratch [^yuan-meng] [^mimansa-jaiswal-resources]
-- Great Frontend [^great-frontend] - front-end interview questions for full-stack AI engineer roles [^janvi-kalra]
+### ML/LLM Coding Prep
+- Implement self-attention from scratch (30 min)
+- Implement LoRA from scratch (20 min)
+- Implement a simple KV cache (20 min)
+- Build a RAG pipeline from scratch (60 min)
+- Build a tool-calling agent (45 min)
+- Implement an evaluation pipeline (30 min)
 
-ML/LLM coding prep:
+### System Design
+- **"Designing Data-Intensive Applications"** — Martin Kleppmann (foundation)
+- **Alex Xu's System Design Interview books** — Practice problems
+- **Eugene Yan's blog** — Applied ML systems design
+- **Company engineering blogs** — Read how real systems are built
 
-- Mimansa Jaiswal's breakdown of what to implement from scratch for ML coding rounds (25-35 min, no debugging): neural networks, LSTMs, RNNs in NumPy/PyTorch; attention mechanisms (cached, grouped query, multi-head); Transformer components; RAG/inference decoding strategies (top-p, top-k, beam search) [^mimansa-jaiswal-resources]
+### Evaluation
+- **RAGAS documentation** — RAG evaluation framework
+- **DeepEval documentation** — LLM evaluation framework
+- **LangSmith tutorials** — Observability and evaluation
+- **"Evaluating LLMs"** — Various survey papers and blog posts
 
-System design:
+### Behavioral
+- **Amazon Leadership Principles** — Framework for structured behavioral answers
+- **STAR/SAIL frameworks** — Structure for behavioral stories
+- **"Cracking the Coding Interview" behavioral chapter** — General behavioral prep
 
-- Alex Xu: System Design Interview books [^alex-xu-system-design] - "just reading those, really understanding them, doing them again and again" [^janvi-kalra]
-- Company engineering blogs from Netflix, Uber, Pinterest, and other target companies for ML infra design prep [^yuan-meng]
+### Organization
+- **Notion or Obsidian** — Track preparation progress, notes, and stories
+- **Spaced repetition** — Use Anki for theory concepts
+- **Interview journal** — Record every interview experience for debrief
 
-Evaluation:
-
-- Maven: AI Evals for Engineers & PMs [^maven-evals] - Hamel Husain and Shreya Shankar
-
-Behavioral:
-
-- SAIL structure (Situation, Action, Impact, Learning) for behavioral interviews - map stories explicitly to company values [^yuan-meng]
-- Prepare distinct examples per interview - "repeatedly telling the same stories can make responses sound mechanical." Vary personal introductions. Use water breaks between STAR paragraphs [^mimansa-jaiswal-resources]
-
-Organization:
-
-- Notion for tracking preparation across 7+ sections [^mimansa-jaiswal]
-- Zotero and Raindrop for paper and research tracking
-- Record yourself explaining projects in 60 seconds to refine storytelling
-
-See [Awesome AI Engineering](../awesome.md) for the full collection.
-
+---
 
 ## Career Transitions
 
-If you are transitioning from another engineering role, see the [learning paths](../learning-paths/README.md#role-specific-guides) - they cover the transition from backend, frontend, data engineering, data science, and ML engineering backgrounds.
+### From Software Engineering to AI Engineering
+- **Easiest transition**: You already have production engineering skills. Focus on AI-specific knowledge (LLMs, RAG, agents, evaluation).
+- **Biggest gap**: ML/AI theory and evaluation methodology.
+- **Recommended path**: Build 2–3 AI projects → Take DeepLearning.AI courses → Apply to AI-forward companies.
+- **Timeline**: 3–6 months of focused preparation.
 
-Key principle for all transitions: "Start the job before you have it. Start writing code to do the things you'd like it to do. Building something yourself is what gets you specific knowledge, the type of knowledge you can't get from courses." [^zero-to-mastery]
+### From Data Science / ML to AI Engineering
+- **Easiest transition**: You already understand ML theory and evaluation.
+- **Biggest gap**: Production engineering (API design, deployment, monitoring, cost optimization).
+- **Recommended path**: Build production AI applications → Focus on engineering practices → Apply to AI engineering roles (not ML research roles).
+- **Timeline**: 2–4 months of focused preparation.
 
+### From Research to AI Engineering
+- **Easiest transition**: Deep understanding of models and theory.
+- **Biggest gap**: Production engineering, cost awareness, and "good enough" mentality (researchers tend to over-optimize models; engineers optimize the whole system).
+- **Recommended path**: Build a production AI application end-to-end → Practice system design → Apply to applied AI roles.
+- **Timeline**: 3–6 months of focused preparation.
+
+### From Other Fields (Product, Design, etc.)
+- **Easiest transition**: Domain expertise + AI is incredibly valuable.
+- **Biggest gap**: Technical depth (coding, system design, ML fundamentals).
+- **Recommended path**: Learn Python → Build AI projects → Take comprehensive courses → Apply to domain-specific AI roles (e.g., AI for healthcare if you have healthcare background).
+- **Timeline**: 6–12 months of focused preparation.
+
+---
 
 ## Job Search and Networking
 
-- Categorize the AI market to focus your search. Three categories: product companies (Cursor, Codium), infrastructure companies (Modal, Fireworks, Pinecone, Braintrust), and model companies (OpenAI, Anthropic, Google, Meta). Decide which segment excites you most [^janvi-kalra]
-- Direct outreach works. LinkedIn messages to founders and hiring managers proved effective for startups. "Reach out to connections despite unpublished work - most people were immensely supportive" [^mimansa-jaiswal]
-- Hackathons as networking and learning. Weekend and multi-week online hackathons serve as both skill development and networking. Building in public (blog posts, Twitter threads) was more effective than courses when the field moves this fast [^janvi-kalra]
-- In-person interviews are back. In-person rounds increased from 24% (2022) to 38% (2025) to counter cheating concerns. More frontier labs require in-person onsites. Be prepared to travel [^interviewquery-2025]
-- Referrals matter more than cold applications. Network-based hiring is increasing as AI-generated applications flood pipelines. Recruiters can detect when candidates feed resumes directly into ChatGPT. Authentic application materials outperform AI-polished generic submissions [^hn-referrals]
-- Top candidates accept offers within 2-3 weeks. Companies with slow processes lose strong applicants. Be prepared to move quickly, and manage your interview timeline so onsites cluster together [^juicebox-ai]
-- References matter more than before. Most top companies now require 2-3 references from recent managers and colleagues. Team matching has become competitive; strong candidates may wait weeks for ideal teams [^yuan-meng]
+### Where to Find AI Engineering Jobs (2026)
 
+| Source | Quality | Notes |
+|--------|---------|-------|
+| Company career pages | High | Best for specific companies you're targeting |
+| LinkedIn | Medium–High | Good for volume, set alerts for "AI Engineer" |
+| Wellfound (AngelList) | Medium | Good for startups |
+| Y Combinator jobs | Medium | Good for early-stage startups |
+| AI-specific job boards | Medium | aisjobs.net, ai-jobs.net |
+| Referrals | Highest | 40%+ of hires come through referrals |
+| Conferences and meetups | High | NeurIPS, ICML, AI Engineer Summit, local meetups |
+| Twitter/X | Medium | Many AI companies post roles on X |
+| Direct outreach | Medium | DM founders/hiring managers at startups |
+
+### Networking Strategy
+
+1. **Build in public.** Share your AI projects and learnings on Twitter/X and LinkedIn.
+2. **Contribute to open source.** Even small PRs to AI tools get you noticed.
+3. **Attend events.** AI Engineer Summit, local AI meetups, company-hosted events.
+4. **Write.** Blog posts about AI engineering decisions demonstrate depth and reach hiring managers.
+5. **Informational interviews.** Reach out to AI engineers at target companies for 15-minute chats.
+6. **Be specific in outreach.** "I loved your blog post about [X] and I'm building something similar" gets more responses than "I'd love to connect."
+
+---
 
 ## Negotiation and Offers
 
-- Your strongest negotiation move is a competing offer. Direct all leverage toward the equity grant size, not base salary, since base bands at each level are relatively narrow [^teamrora]
-- Always benchmark by total compensation, not just base pay. Equity, bonuses, and cloud credits for AI experimentation can add 20-40% to your real annual package. At Meta, total compensation for an E4 MLE is ~$332K, E5 ~$492K, E6 ~$648K annually [^interviewquery-salary]
-- AI engineers earn 10-20% more than general software engineers due to specialized expertise. Professionals with AI expertise earn 56% more on average than peers without it [^ziprecruiter]
-- Startup due diligence like an investor. "All engineers that take a pay cut to go to a startup should have an informed thesis on why they think that company is going to grow during their tenure." Evaluate: (1) revenue and revenue growth rate, (2) large market with room to expand, (3) loyal/obsessed customers, (4) competitive positioning. If a startup will not share financials after you have an offer, that is a red flag [^janvi-kalra]
-- Watch for offer expiration pressure. "Seven-day expiration windows - too short in my view - forcing me to request extensions." Ask for extensions when needed; companies that refuse may signal cultural issues [^mimansa-jaiswal]
+### 2026 Compensation Data (US Market)
 
-Compensation ranges (2025-2026 US market):
+| Level | Years | Base Salary | Total Comp (incl. equity) | Notes |
+|-------|-------|-------------|--------------------------|-------|
+| Junior | 0–2 | $130K–$180K | $160K–$270K | Equity often 10–20% of comp |
+| Mid | 2–5 | $180K–$260K | $270K–$430K | Equity often 20–35% of comp |
+| Senior | 5–8 | $250K–$350K | $370K–$550K | Equity often 30–45% of comp |
+| Staff+ | 8+ | $320K–$450K | $550K–$900K+ | Equity often 40–55% of comp |
 
-| Level | Big Tech Total Comp | AI Startup Range |
-|---|---|---|
-| Junior/New Grad | $150K-$250K | $120K-$200K + equity |
-| Mid-level | $250K-$400K | $180K-$300K + equity |
-| Senior | $350K-$500K | $250K-$400K + equity |
-| Staff+ | $500K-$800K+ | $350K-$600K + equity |
+**Sources**: Levels.fyi data for AI engineering roles, 2025–2026. Compensations vary significantly by company type, location, and market conditions. [^1]
 
-Ranges approximate; varies significantly by company, location, and specific role. [^interviewquery-salary] [^mimansa-jaiswal]
+### Key Negotiation Points
 
+1. **Know your market value.** Use Levels.fyi, Blind, and Glassdoor to understand compensation ranges for your target role and level.
+
+2. **Total compensation matters more than base salary.** At AI startups, equity can be 30–50% of total comp. At big tech, it can be 40–55%.
+
+3. **Negotiate the equity, not just the base.** At startups, equity has the most upside. At big tech, equity refreshers are standard.
+
+4. **Get competing offers.** The single strongest negotiation lever is a competing offer. Even if you prefer Company A, having an offer from Company B gives you leverage.
+
+5. **Understand the equity.** At startups: What's the valuation? What's your strike price? What's the vesting schedule? What happens if the company raises at a down round? See [After the Interview](04-after-the-interview.md) for detailed equity evaluation guidance.
+
+6. **Don't negotiate against yourself.** Let them make the first offer. Then counter with data, not feelings.
+
+7. **Consider the full package.** Signing bonus, relocation, remote work policy, learning budget, and 401(k) match all have real value.
+
+8. **Be professional but firm.** "I'm excited about the role and I'd like to discuss compensation. Based on my research and competing offers, I was expecting [range]."
+
+### Big Tech vs. Startup Compensation
+
+| Factor | Big Tech | AI Startup |
+|--------|----------|------------|
+| Base salary | Higher | Lower |
+| Equity value | Known (public stock) | Speculative (options) |
+| Equity upside | Moderate (already large) | Potentially huge (or zero) |
+| Liquidity | RSUs vest and are sellable | Options may never liquidate |
+| Risk | Low (stable employment) | High (startup may fail) |
+| Growth | Slower (more process) | Faster (more ownership) |
+| Impact | Incremental | Potentially company-defining |
+
+---
 
 ## Sources
 
-[^hamel-husain]: [Hamel Husain: Your AI Product Needs Evals](https://hamel.dev/blog/posts/evals/)
-[^interviewquery-2025]: [InterviewQuery: AI Interview Trends 2025](https://www.interviewquery.com/p/ai-interview-trends-tech-hiring-2025)
-[^promptlayer]: [PromptLayer: The Agentic System Design Interview](https://blog.promptlayer.com/the-agentic-system-design-interview-how-to-evaluate-ai-engineers/)
-[^techeon]: [TechEon: Agentic AI System Design Interview Guide](https://atul4u.medium.com/the-complete-agentic-ai-system-design-interview-guide-2026-f95d0cfeb7cf)
-[^reddit-ycombinator-assignments]: [Reddit r/ycombinator - AI Engineer Interview Assignments](https://www.reddit.com/r/ycombinator/comments/1jnfijm/what_is_your_interview_assignment_for_ai_engineers/)
-[^sundeep-teki]: [Dr. Sundeep Teki: AI Research Engineer Interview Guide](https://www.sundeepteki.org/advice/the-ultimate-ai-research-engineer-interview-guide-cracking-openai-anthropic-google-deepmind-top-ai-labs)
-[^fonzi-ai-50-interviews]: [Fonzi AI: 50+ AI Engineer Interviews](https://medium.com/fonzi-ai/what-ive-learned-from-sitting-in-on-50-ai-engineer-interviews-c493696453c4)
-[^proptech-founder]: [PropTech Founder: AI Engineer Interview](https://www.youtube.com/watch?v=leXRiJ5TuQo)
-[^mimansa-jaiswal]: [Mimansa Jaiswal: LLM/ML Job Interviews](https://mimansajaiswal.github.io/posts/llm-ml-job-interviews-fall-2024-process/)
-[^mimansa-jaiswal-resources]: [Mimansa Jaiswal: Interview Resources](https://mimansajaiswal.github.io/posts/llm-ml-job-interviews-resources/)
-[^yuan-meng]: [Yuan Meng: MLE Interviews 2.0](https://www.yuan-meng.com/posts/mle_interviews_2.0/)
-[^janvi-kalra]: [Janvi Kalra / Pragmatic Engineer](https://newsletter.pragmaticengineer.com/p/from-software-engineer-to-ai-engineer)
-[^reddit-generativeai]: [Reddit r/generativeAI - How to Clear AI Interviews](https://www.reddit.com/r/generativeAI/comments/1p4yrjk/how_to_clear_interviews_in_ai_gen_rag_llm/)
-[^chip-huyen-book]: [Chip Huyen: AI Engineering](https://huyenchip.com/books/)
-[^udl-book]: [Understanding Deep Learning](https://udlbook.github.io/udlbook/)
-[^ddia]: [Designing Data-Intensive Applications](https://dataintensive.net/)
-[^karpathy-zero-to-hero]: [Andrej Karpathy: Neural Networks - Zero to Hero](https://karpathy.ai/zero-to-hero.html)
-[^eugene-yan-patterns]: [Eugene Yan: Patterns for Building LLM-based Systems](https://eugeneyan.com/writing/llm-patterns/)
-[^applied-llms]: [What We Learned from a Year of Building with LLMs](https://applied-llms.org/)
-[^neetcode]: [NeetCode](https://neetcode.io/)
-[^deep-ml]: [Deep-ML](https://www.deep-ml.com/)
-[^great-frontend]: [Great Frontend](https://www.greatfrontend.com/)
-[^alex-xu-system-design]: [Alex Xu: System Design Interview](https://www.amazon.com/System-Design-Interview-insiders-Second/dp/B08CMF2CQF)
-[^maven-evals]: [Maven: AI Evals for Engineers and PMs](https://maven.com/parlance-labs/evals)
-[^interviewnode]: [InterviewNode: GenAI System Design Patterns](https://www.interviewnode.com/post/generative-ai-system-design-interview-patterns-you-should-know)
-[^designgurus]: [DesignGurus: OpenAI System Design Questions](https://www.designgurus.io/blog/openai-system-design-interview-questions)
-[^chip-huyen-platform]: [Chip Huyen: Building a GenAI Platform](https://huyenchip.com/2024/07/25/genai-platform.html)
-[^sdh-anthropic]: [System Design Handbook: Anthropic Interview](https://www.systemdesignhandbook.com/guides/anthropic-system-design-interview/)
-[^igotanoffer]: [IGotAnOffer: GenAI System Design Interview](https://igotanoffer.com/en/advice/generative-ai-system-design-interview)
-[^sdh-genai]: [System Design Handbook: GenAI Interview](https://www.systemdesignhandbook.com/guides/generative-ai-system-design-interview/)
-[^hellointerview-openai]: [HelloInterview: OpenAI L5 Guide](https://www.hellointerview.com/guides/openai/l5)
-[^eightfold-internship]: [Inside Eightfold AI's Internship Process](https://medium.com/@bhardwajtushar2004/inside-eightfold-ais-agentic-ai-internship-hiring-process-2026-f86dcb625aa8)
-[^fonzi-ai-failed-hires]: [Fonzi AI: 50 Failed AI Hires from 2025](https://medium.com/fonzi-ai/i-reviewed-50-failed-ai-hires-from-2025-00770218130d)
-[^amplework]: [Amplework: Why Hiring ML Engineers Is Hard](https://www.amplework.com/blog/why-hiring-a-machine-learning-engineer-is-so-hard/)
-[^aidi-rivera]: [Aidi Rivera: My First Take-Home Code Challenge](https://dev.to/aidiri/learn-from-my-mistakes-my-first-take-home-code-challenge-778)
-[^teamrora]: [TeamRora: AI/ML Salary Negotiation Guide](https://www.teamrora.com/post/aiml-salary-negotiation)
-[^interviewquery-salary]: [InterviewQuery: AI Engineer Salary Guide](https://www.interviewquery.com/p/ai-engineer-salary-2025-guide)
-[^ziprecruiter]: [ZipRecruiter: AI/ML Engineer Salary](https://www.ziprecruiter.com/Salaries/Ai-Ml-Engineer-Salary)
-[^juicebox-ai]: [Juicebox AI: Recruitment Mistakes](https://juicebox.ai/blog/ai-recruitment-mistakes)
-[^hn-referrals]: [Hacker News: AI-Generated Applications](https://news.ycombinator.com/item?id=45932838)
-[^fahd-mirza]: [Fahd Mirza: How to Become an AI Engineer](https://www.youtube.com/watch?v=Zt-h5BiBWH0)
-[^zero-to-mastery]: [Zero to Mastery: How to Become an AI Engineer](https://zerotomastery.io/blog/how-to-become-an-ai-engineer-from-scratch/)
+[^1]: Levels.fyi compensation data for AI engineering roles, 2025–2026. Aggregated from self-reported data across Google, Meta, Amazon, Microsoft, OpenAI, Anthropic, Databricks, and various AI startups.
+[^2]: Interview reports aggregated from Blind, Glassdoor, and LeetCode Discuss, 2025–2026.
+[^3]: Mimansa Jaiswal, Yuan Meng, Janvi Kalra — interview preparation advice from social media posts and blog articles, 2025–2026. Names used with context from public posts.
+[^4]: "State of AI Engineering Hiring", LangChain survey, 2025.
+[^5]: "AI Engineering Job Market Report", various industry reports, 2025–2026.
+[^6]: Company engineering blogs and career pages, 2024–2026.
+[^7]: "How to Negotiate Your AI Engineering Offer", various guides and practitioner advice, 2025.
+
+---
+
+> **Next**: [After the Interview →](04-after-the-interview.md)

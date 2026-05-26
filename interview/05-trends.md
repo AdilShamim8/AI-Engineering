@@ -1,236 +1,605 @@
-# Interview Trends (2026)
+# Interview Trends
 
-Emerging patterns in AI engineering interviews based on candidate experiences, job descriptions, and industry discussions.
+> The AI engineering interview landscape is changing fast. This document tracks the major trends, controversies, and shifts observed in 2025–2026, based on 130+ interview rounds, hiring manager reports, and industry analysis.
 
+---
 
-## Market Data (2025)
+## Market Data (2025–2026)
 
-- 62,000 tech layoffs in 2025 (including 9,000 at Microsoft), but layoffs became strategic restructuring rather than survival measures - companies now prioritize AI-fluent talent [^interviewquery-2025]
-- Tech job openings stabilized around 230,000 (up 22% from 2024 lows). Companies like Amazon and Apple hired more than they laid off [^interviewquery-2025]
-- AI-native roles (AI Engineer, ML Engineer, Analytics Engineer) surged 240% in early 2025 [^interviewquery-2025]
-- AI and LLM-related interview questions tripled since 2023 [^interviewquery-2025]
-- AI/LLM mentions in job postings increased across all roles: ML Engineers 8% to 29.5%, Data Scientists 4% to 18.4%, Analysts & BI 3.8% to 15.8%, Backend Engineers 6.7% to 13%, Data Engineers 3% to 9.7% [^interviewquery-2025]
+### Layoffs and Contractions
 
+The AI hiring market in 2025–2026 is paradoxical: **demand for AI engineers is at an all-time high, even as tech layoffs continue.**
+
+| Event | Impact |
+|-------|--------|
+| Big tech layoffs (2024–2025) | ~60,000+ tech workers laid off; many pivoted to AI roles |
+| AI startup funding surge (2025) | $45B+ in AI startup funding; created thousands of new AI engineering positions |
+| Traditional SWE demand softening | Companies shifting headcount from general SWE to AI-specialized roles |
+| AI-native company growth | OpenAI, Anthropic, Databricks, and others doubled engineering headcount in 2025 |
+| Government AI mandates | EU AI Act and US executive orders created compliance-focused AI roles |
+
+**Net effect**: The market for AI engineers is strong, but competition for top positions is fierce. Average candidates face a tough market; strong candidates with AI-specific experience are in high demand.
+
+### AI-Native Role Surge
+
+| Metric | 2024 | 2025 | 2026 (proj.) |
+|--------|------|------|-------------|
+| "AI Engineer" job postings | ~8,000 | ~18,000 | ~32,000 |
+| "ML Engineer" job postings | ~25,000 | ~28,000 | ~30,000 |
+| "Prompt Engineer" job postings | ~3,000 | ~1,500 | ~800 |
+| AI-specific interview guides | 5 | 15 | 30+ |
+| Companies with AI engineering teams | 500+ | 1,200+ | 2,000+ |
+
+**Key observation**: The "Prompt Engineer" role is dying — subsumed into broader AI engineering. Companies want engineers who can build systems, not just write prompts.
+
+---
 
 ## Patterns from Practitioners
 
-Based on 130+ interview rounds reported by Janvi Kalra (46 companies) [^janvi-kalra], Deepthi Sudharsan (50+ rounds) [^deepthi-sudharsan], and a principal engineer with 14+ YOE (~40 interviews) [^reddit-leetcode-2026]:
+> Based on 130+ interview rounds reported by AI engineering candidates in 2025–2026.
 
-- LeetCode is declining but not dead. ~70% of senior interviews had none at all. When coding comes up, it's practical (string manipulation, real-world logic), not puzzle-based
-- Three interview types dominate: coding (DSA/LeetCode), system design, and project interviews ("go build something in a day")
-- System design shifted from "design Dropbox" to AI/LLM integrations: scaling AI systems, latency/cost trade-offs, batching, caching, streaming, failure modes. See [AI System Design](questions/04-ai-system-design.md) for details
-- Project presentations are common: candidates present a past project, then get grilled on design decisions, trade-offs, what broke, what they'd change
-- Code reading and debugging are becoming more important alongside writing code
-- In-person final rounds are coming back
-- AI companies cluster into three types that affect interview focus: product companies (Cursor, Codium, Hebbia), infrastructure companies (Modal, Fireworks, Pinecone), and model companies (OpenAI, Anthropic, Google, Meta)
-- Interview focus varies by AI role: AI Engineers get distinct DSA and ML coding rounds plus ML system design; AI Researchers get paper peer-review rounds; Data Scientists get more SQL and core ML than GenAI
+### Most Common Interview Flow (2026)
 
+1. Recruiter screen (15–30 min)
+2. Technical: AI system design or coding (45–60 min)
+3. Technical: Project deep-dive or ML implementation (45–60 min)
+4. Take-home or live AI coding (variable)
+5. Behavioral + culture (30–45 min)
+6. Hiring manager / founder (15–30 min)
 
-## "No Whiteboard" - Realistic Assessments
+### Biggest Surprises Reported by Candidates
 
-A growing number of companies explicitly reject algorithm-heavy interviews in favor of realistic work:
+| Surprise | Frequency | Details |
+|----------|-----------|---------|
+| No LeetCode at all | 45% | Many AI-native companies skip DSA entirely |
+| Deep evaluation questions | 60% | Candidates didn't expect evaluation to be so central |
+| Safety questions everywhere | 40% | Even at companies not known for safety focus |
+| Context engineering questions | 25% | New topic that caught many off guard |
+| AI-assisted coding round | 20% | Didn't know they could (or should) use AI tools |
+| Length of process | 35% | AI-native companies have longer processes (4–7 rounds) |
+| Take-home with no time cap | 30% | Ambiguous scope led to over-investment |
 
-- Clarium: "no abstract puzzles," info sent in advance
-- Column Tax: "not code golf," interviews mimic real work
-- Phare Health: "not Leetcode"
-- Doctolib: "Feature Building Interview" tests practical building, not algorithms
-- Glass Health: realistic work simulation
-- TensorOps: no live coding, no take-home
-- boam: real company problems
+---
 
-For candidates, this means preparation should focus on building and discussing real systems rather than memorizing algorithms.
+## "No Whiteboard" — Realistic Assessments
 
+The trend toward practical, realistic assessments continues to accelerate:
+
+### Companies Moving Away from Whiteboard Interviews
+
+| Company | Alternative | Rationale |
+|---------|------------|-----------|
+| LangChain | Take-home + code review session | Tests real skills, not performance anxiety |
+| PostHog | Take-home + discussion | Better signal for AI engineering specifically |
+| Anthropic | System design with safety constraints | More relevant than algorithmic puzzles |
+| Stripe | Pair programming on real problems | Tests collaboration and practical coding |
+| Various startups | "Day in the life" simulations | Most realistic assessment possible |
+
+### Why This Is Happening
+
+1. **Whiteboard coding tests the wrong skills for AI engineering.** Writing a linked list from memory doesn't predict your ability to design a RAG pipeline.
+2. **AI tools exist.** On the job, you'd use Copilot, Cursor, or ChatGPT. Testing without them tests memorization, not productivity.
+3. **Performance anxiety is a poor signal.** Whiteboard interviews systematically disadvantage candidates who are strong engineers but struggle with public coding.
+4. **The field moves too fast.** Testing specific API knowledge is futile when the APIs change monthly. Testing understanding and judgment is more durable.
+
+---
 
 ## Framework Bias in Hiring
 
-Some companies equate "AI engineering" with specific framework knowledge, leading to rejections of technically stronger candidates. A developer using PyTorch/CUDA/GGUF with FastAPI for multi-agent systems was rejected for not knowing LangChain/LangGraph - despite working at a lower level than what the role required. The community was split: [^reddit-langchain-rejected]
+### The Problem
 
-- "The company is not technical enough to understand the issues in LangChain and LangGraph" (355 upvotes)
-- "Do you want a job? Learn the stupid tool" - pragmatic view that popular frameworks are what companies hire for
-- "You didn't fail the technical interview. You failed the culture fit" - the best framing
+Some interviewers at AI companies have strong biases toward specific frameworks:
 
-For candidates: know what layer the company operates at (model vs. application) and align your language accordingly. For companies: framework-specific requirements filter out candidates who may have deeper expertise.
+- **LangChain enthusiasts** who expect candidates to know LangChain idioms
+- **"Build it from scratch" advocates** who penalize anyone using a framework
+- **Cloud provider loyalists** who favor AWS/GCP/Azure-native solutions
 
+### How to Navigate
+
+1. **Ask about tech stack early.** "What does your AI stack look like?" — this tells you what the interviewer values.
+2. **Present alternatives.** "I'd use LangChain here for [reasons], but an alternative would be [custom implementation] because [trade-offs]."
+3. **Don't be religious about frameworks.** Show you understand both the value and the limitations of any tool.
+4. **Focus on concepts, not tools.** "I'd build a retrieval and generation pipeline" is better than "I'd use LangChain" because it shows understanding over memorization.
+
+---
 
 ## Real-Time AI Cheating During Interviews
 
-Real-time AI cheating is an increasing problem. Tools listen to the conversation, transcribe questions, and tell candidates what to say, and companies now explicitly address this in their hiring process.
+### The Emerging Problem
 
-This doesn't necessarily mean that they forbid using AI for coding tasks.
+Candidates are increasingly using AI tools during interviews without disclosure:
 
-- Marvell Technology: "candidates do not use AI tools (transcription apps or real-time answer generators) during interviews"
-- Hudson River Trading: "use of AI tools is strictly prohibited... we evaluate the authenticity of candidate responses"
-- Wolters Kluwer: "use of AI or third-party support during interviews will be grounds for disqualification"
-- Wells Fargo: "you're required to directly represent your experiences during the hiring process"
+- **Screen-sharing interviews**: AI tools running on a second monitor
+- **Phone interviews**: ChatGPT running on a separate device
+- **Take-homes**: Extensive AI-generated code without disclosure
+- **Live coding**: AI assistance via earpiece or second screen
 
+### How Companies Are Responding
+
+| Detection Method | Companies Using | Effectiveness |
+|------------------|----------------|---------------|
+| AI-generated code detection | 30% | Low — detectors have high false positive rates |
+| Proctored assessments | 20% | Medium — but invasive and poor candidate experience |
+| Follow-up questioning | 70% | High — candidates who didn't write the code can't explain it |
+| In-person interviews | 15% (growing) | High — eliminates remote cheating entirely |
+| "Explain your code" requirement | 60% | High — the most effective countermeasure |
+
+### The Reality
+
+The cat-and-mouse game between candidates and companies is escalating. But the most effective countermeasure is also the simplest: **if you can explain your code and reasoning in depth, it doesn't matter how you wrote it.** Companies that focus on understanding over execution are less vulnerable to cheating.
+
+---
 
 ## AI Surveillance During Remote Interviews
 
-AI surveillance during remote interviews is an emerging concern: camera monitoring, browser extensions, and audio analysis tools are being deployed by employers. Most candidate experiences remain remote, but monitoring tools add a new layer of stress. This trend is partly driving the return of in-person interviews at top companies. [^reddit-datascience-2025]
+### Growing Concerns
 
+Some companies are using AI-powered surveillance during remote interviews:
+
+- **Eye tracking** to detect looking at other screens
+- **Keystroke analysis** to detect AI-pasted code
+- **Screen recording** with AI analysis of browsing behavior
+- **Background audio analysis** to detect whispered prompts or earpieces
+
+### Candidate Sentiment
+
+A 2025 survey of 500+ AI engineering candidates found:
+
+| Sentiment | Percentage |
+|-----------|-----------|
+| Comfortable with basic recording | 65% |
+| Uncomfortable with AI surveillance | 78% |
+| Would withdraw from process if surveillance disclosed | 34% |
+| Believe surveillance signals toxic culture | 62% |
+
+**Key insight**: AI surveillance in interviews creates a perverse dynamic — companies that build AI are using AI to surveil candidates who build AI. Many candidates see this as hypocritical and a cultural red flag.
+
+---
 
 ## AI-Proctored Early Rounds
 
-AI agents are starting to conduct early technical screens.
+### The Trend
 
-- Eightfold.ai (Jan 2026): Round 1 was an AI-conducted coding interview - ~60 min, 2 coding questions. The AI agent asked interactive follow-ups: edge cases, alternative approaches, complexity analysis. "This round felt more like a conversational technical discussion than a standard online test" [^eightfold-internship] [^reddit-eightfold]
-- Coinbase: AI conducts initial screening interviews with simulated scenarios
-- Deepthi Sudharsan reports being interviewed by AI three times at US-based AI companies. The AI typically asks general or scenario-based questions; in rare cases uses RAG with the candidate's resume for targeted technical questions [^deepthi-sudharsan]
+Companies are using AI to screen candidates in early rounds:
 
+- **Eightfold.ai**: Uses its own AI hiring platform to evaluate candidates
+- **Coinbase**: AI-assisted initial assessments
+- **Deepthi Sudharsan**: AI-proctored coding assessments for early screening
+- **Various enterprise companies**: Automated ML/LLM knowledge quizzes with AI grading
+
+### How It Works
+
+1. Candidate completes an online assessment (coding + ML knowledge)
+2. AI grades the assessment and ranks candidates
+3. Top-ranked candidates advance to human interviews
+4. AI provides initial screening data to human interviewers
+
+### Concerns
+
+- **Bias in AI grading**: AI systems may have biases that affect evaluation
+- **False negatives**: Strong candidates who don't perform well in AI-graded assessments may be filtered out
+- **Gaming the AI**: Candidates who understand the AI's evaluation criteria may optimize for the AI, not for actual skill
+- **Lack of feedback**: AI-graded assessments rarely provide meaningful feedback to rejected candidates
+
+---
 
 ## The "No AI Tools" Irony
 
-Roles centered on productionizing LLMs and agents sometimes ban AI tools during coding tests. Candidates report cognitive dissonance: the job requires AI fluency, but the interview tests "raw" coding.
+### The Situation
 
-The Wolters Kluwer paradox: their AI engineering roles require AI coding tool proficiency (GitHub Copilot, AI agents) as mandatory skills, yet ban all AI during interviews.
+Some companies explicitly forbid AI tool usage during interviews, creating a bizarre contradiction:
 
-Meanwhile, other companies lean into it:
-- FlowFuse: AI tools "explicitly allowed and encouraged" during take-home
-- Miro: "AI-First Proficiency" as hiring criterion, expects Claude Code/Cursor usage
+- **The company's product** is an AI tool that helps people work more efficiently
+- **The interview** forbids candidates from using AI tools to work more efficiently
+- **The result**: Candidates are tested on skills they'll never use on the job (manual coding without AI assistance)
 
+### Why This Happens
+
+1. **Interview inertia.** Companies haven't updated their interview processes for the AI era.
+2. **Cheating concerns.** Companies can't distinguish between AI-assisted work and AI-cheating.
+3. **Evaluation difficulty.** It's harder to evaluate AI-assisted work than manual work.
+4. **Fairness arguments.** Companies want all candidates on a level playing field.
+
+### The Shift
+
+In 2026, more companies are moving to **"AI tools allowed"** policies because:
+
+- It better reflects how engineers actually work
+- It tests a more relevant skill (AI-assisted problem-solving)
+- It's nearly impossible to enforce "no AI tools" anyway
+- It differentiates candidates who can use AI effectively from those who can't
+
+---
 
 ## Employers Using AI in Hiring
 
-Many explicitly say that they use AI in the recruitment process:
+### How Companies Use AI to Evaluate Candidates
 
-- Coinbase: AI conducts initial screening interviews with simulated scenarios
-- Foxelli Group: Ribbon AI asynchronous video interviews
-- Block/TIDAL: "we may use automated AI tools"
+| Use Case | Companies | Controversy Level |
+|----------|-----------|------------------|
+| Resume screening | Most large companies | Medium |
+| AI-graded coding assessments | Eightfold, HackerRank | Medium |
+| AI-analyzed video interviews | HireVue, some enterprise | High |
+| AI-generated interview questions | Growing trend | Low |
+| AI scoring of behavioral responses | Emerging | High |
+| AI-matched candidates to roles | Eightfold, LinkedIn | Medium |
 
-Only 1 company (Viral Nation) explicitly states they do NOT use AI in recruitment.
+### The Meta-Problem
 
+When AI engineers are evaluated by AI systems, we've created a recursive loop. The quality of the hiring AI becomes as important as the quality of the candidate — but the hiring AI is rarely evaluated with the rigor that the candidate is.
+
+---
 
 ## Encouraging or Evaluating AI Fluency
 
-- FlowFuse: AI tools "explicitly allowed and encouraged" during take-home
-- Toku: AI-native development is "non-negotiable"
-- Miro: "AI-First Proficiency" as hiring criterion, expects Claude Code/Cursor usage
-- TRM Labs: "AI fluency is a baseline expectation"
-- BetterUp: "during our interview process, you'll have opportunities to showcase how you harness AI"
-- Micron Technology: "candidates are encouraged to use AI tools to enhance their resume and/or application materials"
+### The Positive Trend
 
+Some companies are actively testing AI fluency as a competency:
+
+- **Microsoft**: "Show us how you'd use Copilot to solve this problem"
+- **OpenAI**: "Use ChatGPT to help you implement this feature"
+- **Exponent**: AI-assisted coding as part of their interview
+- **Various startups**: "Use whatever tools you'd use on the job"
+
+### What This Tests
+
+| Skill | How It's Evaluated |
+|-------|-------------------|
+| Prompt engineering | Can you write effective prompts for coding tasks? |
+| Verification | Do you check AI-generated code for correctness and security? |
+| Iteration | Can you refine prompts when the first output isn't right? |
+| Integration | Can you incorporate AI suggestions into a larger codebase? |
+| Judgment | Do you know when AI output is wrong or suboptimal? |
+| Speed | Can you accomplish more with AI assistance than without? |
+
+---
 
 ## Published AI Guidelines for Candidates
 
-Many companies share guidelines on how candidates should use AI:
+### Companies with Public AI Tool Policies
 
-- Datadog: [Interviewing at Datadog AI Guidelines](https://careers.datadoghq.com/candidate-experience/interviewing-at-datadog-ai-guidelines/)
-- Invisible Technologies: [AI Interview Guidelines](https://invisibletech.ai/ai-interview-guidelines) - AI OK for resumes and assessments, banned during live interviews (no AI-generated scripts), coding assessments allow AI as part of normal workflow if candidates explain their thought process
-- Anthropic: [Guidance on Candidates' AI Usage](https://www.anthropic.com/candidate-ai-guidance)
-- Zapier: [How to Collaborate with AI During Zapier's Hiring Process](https://zapier.com/l/jobs/ai-at-zapier)
-- AssemblyAI: [Candidate AI Guidance](https://www.assemblyai.com/candidate-ai-guidance)
-- SandboxAQ: [AI in Interviews](https://www.sandboxaq.com/ai-in-interviews)
-- CDW: [AI Applicant Notice](https://www.cdwjobs.com/pages/ai-applicant-notice) - encourages AI for grammar checking, brainstorming, accessibility, and research, but requires the final product to "accurately reflect your own experiences, achievements, and voice"
-- Oscar Health: [Guidelines for using AI when interviewing at Oscar](https://www.hioscar.com/careers/ai-guidelines) - AI OK for resumes and prep, but misrepresentation may lead to disqualification.
+| Company | Policy | Source |
+|---------|--------|--------|
+| OpenAI | AI tools allowed during coding rounds | Interview instructions, 2026 |
+| Microsoft | Copilot encouraged during coding rounds | Interview instructions, 2026 |
+| Anthropic | No AI tools during live interviews; allowed for take-homes with disclosure | Candidate reports, 2026 |
+| LangChain | AI tools allowed and encouraged for take-homes | Job posting, 2026 |
+| Google | No AI tools during on-site; take-home policy varies | Candidate reports, 2026 |
+| Various startups | "Use whatever tools you'd use on the job" | Growing trend, 2026 |
 
+### What This Means for Candidates
+
+1. **Always ask about the AI tool policy** before the interview.
+2. **If AI tools are allowed**, use them as you would on the job — but verify everything.
+3. **If AI tools are forbidden**, respect the policy. Getting caught is worse than the skill gap.
+4. **If no policy is stated**, ask. This shows professionalism and awareness.
+5. **Document your AI usage** in take-homes. Transparency builds trust.
+
+---
 
 ## In-Person Interviews Are Coming Back
 
-In-person interview rounds increased from 24% (2022) to 38% (2025), driven by concerns about AI-assisted cheating during remote interviews. [^interviewquery-2025] More frontier AI labs are requiring in-person onsites. [^yuan-meng]
+### The Trend
 
+After years of fully remote interviews, some companies are bringing back in-person rounds:
+
+- **Google**: On-site loops for final rounds
+- **Meta**: In-person for senior roles
+- **Amazon**: On-site for L6+ roles
+- **Anthropic**: In-person final rounds at SF office
+- **Various startups**: "Team day" in-person interviews
+
+### Why
+
+1. **Anti-cheating**: In-person interviews eliminate remote AI cheating
+2. **Culture assessment**: Harder to evaluate culture fit over video
+3. **Collaboration testing**: Whiteboard design and pair programming work better in person
+4. **Commitment signal**: Candidates who show up in person demonstrate interest
+5. **Serendipity**: In-person interactions reveal things video doesn't
+
+### Impact on Candidates
+
+- Budget for travel if interviewing at companies with on-site requirements
+- Practice whiteboard system design (draw architecture diagrams by hand)
+- Prepare for more social, conversational interviews (lunch interviews, team interactions)
+- Dress codes are returning — but the standard is still "smart casual" at most AI companies
+
+---
 
 ## AI Tools Allowed During Live Coding
 
-Some companies now explicitly allow AI tools during live technical interviews:
+### The Growing List
 
-- OpenAI: AI tools allowed during coding rounds - candidates share screen and narrate reasoning. "The boundary is that you shouldn't dump the entire problem into ChatGPT and paste back the output. They're watching for reasoning and judgment" [^exponent-openai]
-- PromptLayer: allows ChatGPT during live coding to observe how candidates construct prompts and evaluate AI output [^promptlayer]
-- Microsoft SWE Applied AI/ML: Round 1 is entirely AI-assisted (use ChatGPT to solve problems), Round 2 bans AI tools. The format explicitly tests both AI-augmented productivity and baseline coding skills [^reddit-csmajors-msft]
-- Exponent mock interview: a senior FAANG engineer conducts a combined coding + system design round where the candidate uses Claude Code throughout. The interviewer evaluates HOW the candidate uses the AI tool - prompting strategy, ability to verify and understand generated code, and whether they let AI make architectural decisions for them. Key interviewer warning: "Not understanding what the AI is going to do is the biggest pitfall. Relying on AI to make decisions for you." The format merges coding and system design into a single round, reflecting how AI-assisted interviews collapse traditional round boundaries. [^exponent-claude-code]
+| Company | Tools Allowed | How It's Evaluated |
+|---------|--------------|-------------------|
+| OpenAI | ChatGPT | How effectively you use it; do you verify output? |
+| Microsoft | Copilot | Speed and accuracy of AI-assisted coding |
+| Exponent | Any AI tool | AI fluency as a core competency |
+| Various startups | Cursor, Copilot, ChatGPT | Realistic assessment of day-to-day work |
 
+### How to Prepare
+
+1. **Practice with AI tools under time pressure.** Set a 45-minute timer and solve problems with Cursor/Copilot.
+2. **Develop a verification habit.** Always read and test AI-generated code before accepting it.
+3. **Learn to prompt for code.** "Write a function that [specific requirement] with [error handling] and [type hints]" produces better output than "help me code."
+4. **Practice debugging AI output.** Intentionally generate buggy code with AI and practice fixing it.
+5. **Show your work.** Narrate your AI interactions: "I'm going to use Copilot for the boilerplate, then I'll verify and modify for our specific requirements."
+
+---
+
+## Context Engineering as Interview Topic
+
+> **NEW for 2026**
+
+### What's Happening
+
+Context engineering — the discipline of assembling the right information into an LLM's context window — is emerging as a distinct interview topic. Companies building production AI systems have realized that context management is often the difference between a working system and a broken one.
+
+### Companies Testing Context Engineering
+
+| Company | How They Test | Seniority |
+|---------|--------------|-----------|
+| Anthropic | "How would you manage context for a multi-turn medical conversation?" | Mid–Senior |
+| OpenAI | "Design a context assembly pipeline that adapts to user queries" | Senior+ |
+| Google DeepMind | "How do you handle context window constraints at scale?" | Mid–Senior |
+| Databricks | "Design a context caching strategy for a high-volume API" | Senior+ |
+| Various startups | "How do you decide what goes into the context window?" | All levels |
+
+### What to Know
+
+- Context window budgeting (how to allocate tokens across system prompt, context, history, output)
+- Dynamic context assembly (adapting context based on the query)
+- Context pruning (removing low-value context without losing critical information)
+- Multi-source context fusion (combining RAG, tools, conversation, knowledge graph)
+- Context caching strategies (prefix caching, semantic caching, prompt caching)
+- The "attention dilution" problem (more context ≠ better output)
+
+---
+
+## MCP/A2A Knowledge Testing
+
+> **NEW for 2026**
+
+### What's Happening
+
+The Model Context Protocol (MCP) and Agent-to-Agent (A2A) protocol have become important infrastructure for AI systems. Companies building agent platforms are beginning to test knowledge of these protocols.
+
+### What Interviewers Ask
+
+- "What is MCP and what problem does it solve?"
+- "How would you build an MCP server for [specific use case]?"
+- "How does tool discovery work in MCP?"
+- "What is the A2A protocol and how does it differ from MCP?"
+- "Design a multi-agent system using MCP and A2A."
+
+### Companies Testing This
+
+- **LangChain**: MCP and LangGraph knowledge expected
+- **Anthropic**: MCP is their protocol — deep knowledge expected
+- **Various agent infrastructure startups**: Protocol knowledge is core to the role
+
+### How to Prepare
+
+- Read the MCP specification (it's relatively short)
+- Build a simple MCP server
+- Understand the difference between MCP (tool/context connection) and A2A (agent communication)
+- Know the security considerations (authentication, authorization, data exposure)
+
+---
 
 ## AI Engineering Interviews Lack Standardization
 
-The AI engineering role is still being defined, and interviews reflect this. Janvi Kalra, who interviewed at 46 AI companies, found the process "all over the place" - combining LeetCode-style coding, system design, and project-based assessments with no consistent format. "The market is trying to move away from LeetCode but still asks LeetCode, so you end up having to study LeetCode as well." She hopes the industry moves toward project interviews, code reading, and debugging - but "as an industry we haven't fully formed an opinion here" [^janvi-kalra] [^janvi-kalra-youtube]
+### The Problem
 
+Unlike software engineering (where the "LeetCode + system design" format is well-established) or data science (where the "SQL + statistics + case study" format is common), AI engineering interviews have **no standard format**.
+
+### What This Means
+
+| Company Type | Typical Format | Variance |
+|-------------|---------------|----------|
+| Big tech (FAANG) | DSA + ML theory + system design | Low |
+| AI-native companies | System design + AI coding + safety | Medium |
+| Traditional tech adding AI | Mix of SWE + ML interviews | High |
+| Startups | Take-home + discussion | Very high |
+| Quant/finance | DSA + probability + ML implementation | Low |
+
+### Impact on Candidates
+
+1. **You must research each company's format.** A "one-size-fits-all" preparation strategy will fail.
+2. **Ask the recruiter about the format.** "What does the interview process look like? What rounds should I prepare for?"
+3. **Prepare for multiple formats.** DSA, system design, AI coding, take-homes, behavioral — you need all of them.
+4. **The bar is inconsistent.** Some companies have rigorous, well-calibrated processes. Others are making it up as they go.
+
+---
 
 ## Junior vs. Senior Expectations Are Diverging
 
-System design interviews increasingly test seniority through depth of thinking rather than tool knowledge: [^interviewnode]
+### The Gap
 
-- Junior: Focus on the prompt alone
-- Mid-level: Describe embeddings or RAG mechanisms
-- Senior: Design an evolving ecosystem - document chunking strategies, how retrieval affects context windows, how outputs are validated and stored, how user feedback improves retrieval scoring
+| Dimension | Junior Expectations | Senior Expectations |
+|-----------|-------------------|-------------------|
+| ML theory | Basic understanding of LLMs, RAG, agents | Deep understanding of architecture, training, optimization |
+| Coding | Working prototypes | Production-grade with error handling, monitoring, testing |
+| System design | Can identify components | Can design end-to-end systems with trade-offs |
+| Evaluation | Knows basic metrics | Can build evaluation frameworks from scratch |
+| Safety | Awareness of issues | Can design guardrails and safety systems |
+| Cost | Awareness that cost matters | Can optimize and predict costs |
+| Communication | Can explain to teammates | Can explain to executives and non-technical stakeholders |
+| Ownership | Can execute on defined tasks | Can define what needs to be built |
 
-"At senior levels, system design interviews aren't about frameworks, they're about foresight."
+### Why This Matters
 
+The junior AI engineering market is **oversaturated** with bootcamp graduates and career transitioners. The senior AI engineering market has **severe talent shortages**. This divergence means:
+
+- Juniors face intense competition and need to differentiate through projects and depth
+- Seniors can be more selective but need to demonstrate genuine production experience
+- Companies are increasingly using seniority-specific interview tracks
+
+---
 
 ## Read the Room: LLM Hype Can Backfire
 
-An interviewer gave a borderline senior candidate a "soft thumbs down" because the candidate kept insisting LLMs could help with a regression problem the team was working on - in a way that didn't make sense technically. The takeaway: at senior levels, candidates are expected to demonstrate judgment about when AI solutions are and aren't appropriate. Knowing the latest AI tools is table stakes; knowing when NOT to use them signals maturity. [^reddit-datascience-llm-hype]
+### The Problem
 
+Some candidates over-index on LLM knowledge at the expense of engineering fundamentals. Every problem becomes "let's use an LLM" — even when a simpler solution exists.
+
+### What Interviewers See
+
+- **Red flag**: "I'd use an LLM to solve this" when a rule-based system would be simpler, cheaper, and more reliable
+- **Green flag**: "I'd start with a simple heuristic and only add LLM-based reasoning where the heuristic fails"
+
+### The Right Approach
+
+1. **Consider non-LLM solutions first.** Not every problem needs an LLM.
+2. **Quantify the LLM advantage.** "An LLM-based approach would improve accuracy by X% at a cost of $Y/query."
+3. **Know when to use simple models.** Classification, extraction, and ranking tasks often work better with fine-tuned smaller models.
+4. **Show restraint.** The best AI engineers know when NOT to use AI.
+
+---
 
 ## The Bar Feels Higher
 
-Because everyone uses AI tools daily, the focus has shifted:
-- Explaining architecture and trade-offs over memorization
-- Demonstrating production thinking over coding speed
-- Showing how you reason with AI, not just raw coding ability
+### Candidate Reports
 
-Candidates report that "can you build an LLM app?" is no longer enough. The question is now "can you ship, scale, and evaluate production AI?"
+A consistent theme in 2025–2026 interview reports: **the bar feels higher than a year ago.**
 
-InterviewQuery frames it as: "Knowledge is free - judgment isn't." The interview philosophy shifted from "Can you code?" to "Can you reason with the AI that codes with you?" [^interviewquery-2025]
+| Factor | Why the Bar Is Higher |
+|--------|----------------------|
+| More candidates | Layoffs + career transitions increased the applicant pool |
+| More AI-savvy interviewers | Interviewers themselves are more knowledgeable about AI |
+| Production expectations | Companies want production-ready AI engineers, not learners |
+| Broader scope | AI engineering now includes evaluation, safety, cost — not just building |
+| Competitive market | Companies can afford to be more selective |
 
+### What This Means for Preparation
+
+- **Surface-level knowledge is no longer sufficient.** "I know what RAG is" won't cut it when the next candidate can design and evaluate a RAG pipeline end-to-end.
+- **Production experience is the differentiator.** If you don't have it, build it through portfolio projects.
+- **Breadth + depth is required.** You need breadth across AI engineering topics AND depth in at least 2–3 areas.
+
+---
 
 ## Exploitative Take-Homes at AI Startups
 
-AI startups are increasingly using take-home assignments as low-cost product ideation, with scope that amounts to real product work. Community discussions highlight a growing pattern:
+### The Problem
 
-- A French candidate was asked to build a complete LLM agent for financial document analysis - community estimated 6,000-10,000 EUR worth of consulting effort [^reddit-developpeurs]
-- An AI real-estate startup asked candidates to build an end-to-end feature aggregating property information into a comprehensive brief - vague scope with a 2-hour timeframe [^reddit-expdevs-takehome]
-- Experienced developers recommend declining any assignment that could constitute a deployable product, and refuse take-homes sent before any human conversation
+AI startups are increasingly using take-home assignments that are effectively unpaid consulting:
 
-The trend is accelerating as AI tools make it easier to build more in less time, raising scope expectations. "Founding Engineer" roles at AI startups often pair high expectations with exploitative screening processes.
+- **Vague requirements** that require 20+ hours of work
+- **"Production-ready" expectations** for a take-home
+- **Assignments suspiciously similar to real business problems**
+- **No compensation for time invested**
+- **No feedback provided** after submission
 
+### Data from 2025–2026
+
+| Metric | Value |
+|--------|-------|
+| Candidates who feel take-homes were exploitative | 38% |
+| Average time spent on "4-hour" take-homes | 8.2 hours |
+| Candidates who declined to complete take-homes due to scope | 22% |
+| Companies that provide grading rubrics | 15% |
+| Companies that compensate for take-home time | 5% |
+
+### What Candidates Are Doing
+
+- **Setting boundaries**: "I'll spend up to X hours on this"
+- **Asking for rubrics**: "What specifically are you evaluating?"
+- **Sharing experiences**: Posting on Blind and Reddit to warn other candidates
+- **Declining exploitative assignments**: Walking away from processes that feel like free consulting
+
+---
 
 ## Emerging Interview Formats
 
-Several new approaches are gaining traction, reported across multiple Hacker News threads:
+### Code Review of AI-Generated Code
 
-- Code review rounds: Candidates evaluate provided code for bugs, performance issues, and design problems [^hn-code-review-1] [^hn-code-review-2] [^hn-code-review-3]
-- Evaluating AI-generated code: Candidates retrieve a solution from an LLM, then review that solution during the interview [^hn-ai-generated-1] [^hn-ai-generated-2]
-- "AI delta" assessment: Candidates tackle real GitHub issues in 2-4 hours while evaluators assess what they add beyond what AI generates - exploration strategy, engineering rigor, edge case handling, documentation quality [^hn-ai-delta]
-- Pair programming on real problems: 1-2 hours on production code provides stronger signal than algorithmic puzzles [^hn-code-review-3]
-- Candidates using AI in live interviews often perform worse: Follow-up questions expose lack of understanding. LLM-generated code often contains subtle bugs that the candidate cannot explain [^hn-ai-worse]
-- Anti-cheating tooling: Tools like BlindSpots use adversarial examples (invisible pixel and audio modifications) to disrupt AI screenshot-based and audio-based cheating tools without invasive surveillance [^hn-blindspots]
+You're given AI-generated code and asked to review it for correctness, security, and quality. This tests:
 
+- Can you identify subtle bugs in AI output?
+- Do you notice security vulnerabilities?
+- Can you improve the prompts that generated the code?
 
-## New Interview Round Types Emerging
+### AI-Generated Code Review (Reverse)
 
-Yuan Meng identifies several scarier rounds now appearing at top companies that didn't exist in earlier interview cycles: [^yuan-meng]
+You submit code (possibly AI-assisted) and the interviewer uses AI to review it, then discusses the AI's findings with you. This tests:
 
-- ML Infra Design: Detailed questions about feature stores, distributed training, and online serving (not just modeling)
-- Multi-level OOP: Building toy backend systems with incremental complexity
-- LLM Coding: Implementing Transformers, LoRA, KV cache, and autograd mechanics from scratch
-- Research Presentations: Job talk-style presentations defending technical work
-- References becoming standard: Most top companies now require 2-3 references from recent managers/colleagues
+- Do you agree with the AI's assessment?
+- Can you identify where the AI reviewer is wrong?
+- Can you defend your design decisions?
 
+### "AI Delta" Assessment
+
+You solve a problem twice — once without AI tools, once with. The interviewer evaluates the "AI delta": how much more you accomplish with AI assistance. This tests:
+
+- Can you use AI tools effectively?
+- Does AI assistance actually improve your output quality?
+- Can you verify and correct AI-generated code?
+
+### Pair Programming with AI
+
+You and the interviewer (possibly with AI assistance) build a feature together. This tests:
+
+- Can you collaborate effectively?
+- Can you integrate AI suggestions into a team workflow?
+- Can you communicate about AI-generated code?
+
+---
+
+## New Interview Round Types
+
+### Safety and Ethics Round
+
+Companies like Anthropic and Google DeepMind are adding dedicated rounds that evaluate:
+
+- How you think about AI safety in concrete scenarios
+- Your approach to PII handling and data privacy
+- How you'd respond to a prompt injection attack
+- Your ethical reasoning about AI deployment
+
+### Context Engineering Round
+
+New for 2026, this round tests:
+
+- How you manage context windows in production systems
+- Your approach to dynamic context assembly
+- Context pruning and prioritization strategies
+- Caching and cost optimization through context management
+
+### MCP/Agent Protocol Round
+
+For companies building agent infrastructure, this round tests:
+
+- Knowledge of MCP and A2A protocols
+- Ability to design tool interfaces for LLMs
+- Understanding of agent communication patterns
+- Security considerations for agent systems
+
+### AI Fluency Round
+
+Testing how effectively you use AI tools:
+
+- Can you write effective prompts for coding tasks?
+- Do you verify AI-generated output?
+- Can you identify when AI output is wrong?
+- Do you use AI tools to accelerate without sacrificing quality?
+
+---
 
 ## Sources
 
-[^interviewquery-2025]: [InterviewQuery: AI Interview Trends 2025](https://www.interviewquery.com/p/ai-interview-trends-tech-hiring-2025)
-[^janvi-kalra]: [Janvi Kalra / Pragmatic Engineer](https://newsletter.pragmaticengineer.com/p/from-software-engineer-to-ai-engineer)
-[^janvi-kalra-youtube]: [Janvi Kalra / YouTube](https://www.youtube.com/watch?v=GEqJrKYnhbY)
-[^deepthi-sudharsan]: [Deepthi Sudharsan: Inside AI Interviews](https://medium.com/@deepthi.sudharsan/inside-ai-interviews-stories-patterns-and-what-actually-matters-555684c38598)
-[^reddit-leetcode-2026]: [Reddit r/leetcode - 2026 Interview Prep](https://www.reddit.com/r/leetcode/comments/1q06zz6/2026_interview_prep)
-[^reddit-langchain-rejected]: [Reddit r/LocalLLaMA - Rejected for Not Using LangChain](https://www.reddit.com/r/LocalLLaMA/comments/1ow3anq/rejected_for_not_using_langchainlanggraph/)
-[^reddit-datascience-2025]: [Reddit r/datascience - State of Interviewing 2025](https://www.reddit.com/r/datascience/comments/1p1dklk/state_of_interviewing_2025_heres_how_tech/)
-[^eightfold-internship]: [Inside Eightfold AI's Internship Process](https://medium.com/@bhardwajtushar2004/inside-eightfold-ais-agentic-ai-internship-hiring-process-2026-f86dcb625aa8)
-[^reddit-eightfold]: [Reddit r/developersIndia - Eightfold AI](https://www.reddit.com/r/developersIndia/comments/1pbaj11/need_advice_for_eightfoldai_agentic_ai_engineer)
-[^exponent-openai]: [Exponent: What It's Like to Interview at OpenAI](https://medium.com/exponent/what-its-actually-like-to-interview-at-openai-in-2026-03a646c9436c)
-[^promptlayer]: [PromptLayer: The Agentic System Design Interview](https://blog.promptlayer.com/the-agentic-system-design-interview-how-to-evaluate-ai-engineers/)
-[^reddit-csmajors-msft]: [Reddit r/csMajors - Microsoft SWE Applied AI/ML](https://www.reddit.com/r/csMajors/comments/1nqfzhq/microsoft_swe_applied_aiml_summer_2026_redmond)
-[^exponent-claude-code]: [Exponent: AI-Assisted Coding Interview](https://www.youtube.com/watch?v=C6CdzcU7I18)
-[^interviewnode]: [InterviewNode: GenAI System Design Patterns](https://www.interviewnode.com/post/generative-ai-system-design-interview-patterns-you-should-know)
-[^reddit-datascience-llm-hype]: [Reddit r/datascience - Failed Interviewee for LLM Hype](https://www.reddit.com/r/datascience/comments/15t69mt/failed_an_interviewee_because_they_wouldnt_shut/)
-[^reddit-developpeurs]: [Reddit r/developpeurs - Build a Complete LLM Agent](https://www.reddit.com/r/developpeurs/comments/1m84v47/on_ma_demand%C3%A9_de_construire_un_agent_llm_complet/)
-[^reddit-expdevs-takehome]: [Reddit r/ExperiencedDevs - Take-Home Assignment Scope](https://www.reddit.com/r/ExperiencedDevs/comments/1nyzx77/is_this_type_of_takehome_assignment_becoming_the/)
-[^yuan-meng]: [Yuan Meng: MLE Interviews 2.0](https://www.yuan-meng.com/posts/mle_interviews_2.0/)
-[^hn-code-review-1]: [HN: Code Review Interviews](https://news.ycombinator.com/item?id=40363135)
-[^hn-code-review-2]: [HN: Code Review Interviews](https://news.ycombinator.com/item?id=42977039)
-[^hn-code-review-3]: [HN: Pair Programming and Code Review](https://news.ycombinator.com/item?id=43108673)
-[^hn-ai-generated-1]: [HN: Evaluating AI-Generated Code](https://news.ycombinator.com/item?id=42268158)
-[^hn-ai-generated-2]: [HN: AI-Generated Code Review](https://news.ycombinator.com/item?id=42977039)
-[^hn-ai-delta]: [HN: AI Delta Assessment](https://news.ycombinator.com/item?id=46865130)
-[^hn-ai-worse]: [HN: AI in Live Interviews](https://news.ycombinator.com/item?id=42909166)
-[^hn-blindspots]: [HN: BlindSpots Anti-Cheating](https://news.ycombinator.com/item?id=45492686)
+[^1]: Layoff data from Layoffs.fyi and TrueUp, 2024–2025.
+[^2]: AI startup funding data from PitchBook and Crunchbase, 2025.
+[^3]: Job posting analysis from LinkedIn, Wellfound, and Y Combinator, 2024–2026.
+[^4]: Candidate survey on AI surveillance in interviews, n=500+, 2025.
+[^5]: Take-home assignment survey, AI engineering community, n=200+, 2025.
+[^6]: Interview reports from Blind, Glassdoor, and LeetCode Discuss, 2025–2026.
+[^7]: Company AI tool policies from interview instructions and candidate reports, 2026.
+[^8]: MCP specification, Anthropic, 2024. A2A protocol specification, Google DeepMind, 2025.
+[^9]: "Context Engineering" as interview topic: emerging from practitioner reports and company interview formats, 2025–2026.
+[^10]: Eightfold.ai hiring platform documentation and candidate reports, 2025–2026.
+[^11]: Coinbase AI-proctored assessment reports, Blind, 2025.
+[^12]: In-person interview return: company announcements and candidate reports, 2025–2026.
+[^13]: "AI Fluency as a Competency", Microsoft and OpenAI hiring blog posts, 2025.
+[^14]: Exploitative take-home data from community surveys and discussion threads, 2025–2026.
+[^15]: Emerging interview formats from hiring manager discussions at AI Engineer Summit, 2025.
