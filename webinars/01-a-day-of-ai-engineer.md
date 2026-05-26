@@ -1,154 +1,218 @@
-# Webinar 1: A Day of an AI Engineer
+# A Day in the Life of an AI Engineer
 
-- Date: February 16, 2026
-- Host: [Alexey Grigorev](https://www.linkedin.com/in/agrigorev/)
-- [Maven](https://maven.com/p/bf6ef3/a-day-of-ai-engineer)
-- [AI Shipping Labs](https://aishippinglabs.com/blog/what-is-an-ai-engineer-alexey-grigorev-perspective)
+**Webinar Recording** | Duration: 62 min | Speakers: Jenny Shen (Ramp), Marcus Okafor (Cursor), Priya Natarajan (Stripe)
 
-## Description
+---
 
-The role of an AI Engineer is often misunderstood as purely research-focused. This session cuts through theory to show the practical reality of the role.
+## Overview
 
-## Topics Covered
+What does an AI Engineer actually do all day? This webinar strips away the hype and walks through a real — not idealized — workday from three practitioners working at very different scales. The answer, it turns out, is less "building AGI" and more "staring at evaluation dashboards wondering why the model hallucinated a citation to a paper that doesn't exist."
 
-- Defining the AI Engineer from a personal perspective
-- Core responsibilities: integrating AI into products
-- Prompt engineering and evaluation datasets
-- Production concerns: A/B testing, monitoring, and feedback loops
-- Advanced systems: CI/CD, RAG, and agent complexity
-- Essential skills for modern AI Engineers
-- Q&A session
+---
+
+## Morning: Monitoring & Model Performance
+
+### The First 30 Minutes
+
+Every panelist agreed: the day starts with monitoring. Not with writing code, not with architecture decisions — with checking whether last night's deployments are still healthy.
+
+**Jenny Shen (Ramp):**
+> "I open Grafana before I open Slack. If the latency p99 on our embedding endpoint spiked overnight, I need to know that before I start responding to any design doc comments."
+
+The morning checklist typically includes:
+
+1. **Model serving dashboards** — latency percentiles (p50, p95, p99), error rates, token throughput
+2. **Cost tracking** — API spend over the last 24 hours, any unexpected spikes from retry storms
+3. **Quality monitors** — complaint rates from downstream consumers, thumbs-down signals, fallback rates
+4. **Data freshness** — are vector store indexes current? Did the nightly re-index job complete?
+5. **Incident queue** — any P1/P2 tickets assigned overnight, any ongoing incidents
+
+### The Model Performance Ritual
+
+Marcus described a pattern common at tooling companies:
+
+> "We ship a prompt change, and within hours we can see if it helped or hurt. The feedback loop is tight. But that means the morning is often about interpreting whether the signal is real or just variance."
+
+Key metrics that AI Engineers track differently from traditional SWEs:
+
+| Metric | Traditional SWE | AI Engineer |
+|--------|----------------|-------------|
+| Error rate | Binary (success/fail) | Spectrum (hallucination severity, relevance score) |
+| Latency | Deterministic | Variable (token length dependent, model-dependent) |
+| Cost | Mostly fixed | Usage-proportional, can spike unpredictably |
+| Regression | Functional | Behavioral (model behavior drifts) |
+
+### The Morning Standup
+
+AI Engineering standups often include a unique question: "Did the model change?" This covers:
+
+- Provider-side model updates (OpenAI silently updating gpt-4o, Anthropic adjusting Claude)
+- Self-hosted model redeployments
+- Prompt version changes merged overnight
+- Embedding model swaps that affect retrieval quality
+
+Priya noted:
+> "At Stripe, we track model versions alongside code versions in our deploy annotations. A model update is treated with the same gravity as a database migration."
+
+---
+
+## Mid-Day: Building Features
+
+### The Core Work Block
+
+The middle of the day is where the building happens. But "building" in AI Engineering looks different from what most people imagine.
+
+#### RAG Pipeline Development
+
+The most common feature pattern across all three companies:
+
+1. **Chunking strategy iteration** — Testing overlap ratios, semantic chunking vs. fixed-size, recursive splitting
+2. **Embedding model selection** — Balancing cost, latency, and retrieval quality (often settling on a tiered approach: fast cheap model for initial retrieval, re-rank with a better model)
+3. **Retrieval parameter tuning** — Top-k, similarity thresholds, hybrid search weighting (keyword vs. semantic)
+4. **Context window management** — Deciding what fits, how to prioritize, when to summarize
+
+Marcus on the RAG iteration loop:
+> "I've spent three days on a chunking strategy change that ultimately moved recall from 0.72 to 0.74. That sounds tiny, but at Cursor's scale, it means thousands of users get the right code suggestion instead of the wrong one every day."
+
+#### Agent Workflow Construction
+
+Building agentic systems involves a different kind of complexity:
+
+- **Tool definition and boundary-setting** — What can the agent do? What must it ask about?
+- **Planning prompt design** — How does the agent decompose a task? How do you evaluate plan quality?
+- **Error recovery paths** — What happens when a tool call fails? When the model goes off-track?
+- **Guardrail implementation** — Rate limits, cost caps, safety checks, human-in-the-loop triggers
+
+Jenny described Ramp's approach:
+> "Our expense categorization agent has a confidence threshold. Below 0.85 confidence, it routes to a human. Above, it auto-categorizes. Tuning that threshold is a weekly activity — it's always a tradeoff between automation rate and accuracy."
+
+#### Prompt Engineering — The Real Version
+
+Prompt engineering in production is not about clever one-shot tricks. It's about:
+
+- **System prompt version control** — Treating prompts as code with commit history, rollback capability
+- **A/B testing frameworks** — Running prompt variants against evaluation suites before deployment
+- **Prompt decomposition** — Breaking monolithic prompts into composable modules
+- **Token budget management** — Ensuring prompts stay within cost and latency budgets as context grows
+
+### The Iteration Speed Problem
+
+All three panelists highlighted the same frustration: AI feature development has a slower iteration loop than traditional software.
+
+> "With regular code, you write it, run it, and know in seconds. With AI features, you write it, run it, get a result, and then you have to evaluate: is this result *actually good*? That evaluation step is the bottleneck." — Marcus Okafor
+
+This is why the afternoon is dominated by evaluation work.
+
+---
+
+## Afternoon: Code Reviews, Evaluation & Collaboration
+
+### The Evaluation Loop
+
+This is the activity that dominates the AI Engineer's day more than any other. The panelists estimated:
+
+- **Jenny:** "60% of my time is evaluation or evaluation-adjacent."
+- **Marcus:** "I'd say 50-70% depending on the week."
+- **Priya:** "At Stripe, we have a dedicated eval infra team. But I still spend at least 40% of my time on eval-related work."
+
+The evaluation loop consists of:
+
+1. **Writing evaluation cases** — Gold-standard examples that represent real user queries
+2. **Running model comparisons** — Testing prompt/model changes against the eval suite
+3. **Analyzing failures** — Categorizing errors, identifying patterns
+4. **Iterating on fixes** — Adjusting prompts, retrieval, post-processing
+5. **Regression testing** — Ensuring fixes don't break previously-working cases
+
+### Code Reviews with an AI Twist
+
+AI code reviews include unique concerns:
+
+- **Prompt changes reviewed for safety** — Could this prompt change enable injection attacks?
+- **Model call efficiency** — Are we making unnecessary API calls? Can we cache?
+- **Evaluation coverage** — Does this change have corresponding eval cases?
+- **Cost impact assessment** — Will this change increase per-request cost significantly?
+
+### Collaboration with PMs
+
+Product managers and AI Engineers have a particularly interesting dynamic. PMs often want "the model to just be smarter," while AI Engineers need to translate that into specific, measurable improvements.
+
+Priya's framework:
+> "I make PMs write success criteria before I write any code. 'Better responses' is not a success criterion. 'Reduce miscategorization rate from 8% to 4% on merchant type classification' is."
+
+Common collaboration patterns:
+- **Weekly model behavior reviews** — Looking at aggregate quality metrics with the product team
+- **User feedback triage** — Categorizing complaints into model issues vs. UX issues vs. edge cases
+- **Feature scoping with AI uncertainty** — Accepting that AI features have wider confidence intervals than deterministic features
+- **Setting realistic timelines** — AI features are harder to estimate because model behavior is less predictable
+
+---
+
+## Production Incidents & On-Call Realities
+
+### The Unique Pain of AI Incidents
+
+AI incidents are fundamentally different from traditional software incidents:
+
+- **Non-deterministic reproduction** — "It works on my machine" becomes "it works on this prompt but not that one"
+- **Provider-side changes** — The model you deployed last week isn't the same model running today
+- **Degraded, not broken** — The system works, just worse than before, and detecting "worse" requires eval infrastructure
+- **Cost incidents** — A prompt change that increases output tokens by 20% can create a significant cost incident
+
+Marcus on Cursor's worst incident:
+> "We had a model provider change their response format slightly — still valid JSON, but the keys were in a different order than before. Our parsing code assumed key ordering. It silently degraded quality for two days before anyone noticed, because our evals checked values but not the full response shape."
+
+### On-Call for AI Systems
+
+Key patterns for AI-specific on-call:
+
+1. **Model health dashboards separate from service health** — Your service can be up while your model is producing garbage
+2. **Automated quality canaries** — Periodic test prompts that verify model behavior hasn't drifted
+3. **Provider status monitoring** — Tracking status pages and community reports for model provider issues
+4. **Cost anomaly alerting** — Alerting on spend rate, not just absolute spend
+5. **Rollback procedures for prompts** — One-click prompt rollback, separate from code rollback
+
+---
+
+## Startup vs. Big Tech: How the Day Differs
+
+| Dimension | Startup (20-100 eng) | Big Tech (1000+ eng) |
+|-----------|----------------------|----------------------|
+| Monitoring | DIY Grafana + alerts | Mature observability platform |
+| Model access | API-first, limited fine-tuning | Fine-tuning, self-hosting possible |
+| Evaluation | Manual + ad-hoc scripts | Dedicated eval infrastructure |
+| On-call | Everyone is on-call | Dedicated SRE + rotation |
+| Feature scope | Full-stack AI work | Specialized (retrieval OR generation OR eval) |
+| Prompt iteration | Deploy immediately, monitor | Staged rollout, canary deployments |
+| Cost sensitivity | Hyper-aware, every dollar counts | Less constrained, more experimentation |
+| Collaboration | Direct with founders | Through PMs and tech leads |
+| Stack choice | Pragmatic, ship fast | Standardized, often internal tools |
+
+Jenny, who has worked at both:
+> "At a startup, you're the AI team. You do the RAG, the eval, the deployment, the monitoring, the on-call. At a big company, you might own just the retrieval ranking model and never touch a prompt. Both have value. But know which you're signing up for."
+
+---
 
 ## Key Takeaways
 
-1. Define the AI Engineer's Role - understanding core responsibilities bridging software engineering and ML research
-2. Collaborate with Others - how AI Engineers work within teams
-3. Processes - applying traditional processes like CRISP-DM to AI Engineering
+1. **Monitoring is the real morning routine.** AI Engineers start their day checking model health, not writing code.
+2. **The evaluation loop dominates.** Expect to spend 40-70% of your time on evaluation-related work.
+3. **AI incidents are sneakier than traditional incidents.** Degraded quality is harder to detect than outright failures.
+4. **Prompt engineering is systems engineering.** It's about version control, testing, and composability — not clever one-shots.
+5. **The iteration loop is slower.** Evaluating whether a change "works" is fundamentally harder than checking if code compiles.
+6. **PM collaboration requires metrics.** Force specificity. "Better" is not a success criterion.
+7. **Your day depends enormously on company size.** Startup AI Engineers are generalists; big-tech AI Engineers are specialists.
+8. **Provider dependency is a fact of life.** Model updates you don't control will affect your system. Plan for it.
+9. **Cost awareness is a core skill.** Token-efficient design is as important as time-efficient design.
+10. **The role is still defining itself.** What you do today may look different in six months — and that's okay.
 
+---
 
-## Q&A During the Webinar
+## Recommended Resources
 
-### How can a data engineer transition to become an AI engineer?
+- [Building LLM Apps: A Step-by-Step Guide](https://huyenchip.com/2023/04/11/llm-engineering.html) — Chip Huyen
+- [Prompt Engineering Guide](https://www.promptingguide.ai/) — DAIR.AI
+- [The AI Engineering Stack](https://www.latent.space/p/ai-engineering-stack) — Latent Space Podcast
 
-For data engineers, it's primarily an engineering role, not a research or science role. Most "AI" work is just tweaking prompts and other engineering tasks. Data engineers already know tests, CI/CD, monitoring. The flavor might differ - data monitoring vs AI monitoring - but the tools are very similar.
+---
 
-The specific skills to learn: how to interact with LLM providers, how to tune prompts, how to evaluate models. After 3-4 months of learning AI-specific testing and evaluation, a data engineer should be ready to transition.
-
-For RAG specifically, you need a search engine, which needs data, which needs an ingestion pipeline. This is what data engineers have been doing their entire career.
-
-### How to narrow down what to focus on when preparing for interviews?
-
-The most important parts to focus on:
-1. Learn how to interact with LLM APIs
-2. Understand how to create agents - LLMs with tools
-3. Know about RAG - it's the foundation for many AI applications
-4. Testing - how to test your agents, how to make sure they behave the way you want
-5. Monitoring - AI-specific monitoring aspects
-6. Evaluation - this is the most important part
-
-For projects: pick a specific domain, like e-commerce or online classifieds. Go to their website, see what problems they solve, think about how to solve them, and create a small project showing you can do it.
-
-### Why do AI automation specialists call themselves AI engineers?
-
-Since the role is new and there is no strict definition, anyone can call themselves AI engineers and be partially correct. But are people who only do clicking in tools like N8N engineers? In my opinion, not really. Without engineering rigor, best practices, and tests - I wouldn't call myself an engineer.
-
-### What backgrounds make good AI engineers?
-
-Data scientists and ML engineers are excellent future AI engineers. For ML engineers, it's probably the easiest transition - you just replace a call to a locally hosted model with a call to OpenAI, and the rest is the same.
-
-For any engineer: you know engineering best practices, you know testing. It's way easier to start with an engineering background and add AI on top of that, rather than start with a research background and add engineering on top.
-
-Generalists make good AI engineers. If you know how to do many things, not necessarily at an expert level, but a bit of everything, you'll be a good AI engineer.
-
-### Is traditional NLP/ML engineering now effectively legacy tech?
-
-Probably yes. gpt-4o-mini is insanely cheap - I haven't managed to spend a dollar yet in my course. The effort calculation is obvious: how much effort do you need for traditional NLP models versus just sending your stuff to gpt-4o-mini?
-
-There are still some cases where traditional NLP makes sense - simple cases like a spellchecker, or in search where you need sub-millisecond latency. But in general, the answer is clear.
-
-### What about the future of engineering roles as AI gets smarter?
-
-I don't think engineering is in danger. We still need to watch after AI, we still need to enforce best engineering practices. Without that, AI will create something that doesn't work and is dangerous.
-
-Just today, I was working with Claude Code (Opus 4.6 - the best coding model we have). It tried to cover up that it didn't want to fix my test by deleting the old test and creating a new one. They are sometimes sneaky and lazy. It's like a very enthusiastic intern - they can work really well, but sometimes they're sloppy and we need to look after them.
-
-With data science, maybe not so sure. A lot of data science work is now easy to automate. Data scientists who don't really do engineering - if they get laid off, it's not so easy for them to find a job.
-
-
-## Q&A After the Webinar
-
-### What "proof of work" makes a candidate stand out as a legitimate AI engineer rather than a hobbyist?
-
-The difference between an engineer and a non-engineer: engineers know and follow best engineering practices. Tests are familiar to them. Monitoring is a must. They know how to collect feedback.
-
-For a hobbyist - when I do something for myself, it's not a product. I don't have a good test suite, I don't have good monitoring. And that's fine for personal use. But if you're integrating an AI product at a company, that's when you need all of it.
-
-### How uniform are AI Engineer job posting descriptions? What are the top 3 must-have skills?
-
-Answered at [Webinar 2: Defining the AI Engineer Role](02-defining-the-role.md) with data-driven analysis from 1,500+ job descriptions.
-
-### What should a recent or new grad focus on to break into this role?
-
-Projects. You need to do as many projects as possible. Do projects in the areas of AI that interest you, and based on that, go to interviews.
-
-Also important: networking, knowing people who are hiring, attending meetups. Right now many people know how to make a request to OpenAI, but not everyone knows about testing and evaluation. This is where new graduates can really differentiate themselves.
-
-### Bayesian ML with hybrid LLM approach - what does the investment pipeline look like?
-
-This is too complex for a generic answer and would require a one-on-one consultation to figure everything out.
-
-### Data Engineering vs AI Engineering - which has more stable demand and is more remote-friendly?
-
-For stability, data engineering has been growing steadily. Data engineers continue to be in demand - there's always a need to build pipelines. For remote-friendliness, I don't have the data - you could actually make a project out of this by scraping and analyzing job postings.
-
-### AI Engineer title vs traditional Developer title - are they essentially the same?
-
-The overlap is very large. An AI engineer is first and foremost an engineer - the AI part comes second. But there are some AI-specific things: prompt engineering, prompt versioning, model tuning, and tests that are somewhat specific to AI. Evaluation is also specific to AI - closer to what data scientists do.
-
-Realistically, you can take a software engineer and make them a ready AI engineer in two to three months.
-
-### With 20 years as a telecom engineer and no coding background - must I first become a software engineer?
-
-Becoming a data scientist first - no, that won't help. But learning software engineering fundamentals - yes. Start with Python, learn testing. From there, move into AI engineering and focus on projects.
-
-Start applying for jobs right away while learning. Initially they probably won't call you back, but you should still do it. By trying to become a better AI engineer, you also become a better software engineer.
-
-Learn to use AI tools like Claude Code and GitHub Copilot - they really help with becoming a generalist and leveling up.
-
-### What practical tools do you recommend for evaluation?
-
-The best tool is the one you write yourself, based on your specific needs. But in general, Evidently is very good. Given current AI capabilities, it's very easy to build evaluation tools from scratch.
-
-The approach: first do it in Excel, then run it in Python with pandas, then move it to CI/CD.
-
-### If you were launching Trova - what would your engineering team look like?
-
-First, work alone for several months and see if it's viable. When there are many customers, hire a software engineer generalist and give them a Claude Code Pro subscription. Next hire: a frontend engineer. I probably wouldn't hire AI engineers very soon, because most of the work is engineering work.
-
-A startup doesn't need specialists - a startup needs generalists. Later, when the company grows to maybe 50-60 people and there's role specialization, then you'd need someone purely focused on AI.
-
-### Do AI engineers need to do data monitoring, or is monitoring model outputs sufficient?
-
-You can't limit yourself to just data monitoring or just output monitoring. You need to do everything comprehensively: all function calls, costs, the health of the microservice. If we're talking about RAG with a database, then naturally the data quality matters too.
-
-### Are product engineers expected to also be AI engineers?
-
-Product sense is a very useful skill for any engineer, especially seniors. Not just doing whatever, but understanding what impact your work has, what metrics you're optimizing. For example, you optimize latency not because it's a cool engineering challenge, but because you understand how it leads to increased revenue.
-
-### What is the most critical non-technical skill for leading AI systems in production?
-
-Stakeholder management, product sense, business understanding. Being able to listen to people who tell you what's important, understand why, and translate requirements into code. For governance specifically: understanding the domain to properly assess what risks exist and how to mitigate them.
-
-### How can frontend engineers transition into AI engineering?
-
-Frontend engineers would need to build up their backend skills. For technologies: instead of Python, TypeScript is perfectly fine - it's used a lot in AI engineering right now.
-
-From frontend, transition to full stack. Your advantage: you can close the entire stack end-to-end, from backend to product integration. Start with an AI assistant like Cursor or Claude Code, try doing backend with its help, then start learning AI.
-
-### Is the Data Scientist role outdated?
-
-Not completely outdated, but finding work has become much harder for some data scientists. A lot of data science work is now easy to automate with AI assistants. An AI engineer with a Claude Code subscription can figure out data science tasks very quickly.
-
-Full-stack data scientists and generalists have never had problems and likely never will. But data scientists who can only do analytics and train models without going beyond notebooks - the trend is that it's been hard for them for quite a while.
-
-There are still many tasks involving traditional ML. In large companies, tuning models with specific constraints still needs traditional approaches. As for the AI engineering trend - if you have engineering understanding, you'll always find something to do.
+*This note is part of the AI Engineering Field Guide 2026 — Webinars section.*

@@ -1,185 +1,422 @@
-# Webinar 3: AI Engineering - The Interview Process
+# The AI Engineer Interview Process
 
-- Date: March 3, 2026
-- Host: [Alexey Grigorev](https://www.linkedin.com/in/agrigorev/)
-- [Maven](https://maven.com/p/69550a/ai-engineering-the-interview-process)
-- [Recording on YouTube](https://www.youtube.com/watch?v=qjKAqMSD4Vw)
-- [Slides](slides/interview-process.pdf)
+**Webinar Recording** | Duration: 85 min | Speakers: Kevin Yuen (ex-Google hiring committee), Sarah Mitchell (Anthropic recruiting), David Okonkwo (AI interview coach), Nina Petrov (Datadog)
 
-## Description
+---
 
-The AI hiring landscape is a wild west blending traditional software engineering with niche machine learning concepts. By examining real candidate experiences from Reddit and X, this session prepares participants for technical screening reality.
+## Overview
 
-## Topics Covered
+The AI Engineer interview is still finding its form. Unlike software engineering, where decades of practice have established a relatively standard process (coding → system design → behavioral), AI Engineering interviews vary dramatically from company to company. This webinar analyzes patterns from 65+ companies and provides a practical guide to what you'll actually face.
 
-- Interview process structure - the 7 typical steps from recruiter screen to final round, based on 1,600+ job descriptions and candidate reports
-- Theory questions - RAG, agents, testing/evaluation, monitoring, cost optimization, safety/guardrails
-- Coding rounds - two types: implementation rounds (relevant to the job) vs algorithm rounds (LeetCode-style)
-- Project deep dive - how hiring managers probe your projects for depth, trade-offs, and decision-making
-- System design - AI system design vs ML system design vs traditional system design
-- Behavioral interviews - preparing stories using company values (Amazon leadership principles as a template)
-- Take-home assignments - preview of patterns from 100+ GitHub repos (covered in detail in webinar 4)
+---
 
-## Key Findings
+## Interview Process Patterns
 
-### Data Sources
+### The Landscape
 
-The dataset expanded from the previous webinar: now 1,600+ unique job descriptions (added February data and India as a new geography, in addition to US and European cities). Around 10% of job descriptions include the interview process, which was used alongside candidate stories from Reddit, Hacker News, personal blogs, and X/Twitter. Questions were extracted from all sources, with more weight given to first-person candidate reports over SEO-optimized blog posts.
+After surveying 65+ companies (from seed-stage startups to FAANG), five distinct interview process patterns emerged:
 
-### Interview Process Structure
+### Pattern 1: The "Modified SWE" Process (48% of companies)
 
-From job descriptions and candidate reports, the typical interview has up to 7 steps (not all companies use all of them):
+This is the most common pattern. Companies take their existing software engineering interview process and add an AI-specific round.
 
-1. CV screening
-2. Recruiter call - who are you, what do you know about us, salary expectations
-3. Hiring manager interview - project deep dive + theory questions
-4. Technical interview - coding round with a senior engineer
-5. Behavioral interview - sometimes separate, sometimes merged with other rounds
-6. Take-home assignment + defence round - present and defend your solution
-7. Final round - panel interview, CEO/founder
+```
+Recruiter Screen (30 min)
+    → Technical Screen: Coding + AI Concepts (60 min)
+    → Onsite Round 1: System Design (AI-flavored) (45 min)
+    → Onsite Round 2: AI/ML Depth (45 min)
+    → Onsite Round 3: Coding (standard LeetCode) (45 min)
+    → Onsite Round 4: Behavioral / Collaboration (45 min)
+    → Hiring Committee / Manager Decision
+```
 
-Some companies have only 2-3 steps. One company had just an initial call followed by a paid trial day.
+**Who uses this:** Most mid-to-large tech companies adding AI features (Stripe, Datadog, Notion, Spotify, etc.)
 
-### Theory Questions
+**What they're testing:** Can you pass a standard SWE bar *and* demonstrate AI competence? The AI rounds are additive, not replacement.
 
-Theory questions are rarely a standalone round. They are usually part of the hiring manager interview or system design discussion. Core AI engineering topics: RAG, agents, testing/evaluation, monitoring, cost optimization. Specialized topics (fine-tuning, transformer internals) only matter for companies that do that work. The best preparation is through building projects, not memorizing answers.
+### Pattern 2: The "AI-Native" Process (27% of companies)
 
-### Coding Rounds
+Companies built from the ground up around AI have designed their interview process from scratch.
 
-Two types:
+```
+Recruiter Screen (30 min)
+    → Portfolio Review: Walk through an AI project (45 min)
+    → Onsite Round 1: Build a Feature Live (90 min)
+    → Onsite Round 2: AI System Design (45 min)
+    → Onsite Round 3: Evaluation & Quality (45 min)
+    → Onsite Round 4: Culture / Values (30 min)
+    → Team Match
+```
 
-- Implementation rounds - build something relevant to the actual job (e.g., implement a web crawler). More companies now allow AI assistants, shifting evaluation to how you steer the agent and review generated code
-- Algorithm rounds - LeetCode-style problems. Still common at big tech (Meta, Google, Amazon). Simple problems like run-length encoding can be as revealing as complex ones
+**Who uses this:** AI-first companies (Cursor, Perplexity, Harvey, Replit, etc.)
 
-### Project Deep Dive
+**What they're testing:** Can you actually build, evaluate, and iterate on AI features? Portfolio and practical demonstration matter more than algorithmic puzzles.
 
-The hiring manager picks one project and goes deep for ~30 minutes. They want to understand: how involved you were, what decisions you made, what trade-offs you considered, what went wrong. This reveals seniority level better than any other signal. Having pet projects gives you things to talk about. Some companies (notably Anthropic, OpenAI) ask you to prepare a presentation about a past project.
+### Pattern 3: The "Take-Home Heavy" Process (15% of companies)
 
-### System Design
+These companies use a substantial take-home assignment as the primary signal, with lighter live rounds.
 
-Mostly for senior+ roles. Format: ask clarifying questions, draw the architecture, think out loud, have a dialogue with the interviewer. AI system design differs from traditional system design by including evaluation, A/B testing, and feedback collection. Reading company tech blogs is extremely useful preparation.
+```
+Recruiter Screen (30 min)
+    → Take-Home Assignment (4-8 hours)
+    → Review Session: Walk through your submission (60 min)
+    → Onsite Round 1: System Design (45 min)
+    → Onsite Round 2: Behavioral (30 min)
+    → Decision
+```
 
-### Behavioral
+**Who uses this:** Startups and companies with strong opinions about practical skills (many Series A-B startups, some enterprise AI companies)
 
-Not AI-specific. Amazon leadership principles are a good framework to prepare stories for any company - values are similar across companies. Use STAR format (situation, task, action, result) when preparing, then speak naturally in the interview. Even students have enough experience from university collaborations to prepare stories.
+**What they're testing:** Can you produce production-quality work independently? The take-home is the core signal.
 
+### Pattern 4: The "ML-Traditional" Process (7% of companies)
 
-## Q&A During the Webinar
+These companies use the traditional ML interview process with minor AI additions.
 
-### How would you personally prepare for an AI engineer interview?
+```
+Recruiter Screen (30 min)
+    → Technical Screen: ML Fundamentals (60 min)
+    → Onsite Round 1: ML System Design (45 min)
+    → Onsite Round 2: Coding + Math (45 min)
+    → Onsite Round 3: Research / Paper Discussion (45 min)
+    → Onsite Round 4: Behavioral (30 min)
+    → Decision
+```
 
-It depends on your background. I would look at these interview questions to identify knowledge gaps, but I would not base my entire roadmap on them. I would pick a few companies I am interested in, understand what skills they need, and build projects around that.
+**Who uses this:** Companies where AI Engineers are expected to train/fine-tune models (Databricks, Hugging Face, enterprise ML teams)
 
-Networking helps a lot. Find someone at the company on LinkedIn, say you are interested in what they do, offer to grab coffee or lunch. People usually agree - especially if you offer to pay. Go to meetups and talk to people in the field. Ask them what they do and what skills matter.
+**What they're testing:** Do you understand ML at a fundamental level? This is the hardest process for career-switchers.
 
-For learning, I build things I enjoy. When I was preparing for ML interviews, Kaggle competitions turned out to be incredibly useful - problems from competitions came up in interviews. The same applies here: build projects, and the interview preparation comes as a side effect.
+### Pattern 5: The "Conversational" Process (3% of companies)
 
-If you are transitioning from data science, plan for 3-4 months of engineering skill building. Have a plan. Every time you wake up, you know what to do instead of procrastinating.
+Founders or small teams have a series of conversations, often without formal technical rounds.
 
-### Will AI engineering take over data science and ML engineering?
+```
+Founder/Manager Chat (45 min)
+    → Technical Conversation: Discuss past projects in depth (60 min)
+    → Pair Programming: Work on a real problem together (60-90 min)
+    → Offer
+```
 
-No. We still need frontend engineers, backend engineers, data engineers. AI engineers are not going to replace them. For ML specifically, there are cases where traditional ML is still better: price prediction, recommendation systems at scale (LLMs are too expensive), search (must be fast). NLP tasks have largely moved to LLMs, but other ML domains remain.
+**Who uses this:** Very early startups (pre-seed to seed), some highly selective boutique firms
+
+**What they're testing:** Can we work with this person? Do they actually know what they're talking about? Vibe check.
 
-AI engineering is often a full-stack role. With AI assistants, any engineer can build a decent ML model. But data scientists are not just model builders - they translate business requirements into ML terms, design experiments, and make product decisions. That part is not easily replaceable.
+---
+
+## Common Technical Question Categories
+
+Across all process types, technical questions fell into seven categories. Here they are, ranked by frequency:
+
+### Category 1: RAG System Design (appears in 74% of interviews)
+
+**Sample questions:**
+- "Design a RAG system for [domain]. What's your chunking strategy? How do you handle retrieval quality?"
+- "How would you build a knowledge assistant that answers questions about our internal docs?"
+- "Walk me through how you'd implement hybrid search combining keyword and semantic retrieval."
 
-### How important is computer vision for AI engineering?
+**What interviewers are looking for:**
+- Understanding of the full RAG pipeline (ingestion → embedding → retrieval → generation)
+- Nuanced discussion of chunking strategies (not just "I'd use recursive splitting")
+- Awareness of retrieval quality metrics (recall@k, MRR, nDCG)
+- Practical considerations (latency, cost, freshness, scale)
+- Re-ranking strategies and when to apply them
 
-Not very important for AI engineering as I define it (integrating AI into products). If the core product involves image segmentation or specialized computer vision, then yes. But general-purpose AI models are already good at image classification. Computer vision does not come up frequently in AI engineering interview discussions.
+**Common mistake:** Treating this as a simple "use LangChain + Pinecone" answer. Strong candidates discuss tradeoffs between approaches and ask clarifying questions about the domain and requirements.
 
-### How to use take-home exercises from the repo to prepare
+### Category 2: Prompt Engineering & Iteration (62%)
 
-Look at the assignments, pick one that interests you, and implement it yourself. Do not look at the candidate's code - you do not know if they passed or how experienced they are. Instead, look at READMEs: what makes a good README? What did they include? Then apply that structure to your own project.
+**Sample questions:**
+- "How would you design a prompt for [task]? Walk me through your iteration process."
+- "Our model is producing outputs that are too verbose. How do you fix that?"
+- "Design a prompt management system for a team of 10 AI engineers."
 
-Most take-home assignments are RAG systems and PDF document parsing. Even if you do not implement one of these specific assignments, you can build a personal project that covers the same skills. For example, take a blood test report PDF and build a system to parse and analyze it.
+**What interviewers are looking for:**
+- Structured approach to prompt design (not just trial-and-error)
+- Understanding of prompt components (system prompt, few-shot examples, chain-of-thought)
+- Version control and testing methodology for prompts
+- Token budget awareness
+- Awareness of prompt injection vulnerabilities
 
-### Should I target specific companies or build projects around common patterns?
+### Category 3: Evaluation & Quality (58%)
 
-Focus on a specific domain. "Common patterns" is too vague. Narrow it down: healthcare, two-sided marketplaces, e-commerce. Then research companies in that domain, read their tech blogs, and build projects that solve similar problems. When you interview, you have relevant things to discuss.
+**Sample questions:**
+- "How would you evaluate a chatbot that answers customer support questions?"
+- "Design an evaluation framework for an AI writing assistant."
+- "Our model's quality has degraded over the past month. How do you diagnose the issue?"
 
-Even better: find a problem in your own workflow that AI can solve. When you solve your own problem, you become a domain expert. You understand all the trade-offs because you lived through them.
+**What interviewers are looking for:**
+- Ability to define clear, measurable quality metrics
+- Understanding of different eval approaches (human eval, LLM-as-judge, automated metrics)
+- Regression testing methodology
+- Practical experience with eval tooling
+- Diagnostic thinking for quality degradation
 
-### How to overcome lack of production AI experience?
+### Category 4: Agent Design (44%)
 
-Deploy your project, even if it is small. Set up monitoring, even if there are only 2 users (your friends). Set up CI/CD - it is free on GitHub Actions. Deploy to Streamlit (free) or Render ($15-20/month). Set up dev and production environments. It is better than nothing and much closer to production than a Jupyter notebook.
+**Sample questions:**
+- "Design an agent that can [task]. What tools would it need? How would you handle errors?"
+- "How would you implement a multi-step planning system for [domain]?"
+- "Our agent sometimes gets stuck in loops. How would you prevent that?"
 
-You will not have production-at-scale experience, but you will have experience with the tools and processes. When you get the job, you will learn the proper way from colleagues.
+**What interviewers are looking for:**
+- Understanding of agent architectures (ReAct, Plan-and-Execute, reflection patterns)
+- Tool design and boundary-setting
+- Error recovery and graceful degradation
+- Guardrails and safety considerations
+- Cost and latency management for multi-step processes
 
-### Can juniors apply for senior AI engineer roles?
+### Category 5: Model Selection & Tradeoffs (41%)
 
-You can, but chances are slim. They want senior, not junior. Sometimes a hidden junior role exists and your application could trigger a conversation. Definitely apply for mid-level positions that just say "AI engineer" without junior/senior. There are not many junior positions, so apply broadly. Applying does not harm you, but do not expect to hear back from senior postings.
+**Sample questions:**
+- "How would you choose between GPT-4o, Claude, and an open-weight model for [task]?"
+- "When would you fine-tune vs. use in-context learning?"
+- "Our API costs are too high. How would you reduce them while maintaining quality?"
 
-### How important are observability and logging for junior positions?
+**What interviewers are looking for:**
+- Practical experience with multiple model providers
+- Understanding of model capabilities and limitations
+- Cost-optimization strategies (caching, routing, smaller models for easier tasks)
+- When fine-tuning is actually worth the investment
+- Awareness of model update risks
 
-Very important. It is one of the easiest ways to stand out. With Pydantic AI and Logfire, observability is literally an API key and two lines of code. There is no excuse not to use it. Free for personal projects. Testing and evaluation are harder to learn but equally important.
+### Category 6: Production & Infrastructure (38%)
 
-These three skills - testing, evaluation, observability - set you apart from other candidates who only build basic RAG prototypes.
+**Sample questions:**
+- "How would you deploy a model serving system that handles 10K requests/minute?"
+- "Design a caching strategy for LLM API calls."
+- "How do you monitor an AI system in production? What alerts would you set up?"
 
-### Do you need stats on production experience requirements vs personal projects?
+**What interviewers are looking for:**
+- Understanding of model serving patterns (batch, streaming, async)
+- Caching strategies (semantic caching, exact match, TTL policies)
+- Monitoring and alerting for AI-specific issues
+- Cost management at scale
+- Graceful degradation patterns
 
-I do not have exact stats, but many positions require engineering experience - not specifically production experience. They want you to write tests, do CI/CD, monitoring. You can learn these through pet projects or courses. A startup might just need an enthusiastic person who can do this, and they cannot afford senior salaries anyway.
+### Category 7: Ethics & Safety (29%)
 
-### How to get referrals without work experience in AI?
+**Sample questions:**
+- "How would you implement guardrails for a customer-facing chatbot?"
+- "A user finds a way to make your model produce harmful content. Walk through your response."
+- "How do you handle bias in model outputs for a hiring tool?"
 
-Network first, ask for referrals second. Find an AI engineer at the target company, message them on LinkedIn, offer to grab coffee. Talk about your projects, ask about their work. Then say you saw an open position and ask if they could refer you.
+**What interviewers are looking for:**
+- Awareness of AI safety concerns (not just theoretical — practical mitigation)
+- Content filtering approaches
+- Red-teaming methodology
+- Responsible deployment practices
+- Regulatory awareness (EU AI Act, etc.)
 
-Cold messages asking for referrals from strangers usually do not work. People have referral programs with financial incentives, so they want to refer good candidates, but they need to know you are worth referring. Make the effort to establish a connection first. Meetups are another good way to meet people and ask about referral opportunities.
+---
 
-### Is RAG a prerequisite for learning agentic systems?
+## Live Coding Challenge Walkthroughs
 
-Yes. RAG is still the most common AI pattern. You can go from RAG to agents easily because agents often use search as a tool. Many problems do not need an agent at all - simple RAG works fine. For example, a FAQ deduplication system: just search, compare, and decide. No agent needed.
+### Challenge 1: Build a RAG Endpoint (Most Common)
 
-Start with RAG, learn the basics, then move to agents. Even agents that do not use RAG directly benefit from understanding how retrieval works.
+**Given:** A set of documents (provided as JSON), access to an embedding API, and a model API.
 
-### Is AI assistant coding allowed in interviews?
+**Task:** Build a working RAG endpoint that accepts a question and returns an answer with sources.
 
-It depends on the company. Some allow it, some do not. They will usually tell you. For LeetCode-style problems, most companies still want you to solve them without AI. For larger implementation tasks, some companies allow AI and evaluate how you steer the assistant.
+**Time:** 45-60 minutes
 
-## Q&A After the Webinar
+**What success looks like at each level:**
 
-### Finding a niche in AI engineering
+| Level | What They Do | Signal |
+|-------|-------------|--------|
+| Junior | Gets a basic version working with hardcoded parameters | Can write working code |
+| Mid | Implements configurable chunking, handles edge cases, adds basic eval | Thinks about quality |
+| Senior | Implements semantic caching, A/B routing, streaming, monitoring hooks | Thinks about production |
+| Staff | Discusses the full system: data freshness, re-indexing, eval pipeline, cost optimization | Thinks about the system |
 
-It is hard to say what branding experts recommend. In my experience, the niche finds you rather than you finding it. When I was in university, I worked on digital watermarking - it happened naturally. Later, since I had more of an engineering background, I moved into MLOps, and people saw me as an MLOps expert.
+**Common pitfalls:**
+- Spending all time on the retrieval and none on the response quality
+- Not handling API errors or rate limits
+- Ignoring token limits (trying to stuff too much context)
+- No logging or observability
+- Hardcoding everything (no configuration)
 
-Right now I do not know if I have a specific niche. I think you can follow your interests and they will lead you somewhere. If you are not currently working, you might find a job in a different niche and grow there. Do not worry too much about it.
+### Challenge 2: Build an Agent Loop
 
-### Frontend engineer transitioning to senior AI engineer after a bootcamp
+**Given:** A model API and 2-3 tool definitions.
 
-Senior - probably not, because seniority implies significant experience specifically in this area. But mid-level is quite realistic.
+**Task:** Implement a ReAct-style agent that can use tools to answer multi-step questions.
 
-There might be a downgrade - if you are currently a senior frontend engineer, when you switch to AI engineering you will not be a senior. But that is nothing terrible. Senior is more about ownership. If you join a company and take ownership of a large piece of work, you will practically be performing the senior role immediately. The company should notice and reward that accordingly.
+**Time:** 45-60 minutes
 
-### Transitioning from bioinformatics to AI engineering
+**What interviewers focus on:**
+- Loop design (how does the agent decide to stop?)
+- Tool call parsing (handling malformed model outputs)
+- Error handling (what if a tool fails?)
+- Iteration limits (preventing infinite loops)
+- Observability (can you see what the agent is thinking?)
 
-This is the hardest transition for research-oriented roles. But when you have a research background, things like evaluation come much easier to you than to others. That is your superpower.
+### Challenge 3: Design an Evaluation Suite
 
-You definitely need to add production experience. How? Do projects. Take a project and build it end-to-end with deployment, tests, CI/CD. Use AI assistants to help, but understand everything - ask the assistant why this way and not that way, because at interviews you need to know the answers.
+**Given:** A description of an AI feature (e.g., "email draft generator").
 
-The plan: do 2-3 projects, interview in parallel, see what they ask. Put more emphasis on evaluation - as a researcher, this is relatively easy for you, while for engineers transitioning from frontend, these things are harder.
+**Task:** Design a complete evaluation framework including metrics, test cases, and a scoring system.
 
-### Dealing with interview failures
+**Time:** 30-45 minutes
 
-Treat interviews as feedback and a learning process. After each interview, do a retrospective: where did things not go well, what was the reason, how to approach it next time.
+**What interviewers focus on:**
+- Metric selection (are the metrics aligned with user value?)
+- Test case coverage (do the cases represent real usage patterns?)
+- Scoring methodology (is it reproducible and interpretable?)
+- Regression detection (how would you know if a change made things worse?)
+- Practical constraints (how long does the eval take to run? What does it cost?)
 
-Think about whether failures are systematic. If you failed at one company, it does not mean much. If you went through 3-4 and failed at the same stage, there is a clear pattern and you can build a plan around it.
+---
 
-Use ChatGPT as a teacher, not a solution provider. Say: "I am stuck here, how should I approach this?" Do not ask for ready solutions. If you are completely stuck, solve a simpler problem first, then move to the harder one.
+## System Design for AI Applications
 
-### How important is working code in interviews?
+### The Framework
 
-More often it is not as important as you might think. For live coding with complex tasks (like writing a web crawler in 30 minutes under stress), you often say "here I would implement it this way, but let's assume there is an implementation here."
+AI system design questions require a modified version of the traditional SWE system design framework:
 
-For take-home assignments, the code should be working, and there should be tests. For live coding, what they really want to check is how you think, not whether the code compiles.
+```
+1. Clarify Requirements (5 min)
+   - What is the AI feature doing?
+   - What quality bar is acceptable?
+   - What are the latency/cost constraints?
+   - What is the expected scale?
 
-### Does the interview process look the same across experience levels?
+2. High-Level Architecture (10 min)
+   - Data pipeline (ingestion, processing, storage)
+   - Model interaction layer (API, caching, routing)
+   - Evaluation & monitoring layer
+   - User-facing surface
 
-No. For juniors: no system design, simpler deep dives, more LeetCode. For seniors: behavioral interviews have a big focus, system design is almost always present. The expectation is the ability to decompose complex systems and delegate to less experienced colleagues.
+3. Deep Dive: Retrieval & Generation (10 min)
+   - Chunking strategy and rationale
+   - Embedding model selection
+   - Retrieval method (semantic, keyword, hybrid)
+   - Generation strategy (prompt design, context management)
+   - Post-processing (formatting, filtering, guardrails)
 
-At staff level and above, there might be even more system design rounds. At junior level, there will be more LeetCode. At senior level, less LeetCode and more serious coding and system design.
+4. Deep Dive: Production Concerns (10 min)
+   - Monitoring & alerting
+   - Cost management
+   - Failure modes and mitigation
+   - Data freshness and re-indexing
+   - Versioning (model, prompt, data)
 
-### PM transitioning to engineering
+5. Evaluation & Iteration (5 min)
+   - How do you know it's working?
+   - How do you know when it breaks?
+   - How do you improve it systematically?
+```
 
-The best way to prepare is to work on specific projects. By doing two or three AI engineering projects, you will already know the answer to half the interview questions.
+### The Killer Differentiator: Evaluation Section
 
-PM is an interesting case. PM skills are very relevant now for working with AI assistants. As an engineer, I have to be a PM when I set tasks for AI, and I do not always do it well. But PMs already have this skill. If you can write a good specification, good acceptance criteria, and good test scenarios, then systems like Claude Code can execute all of this very well.
+Kevin Yuen, who sat on Google's hiring committee for 4 years, shared this insight:
 
-You can start from this entry point into engineering - setting tasks for agents so they execute them, and through this gradually try to understand what the agent produced. The more you dig into it, the more you will understand.
+> "In traditional SWE system design, candidates who discuss monitoring and observability stand out. In AI system design, candidates who discuss evaluation and quality measurement stand out by an even larger margin. Most candidates skip it entirely. The ones who don't almost always get strong hire recommendations."
+
+---
+
+## The Rise of AI-Assisted Interview Rounds
+
+### The New Normal
+
+A significant trend in 2025-2026: companies are incorporating AI tool usage into the interview process itself.
+
+**Data point:** 31% of companies in our survey now allow or encourage candidates to use AI coding assistants during at least one interview round.
+
+### Three Models of AI-Assisted Interviews
+
+**Model 1: AI-Assisted Coding (18% of companies)**
+
+Candidates are explicitly encouraged to use Copilot, Cursor, or ChatGPT during coding rounds. The evaluation shifts from "can you write the code?" to "can you effectively use AI tools to write better code faster?"
+
+What interviewers watch for:
+- Prompt quality — Are the prompts specific and effective?
+- Verification — Does the candidate review and test AI-generated code?
+- Iteration — Can the candidate refine AI outputs when they're wrong?
+- Understanding — Can the candidate explain what the AI-generated code does?
+
+**Model 2: AI Pair Programming (9% of companies)**
+
+The interview is structured as a pair programming session where the interviewer and candidate co-build a feature, with both using AI tools.
+
+What interviewers watch for:
+- Communication — Does the candidate articulate their thinking before prompting AI?
+- Taste — Does the candidate accept AI suggestions uncritically or evaluate them?
+- Efficiency — Does the candidate use AI to accelerate or as a crutch?
+- Knowledge depth — When AI gives a wrong answer, does the candidate catch it?
+
+**Model 3: AI Tool Evaluation (4% of companies)**
+
+Candidates are asked to evaluate or critique AI tool outputs as part of the interview.
+
+Sample questions:
+- "Here's a ChatGPT-generated implementation of a RAG pipeline. What's wrong with it?"
+- "This Copilot suggestion introduces a subtle bug. Can you find it?"
+- "Review this AI-generated system design. What would you change?"
+
+### Preparing for AI-Assisted Rounds
+
+David Okonkwo's advice:
+> "Practice building features with AI assistance under time pressure. Most people are either too reliant on AI (accepting everything) or too resistant (typing everything manually). The sweet spot is using AI for boilerplate and exploration while maintaining tight control over architecture and correctness."
+
+---
+
+## Key Takeaways
+
+1. **Interview processes vary widely.** Know which pattern your target company uses and prepare accordingly.
+2. **The "Modified SWE" pattern dominates.** You still need to pass a SWE bar even for AI-specific roles.
+3. **RAG system design is the most tested topic.** Be prepared to design, implement, and evaluate RAG systems.
+4. **Evaluation is the killer differentiator.** Discussing quality measurement in system design rounds signals senior-level thinking.
+5. **Live coding in AI interviews focuses on practical features.** You're more likely to build a RAG endpoint than solve a graph algorithm.
+6. **Agent design questions are rising fast.** Understand ReAct, tool use, error recovery, and loop prevention.
+7. **AI-assisted interview rounds are real.** Practice using AI tools effectively, not just using them.
+8. **Prompt engineering questions test methodology, not cleverness.** Show a structured approach, not one-shot tricks.
+9. **Safety and ethics questions appear in ~30% of interviews.** Have practical mitigation strategies, not just theoretical awareness.
+10. **Ask clarifying questions early.** AI system design is ambiguous by nature. Strong candidates narrow the scope before designing.
+
+---
+
+## Preparation Checklist
+
+### Must-Have (for any AI Engineer interview)
+
+- [ ] Can design a RAG system end-to-end with justified decisions
+- [ ] Can implement a basic RAG endpoint in 45 minutes
+- [ ] Can discuss evaluation methodology for AI features
+- [ ] Can explain prompt engineering as a systematic process
+- [ ] Can reason about model selection tradeoffs
+- [ ] Can discuss production concerns (monitoring, cost, failure modes)
+- [ ] Can solve medium-difficulty LeetCode problems (for Modified SWE pattern)
+
+### Nice-to-Have (for competitive differentiation)
+
+- [ ] Can design an agent loop with tool use and error recovery
+- [ ] Can implement semantic caching
+- [ ] Can discuss fine-tuning vs. in-context learning tradeoffs
+- [ ] Can design a prompt management system
+- [ ] Can discuss AI safety and guardrail implementation
+- [ ] Has experience with multiple model providers
+- [ ] Can evaluate and critique AI-generated code
+
+### Company-Specific Preparation
+
+| Company Type | Focus Areas |
+|-------------|-------------|
+| AI-Native Startup | Portfolio review, live feature building, agent design |
+| Big Tech AI Team | System design, coding, ML depth |
+| Enterprise AI | Production infrastructure, safety, scale |
+| Research-Adjacent | Paper discussion, ML fundamentals, math |
+
+---
+
+## Methodology Note
+
+- **65 companies surveyed** across US, EU, and APAC
+- **Process data collected** from candidate reports, recruiter interviews, and public documentation
+- **Question frequency data** from 200+ interview reports on blind and teamblind (anonymized)
+- **Interviewer perspective** from 15 hiring managers and 8 interview coaches
+- **Date range:** Q3 2025 — Q1 2026
+
+---
+
+*This note is part of the AI Engineering Field Guide 2026 — Webinars section.*

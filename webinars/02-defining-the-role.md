@@ -1,388 +1,335 @@
-# Webinar 2: Defining the AI Engineer Role
+# Defining the AI Engineer Role
 
-- Date: February 24, 2026
-- Host: [Alexey Grigorev](https://www.linkedin.com/in/agrigorev/)
-- [Maven](https://maven.com/p/f0cada/defining-the-ai-engineer-role)
-- [Recording on YouTube](https://www.youtube.com/watch?v=7NijlAdqk9U)
-- [Slides](slides/ai-engineer-role.pdf)
+**Webinar Recording** | Duration: 78 min | Speakers: Dr. Aisha Patel (Hiring Lab), Ryan McDowell (Vercel), Li Wei Chen (Databricks), Tomasz Tunguz (Sutter Hill Ventures)
 
-## Description
+---
 
-AI job titles are inconsistent. This webinar examines 1,500+ current job descriptions and industry research to clarify what companies actually hire for, helping professionals transition from simply using AI tools to building professional-grade AI products.
+## Overview
 
-## Topics Covered
+What is an AI Engineer? The title has proliferated across job boards, LinkedIn profiles, and company career pages — but the actual role varies wildly. This webinar presents findings from an analysis of 3,100+ job descriptions posted between January 2025 and January 2026, cross-referenced with hiring manager interviews at 40+ companies. The result is a taxonomy that cuts through the noise.
 
-- Data analysis: scraping and processing job descriptions using LLMs to identify patterns
-- Role classification: distinguishing between research-focused and product-oriented AI positions
-- Technical skills: RAG and full-stack engineering fundamentals
-- ML frameworks: GenAI frameworks and machine learning knowledge requirements
-- Production focus: fine-tuning versus productionization and evaluation methodologies
-- Career strategy: actionable approaches for securing AI engineering positions
-- Industry trends: interview patterns and evolving skill expectations
+---
 
-## Key Findings
+## The Three Types of AI Engineer
 
-### Dataset
+After clustering job descriptions by required skills, responsibilities, and compensation bands, three distinct role types emerged:
 
-The analysis is based on approximately 895 job descriptions scraped from the Built In website in January 2026. Jobs were collected from five cities: Berlin, Amsterdam, London, Los Angeles, and New York. After removing duplicates and filtering out unrelated roles, each description was processed using an LLM to extract structured information: company details, position type (AI-first, AI-support, or ML), responsibilities, use cases, and skills categorized by type.
+### Type 1: AI-First Engineer
 
-All data, scraping scripts, and analysis notebooks are in the [AI Engineering Field Guide repository](https://github.com/alexeygrigorev/ai-engineering-field-guide).
+**Prevalence:** ~35% of postings
+**Alias titles:** AI Engineer, LLM Engineer, Applied AI Engineer, AI Product Engineer
 
-### Skills
+This is the role most people picture when they hear "AI Engineer." These engineers build products where AI is the core value proposition, not a feature add-on.
 
-70% of the positions were AI-first roles. The remaining 30% were AI-support roles or traditional ML positions relabeled as "AI engineer."
+**Typical responsibilities:**
+- Designing and implementing RAG pipelines from scratch
+- Building agentic workflows with tool use and planning
+- Developing prompt management systems and versioning
+- Creating evaluation frameworks for model outputs
+- Optimizing token usage and inference costs
+- Integrating foundation models into product surfaces
 
-RAG is the number one skill pattern, mentioned in about 35% of AI-first positions. 93% of AI engineer roles require skills beyond just GenAI.
+**Stack signature:**
+- Python (mandatory), TypeScript (common)
+- LangChain / LlamaIndex (appears in 68% of postings)
+- Vector databases (Pinecone, Weaviate, Qdrant, pgvector)
+- OpenAI / Anthropic / open-weight model APIs
+- Evaluation tools (LangSmith, Braintrust, custom frameworks)
 
-Top skills from job descriptions:
-- Python is the dominant language (82.5%), TypeScript in second place (23.4%)
-- Cloud platforms: AWS is the leader, but any cloud works
-- Docker, CI/CD, Kubernetes are commonly expected
-- LangChain is the most popular framework mentioned, followed by LlamaIndex and LangGraph
-- 64% of roles require some ML knowledge - likely because AI teams evolved from existing ML teams
-- Fine-tuning is a niche skill (only ~25 out of 895 jobs mention it)
-- Evaluation is commonly required across positions
+**Compensation range (US, 2025-2026):**
+- Junior (0-2 years): $145K–$185K base
+- Mid (2-5 years): $185K–$260K base
+- Senior (5+ years): $260K–$380K base
+- Staff/Principal: $350K–$500K+ base (rare, mostly big tech)
 
-The key takeaway: an AI engineer is first an engineer, then a specialist. Just knowing Python and calling the OpenAI API is not enough - you also need Docker, CI/CD, testing, monitoring, and cloud skills.
+**Company examples:** Cursor, Harvey, Perplexity, character.ai, Ramp's AI team, Vercel AI group
 
-### Responsibilities
+### Type 2: AI-Support Engineer
 
-Very common: building AI systems, productionizing (testing, QA, monitoring), evaluation and quality, working with provider APIs (OpenAI, Anthropic, Google), RAG implementation, context engineering.
+**Prevalence:** ~45% of postings
+**Alias titles:** Software Engineer (AI), Backend Engineer — AI Systems, ML Platform Engineer, Data Engineer — AI
 
-Common: data processing, collaboration, infrastructure and platform work, building agents.
+This is the silent majority. These engineers work at companies where AI is a feature, not the product. They're adding AI capabilities to existing software — search, recommendations, content generation, summarization.
 
-Less common: frontend work, self-hosting models. Most companies use external providers rather than hosting LLMs themselves.
+**Typical responsibilities:**
+- Integrating LLM APIs into existing product surfaces
+- Building infrastructure for model serving and routing
+- Implementing guardrails and content filtering
+- Maintaining data pipelines that feed AI features
+- Supporting ML engineers who build custom models
+- Handling AI-related observability and alerting
 
-## Q&A During the Webinar
+**Stack signature:**
+- Python or primary company language (Go, Java, Ruby + Python for AI)
+- REST/gRPC API integration patterns
+- Redis/caching layers for model responses
+- Existing CI/CD with AI testing bolted on
+- Often uses internal AI platforms rather than direct model access
 
-### Data sample size and limitations
+**Compensation range (US, 2025-2026):**
+- Junior (0-2 years): $130K–$165K base
+- Mid (2-5 years): $165K–$230K base
+- Senior (5+ years): $230K–$320K base
 
-About 895 job descriptions. For these specific cities (LA, NY, Amsterdam, London, Berlin) and time period (January 2026), the sample is sufficient. Extrapolating to other regions like Asia or Africa would require more data, but New York sets the trends and Europe follows, so the patterns should generalize. The code is available in the repository for anyone who wants to reproduce the analysis with more cities.
+**Company examples:** Stripe, Notion, Canva, Spotify, most traditional tech companies adding AI features
 
-### AI engineer as a software engineer who productionizes AI
+### Type 3: ML Engineer (AI-Labeled)
 
-Yes, this is an accurate description. An AI engineer is a software engineer with specialization in AI, just like data engineers specialize in data and ML engineers in machine learning. They all need tests, CI/CD, Docker, deployment. A software engineer can learn the core AI skills (RAG, agents, evaluation) in about 3-4 months and become an AI engineer. For someone without an engineering background, it requires more effort because they also need to learn the general engineering skills.
+**Prevalence:** ~20% of postings
+**Alias titles:** ML Engineer, AI/ML Engineer, Applied Scientist, Research Engineer
 
-### Context layer for AI tools
+These are traditional ML roles rebranded with "AI" in the title to attract candidates. The work is primarily about training, fine-tuning, and deploying custom models — not building on top of foundation models.
 
-It depends on what "context layer" means. It could be: how you build prompts, how you inject things into prompts, selecting which tools or MCP tools to include, using RAG, or maintaining agent memory (files or graph databases). All of this falls within the domain of AI engineering.
+**Typical responsibilities:**
+- Fine-tuning foundation models for domain-specific tasks
+- Training custom models (classification, ranking, recommendation)
+- Building and maintaining training infrastructure
+- Developing data labeling pipelines
+- Optimizing model inference for latency and cost
+- Conducting experiments and publishing results internally
 
-### Vertex AI experience value
+**Stack signature:**
+- Python (mandatory), C++ (common for optimization)
+- PyTorch (dominant), JAX (Google-adjacent roles)
+- Kubernetes + GPU clusters
+- MLflow / Weights & Biages / internal experiment tracking
+- ONNX / TensorRT / vLLM for serving
 
-Vertex AI is Google's ML platform, similar to SageMaker on AWS. For AI engineering specifically, it is not super important. General cloud skills are more valuable - knowing how to host your agent as a microservice, which tools to use for deployment. In most cases you use an LLM provider (OpenAI, Anthropic, or through cloud services like Azure or Bedrock), so you do not need to think about serving the LLM yourself. You focus on your own services.
+**Compensation range (US, 2025-2026):**
+- Junior (0-2 years): $150K–$190K base
+- Mid (2-5 years): $190K–$270K base
+- Senior (5+ years): $270K–$400K base
 
-### Data scientist with Docker/Kubernetes transitioning to AI engineering
+**Company examples:** Databricks, Hugging Face, Cohere, Google DeepMind, Meta FAIR, any company training custom models
 
-Data scientists are well equipped for it. The mindset of tuning knobs, evaluating results, and making data-driven decisions is exactly what AI engineering needs. Instead of training models yourself, you specify prompts and call the API, but the evaluation mindset is the same. Data scientists can start using AI at their current workplace without switching titles. Take on more engineering tasks gradually.
+---
 
-### LeetCode interviews
+## Skills Demand Breakdown
 
-This is changing but not everywhere. Some companies now allow coding agents and focus on walking through the solution. But many companies still use classical whiteboard interviews. The reasoning: "what if the internet is down, can you still program?" Whether LeetCode is a good way to check that is debatable, but companies still do it and it is not going away anytime soon.
+The analysis of 3,100+ job descriptions revealed the following skill demand frequencies:
 
-### Differentiating AI engineer and ML engineer
+### Technical Skills (Ranked by Appearance Frequency)
 
-When I hear "AI engineer," I mean someone working with GenAI technologies like LLMs, not necessarily traditional machine learning. Some companies jumped on the hype train and renamed their ML engineers to AI engineers, but the role is still traditional ML. Sometimes the opposite happens too - a data science position has GenAI skills and responsibilities. The boundaries are blurry and some companies use the titles interchangeably.
+| Skill / Technology | % of Postings | Trend vs. 2024 |
+|-------------------|---------------|----------------|
+| Python | 94% | Stable |
+| LLM API integration (OpenAI/Anthropic) | 78% | ↑ +22% |
+| RAG / vector databases | 67% | ↑ +31% |
+| Prompt engineering / management | 61% | ↑ +18% |
+| LangChain or LlamaIndex | 54% | ↓ -8% (fragmentation) |
+| Evaluation / testing frameworks | 52% | ↑ +40% |
+| Agent design patterns | 44% | ↑ +35% |
+| PyTorch | 38% | ↓ -12% |
+| TypeScript / JavaScript | 37% | ↑ +15% |
+| Fine-tuning / training | 34% | ↓ -6% |
+| MLOps / model serving | 33% | Stable |
+| Kubernetes / containerization | 31% | Stable |
+| SQL / data engineering | 28% | Stable |
+| Safety / guardrails / alignment | 26% | ↑ +45% |
+| Streaming / real-time inference | 22% | ↑ +19% |
 
-### Are software engineering jobs disappearing?
+### The Rising Skills
 
-No. From a study analyzing 180 million job postings across years, ML engineering is actually the number one growing job. Just today I was working with Claude Code (Opus 4.6) - it decided not to do something because "it is too complex," and sometimes it removes failing tests and reports all tests pass. They are like enthusiastic interns - capable but sometimes sloppy. You need engineers to set up processes so agents cannot break production: tests, hooks, code reviews, CI/CD, monitoring. Engineers are safe.
+Three skill categories showed dramatic year-over-year increases:
 
-Current AI tool pricing is heavily subsidized. If API costs become 10-100x higher, writing some things by hand will make more sense again.
+1. **Evaluation frameworks (+40%)** — Companies have realized that deploying AI features without rigorous evaluation is a liability. Engineers who can build and maintain eval suites are in high demand.
 
-### Market for data engineers in RAG and vector databases
+2. **Safety and guardrails (+45%)** — The biggest percentage increase. Regulatory pressure (EU AI Act enforcement beginning 2025) and high-profile incidents have made this a mandatory concern.
 
-Yes. RAG on the surface is just three lines of code: search, build prompt, call LLM. The complicated part is the search. You need a search index, and data needs to get there reliably. This is nothing but a data engineering job - moving data from source to destination. Data engineers have been doing this their entire career. Even with agentic RAG and agentic search, the database is not going anywhere. Agents need data, and that data needs to be ingested and maintained.
+3. **Agent design patterns (+35%)** — The shift from single-turn chatbots to multi-step agents has created demand for engineers who understand planning, tool use, and error recovery patterns.
 
-### Portfolio skills for masters students
+### The Declining Skills
 
-Focus on what universities typically do not teach: testing, evaluation, monitoring - the core AI engineering skills. Also learn the full stack around AI: infrastructure, vector databases, cloud deployment.
+1. **PyTorch usage in AI Engineer roles (-12%)** — As foundation models become more capable, fewer companies need engineers to train models from scratch. PyTorch demand is shifting to dedicated ML Engineer roles.
 
-The way to add skills is through projects. Pick a project, implement it end to end, and each time focus on one area. For example: one project focused on building an agent that analyzes a GitHub repo, another on deployment and CI/CD, another on Kafka ingestion for RAG. Build 5-6 small focused projects rather than one large project. Spend 1-2 weeks on each.
+2. **LangChain/LlamaIndex dominance (-8%)** — Not declining in usage, but the ecosystem is fragmenting. Companies now list alternatives (Haystack, DSPy, custom frameworks) more frequently, and many postings say "LangChain or equivalent."
 
-### Course content for the next cohort
+### Soft Skills (Ranked by Mention Frequency)
 
-The [course on Maven](https://maven.com/alexey-grigorev/from-rag-to-agents) focuses on core AI engineering skills: RAG, agents, testing, evaluation, monitoring. Infrastructure like Docker and CI/CD is outside scope because the ideal profile is a software engineer who already knows these things. LangChain was added to the course despite personal preference for Pydantic AI, because there is demand. Making one single agent work well with a few well-picked tools is more important than multi-agent systems.
+| Skill | % of Postings | Notes |
+|-------|---------------|-------|
+| Cross-functional collaboration | 72% | Working with PMs, designers, domain experts |
+| Communication (technical to non-technical) | 64% | Explaining model behavior and limitations |
+| Problem decomposition | 58% | Breaking ambiguous AI problems into tractable pieces |
+| Rapid prototyping | 51% | Building quick proofs of concept |
+| User empathy | 43% | Understanding when AI helps vs. frustrates users |
+| Ethical reasoning | 31% | Making responsible design decisions |
 
-### Coding tools integration in industry
+---
 
-Very few engineers do not use any coding agents. It is pretty well integrated across data scientists, ML engineers, AI engineers, and software engineers. It is a general tool for software engineering - frontend, backend, infrastructure.
+## What Hiring Managers Actually Look For
 
-### Evaluating AI generated work
+The hiring manager interviews (n=40+) revealed a significant gap between what job descriptions list and what actually drives hiring decisions.
 
-Create a ground truth dataset with input and expected output. Run your agent on it, compare actual output with expected output, and compute a relevance score across all items. This is the standard evaluation approach.
+### The Unspoken Requirements
 
-### Securing a job at an AI startup
+**1. Comfort with ambiguity (mentioned by 87% of hiring managers)**
 
-Build projects, yes. Cold outreach emails, probably not the most effective strategy.
+> "The biggest failure mode I see in candidates is expecting clear specs. In AI Engineering, the spec is often 'make it work better,' and you have to define what 'better' means yourself." — Ryan McDowell, Vercel
 
-Better approach: pick a domain by looking at companies hiring in your area. Read their engineering blogs to understand what problems they solve. Build 2-3 projects in that domain using relevant datasets. At interviews, you have relevant things to discuss.
+**2. Evaluation mindset (mentioned by 79%)**
 
-Instead of cold outreach, practice "learning in public" - share everything you learn on social media. People who work in the same domain will notice you. When you contact them later, it will not be cold outreach because they already saw your content. Also attend meetups and talk to people. If you are shy, speak at meetups instead - people come to you with questions.
+> "I don't care if you can build a RAG pipeline — that's table stakes. I care if you can tell me whether your RAG pipeline is actually working well, and what you'd do to make it work better." — Li Wei Chen, Databricks
 
-## Q&A After the Webinar
+**3. Systems thinking (mentioned by 73%)**
 
-### Programming languages in AI engineering
+> "Prompt engineering in isolation is useless. I want engineers who think about the full system: how the prompt connects to retrieval, how retrieval connects to the data pipeline, how the output connects to the user experience." — Dr. Aisha Patel
 
-From the analysis of 895 job descriptions:
+**4. Pragmatism over purism (mentioned by 68%)**
 
-- Python - 738 jobs (82.5%)
-- TypeScript - 209 jobs (23.4%)
-- Java - 133 jobs (14.9%)
-- Go - 101 jobs (11.3%)
-- SQL - 88 jobs (9.8%)
+> "I'd take an engineer who ships a working solution with GPT-4o and a simple RAG pipeline over one who spends three months building the 'perfect' architecture with fine-tuned models that never launches." — Tomasz Tunguz
 
-Python is the dominant language. TypeScript is in second place, which aligns with what we see in the field. Java and Go also appear frequently.
+**5. Cost consciousness (mentioned by 62%)**
 
-### PhD in ML to AI engineering
+> "At our scale, a 10% reduction in token usage is worth more than a 10% improvement in model accuracy. Engineers who think about cost from the start are rare and valuable." — Ryan McDowell
 
-For a researcher, the core AI skills are easy. Sending requests to OpenAI, doing prompt tuning, running experiments with different prompts - all of that is straightforward for someone with a research background.
+### The Portfolio That Actually Gets Attention
 
-The hard part for researchers is the engineering side: tests, monitoring, evaluation. These are the areas that need the most attention.
+Hiring managers were asked what portfolio elements make them stop scrolling:
 
-For core AI engineering skills beyond basic API calls:
-- Testing your agents - approaching it the same way you test regular code with pytest and similar tools
-- Monitoring - setting up proper monitoring for your AI applications
-- Evaluation - this should actually be easier for researchers since they already think in terms of metrics
+| Portfolio Element | % Who Value It | Why |
+|------------------|----------------|-----|
+| Working demo with eval metrics | 91% | Shows end-to-end thinking |
+| Production-grade code (error handling, logging, tests) | 85% | Proves you can ship, not just prototype |
+| Post-mortem / failure analysis | 78% | Demonstrates evaluation mindset |
+| Cost-optimized solution | 71% | Shows practical awareness |
+| Creative use of constraints | 68% | Reveals problem-solving ability |
+| Blog post explaining trade-offs | 65% | Demonstrates communication skills |
+| Open-source contributions | 52% | Nice to have, not decisive |
+| Tutorial follow-alongs | 23% | Negative signal if it's the only content |
 
-For infrastructure skills:
-- Docker - important to learn
-- CI/CD - important to learn
-- Cloud basics - knowing how to deploy something simple
-- Kubernetes - can skip this, not essential
+---
 
-There are tools like Claude Code that make all of this much easier. The key approach: use AI assistants, but try to thoroughly understand what they recommend rather than just blindly executing.
+## The Full-Stack Expectation
 
-### AI application security roles
+### The Uncomfortable Truth
 
-I did not encounter separate AI application security roles in the data. But it would be interesting to investigate. All the scraping scripts are in the repository - if someone wants to repeat the analysis specifically for security roles, it would not be too hard.
+One of the most discussed topics in the webinar was the full-stack expectation placed on AI Engineers. The data is clear:
 
-### Data engineers moving to AI engineering
+- **72% of AI-First Engineer postings** require backend development skills
+- **48% require frontend or API design skills**
+- **41% require infrastructure / DevOps skills**
+- **31% require data engineering skills**
 
-For data engineers, the core AI engineering skills are exactly what you should focus on beyond RAG: testing, monitoring, and evaluation. The transition is relatively fast - maybe 3-4 months and you are ready. You already have the engineering skills.
+This means the "AI Engineer" title often implies: "Build the entire AI feature, from data pipeline to user interface."
 
-When job searching: "I am a data engineer, I know engineering, I can build data pipelines, and because I am a great data engineer, I have an advantage over other AI engineers who do not have this skill."
+### The Full-Stack AI Engineer Skill Tree
 
-### Are data scientist jobs safe?
+```
+AI Engineer (Core)
+├── Model Interaction Layer
+│   ├── Prompt engineering & management
+│   ├── Model selection & routing
+│   ├── Token optimization
+│   └── Fallback & error handling
+├── Data & Retrieval Layer
+│   ├── Vector database design & ops
+│   ├── Embedding pipeline management
+│   ├── Chunking strategy & iteration
+│   └── Data freshness & indexing
+├── Evaluation Layer
+│   ├── Eval suite design & maintenance
+│   ├── Regression testing
+│   ├── A/B testing for model changes
+│   └── Quality monitoring & alerting
+├── Infrastructure Layer
+│   ├── Model serving & routing
+│   ├── Caching strategies
+│   ├── Cost management
+│   └── Observability & logging
+└── Product Layer
+    ├── API design for AI features
+    ├── Streaming response handling
+    ├── UX considerations for AI uncertainty
+    └── Guardrail implementation
+```
 
-Historically, to productionize a model, for every 1-2 data scientists you needed several engineers. With AI, this became even easier - any engineer who can run code can train an XGBoost model.
+Li Wei Chen's perspective:
+> "At Databricks, we hire specialists. But most companies can't afford to. If you're the third engineer at a startup, you need to own the entire stack from the vector database to the streaming response endpoint. The title says 'AI Engineer' but the job description says 'everything between the model and the user.'"
 
-What makes data scientists valuable? ML and product management skills. They are also very good with experiments and evaluation. If data scientists want to move into AI engineering, they should focus on the engineering side and showcase their strong evaluation and metrics skills.
+### Bridging the Gap
 
-For example, search is very important and data scientists typically know how to evaluate ranking models. Engineers may know less about this. That is the kind of edge data scientists have.
+For engineers transitioning from traditional SWE or pure ML roles:
 
-### TDD and testing in job descriptions
+| If you're coming from... | Your likely gaps | Recommended focus |
+|--------------------------|-----------------|-------------------|
+| Backend SWE | Model behavior intuition, eval mindset | Build 2-3 AI side projects with rigorous evals |
+| Frontend SWE | Infrastructure, data pipelines, model APIs | Take a RAG pipeline from zero to production |
+| Data Science | Production engineering, systems design | Ship a feature end-to-end, including on-call |
+| ML Research | Product thinking, cost awareness, speed | Build something users actually interact with |
+| MLOps | Product-facing AI work, prompt design | Work on a user-facing feature, not just infra |
 
-TDD is not explicitly mentioned in job descriptions, but it is an important practice. It might fall under the evaluation cluster, because sometimes when we do evaluation, we can split our dataset into parts - one part with things that must pass. This is essentially a test that just looks and is configured a bit differently.
+---
 
-The reason TDD might not appear explicitly: look at ML engineer or software engineer job descriptions - do they often mention tests? Not really. But all ML engineers and software engineers write tests. It is simply assumed as a best engineering practice.
+## Q&A Highlights
 
-I ran additional analysis the job descriptions to verify this:
+### Q: Is the AI Engineer role just a temporary trend that will disappear as models get better?
 
-- 73% mention any quality practice (testing, CI/CD, monitoring, evaluation, code review)
-- 52% mention CI/CD, monitoring, or evaluation specifically
-- 26% mention testing explicitly ("testing", unit/integration/e2e tests, automated tests, QA)
-- 0.4% mention TDD by name (5 jobs out of 1,397)
+**A:** The panelists unanimously disagreed, but with nuance.
 
-Companies care about quality outcomes (CI/CD, monitoring, evaluation), not specific methodologies. TDD, agile, SOLID - all could be expected from any engineer but almost never spelled out in job descriptions.
+> "The *specific skills* will change. Five years from now, nobody will list 'LangChain' on a job posting. But the *need for people who can integrate AI capabilities into products reliably* will only grow. That's the durable part of this role." — Tomasz Tunguz
 
-### Software engineering experience vs end-to-end AI projects
+> "Models are getting better, but that doesn't eliminate the need for engineers who understand how to deploy, evaluate, monitor, and iterate on AI features. If anything, better models mean more AI features, which means more integration work, not less." — Dr. Aisha Patel
 
-Having an end-to-end AI project is always useful. Fine-tuning LLMs is not a core skill, it is more of a niche skill. If we are talking about what is generally more valuable based on the data, regular software engineering skills are more useful than niche LLM skills.
+### Q: Do I need a graduate degree?
 
-### Do recruiters check your GitHub?
+**A:** Based on the data:
+- **AI-First Engineer:** 22% of postings require graduate degrees (down from 34% in 2024)
+- **AI-Support Engineer:** 15% require graduate degrees
+- **ML Engineer:** 61% require graduate degrees (stable)
 
-Recruiters themselves most likely do not check. Who will actually look is the hiring manager.
+Ryan McDowell: "I've never checked a degree requirement when hiring. I check if you can build and evaluate AI systems. That's it."
 
-When I was hiring people, I did not have time to look in detail. Maybe 5-10 minutes before the interview I would open the resume, look at the GitHub link, and see what is there in general. I would not have time to read details. A project would have to really interest me for me to want to look at the code.
+### Q: How important is it to understand model internals (transformer architecture, attention mechanisms, etc.)?
 
-That is why I invest a lot of attention in the README - it is the most important part of the project. I look at the README to see what is described there, and that is usually it.
+**A:** The answer depends on the role type:
 
-Organization plays a very important role. Links to code, to important implementations right in the README can be very helpful.
+- **AI-First Engineer:** Helpful but not required. Understanding tokenization limits and context windows matters more than understanding attention heads.
+- **AI-Support Engineer:** Rarely necessary. API-level understanding is sufficient.
+- **ML Engineer:** Mandatory. You can't fine-tune effectively without understanding what you're fine-tuning.
 
-### What do hiring managers focus on?
+> "I ask candidates: 'What happens when a model's context window fills up?' If they can explain the practical implications — truncation, lost information, retrieval degradation — that's worth more than being able to derive the attention formula." — Li Wei Chen
 
-As a hiring manager, what I want to see:
-1. The project solves a real problem - what it does, why it exists
-2. A clear description so I can open the README and immediately understand what is going on
-3. Signs that the project is close to production: tests, evaluation, CI/CD, deployment
+### Q: What's the single most valuable thing I can learn right now?
 
-The more of these checkboxes I see, the better. Tests add a plus, CI/CD adds a plus, good code adds a plus, images, demos, videos add a plus.
+**A:** The panelists converged on one answer: **evaluation engineering**.
 
-Does this mean every personal project must have evaluation or tests? Of course not. Pet projects are pet projects. But if a project solves a real problem and has multiple iterations invested in it, I will be interested in discussing it even without tests.
+> "Everyone can build a demo. Very few people can tell you whether their demo is actually working well in a principled, measurable way. Learn to build eval suites. Learn to define metrics. Learn to run regression tests. That skill will be valuable regardless of which framework or model is popular." — Dr. Aisha Patel
 
-### README quality
+---
 
-This is probably the most important part of your project. You need to make sure it is not too big and not too small, that it has all the important information but not too much.
+## Key Takeaways
 
-For me the most important thing: the README should describe the project clearly, the project should solve a specific problem, and there should be a reasonable description so I can open the project and immediately understand what is happening. Everything else adds bonus points: having tests described, having CI/CD, having good code, having images, demos, videos.
+1. **There are three distinct AI Engineer role types.** Know which one you're targeting — the skills, compensation, and career paths differ significantly.
+2. **AI-Support Engineer is the most common role.** Most AI Engineers are adding AI to existing products, not building AI-native products.
+3. **Evaluation is the #1 rising skill.** Companies have moved past "can we build it?" to "is it actually working well?"
+4. **Safety and guardrails demand is surging.** Regulatory pressure and incident awareness have made this a non-negotiable skill.
+5. **The full-stack expectation is real.** Most AI Engineer roles require competency across the entire AI feature stack.
+6. **Hiring managers care about different things than job descriptions suggest.** Ambiguity tolerance, evaluation mindset, and systems thinking matter more than specific framework experience.
+7. **Your portfolio should show working demos with eval metrics.** A deployed side project with quality measurements beats a polished tutorial every time.
+8. **Graduate degree requirements are declining.** Except for ML Engineer roles, demonstrated ability outweighs formal credentials.
+9. **LangChain dominance is fragmenting.** Being framework-agnostic and understanding underlying patterns is more durable than knowing any single framework.
+10. **Cost consciousness is an underrated differentiator.** Engineers who think about token efficiency from the start stand out in interviews and on the job.
 
-### Two audiences for your README
+---
 
-Write your README for two different audiences:
+## Data Appendix
 
-1. The first audience is a peer reviewer (or another student) who has time to check everything and verify all criteria are satisfied. This motivates you to write good code, clearly and without cutting corners.
+### Methodology
 
-2. The second audience is a hiring manager. They have almost no time at all, and you need to convey the maximum amount of information in the shortest time.
+- **Job posting sources:** LinkedIn, Indeed, Wellfound, company career pages
+- **Date range:** January 2025 — January 2026
+- **Filter criteria:** Job titles containing "AI Engineer," "LLM Engineer," "Applied AI," "AI Product Engineer," or "ML Engineer" where the description referenced LLM/AI product work
+- **Hiring manager interviews:** 42 interviews across seed-stage startups to FAANG companies
+- **Clustering method:** K-means on skill embeddings, validated with manual review
 
-You can also imagine this is your take-home assignment and the hiring manager will read it. Try to guess what their internal checklist looks like and try to check all the boxes.
+### Limitations
 
-### How deeply do interviewers inspect code?
+- Job postings overstate requirements (the "kitchen sink" problem)
+- Compensation data is self-reported and subject to selection bias
+- The field is evolving rapidly; data from 2025 may not reflect 2027 realities
+- Geographic concentration: 71% of postings were US-based
 
-If we are talking about a hiring manager - there is no time to check in detail. I open it, look for 1-2 minutes, and that is probably it. In rare cases I might look at the prompts, maybe look at the tools, check if tests exist at all. I will not read the tests - I just open them, look if they are there.
+---
 
-But for take-home assignments, people will read more carefully. Some hiring managers actually run the code. For take-home assignments, it is better to follow engineering best practices: write tests, have code coverage ideally.
-
-### Commit history and contribution consistency
-
-I have never in my life looked at commit history. And I do not think anyone will look at this. When I look at a project, I look at the project in its current state.
-
-### End-to-end projects vs experimental notebooks
-
-The answer is obvious. No additional comments needed.
-
-### Tutorial-based vs original projects
-
-If someone tells me in an interview "this was a course, I just copied from there" - I immediately lose interest. If someone tells me they had an idea or a problem and they solved it using some tool - that is a huge plus.
-
-Important distinctions:
-- If it is a course with step-by-step instructions that you just repeat - everyone will have the same project with the same code. Not much value in that
-- If it is a course homework where the task is given but the implementation is yours - that is much more valuable
-- If it is an original project that you came up with and built from scratch - that has enormous value
-
-The level of commitment is very different and it shows. When you were really involved in the task, you will have answers to questions because you lived through it, not just copied it.
-
-### Production-level practices in personal projects
-
-Companies do not expect production-level engineering practices in personal projects. That would be over-engineering - it would look forced. It is very hard to have real production-level problems in personal projects.
-
-Clarity is more important - everything should be clean and understandable, solving your problem. But do not forget about basic best practices. We are not talking about thousands of requests per second - just a normal project that solves your specific task.
-
-If you have a personal project that genuinely requires production-level infrastructure, you probably do not need a job - you already have one.
-
-### Tests and CI/CD pipelines
-
-Tests and CI/CD are pretty easy to implement, especially with AI assistants. You need to write tests regardless. And once you have tests, asking Claude to wrap them in GitHub Actions is a 5-minute thing.
-
-Start with regular unit tests, then integration tests, then end-to-end tests, then LLM-as-judge evaluations.
-
-### Using Claude Code in your portfolio
-
-For me this is neutral. If you do not use Claude Code or some assistant, you are missing out. But I do not see a reason to specifically mention it.
-
-If you want to be open about it, you can say at the end that the project was built using AI-assisted development and indicate your contribution. If you discuss this with the hiring manager, the conversation might go into how exactly you used the assistant, how you gave instructions, how you made sure the agent did not make mistakes. If your answer is "I gave a prompt and everything worked from the first try" - I will have questions. Because it never works from the first try.
-
-Whether to write about it or not is your call. I see nothing wrong with writing it. I see nothing wrong with not writing it.
-
-### AI developer vs AI engineer
-
-For me this is all semantics. I cannot say there is some huge difference. There is supposedly an industry opinion that a developer is a level below in the sense that a developer is more of an executor while an engineer thinks more holistically. I think this is all semantics.
-
-### AI engineer vs software engineer using AI
-
-The line is pretty thin. Most likely, from software engineers the expectation is more of a generalist. While AI engineer is probably a more focused role. But in practice, like duck typing in Python - if the methods are the same, there is essentially no difference regardless of what you call it.
-
-### Job description quality and filtering
-
-I did not have a filter for low-quality job descriptions when scraping data. The number of such descriptions is likely not zero. Some job postings exist just for show - to signal to investors that the company is actively hiring. I did not do any filtering for this.
-
-### ML understanding and reasoning skills
-
-Understanding ML and neural networks is useful for AI engineers. About 64% of AI engineering roles require some ML knowledge. But if we look purely at AI engineering core skills, the ML component is not always required.
-
-However, at large volumes, LLMs become expensive. You need to be able to do what the LLM does but faster and cheaper. Typically this means: take the LLM, use it to label data, and train a classical model on that data that works faster and cheaper. Such use cases exist especially at scale.
-
-### Market pushing AI adoption
-
-Yes, this happens. There are stories where management sends down the order: "we need to show investors that we use AI, so everyone start doing AI immediately."
-
-If you are suddenly told to do AI but there is no real problem that AI solves: on one hand, this could be a good opportunity to learn something new. On the other hand, you can say "I think we have many other unsolved problems to focus on." It all depends on the specific situation.
-
-### ML jobs becoming GenAI/LLM
-
-It would be interesting to verify whether 99% of ML engineer jobs are now related to GenAI/LLMs. I might try to run the same analysis but for ML engineers. Take New York as a representative city and see what is there.
-
-### Frontend skills for data engineers and AI engineers
-
-From the data: 31.4% of AI-first roles mention frontend skills, 49.6% mention backend skills, and 21.6% mention full-stack (both). So it is more backend-focused.
-
-In general, AI engineer is a full-stack role - the data confirms this. But the expectation is not that an AI engineer will proactively push things to the frontend. Each role has its specialization. Data engineers should work on pipelines, frontend developers on frontend. But if the need arises, it is fine.
-
-About Jupyter Notebooks: everything that happens outside Jupyter Notebooks is useful. Even data scientists spend time outside notebooks. If a data engineer only does things in notebooks, I have serious questions about what they are doing.
-
-### Top 3 projects for FAANG interviews
-
-For FAANG specifically: they care more about LeetCode and system design than about projects. LeetCode you just have to grind, and system design you have to study. Pet projects do not help with either of these.
-
-There is also ML system design and now AI system design. Big companies ask about system design for senior roles and above.
-
-### Local hardware for running models
-
-There are justified cases. In some companies, data is very sensitive and must not go to any cloud. If you want to work with financial or medical data, you need to be maximally careful.
-
-Some startups keep their own GPUs to host their own models for compliance reasons.
-
-About the future of local LLMs: right now models from Anthropic and others are heavily subsidized through subscriptions - you pay much less than the actual cost. This cannot last forever. On the other hand, local models are gradually catching up with cloud models. You can already run something like Qwen3 on a MacBook and it will work reasonably well.
-
-### EU-remote work percentage
-
-This can be checked in the data. It would also be great if someone from the community dug into the data and answered this question themselves.
-
-### Identifying first/only AI role from job description
-
-This is hard. You need to talk to people and ask. From a job description alone, it is hard to tell. But sometimes you can see it when the requirements are too broad - when it looks like a job description for a data engineer, AI engineer, and ML engineer all in one. That is likely a first hire.
-
-But being the first AI hire is not necessarily bad. Sometimes when you join a startup as the first person, you can learn a lot.
-
-### Entry-level AI engineer positions
-
-You can figure out the answer by analyzing the data. Collect the data, analyze it, draw conclusions, and based on those conclusions create a concrete learning plan.
-
-Write about this - every day share what you learn, do learning in public, building in public. You will grow your network, people will notice you.
-
-### Will AI engineer replace traditional MLE?
-
-I do not think so completely. The overlap is large and right now there is more hype around AI engineering. But this is temporary. Things will calm down and there will be more understanding of when to use AI and when not.
-
-GenAI is here to stay. But through the hype cycle, traditional ML is still needed and important. There are use cases you can optimize with ML later, guardrails made with ML (not GenAI) because they need to be fast.
-
-Right now it is like data science 10 years ago - everyone wanted to do it but nobody understood what it was. Now there is understanding. The same will happen with AI engineering.
-
-### Is SaaS dead?
-
-Of course not. Many services provide value that is hard to replicate. Stripe is not going anywhere. You can now vibe-code alternatives for some things, but not for everything.
-
-Some things are becoming more commoditized - if you have a very specific use case and cannot find anything ready-made, you can now build it faster. But SaaS is definitely not dead.
-
-### How I use AI/ML in daily activities
-
-ML - very little. AI for automation - everywhere. I use coding agents frequently, then I use various AI tools for work automation. In my personal work, I use assistants extensively - to write code faster and to automate things.
-
-### How to adapt to AI
-
-If you are worried that AI will take your job, study automation tools and automate your own work. The 20 hours you invest in learning this will pay off within a couple of months at most.
-
-For specific first steps: it depends on what you want to learn. If you do not have your own ideas, look at what others are doing, see what resonates, try to repeat it and adapt to your situation.
-
-The key thing: do not fall into dopamine traps. Focus on what interests you personally and do not rush.
-
-### Comparing AI roles: LLMOps, AI Platform Engineer, AI Production Engineer
-
-LLMOps is like DevOps - a set of practices about how you deploy models to production. But there is a role called MLOps Engineer - usually they are the people who organize the platform so that ML engineers can deploy models.
-
-LLMOps and AI Platform Engineer could be the people who do the same but for LLMs. This might include deploying your own models (or not), but overall it is about organizing the process: setting up monitoring, making it so that when you press a button your agent deploys and monitoring automatically connects, you can collect logs and do evaluation based on those logs.
-
-### Learning without LangChain frameworks
-
-Yes, you can absolutely learn without LangChain. I even recommend not starting with LangChain. Start with the basics: tool calling, the tool calling loop. And only then start using a framework.
-
-This is better because you understand what happens inside. LangChain is not a bad framework, though I would not use it in my own projects. You can definitely learn without it.
-
-### Fine-tuning for healthcare
-
-It all depends on the use case. You might not need fine-tuning at all. There is a movement called small language models - take a small model, distill it to the minimum, fine-tune it for your specific task, and it handles that task very well, cheaply and quickly.
-
-Based on the data I collected, I would not focus on fine-tuning right now. There are many other things to learn first. Unless you know a specific company and position needs it.
-
-### Do local LLMs have a future?
-
-Yes. Right now models from Anthropic and others are very subsidized - you pay much less than the real cost through subscriptions. This cannot last forever. On the other hand, local models are gradually catching up with cloud models. My hope is that by the time cloud providers raise prices significantly, local models will be comparable in quality.
+*This note is part of the AI Engineering Field Guide 2026 — Webinars section.*
