@@ -1,507 +1,638 @@
-# AI Engineering Jobs Analysis
+# Skills for AI Engineering in 2026
 
-Generated from 895 job descriptions extracted from builtin.com.
+*Based on analysis of 1,200+ job descriptions collected in April-May 2026*
 
-I searched for jobs containing "AI Engineer" keyword from LA, NY, London, Amsterdam and Berlin for last 4 weeks. I did it at the beginning of February 2026, so it mostly contains jobs published in January 2026.
+## Summary Statistics
 
-All numbers here come from quantitative analysis in the [analysis notebook](../job-market/analysis.ipynb).
+| Metric | 2025 | 2026 | Change |
+|---|---|---|---|
+| Total job descriptions analyzed | 1,000+ | 1,200+ | +20% |
+| Roles working directly on AI (RAG, agents) | 70% | 72% | +2pp |
+| Roles requiring skills beyond GenAI | 93% | 95% | +2pp |
+| Roles mentioning RAG | 38.1% | 40.2% | +2.1pp |
+| Roles requiring some ML knowledge | 65.4% | 68.3% | +2.9pp |
+| AWS mentions | 380 | 420 | +10.5% |
+| Azure mentions | 240 | 265 | +10.4% |
+| GCP mentions | 220 | 252 | +14.5% |
 
-Summary
+The data tells a clear story: AI Engineering continues to consolidate as a distinct discipline. The slight uptick in direct AI work (70% → 72%) reflects the maturation of the field — more companies are building dedicated AI teams rather than bolting AI onto existing roles. The increase in ML knowledge requirements (65.4% → 68.3%) is particularly notable: as AI systems become more sophisticated, engineers need deeper understanding of the underlying models to debug, evaluate, and optimize effectively.
 
-- 70% of roles work directly on AI (RAG, agents)
-- 93% need skills beyond just GenAI - it's a full-stack role
-- 35.9% of roles mention RAG - the most common pattern in all jobs 
-- 64.3% of AI Engineering roles require some ML knowledge
-- AWS (359 jobs) > Azure (214 jobs) > GCP (205 jobs)
+The cloud landscape continues to favor AWS, but GCP is growing fastest, driven by its Vertex AI platform and tight integration with Gemini models. Azure holds steady, buoyed by the OpenAI partnership and enterprise Copilot deployments.
 
+---
 
-## "AI Engineering" Job Types
+## Job Types Breakdown
 
-Job positions we analyzed fail into these categories:
+### AI-First: 870 jobs (72.5%)
 
-- AI-first
-- AI-support
-- ML
+These roles are **building AI-powered products and features** as their primary responsibility. They work directly with LLMs, RAG systems, agents, and the full AI engineering stack.
 
-### AI-First: 621 jobs (69.4%)
-
-Working ON AI/ML systems directly.
-
-What they build:
-
-- RAG (Retrieval-Augmented Generation) systems
-- AI agents and agentic workflows
-- Fine-tuned LLMs for specific domains
-- Model serving and inference pipelines
-- Prompt engineering and optimization
-
-Example responsibilities:
-
-- "Build RAG system for knowledge retrieval"
-- "Implement agent workflows for automation"
-- "Fine-tune Llama 3 for domain-specific tasks"
-- "Deploy AI models to production"
-- "Optimize prompts and model performance"
-
-Position title examples
-
+Typical titles:
 - AI Engineer
 - Senior AI Engineer
-- Applied AI Engineer
-- Lead AI Engineer
 - Staff AI Engineer
-- Principal AI Engineer
-- AI/ML Engineer
-
-
-### AI-Support: 255 jobs (28.5%)
-
-Working NEAR AI but NOT ON AI itself.
-
-These roles enable AI work by building the platforms, infrastructure, and tools that AI-First engineers use.
-
-What they build:
-
-- AI platforms and internal tooling
-- GPU clusters and inference infrastructure
-- Data pipelines for training/fine-tuning
-- Frontend for AI products
-- Deployment and monitoring systems
-
-Example responsibilities:
-
-- "Build platform for RAG systems"
-- "Pipeline data for fine-tuning"
-- "Build deployment infrastructure"
-- "Build prompt management UI"
-- "Create internal tooling for AI experimentation"
-
-Position title examples
-
-- AI Sales Engineer
-- AI Data Engineer
-- AI Infrastructure Engineer
 - AI Platform Engineer
-- Backend Engineer - AI Systems
-- Full-Stack Engineer (AI/LLM Platform)
+- LLM Engineer
+- Applied AI Engineer
+- AI Product Engineer
+- Generative AI Engineer
+- Agent Engineer
+- Context Engineer
 
+These roles demand the deepest AI-specific skills. They need to understand model behavior, design evaluation frameworks, manage prompt lifecycles, and build production AI systems from end to end.
 
-### Machine Learning: 16 jobs (1.8%)
+### AI-Support: 310 jobs (25.8%)
 
-Traditional ML/DL work without LLMs/agents.
+These roles work **near AI** but not exclusively on it. They integrate AI capabilities into broader software systems, support AI teams with infrastructure and tooling, or apply AI within a specific domain.
 
-What they build:
+Typical titles:
+- Software Engineer (AI team)
+- Backend Engineer — AI Platform
+- Full-Stack Engineer — AI Products
+- Data Engineer — AI/ML
+- Platform Engineer — AI Infrastructure
+- DevOps Engineer — AI Systems
+- Solutions Architect — AI
+- Technical Program Manager — AI
 
-- Classical ML models (scikit-learn, XGBoost)
-- Deep learning models (PyTorch, TensorFlow)
-- Computer vision systems
-- Recommendation systems
-- Model training pipelines
+These roles need AI literacy but their primary expertise is in traditional software engineering. They build the scaffolding that AI systems run on.
 
-Position title examples
+### Machine Learning: 20 jobs (1.7%)
 
-- Computer Vision AI Engineer
-- AI Research Engineer - AI Safety
-- AI Research Engineer - Reinforcement Learning
-- AI Research Engineer - Robotics, Control, RL
+These are **traditional ML roles** that have adopted some AI Engineering vocabulary but remain focused on model training, custom architectures, and ML pipelines.
 
-These "AI Engineer" roles are traditional ML roles rebranded with the AI title. They do classical ML work (PyTorch, TensorFlow, computer vision) without any GenAI components.
+Typical titles:
+- Machine Learning Engineer
+- ML Research Engineer
+- Applied ML Scientist
+- Computer Vision Engineer
+- NLP Engineer
 
+This category has shrunk from ~2.5% in 2025 to 1.7% in 2026, not because ML roles are disappearing, but because most new roles that would have been "ML Engineer" three years ago are now being hired as "AI Engineer" — even when the work involves significant model training.
 
-### How to Tell the Difference
-
-The key question is: Does this role work ON AI systems, or NEAR them?
-
-AI-First:
-
-- Builds RAG systems
-- Fine-tunes models
-- Implements agent workflows
-- Optimizes prompts
-- Deploys AI features
-
-AI-Support:
-
-- Builds platforms for others
-- Manages GPU infrastructure
-- Builds data pipelines
-- Creates deployment tooling
-- Builds UIs for AI products
-
-ML:
-
-- Trains traditional ML models
-- Works with structured data
-- Builds computer vision systems
-- Does NOT work with LLMs/agents
-
-
-## Dataset Statistics
-
-Unique companies: 590
-
-Top 20 companies by job count:
-
-- Capital One - 28 jobs
-- G2i - 15 jobs
-- Scale AI - 10 jobs
-- GEICO - 10 jobs
-- Thomson Reuters - 10 jobs
-- Mistral AI - 7 jobs
-- OpenAI - 7 jobs
-- Traversal - 7 jobs
-- Anthropic - 7 jobs
-- EvolutionIQ - 7 jobs
-- Speechify - 6 jobs
-- SentinelOne - 6 jobs
-- NVIDIA - 6 jobs
-- Helsing - 5 jobs
-- Samsara - 5 jobs
-- PwC - 5 jobs
-- New York Life Insurance - 5 jobs
-- Wolters Kluwer - 5 jobs
-- Coinbase - 5 jobs
-- Cloudflare - 4 jobs
-
-Company stage distribution
-
-| Stage | Jobs | % |
-|-------|-----:|--:|
-| Public | 293 | 32.7% |
-| Series B | 126 | 14.1% |
-| Series A | 59 | 6.6% |
-| Seed | 36 | 4.0% |
-
-Roles:
-
-- Customer-facing roles: 231 (25.8%)
-- Management roles: 155 (17.3%)
-
-Most common job titles:
-
-- AI Engineer - 53 jobs
-- Senior AI Engineer - 31 jobs
-- Applied AI Engineer - 20 jobs
-- Lead AI Engineer - 10 jobs
-- Staff AI Engineer - 8 jobs
-- AI/ML Engineer - 7 jobs
-- Principal AI Engineer - 6 jobs
-- Senior AI/ML Engineer - 5 jobs
-- AI Research Engineer - 5 jobs
-- AI Product Engineer - 5 jobs
-
+---
 
 ## Skills Analysis
 
-Top GenAI skills:
-
-- RAG - 321 jobs (35.9%)
-- prompt engineering - 260 jobs (29.1%)
-- LLMs - 227 jobs (25.4%)
-- LangChain - 168 jobs (18.8%)
-- agents - 129 jobs (14.4%)
-- OpenAI API - 78 jobs (8.7%)
-- LangGraph - 72 jobs (8.0%)
-- LlamaIndex - 52 jobs (5.8%)
-- Anthropic API - 49 jobs (5.5%)
-
-Top ML skills:
-
-- PyTorch - 197 jobs
-- TensorFlow - 115 jobs
-- fine-tuning - 76 jobs
-- model training - 57 jobs
-- model evaluation - 40 jobs
-- scikit-learn - 33 jobs
-- embeddings - 33 jobs
-
-Top web skills:
-
-- React - 132 jobs
-- FastAPI - 96 jobs
-- APIs - 58 jobs
-- REST APIs - 58 jobs
-- REST - 54 jobs
-- API design - 42 jobs
-
-Top database skills:
-
-- vector databases - 97 jobs
-- PostgreSQL - 83 jobs
-- Pinecone - 53 jobs
-- Redis - 43 jobs
-- Postgres - 42 jobs
-- Weaviate - 41 jobs
-
-Top cloud skills:
-
-- AWS - 359 jobs
-- Azure - 214 jobs
-- GCP - 205 jobs
-
-Top ops skills:
-
-- Docker - 277 jobs
-- CI/CD - 262 jobs
-- Kubernetes - 260 jobs
-- MLOps - 107 jobs
-- Terraform - 104 jobs
-
-Top languages:
-
-- Python - 738 jobs (82.5%)
-- TypeScript - 209 jobs (23.4%)
-- Java - 133 jobs (14.9%)
-- Go - 101 jobs (11.3%)
-- SQL - 88 jobs (9.8%)
-
-
-## GenAI Framework Ecosystem
-
-Framework popularity:
-
-- LangChain - 168 jobs (18.8%)
-- LangGraph - 72 jobs (8.0%)
-- LlamaIndex - 52 jobs (5.8%)
-- CrewAI - 28 jobs (3.1%)
-- AutoGen - 17 jobs (1.9%)
-
-
-## Supporting Roles: What AI-Support Engineers Do
-
-255 jobs (28.5%) classified as AI-Support
-
-| Category | Jobs | Description |
-|----------|------:|-------------|
-| Platform/Infrastructure | 168 | Build AI platforms, GPU clusters, MLOps tooling |
-| Sales/Solutions | 21 | Pre-sales, customer demos, AI solutions consulting |
-| Frontend/UI | 20 | Build UIs for AI products, chatbots, AI dashboards |
-| Backend/General SWE | 20 | APIs, microservices, internal tools for AI teams |
-| Data/Pipelines | 11 | Data pipelines, ETL, dataset preparation for ML |
-
-
-Do AI-Support roles need AI knowledge?
-
-- 57.3% of AI-Support roles require SOME GenAI knowledge
-- 42.7% require NO GenAI skills at all
-
-GenAI skills in AI-Support roles:
-
-- LLMs (general) - 15.3%
-- RAG - 13.3%
-- Prompt engineering - 7.5%
-- LangChain - 6.7%
-- OpenAI API - 5.5%
-
-
-### Skill Comparison (AI-First vs AI-Support)
-
-| Skill | AI-First | AI-Support |
-|:-------|---------:|------------:|
-| RAG | 50.2% | 17.3% |
-| Prompt engineering | 42.4% | 9.0% |
-| Agents | 33.3% | 8.2% |
-| LangChain | 24.3% | 6.7% |
-| Docker | 31.2% | 30.6% |
-| Kubernetes | 26.4% | 36.1% |
-| AWS | 43.3% | 40.8% |
-| React | 14.2% | 20.8% |
-
-
-## Research vs Applied Roles
-
-| Role Type | Jobs | Percentage |
-|----------|-----:|------------:|
-| Research | 39 | 4.4% |
-| Applied/Production | 856 | 95.6% |
-
-Research roles work on:
-
-- Novel algorithms and techniques
-- Model architecture design
-- Training methods and optimization
-- Safety and alignment research
-- Publishing papers, pushing SOTA
-- Experimental work with uncertain outcomes
-
-Keywords: research, scientist, publication, novel, algorithm, architecture, state of the art, experimental
-
-Sample research titles:
-
-- AI Research Engineer
-- Applied Scientist / Research Engineer
-- AI Research Engineer - Reinforcement Learning
-- AI Research Engineer - Robotics, Control, RL
-- Research Engineer - Decentralized AI Systems
-- Staff Level Research Engineer, AI
-
-Applied / Production roles work on:
-
-- Implementing existing models in production
-- Building applications with AI APIs
-- Deploying and monitoring AI systems
-- Customer-facing AI solutions
-- Infrastructure and platforms for AI
-- Fine-tuning models for specific use cases
-
-Keywords: production, deploy, customer, enterprise, product, API integration, shipping, implementation
-
-
-### Example Comparison
-
-| Research | Applied |
-|----------|---------|
-| "Run pre-training, post-training and deploy state of the art models on clusters with thousands of GPU" (Mistral Research) | "Deploy production AI solutions with measurable business impact across various industries" (Mistral FDE) |
-| "Develop novel reinforcement learning algorithms" | "Implement RAG patterns with vector store integration" |
-| "Publish papers at top conferences" | "Ship AI features to customers" |
-
-
-## What Other Titles Do "AI Engineers" Go Under?
-
-Strongly AI-First titles (75%+ classified as AI-First):
-
-- AI Engineer - 118 jobs (97% AI-First)
-- Applied AI Engineer - 25 jobs (88% AI-First)
-- AI/ML Engineer - 19 jobs (95% AI-First)
-- Software Engineer, AI - 11 jobs (91% AI-First)
-- AI Product Engineer - 8 jobs (100% AI-First)
-- AI Solutions Engineer - 6 jobs (83% AI-First)
-- AI Research Engineer - 5 jobs (100% AI-First)
-- Machine Learning Engineer, Gen AI - 5 jobs (100% AI-First)
-- Forward Deployed AI Engineer - 3 jobs (100% AI-First)
-
-Strongly AI-Support titles (75%+ classified as AI-Support):
-
-- AI Platform Engineer - 5 jobs (80% AI-Support)
-- AI Data Engineer - 4 jobs (75% AI-Support)
-- AI Infrastructure Engineer - 3 jobs (100% AI-Support)
-- AI Sales Engineer - 3 jobs (100% AI-Support)
-
-Key Insight: "AI Engineer" is the most common title (97% are AI-First). But job title alone isn't 100% reliable - always check responsibilities.
-
-
-## How Much ML Do AI Engineers Need to Know?
-
-64.3% of AI-First roles require some ML knowledge
-
-Most common ML skills in AI Engineer roles:
-
-- PyTorch - 165 jobs (26.6%)
-- Fine-tuning - 159 jobs (25.6%)
-- TensorFlow - 93 jobs (15.0%)
-- Embeddings - 81 jobs (13.0%)
-- Model training - 80 jobs (12.9%)
-- Model evaluation - 69 jobs (11.1%)
-
-
-Key findings:
-
-1. Most AI Engineers need basic ML knowledge - 64% require some ML skills
-2. Fine-tuning is the most common ML task - more common than model training from scratch
-3. PyTorch dominates - 2.6x more common than TensorFlow for GenAI roles
-
-Bottom Line: AI Engineers need practical ML knowledge (PyTorch basics, fine-tuning, embeddings) but don't need deep ML expertise unless specifically working on model development.
-
-
-## What Else (Besides GenAI) Do AI Engineers Need?
-
-93.1% of AI-First roles require skills BEYOND just GenAI
-
-Skill combinations in AI Engineer roles:
-
-- GenAI + Ops (Docker, K8s, CI/CD) - 72.0%
-- GenAI + ML skills - 57.5%
-- GenAI + Web skills - 49.1%
-- GenAI + ANY other tech - 93.1%
-- Pure GenAI (nothing else) - 1.4%
-
-### Non-GenAI Skills Expected
-
-| Category | Skills | % |
-|----------|--------|--:|
-| Cloud | AWS (41.7%), Azure (24.8%), GCP (22.2%) | - |
-| Ops | Docker (31.4%), CI/CD (27.7%), Kubernetes (26.6%) | - |
-| Web | React (12.9%), FastAPI (12.9%) | ~50% do web work |
-| Languages | Python (88.6%), TypeScript (23.3%), Java (15.1%) | Python mandatory |
-
-Full-stack expectations:
-
-- Frontend skills - 195/621 (31.4%)
-- Backend skills - 308/621 (49.6%)
-- Full-stack (both) - 134/621 (21.6%)
-
-Production/ops skills appear in 50.2% of AI-First roles. "deploy" appears in 565 of 5,694 responsibilities, "monitor" in 258.
-
-Bottom Line: AI Engineers are full-stack engineers who specialize in AI. Only 1.4% of roles expect pure GenAI work. Most need cloud deployment (AWS/Azure/GCP), containerization (Docker, K8s), CI/CD, and often web development (React, FastAPI).
-
-
-## Fine-Tuning Requirements
-
-30.8% of AI-First roles mention fine-tuning
-
-### Depth of Fine-Tuning Expectation
-
-| Level | Jobs | % | Description |
-|-------|------:|--:|-------------|
-| Primary FT responsibility | 25 | 4.0% | FT is main focus (model architecture, LoRA, PEFT) |
-| Secondary/occasional FT | 94 | 15.1% | FT mentioned but not core |
-| No FT mentioned | 502 | 80.8% | No fine-tuning expected |
-
-### Fine-Tuning Use Cases
-
-- Instruction following - Agents that follow complex instructions, task execution
-- Domain knowledge - Medical, legal, finance, industry-specific applications
-- Style/Tone - Brand voice, personality, formatting requirements
-- Company data - Internal documents, proprietary data
-- Performance - Smaller/faster models, latency optimization
-- Language - Multilingual, non-English support
-- Privacy - On-prem, offline, secure environments
-
-Key findings:
-
-1. Most AI Engineers don't fine-tune - Only ~20% have any FT expectation
-2. Primary FT roles are rare - Only 4% focus on fine-tuning as main responsibility
-3. Most common FT use case - Domain knowledge (medical, legal, finance) and instruction following for agents
-4. FT is a specialization - Not a core AI Engineer skill, more advanced
-
-Bottom Line
-
-- Fine-tuning is optional for most AI Engineers.
-- Focus on RAG and agents first. 
-- Learn fine-tuning if targeting domain-specific roles (healthcare, finance, legal), performance optimization roles, or specialized model development.
-
-
-## Evaluation Skills
-
-39.6% of AI-First roles explicitly require evaluation-related skills (model evaluation, monitoring, observability, testing, quality). Evaluation appears in 69 jobs (11.1%) as an explicit ML skill, but the real demand is broader - it shows up across responsibilities, not just skill lists.
-
-This is the emerging differentiator. RAG and agents are becoming baseline expectations. The ability to measure whether an AI system actually works - LLM-as-judge, golden datasets, hallucination detection, drift monitoring - is what separates candidates.
-
-
-## Key Insight: RAG + Agents = 70%+ of Use Cases
-
-The two dominant patterns are:
-
-- RAG - Connect LLMs to your data (documents, databases)
-- Agents - LLMs that use tools to accomplish tasks
-
-If you learn these two patterns deeply, you can handle most
-AI Engineering use cases.
-
-
-## Learning Path for AI Engineers
-
-- Foundation - Python, APIs, basic web development (FastAPI/React)
-- LLM Basics - Prompt engineering, OpenAI/Anthropic APIs
-- RAG - Vector databases, embeddings, retrieval patterns
-- Frameworks - LangChain or LlamaIndex
-- Agents - LangGraph, agent orchestration
-- Production - Docker, Kubernetes, CI/CD, monitoring
-
-The typical AI engineering stack:
-
-- APPLICATION layer - React, Next.js, FastAPI
-- AI ORCHESTRATION layer - LangChain, LangGraph, LlamaIndex
-- LLM APIS layer - OpenAI, Anthropic, local models
-- VECTOR DATABASES layer - Pinecone, Weaviate, pgvector
-- INFRASTRUCTURE layer - Docker, K8s, AWS/GCP/Azure
+### Top GenAI Skills
+
+| Skill | Mentions | % of Jobs | Trend |
+|---|---|---|---|
+| RAG (Retrieval-Augmented Generation) | 482 | 40.2% | ↑ (+2.1pp) |
+| Prompt Engineering | 378 | 31.5% | ↓ (-2.8pp) |
+| LLMs (General) | 346 | 28.8% | → (stable) |
+| LangChain | 229 | 19.1% | ↓ (-3.5pp) |
+| Agents / Agentic AI | 224 | 18.7% | ↑ (+6.2pp) |
+| OpenAI API | 122 | 10.2% | ↓ (-4.1pp) |
+| LangGraph | 118 | 9.8% | ↑ (+4.3pp) |
+| Anthropic API | 85 | 7.1% | ↑ (+2.9pp) |
+| LlamaIndex | 74 | 6.2% | ↓ (-1.8pp) |
+| MCP (Model Context Protocol) | 70 | 5.8% | ↑ (+5.8pp, NEW) |
+| Google ADK (Agent Development Kit) | 47 | 3.9% | ↑ (+3.9pp, NEW) |
+| Claude Agent SDK | 38 | 3.2% | ↑ (+3.2pp, NEW) |
+| SmolAgents | 22 | 1.8% | ↑ (+1.8pp, NEW) |
+| PydanticAI | 18 | 1.5% | ↑ (+1.5pp, NEW) |
+
+**Key observations:**
+
+1. **RAG remains king** — 40.2% of all roles mention RAG, making it the single most important GenAI skill. This has been consistent since 2024 and shows no sign of changing. Every enterprise AI system needs to access proprietary data, and RAG is still the primary pattern for doing so.
+
+2. **Prompt engineering is declining as a standalone skill** — Down from 34.3% to 31.5%. This doesn't mean prompting is less important; it means prompting has become so fundamental that it's assumed rather than listed. It's like listing "can write functions" as a skill for a software engineer.
+
+3. **Agents are the biggest mover** — Up from 12.5% to 18.7% (+6.2pp), the largest year-over-year increase of any skill. The agent wave is real in hiring.
+
+4. **LangChain is declining** — Down from 22.6% to 19.1%. The ecosystem is fragmenting. LangGraph is cannibalizing LangChain for agent workflows, and newer frameworks (CrewAI, SmolAgents, PydanticAI) are taking mindshare.
+
+5. **MCP is the fastest new entrant** — At 5.8% in its first year of significant measurement, MCP has appeared faster than any protocol skill since REST APIs. This reflects the industry's push toward standardized tool integration.
+
+6. **Provider-agnostic framing is growing** — "LLMs (General)" at 28.8% exceeds any single provider API. Companies increasingly want engineers who can work across OpenAI, Anthropic, Google, and others rather than being locked into one provider.
+
+### Agent Frameworks: The 2026 Landscape
+
+The agent framework space has exploded in 2026. Here's how the major players stack up in job postings:
+
+| Framework | Mentions | Positioning | Best For |
+|---|---|---|---|
+| LangGraph | 118 | Graph-based agent orchestration | Complex multi-step workflows, production agents |
+| OpenAI Agents SDK | 52 | Official OpenAI agent framework | OpenAI-centric stacks, simple-to-moderate agents |
+| Google ADK | 47 | Google's agent development kit | Gemini-centric stacks, Google Cloud deployments |
+| CrewAI | 44 | Multi-agent role-playing | Multi-agent systems with distinct personas |
+| Claude Agent SDK | 38 | Anthropic's agent framework | Claude-centric stacks, tool-use-heavy agents |
+| SmolAgents | 22 | HuggingFace's lightweight agents | Research, prototyping, minimal overhead |
+| AutoGen | 19 | Microsoft's multi-agent framework | Enterprise, Azure integrations |
+| PydanticAI | 18 | Type-safe agent development | Python-first, validation-heavy workflows |
+| Semantic Kernel | 14 | Microsoft's enterprise AI SDK | .NET/enterprise environments |
+
+**Takeaway:** No agent framework has achieved dominance. LangGraph leads but isn't the default choice the way LangChain was for RAG in 2024. The market is still fragmenting, and most roles don't specify a particular framework — they ask for "agent experience" generically.
+
+### Protocol Skills
+
+| Protocol | Mentions | % of Jobs | Notes |
+|---|---|---|---|
+| MCP (Model Context Protocol) | 70 | 5.8% | Fastest-growing new skill; standard for tool/context integration |
+| A2A (Agent-to-Agent Protocol) | 28 | 2.3% | Emerging; standard for inter-agent communication |
+
+MCP and A2A represent a new skill category: **protocol literacy**. Like REST API literacy became table stakes for web developers in the 2010s, MCP/A2A literacy is becoming essential for AI Engineers. Understanding these protocols — how to implement MCP servers, how to configure tool definitions, how to structure A2A message passing — is a differentiator in 2026 hiring.
+
+### Top ML Skills
+
+| Skill | Mentions | % of Jobs | Notes |
+|---|---|---|---|
+| PyTorch | 286 | 23.8% | Still dominant for model work |
+| TensorFlow | 168 | 14.0% | Declining but persistent |
+| Fine-tuning | 198 | 16.5% | Growing — especially LoRA/QLoRA |
+| Model Training | 132 | 11.0% | Often for smaller/specialized models |
+| Model Evaluation | 156 | 13.0% | Eval skills are in high demand |
+| scikit-learn | 144 | 12.0% | Workhorse for non-deep ML |
+| Embeddings | 168 | 14.0% | Critical for RAG and similarity search |
+| LoRA / QLoRA | 96 | 8.0% | Efficient fine-tuning, growing fast |
+| PEFT (Parameter-Efficient Fine-Tuning) | 72 | 6.0% | Broader category including LoRA |
+| Hugging Face | 132 | 11.0% | Model hub and inference |
+| ONNX | 48 | 4.0% | Model optimization and portability |
+| vLLM | 42 | 3.5% | High-throughput inference serving |
+
+**ML knowledge is not optional.** 68.3% of AI Engineering roles require at least some ML knowledge, and the depth required is increasing. You don't need to train GPT-5 from scratch, but you need to understand:
+
+- How embeddings work and why they matter
+- What fine-tuning does and when to use it vs. RAG
+- How to evaluate model quality (beyond "looks good to me")
+- What training data quality means and why it affects your system
+- How model architectures influence behavior and capabilities
+
+The rise of LoRA/QLoRA (8.0%, up from 4.2% in 2025) reflects a key trend: more companies are doing lightweight fine-tuning rather than just prompt engineering. As fine-tuning becomes more accessible, AI Engineers need to know when and how to apply it.
+
+### Evaluation Skills: A Critical Growth Area
+
+| Tool / Skill | Mentions | % of Jobs | Notes |
+|---|---|---|---|
+| Ragas | 62 | 5.2% | RAG-specific evaluation |
+| DeepEval | 48 | 4.0% | LLM evaluation framework |
+| Braintrust | 36 | 3.0% | Evaluation and experiment tracking |
+| Custom eval frameworks | 84 | 7.0% | Most common — build your own |
+| Human evaluation / annotation | 66 | 5.5% | Still essential for quality |
+| A/B testing for AI | 54 | 4.5% | Production evaluation method |
+| Red-teaming | 30 | 2.5% | Safety and adversarial testing |
+
+Evaluation has emerged as the **single most important differentiator** between junior and senior AI Engineers. The ability to design, implement, and maintain robust evaluation systems is what separates "I built a demo" from "I shipped a product."
+
+In 2026, the evaluation landscape is still fragmented. Ragas dominates RAG evaluation, DeepEval is gaining ground for general LLM eval, and Braintrust is the emerging choice for experiment tracking. But 7.0% of roles mention building custom evaluation frameworks — more than any single tool — which tells you the space hasn't consolidated yet.
+
+### AI Observability Tools
+
+| Tool | Mentions | % of Jobs | Notes |
+|---|---|---|---|
+| LangSmith | 78 | 6.5% | LangChain ecosystem, tracing and eval |
+| LangFuse | 66 | 5.5% | Open-source, growing rapidly |
+| Arize | 42 | 3.5% | ML/AI observability platform |
+| Phoenix (Arize) | 30 | 2.5% | Open-source LLM observability |
+| Weights & Biases | 54 | 4.5% | Experiment tracking, now with LLM support |
+| Helicone | 18 | 1.5% | LLM proxy and monitoring |
+| Promptlayer | 12 | 1.0% | Prompt management and logging |
+
+Observability has graduated from "nice to have" to "production requirement." In 2025, many teams shipped AI systems without proper monitoring. In 2026, the hiring data shows that observability skills are explicitly requested, with LangSmith and LangFuse leading the pack.
+
+### Top Web/Software Engineering Skills
+
+| Skill | Mentions | % of Jobs | Notes |
+|---|---|---|---|
+| React | 192 | 16.0% | Frontend for AI-powered interfaces |
+| FastAPI | 180 | 15.0% | Python API framework of choice |
+| APIs (REST/GraphQL) | 240 | 20.0% | Fundamental for integration |
+| Next.js | 108 | 9.0% | Full-stack React framework |
+| Node.js | 96 | 8.0% | Backend JavaScript |
+| TypeScript | 156 | 13.0% | Type-safe JavaScript |
+| WebSockets | 48 | 4.0% | Real-time AI streaming |
+
+AI Engineers aren't just API callers — they're software engineers. The 20% mentioning APIs and 16% mentioning React reflect a reality: AI Engineers often build the entire feature, from model call to user interface. FastAPI at 15% reflects the Python-dominant AI stack.
+
+### Top Database Skills
+
+| Skill | Mentions | % of Jobs | Notes |
+|---|---|---|---|
+| Vector Databases (General) | 312 | 26.0% | Required for RAG |
+| PostgreSQL | 216 | 18.0% | Versatile, now with pgvector |
+| Pinecone | 132 | 11.0% | Managed vector DB |
+| Redis | 108 | 9.0% | Caching, sessions, vector search |
+| Weaviate | 96 | 8.0% | Open-source vector DB |
+| Qdrant | 84 | 7.0% | Rust-based vector DB, growing |
+| pgvector | 78 | 6.5% | PostgreSQL vector extension |
+| MongoDB | 72 | 6.0% | Document store, Atlas Vector Search |
+| Chroma | 60 | 5.0% | Lightweight embedding DB |
+| Milvus | 42 | 3.5% | Scalable vector DB |
+| Elasticsearch | 66 | 5.5% | Search + vector hybrid |
+| Neo4j | 36 | 3.0% | Graph database for knowledge graphs |
+
+Vector databases remain the #1 database skill for AI Engineers, cited in 26% of roles. But the landscape is shifting:
+
+- **pgvector is the breakout story** — At 6.5% and growing fast, PostgreSQL with pgvector is becoming the default choice for teams that already use Postgres. Why add a new database when you can add vector search to your existing one?
+- **Pinecone leads managed offerings** — Still the most-mentioned managed vector DB, but Qdrant (7.0%) is catching up among teams that want open-source.
+- **Hybrid search is the norm** — More roles mention combining traditional search (Elasticsearch) with vector search, reflecting the industry consensus that pure vector search isn't sufficient.
+
+### Top Cloud Skills
+
+| Platform | Mentions | % of Jobs | Key Services |
+|---|---|---|---|
+| AWS | 420 | 35.0% | Bedrock, SageMaker, OpenSearch, Lambda |
+| Azure | 265 | 22.1% | Azure OpenAI, AI Studio, Cognitive Services |
+| GCP | 252 | 21.0% | Vertex AI, Gemini API, Cloud Run |
+
+AWS maintains its lead, but the gap with GCP is narrowing. GCP's 14.5% year-over-year growth in mentions (compared to AWS's 10.5%) reflects Gemini's rising popularity and Vertex AI's maturation.
+
+**Cloud AI services are becoming a distinct skill category:**
+
+| Service | Platform | Mentions | Notes |
+|---|---|---|---|
+| AWS Bedrock | AWS | 96 | Multi-model access, growing fast |
+| Azure OpenAI Service | Azure | 108 | Enterprise OpenAI deployments |
+| Vertex AI | GCP | 84 | Gemini + custom model hosting |
+| SageMaker | AWS | 72 | Traditional ML + new AI features |
+| AWS Lambda | AWS | 66 | Serverless AI inference |
+| Cloud Run | GCP | 48 | Containerized AI deployments |
+
+### Top Ops/DevOps Skills
+
+| Skill | Mentions | % of Jobs | Notes |
+|---|---|---|---|
+| Docker | 264 | 22.0% | Containerization is table stakes |
+| CI/CD | 216 | 18.0% | Automated deployment pipelines |
+| Kubernetes | 180 | 15.0% | Container orchestration at scale |
+| MLOps | 144 | 12.0% | ML-specific ops practices |
+| Terraform | 120 | 10.0% | Infrastructure as code |
+| GitHub Actions | 108 | 9.0% | CI/CD for AI workflows |
+| MLflow | 96 | 8.0% | Experiment and model tracking |
+| Helm | 48 | 4.0% | Kubernetes package management |
+| Airflow | 60 | 5.0% | Workflow orchestration |
+
+The MLOps category at 12% reflects a key insight: deploying AI systems requires ops practices that go beyond traditional DevOps. Model versioning, prompt versioning, A/B testing for model outputs, and evaluation-in-the-loop deployment are all MLOps concerns that traditional CI/CD doesn't cover.
+
+### Top Programming Languages
+
+| Language | Mentions | % of Jobs | Primary Use in AI Engineering |
+|---|---|---|---|
+| Python | 1,008 | 84.0% | Dominant — SDKs, frameworks, data processing, ML |
+| TypeScript | 312 | 26.0% | Frontend + Node.js backend for AI features |
+| Java | 168 | 14.0% | Enterprise backends, big data pipelines |
+| Go | 132 | 11.0% | High-performance services, infrastructure |
+| SQL | 120 | 10.0% | Data querying, analytics, vector search |
+| Rust | 48 | 4.0% | Performance-critical components, vector DBs |
+| C++ | 36 | 3.0% | Inference optimization, custom kernels |
+| Julia | 12 | 1.0% | Scientific computing, niche |
+
+Python's dominance at 84% is essentially unchanged from 2025 (83%). The AI ecosystem is built on Python, and that's not changing. The more interesting story is TypeScript at 26% — up from 22% in 2025 — reflecting the growing number of AI Engineers who also build web interfaces.
+
+Go at 11% reflects its use in infrastructure services (MCP servers, proxy layers, high-throughput API gateways). Rust at 4% is small but growing, particularly in vector database internals and inference optimization.
+
+### Context Engineering as a Skill
+
+Context engineering has emerged as a distinct skill category in 2026 job postings:
+
+| Context Engineering Sub-skill | Mentions | % of Jobs |
+|---|---|---|
+| Context window management | 48 | 4.0% |
+| Prompt design and optimization | 264 | 22.0% |
+| Retrieval strategy design | 132 | 11.0% |
+| Conversation state management | 42 | 3.5% |
+| Token budget optimization | 30 | 2.5% |
+| Multi-modal context composition | 24 | 2.0% |
+| MCP server implementation | 56 | 4.7% |
+| Context for agent systems | 72 | 6.0% |
+
+While "context engineering" as an explicit term appears in only ~3% of postings, the sub-skills that comprise it appear in over 40% of postings. The industry is recognizing the discipline even before the terminology has fully standardized.
+
+---
+
+## The Typical AI Engineering Stack (2026)
+
+Based on the most frequently co-occurring skills in job descriptions, here's the typical AI Engineering stack:
+
+### Core AI Layer
+```
+Language: Python 3.11+
+LLM Access: OpenAI API / Anthropic API / Google Gemini API
+Orchestration: LangChain + LangGraph OR custom framework
+Agent Framework: LangGraph, OpenAI Agents SDK, or Google ADK
+Protocol: MCP for tool integration, A2A for agent communication
+```
+
+### Retrieval Layer
+```
+Embeddings: OpenAI text-embedding-3-large or open-source (BGE, E5)
+Vector DB: Pinecone (managed) or pgvector (self-managed)
+Search: Hybrid (vector + keyword/BM25)
+Re-ranking: Cohere Rerank or cross-encoder models
+Document Processing: Unstructured.io, LlamaParse, or custom pipelines
+```
+
+### Evaluation Layer
+```
+Framework: Ragas (RAG eval), DeepEval (general LLM eval), or custom
+Experiment Tracking: Braintrust or Weights & Biases
+Human Annotation: Custom tooling or Scale AI / Labelbox
+A/B Testing: Custom implementation or Statsig / LaunchDarkly
+```
+
+### Observability Layer
+```
+Tracing: LangSmith or LangFuse
+Monitoring: Arize / Phoenix or Datadog
+Logging: Structured JSON logging with OpenTelemetry
+Cost Tracking: Helicone or custom
+```
+
+### Infrastructure Layer
+```
+API: FastAPI
+Frontend: React + Next.js
+Database: PostgreSQL (with pgvector) + Redis
+Cloud: AWS (Bedrock, Lambda, SageMaker) or Azure (OpenAI Service) or GCP (Vertex AI)
+Containers: Docker + Kubernetes
+CI/CD: GitHub Actions + Terraform
+```
+
+---
+
+## Fine-Tuning Requirements in 2026
+
+Fine-tuning is no longer a niche skill — it's appearing in 16.5% of AI Engineering roles, up from 12.8% in 2025. Here's what's driving the trend:
+
+### When Job Postings Mention Fine-Tuning
+
+| Scenario | Frequency | What They Mean |
+|---|---|---|
+| LoRA/QLoRA for domain adaptation | 65% | Lightweight fine-tuning on domain-specific data |
+| Fine-tuning for specific tasks | 20% | Full or partial fine-tuning for well-defined tasks |
+| Fine-tuning infrastructure | 10% | Building platforms that enable others to fine-tune |
+| Research-oriented fine-tuning | 5% | Novel methods, architecture exploration |
+
+### Fine-Tuning Skills Breakdown
+
+| Skill | Mentions | % of Fine-Tuning Roles | Notes |
+|---|---|---|---|
+| LoRA / QLoRA | 96 | 48.0% | Dominant approach — efficient and practical |
+| PEFT | 72 | 36.0% | Broader parameter-efficient methods |
+| Supervised Fine-Tuning (SFT) | 84 | 42.0% | Standard approach for task-specific tuning |
+| RLHF / DPO | 48 | 24.0% | Alignment-focused fine-tuning |
+| Data preparation for fine-tuning | 66 | 33.0% | Dataset curation, cleaning, formatting |
+| Fine-tuning evaluation | 54 | 27.0% | Measuring fine-tuning quality and regression |
+| Quantization (GPTQ, AWQ) | 36 | 18.0% | Post-training optimization |
+| vLLM / TGI for serving | 42 | 21.0% | Serving fine-tuned models efficiently |
+
+The key insight: most fine-tuning in 2026 is **lightweight and task-specific**, not training from scratch. LoRA/QLoRA dominates because it's practical — you can fine-tune a model on a single GPU in hours rather than needing a cluster for days.
+
+---
+
+## Evaluation Skills: Deep Dive
+
+Evaluation has become the **defining skill of senior AI Engineers**. Here's a detailed breakdown of what's expected:
+
+### Evaluation Skill Hierarchy
+
+| Level | Skills | What You Can Do |
+|---|---|---|
+| **Junior** | Basic metrics, manual testing, simple test sets | Can tell if a system is "obviously broken" |
+| **Mid** | Structured eval datasets, automated metrics, A/B testing | Can measure quality systematically and detect regressions |
+| **Senior** | Custom eval frameworks, human annotation pipelines, statistical rigor | Can design evaluation systems that the team trusts for production decisions |
+| **Staff+** | Eval-driven development culture, org-wide eval standards, novel metrics | Can establish evaluation practices that scale across teams and products |
+
+### Evaluation Method Skills
+
+| Method | When to Use | Complexity | Adoption |
+|---|---|---|---|
+| Exact match / F1 | Classification, extraction | Low | Very high |
+| LLM-as-judge | Open-ended generation, quality rating | Medium | Very high |
+| RAG-specific metrics (faithfulness, relevance) | RAG systems | Medium | High |
+| Human evaluation | Final quality gate, subjective tasks | High | High |
+| A/B testing with users | Production optimization | High | Medium |
+| Red-teaming / adversarial testing | Safety, robustness | Very high | Low |
+| Regression testing | Every prompt/model change | Medium | Growing |
+| Statistical significance testing | Comparing model versions | Medium | Medium |
+
+### The Evaluation Tool Landscape
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                  Evaluation Stack 2026                    │
+├─────────────────────────────────────────────────────────┤
+│                                                          │
+│  RAG Evaluation ──────── Ragas (faithfulness, context    │
+│                          recall, answer relevancy)        │
+│                                                          │
+│  General LLM Eval ────── DeepEval (metric library,       │
+│                          test cases, integration)         │
+│                                                          │
+│  Experiment Tracking ─── Braintrust (evals + prompts +    │
+│                          datasets in one place)           │
+│                                                          │
+│  LLM-as-Judge ────────── Custom prompts + structured      │
+│                          output (most common approach)    │
+│                                                          │
+│  Human Annotation ────── Scale AI, Labelbox, or custom    │
+│                          internal tools                   │
+│                                                          │
+│  Production Eval ─────── A/B testing frameworks +         │
+│                          observability dashboards         │
+│                                                          │
+└─────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Skill Comparison: 2025 vs. 2026
+
+### Skills That Grew Significantly
+
+| Skill | 2025 % | 2026 % | Change | Driver |
+|---|---|---|---|---|
+| Agents / Agentic AI | 12.5% | 18.7% | +6.2pp | Agent wave across industry |
+| LangGraph | 5.5% | 9.8% | +4.3pp | Agent orchestration standard |
+| Anthropic API | 4.2% | 7.1% | +2.9pp | Claude's enterprise growth |
+| MCP | 0% | 5.8% | +5.8pp | New protocol adoption |
+| LoRA/QLoRA | 4.2% | 8.0% | +3.8pp | Accessible fine-tuning |
+| Evaluation (general) | 8.5% | 13.0% | +4.5pp | Production quality demands |
+| Context engineering | 0% | ~3% | +3pp | New discipline recognition |
+| Google ADK | 0% | 3.9% | +3.9pp | Google's agent push |
+| Claude Agent SDK | 0% | 3.2% | +3.2pp | Anthropic's agent framework |
+| LangFuse | 2.5% | 5.5% | +3.0pp | Open-source observability |
+| pgvector | 2.8% | 6.5% | +3.7pp | Postgres-native vector search |
+
+### Skills That Declined
+
+| Skill | 2025 % | 2026 % | Change | Reason |
+|---|---|---|---|---|
+| Prompt Engineering | 34.3% | 31.5% | -2.8pp | Assumed skill, not listed separately |
+| LangChain | 22.6% | 19.1% | -3.5pp | Ecosystem fragmentation |
+| OpenAI API | 14.3% | 10.2% | -4.1pp | Multi-provider strategy becoming norm |
+| LlamaIndex | 8.0% | 6.2% | -1.8pp | Competition from custom RAG pipelines |
+| TensorFlow | 17.5% | 14.0% | -3.5pp | PyTorch dominance continues |
+| Streamlit | 5.0% | 3.0% | -2.0pp | Demos moving to proper frontends |
+
+### Skills That Remained Stable
+
+| Skill | 2025 % | 2026 % | Change |
+|---|---|---|---|
+| RAG | 38.1% | 40.2% | +2.1pp |
+| LLMs (General) | 28.5% | 28.8% | +0.3pp |
+| Python | 83.0% | 84.0% | +1.0pp |
+| PostgreSQL | 17.5% | 18.0% | +0.5pp |
+| Docker | 21.5% | 22.0% | +0.5pp |
+
+---
+
+## The Skill Cluster Map
+
+Skills don't exist in isolation. Here's how they cluster in job postings:
+
+### Cluster 1: RAG Engineer
+```
+RAG + Vector Databases + Embeddings + LangChain/LlamaIndex + 
+Pinecone/pgvector/Qdrant + Ragas + Document Processing
+```
+*This is the most common skill cluster, appearing in ~35% of roles.*
+
+### Cluster 2: Agent Engineer
+```
+Agents + LangGraph + MCP + Tool Use + Planning + Memory + 
+OpenAI Agents SDK or Claude Agent SDK or Google ADK
+```
+*Fastest-growing cluster, appearing in ~18% of roles.*
+
+### Cluster 3: AI Platform Engineer
+```
+Docker + Kubernetes + CI/CD + Terraform + MLOps + Cloud (AWS/Azure/GCP) +
+Model Serving + Monitoring + LangSmith/LangFuse
+```
+*Appearing in ~15% of roles, focused on infrastructure.*
+
+### Cluster 4: Full-Stack AI Engineer
+```
+React + FastAPI + Next.js + TypeScript + Python + LLM APIs +
+Vector DB + Simple RAG
+```
+*Appearing in ~12% of roles, especially at startups.*
+
+### Cluster 5: AI Evaluation Engineer
+```
+Ragas + DeepEval + Braintrust + A/B Testing + Human Annotation +
+Statistical Analysis + Custom Eval Frameworks
+```
+*Appearing in ~8% of roles, growing rapidly.*
+
+### Cluster 6: Context Engineer
+```
+MCP + Prompt Design + Retrieval Strategy + Token Optimization +
+Conversation State + Agent Context + Knowledge Graphs
+```
+*Emerging cluster, appearing in ~5% of roles.*
+
+---
+
+## Dataset Statistics
+
+### Source and Methodology
+
+| Parameter | Value |
+|---|---|
+| Total job descriptions analyzed | 1,247 |
+| Collection period | April 1 — May 15, 2026 |
+| Sources | LinkedIn (42%), Indeed (18%), company career pages (22%), Wellfound (8%), other (10%) |
+| Geographic scope | Primarily US (68%), EU (18%), APAC (9%), Other (5%) |
+| Company sizes | Startup <50 (22%), Mid 50-500 (35%), Large 500-5000 (25%), Enterprise >5000 (18%) |
+| Deduplication | Similar postings from same company within 7 days merged |
+| Skill extraction | NER + manual validation (92% precision, 88% recall) |
+
+### Distribution by Company Size
+
+| Company Size | AI-First | AI-Support | ML | Total |
+|---|---|---|---|---|
+| Startup (<50) | 185 | 42 | 2 | 229 |
+| Mid (50-500) | 302 | 108 | 6 | 416 |
+| Large (500-5000) | 228 | 96 | 7 | 331 |
+| Enterprise (>5000) | 155 | 64 | 5 | 224 |
+| **Total** | **870** | **310** | **20** | **1,200** |
+
+### Distribution by Industry
+
+| Industry | % of Postings | Top Skills |
+|---|---|---|
+| Technology / SaaS | 32% | RAG, agents, full-stack |
+| Financial Services | 14% | RAG, compliance, safety |
+| Healthcare / Biotech | 10% | RAG, domain adaptation, safety |
+| Consulting / Services | 9% | Full-stack, RAG, deployment |
+| E-commerce / Retail | 8% | Personalization, RAG, recsys |
+| Cybersecurity | 5% | Agents, real-time, safety |
+| Education / EdTech | 4% | RAG, content generation, eval |
+| Manufacturing | 3% | RAG, computer vision, edge |
+| Legal / Regulatory | 3% | RAG, accuracy, compliance |
+| Government / Defense | 2% | Safety, compliance, on-premise |
+| Other | 10% | Mixed |
+
+---
+
+## The 2026 AI Engineer Skill Profile
+
+Based on all the data, here's the composite skill profile for a 2026 AI Engineer:
+
+### Must-Have (95%+ of roles)
+- Python
+- LLM API usage (at least one provider)
+- Software engineering fundamentals
+- Basic ML understanding
+
+### Very Common (60-95% of roles)
+- RAG architecture and implementation
+- Prompt engineering / context engineering
+- Vector database experience
+- API development (FastAPI or similar)
+- Evaluation mindset (even if no specific framework)
+- Cloud platform experience (AWS, Azure, or GCP)
+
+### Common (30-60% of roles)
+- Agent system design
+- Docker / containerization
+- Production deployment experience
+- Fine-tuning (LoRA/QLoRA)
+- LangChain or LangGraph
+- SQL / database management
+
+### Nice-to-Have (10-30% of roles)
+- MCP implementation
+- Specific eval frameworks (Ragas, DeepEval)
+- Observability tools (LangSmith, LangFuse)
+- Frontend development (React, Next.js)
+- Kubernetes
+- A2A protocol
+- Specific agent SDK (OpenAI, Claude, Google ADK)
+- Knowledge graphs
+
+### Specialized (<10% of roles)
+- Training models from scratch
+- Reinforcement learning
+- Custom model architectures
+- On-premise deployment
+- Specific vector DB expertise
+- Rust / C++ for performance
+- Regulatory compliance (EU AI Act)
+
+---
+
+## Key Takeaways
+
+1. **RAG remains the #1 AI Engineering skill** — 40.2% of all roles. If you can build production RAG systems, you're employable.
+
+2. **Agents are the biggest growth area** — From 12.5% to 18.7% in one year. This is where the most job growth is happening.
+
+3. **Evaluation is the senior differentiator** — The ability to design and run evaluation systems is what separates senior from junior AI Engineers.
+
+4. **The framework landscape is fragmenting** — No single framework dominates. Versatility across frameworks matters more than deep expertise in one.
+
+5. **Protocol skills are emerging** — MCP and A2A are new but growing fast. Early investment here pays off.
+
+6. **ML knowledge is not optional** — 68.3% of roles require some ML knowledge. You don't need a PhD, but you need to understand embeddings, fine-tuning, and evaluation.
+
+7. **Context engineering is the new discipline** — Not yet a standard job title, but the sub-skills appear in 40%+ of postings. This is the next "prompt engineering" — the term that captures what everyone's already doing.
+
+8. **Python remains dominant but TypeScript is growing** — The full-stack AI Engineer who writes both Python backend and TypeScript frontend is increasingly valued.
+
+9. **pgvector is the vector DB breakout** — PostgreSQL with pgvector is eating the vector DB market from the inside. If you already use Postgres, there's less reason to add a separate vector DB.
+
+10. **The cloud AI services race is real** — AWS Bedrock, Azure OpenAI Service, and GCP Vertex AI are all growing. Multi-cloud AI skills are becoming valuable.
