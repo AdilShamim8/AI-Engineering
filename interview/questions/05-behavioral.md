@@ -1,109 +1,184 @@
-# Behavioral Interview Questions
+# Behavioral Questions
 
-There are typically "tell me about a time you ..." questions.
+> Behavioral interviews in AI engineering aren't just about culture fit — they test how you navigate the unique challenges of building systems that are non-deterministic, ethically complex, and constantly evolving. In 2026, AI-specific behavioral questions are standard at most companies.
 
+---
 
-Based on candidate reports from Reddit, X, and personal blogs about what they were actually asked in AI engineering interviews.
+## Format and What to Expect
 
+| Aspect | Details |
+|--------|---------|
+| Duration | 30–45 minutes |
+| Format | Structured questions, often with scoring rubric |
+| Questions | 3–6 behavioral questions |
+| Interviewers | Hiring manager, team lead, or cross-functional partner |
+| Evaluation | Scored on specific competencies, not "vibe" |
 
-## Format
+**What makes AI behavioral interviews different**: Traditional behavioral interviews focus on teamwork, conflict resolution, and leadership. AI behavioral interviews add a layer: how you handle ambiguity, model failures, ethical dilemmas, and the rapid pace of change in AI.
 
-Typically 30-60 minutes, conversational. The interviewer picks a theme (conflict, leadership, failure, technical decision-making) and goes deep on one or two scenarios rather than asking many surface-level questions.
+---
 
-Common formats:
+## Values and Culture Questions
 
-- Single-scenario deep dive - the interviewer picks one situation from your experience and spends most of the round exploring it from every angle [^exponent-openai]
-- Category-based rotation - the interviewer covers 3-4 topics (conflict, leadership, failure, motivation) with one question each
+These questions test alignment with company values and culture:
 
+- "What attracted you to this company/role specifically?"
+- "How do you stay current with the fast-moving AI landscape?"
+- "Describe a time when you had to make a decision with incomplete information."
+- "What's your approach to building trust with teammates who aren't AI experts?"
+- "How do you balance shipping quickly with building responsibly?"
+- "What does responsible AI mean to you in practice?"
+- "Tell me about a time you advocated for a user-centric approach when the team was focused on technical metrics."
 
-## Common Behavioral Questions
+---
 
-### AI-Specific Behavioral
+## Leadership and Ownership Questions
 
-- How do you stay up-to-date with the latest developments in AI? [^exponent-behavioral]
-- What side projects have you built with AI? What frameworks and models have you worked with? [^promptlayer] [^reddit-ai-eng-questions]
-- What recent AI paper or development caught your attention? [^promptlayer]
-- Describe a project that didn't go as planned or where your AI solution failed [^interviewquery-anthropic] [^educative-deepmind]
+These questions test initiative, accountability, and influence:
 
+- "Tell me about a time you led a technical initiative without being asked."
+- "Describe a situation where you had to influence a decision without formal authority."
+- "How have you mentored or upskilled teammates on AI topics?"
+- "Tell me about a time you pushed back on a requirement that you thought was technically infeasible or ethically problematic."
+- "Describe a time when you took ownership of a production incident. What was the outcome?"
+- "How do you decide what to build vs. what to buy vs. what to skip?"
 
-### Conflict & Collaboration
+### Amazon Leadership Principles (Common Framework)
 
-- Tell me about a specific conflict with another person  [^exponent-openai] [^interviewnode] [^exponent-behavioral] [^igotanoffer-meta]
-- Tell me about a time you handled a difficult stakeholder [^exponent-behavioral] [^interviewnode]
-- Tell me about a time when you had to explain a complex technical concept to someone without a technical background  [^interviewnode]
-- Tell me about a time you convinced someone to change their mind [^exponent-behavioral]
-- How do you collaborate with non-technical stakeholders on AI features? 
+Amazon's 16 leadership principles are used as the basis for behavioral interviews at Amazon and increasingly adapted by other companies:
 
-### Leadership & Ownership
+| Principle | AI Engineering Relevance |
+|-----------|------------------------|
+| Customer Obsession | Building AI systems that solve real user problems, not tech demos |
+| Ownership | Taking responsibility for model behavior in production |
+| Invent and Simplify | Finding simple solutions to complex AI problems |
+| Are Right, A Lot | Having good judgment about when to use AI vs. traditional approaches |
+| Learn and Be Curious | Staying current with the rapidly evolving AI landscape |
+| Hire and Develop the Best | Mentoring others in AI engineering practices |
+| Insist on Highest Standards | Not accepting high hallucination rates or poor evaluation |
+| Think Big | Envisioning how AI transforms entire product categories |
+| Bias for Action | Shipping AI features while maintaining safety guardrails |
+| Frugality | Optimizing token costs and compute efficiency |
+| Earn Trust | Being transparent about AI limitations with stakeholders |
+| Dive Deep | Debugging complex AI system failures |
+| Have Backbone | Pushing back on unethical AI applications |
+| Deliver Results | Measuring and demonstrating AI impact |
+| Strive to Be Earth's Best Employer | Creating inclusive AI teams |
+| Success and Scale Bring Responsibility | Building AI systems that scale safely |
 
-- Tell me about a time you led an initiative or took ownership of a challenging task [^igotanoffer-openai] [^interviewnode]
-- Tell me about a time when you made short-term sacrifices for long-term [^exponent-behavioral]
-- How do you prioritize tasks? [^exponent-behavioral]
-- Describe a time you drove an architectural decision that affected multiple teams [^hellointerview-openai-l5]
-- Tell me about a time you mentored an engineer who went on to a senior role [^hellointerview-openai-l5]
-- How do you lead under risk and uncertainty? [^prachub-anthropic]
-- Tell me about a time when you worked on a project with a tight deadline [^exponent-behavioral]
+---
 
-### Technical Decision-Making
+## Problem-Solving and Ambiguity Questions
 
-- Tell me about a time when you solved a complex problem and how you went about it [^exponent-behavioral]
-- Tell me about a time when a technical misjudgment led to a project delay. What did you learn? [^linkjob-anthropic]
-- What would you do if, midway through a project, you realized it was unfeasible? [^linkjob-anthropic]
-- Describe a time you had to quickly learn a new technology or methodology [^interviewnode] [^x-allie-miller]
+These questions test how you navigate the inherent uncertainty of AI systems:
 
-### Failure & Learning
+- "Tell me about a time when an AI system you built behaved unexpectedly in production. How did you diagnose and fix it?"
+- "Describe a situation where you had to make a decision without enough data. What did you do?"
+- "How do you approach problems where there's no clear 'right' answer? (e.g., model selection, prompt design)"
+- "Tell me about a time when the requirements for an AI feature were vague. How did you clarify and move forward?"
+- "How do you handle situations where different stakeholders have conflicting requirements for an AI system?"
+- "Describe a time when you had to pivot from one approach to another mid-project. What triggered the change?"
 
-- What's a mistake you made, and what did you learn from it? [^interviewnode] [^exponent-behavioral]
-- Describe failure impact and resolve cross-functional conflict [^prachub-anthropic]
-- Why do you think we should NOT hire you? [^exponent-behavioral]
-- Tell me about a time when you had to think outside the box to complete a task
+---
 
-### Culture Fit & Values
+## AI-Specific Behavioral Questions
 
-- Tell me about yourself [^exponent-behavioral]
-- Discuss culture, collaboration, and mission alignment [^prachub-anthropic]
-- Describe career decisions and cultural alignment [^prachub-anthropic]
-- Open-ended behavioral at senior level: conflicts with managers, deadline pressure, design disagreements, mistakes [^microsoft-rohitverma]
+These are unique to AI engineering and test your experience with the realities of building AI systems:
 
-### Career Motivation
+### Handling Model Failures
+- "Tell me about a time a model you deployed started producing bad outputs. What did you do?"
+- "How have you handled a hallucination incident in production?"
+- "Describe a time when a model update caused a regression. How did you detect and respond?"
+- "What's your process for responding to a prompt injection attack on a live system?"
 
-- Why [company]? [^exponent-openai]
-- Why do you want to work here? [^exponent-behavioral]
-- Why change now? [^microsoft-rohitverma]
-- Why [this startup]? with evidence of due diligence [^janvi-kalra-pragmatic]
-- Discuss career decisions and culture fit [^prachub-anthropic]
-- Why do you want to pursue research? (for research roles) [^deepthi-sudharsan]
+### Ethical Dilemmas
+- "Tell me about a time you identified a potential bias in an AI system you were building. What did you do?"
+- "Have you ever refused to build something on ethical grounds? What was the situation?"
+- "How do you handle requests to build AI features that could be misused?"
+- "Describe a time when you had to balance business pressure with responsible AI practices."
 
+### Stakeholder Communication About AI Limitations
+- "How do you explain LLM limitations to non-technical stakeholders?"
+- "Tell me about a time you had to push back on unrealistic AI expectations from leadership."
+- "How do you set appropriate expectations about what AI can and cannot do?"
+- "Describe a time when you had to communicate a production AI failure to executives."
+- "How do you explain the concept of hallucination to a product manager who wants guaranteed accuracy?"
 
-## How to Prepare
+### Working with AI Tools
+- "How do you use AI coding tools in your workflow? What's your verification process?"
+- "Tell me about a time an AI tool gave you wrong output and how you caught it."
+- "How do you decide when to use AI assistance vs. doing something manually?"
+- "What's your approach to staying productive when the AI landscape shifts under you (new models, new frameworks)?"
 
-Find the values of the company you're interviewing for. For each value, prepare 2-3 scenarios from your experience where you can tell a story demonstrating that value using the STAR format (Situation, Task, Action, Result).
+---
 
-If the company doesn't have publicly shared values, use [Amazon's Leadership Principles](https://www.amazon.jobs/content/en/our-workplace/leadership-principles) as a starting point - many companies have something similar.
+## STAR / SAIL Framework
 
+### STAR Framework (Traditional)
 
-### Common mistakes
+| Component | Description | AI Engineering Example |
+|-----------|-------------|----------------------|
+| **S**ituation | Set the context | "Our RAG pipeline was hallucinating 15% of the time in production" |
+| **T**ask | What you needed to do | "I needed to reduce hallucination to under 5% without increasing latency" |
+| **A**ction | What you actually did | "I implemented a citation verification pipeline and adjusted retrieval parameters" |
+| **R**esult | The measurable outcome | "Hallucination rate dropped to 3.2%, latency increased by only 80ms, and user satisfaction improved 22%" |
 
-- Giving generic STAR answers without concrete specifics - numbers, outcomes, what actually happened
-- Reusing the same story across multiple rounds instead of preparing distinct examples
-- Talking about technology names instead of impact and trade-offs
-- Bluffing when you don't know something instead of being honest and curious
+### SAIL Framework (Better for AI Engineering)
 
-## Sources
+SAIL is a newer framework better suited for AI engineering because it emphasizes learning — critical in a field where hindsight always reveals better approaches:
 
-[^deepthi-sudharsan]: [Medium - Deepthi Sudharsan](https://medium.com/@deepthi.sudharsan/inside-ai-interviews-stories-patterns-and-what-actually-matters-555684c38598)
-[^educative-deepmind]: [Educative - Google DeepMind](https://www.educative.io/blog/google-deepmind-interview-questions)
-[^exponent-behavioral]: [Exponent - ML Engineer Behavioral Questions](https://www.tryexponent.com/questions?role=ml-engineer&type=behavioral)
-[^exponent-openai]: [Medium - Exponent, OpenAI](https://medium.com/exponent/what-its-actually-like-to-interview-at-openai-in-2026-03a646c9436c)
-[^hellointerview-openai-l5]: [HelloInterview - OpenAI L5](https://www.hellointerview.com/guides/openai/l5)
-[^igotanoffer-meta]: [IGotAnOffer - Meta ML Engineer](https://igotanoffer.com/blogs/tech/facebook-machine-learning-engineer-interview)
-[^igotanoffer-openai]: [IGotAnOffer - OpenAI](https://igotanoffer.com/en/advice/openai-interview-questions)
-[^interviewnode]: [InterviewNode - Behavioral Guide for ML Engineers](https://www.interviewnode.com/post/acing-the-behavioral-interview-a-guide-for-ml-engineers-by-interviewnode)
-[^interviewquery-anthropic]: [InterviewQuery - Anthropic](https://www.interviewquery.com/interview-guides/anthropic)
-[^janvi-kalra-pragmatic]: [Janvi Kalra / Pragmatic Engineer](https://newsletter.pragmaticengineer.com/p/from-software-engineer-to-ai-engineer)
-[^linkjob-anthropic]: [LinkJob - Anthropic](https://www.linkjob.ai/interview-questions/anthropic-interview-process/)
-[^microsoft-rohitverma]: [Medium - Rohit Verma, Microsoft Senior Engineer](https://medium.com/@rohitverma_87831/microsoft-senior-engineer-interview-experience-2026-the-offer-that-took-me-three-attempts-e0d6e052bdb1)
-[^prachub-anthropic]: [Prachub - Anthropic Behavioral & Leadership](https://prachub.com/companies/anthropic/categories/behavioral-and-leadership)
-[^promptlayer]: [PromptLayer](https://blog.promptlayer.com/the-agentic-system-design-interview-how-to-evaluate-ai-engineers/)
-[^reddit-ai-eng-questions]: [Reddit - AI Engineer Interview Questions](https://www.reddit.com/r/ArtificialInteligence/comments/1nybfr8/ai_engineer_interview_questions/) (r/ArtificialIntelligence)
-[^x-allie-miller]: [X - Allie K. Miller, Adaptability Interview Questions](https://x.com/alliekmiller/status/1967970071248015679)
+| Component | Description | AI Engineering Example |
+|-----------|-------------|----------------------|
+| **S**ituation | Set the context | "Our agent system was getting stuck in loops 8% of the time" |
+| **A**ction | What you did | "I implemented loop detection, max iteration limits, and a self-correction mechanism" |
+| **I**mpact | Measurable outcome | "Loop rate dropped to 0.3%, cost per session decreased 40%" |
+| **L**earning | What you'd do differently | "I learned that prevention is cheaper than correction — I'd design the agent with loop awareness from the start next time" |
+
+**Why SAIL works better for AI**: The "Learning" component shows maturity. AI engineering is iterative — the best candidates demonstrate that they learn and adapt from every experience.
+
+---
+
+## AI Engineering-Specific Stories to Prepare
+
+You should have 6–8 stories ready, each covering a different theme:
+
+| # | Theme | Key Points to Hit |
+|---|-------|-------------------|
+| 1 | **Production failure** | What broke, how you detected it, how you fixed it, what you learned |
+| 2 | **Ambiguous requirements** | How you clarified, what you built, how you validated |
+| 3 | **Stakeholder pushback** | What they wanted, why you disagreed, how you navigated it |
+| 4 | **Cost or latency optimization** | The problem, the solution, the measurable impact |
+| 5 | **Ethical or safety concern** | What you noticed, what you did, the outcome |
+| 6 | **Cross-functional collaboration** | Who you worked with, the challenge, the result |
+| 7 | **Technical leadership** | What you led, the obstacles, the impact |
+| 8 | **Learning from failure** | What went wrong, your role, what you'd do differently |
+
+**Pro tip**: Each story should work for multiple questions. Your "production failure" story can also answer questions about ownership, problem-solving, and communication.
+
+---
+
+## Common Mistakes
+
+1. **Being too vague.** "We improved the system" → "We reduced hallucination rate from 15% to 3% by implementing citation verification." Specifics matter.
+
+2. **Taking all the credit.** Say "I" for your specific contributions, "we" for team achievements. Over-claiming is a red flag.
+
+3. **No learning or reflection.** Stories without a "what I'd do differently" component signal a lack of growth mindset.
+
+4. **Ignoring the human side.** Behavioral interviews test interpersonal skills, not just technical outcomes. Include how you communicated, collaborated, and navigated disagreement.
+
+5. **Not preparing AI-specific stories.** Generic SWE behavioral stories (deployed a microservice) don't demonstrate AI engineering maturity. You need stories about hallucination, prompt injection, cost management, and stakeholder communication about AI limitations.
+
+6. **Being negative about past employers.** Even if your last company made bad AI decisions, frame it constructively: "I advocated for X because Y, but the decision went another way. Here's what I learned from the outcome."
+
+7. **Memorized, robotic delivery.** Your stories should feel natural, not rehearsed. Practice enough to be fluid, but not so much that you sound scripted.
+
+8. **Not answering the actual question.** Listen carefully. If they ask about "influencing without authority," don't tell a story about technical debugging. Pick the right story for the right question.
+
+9. **Focusing only on successes.** Your best behavioral stories include failure. "I tried X, it didn't work because Y, so I tried Z" shows adaptability and resilience.
+
+10. **Underestimating the round.** Many candidates treat behavioral as a "soft" round and under-prepare. At companies like Amazon and Anthropic, behavioral rounds are heavily weighted and can be the deciding factor.
+
+---
+
+> **Next**: [Home Assignments →](06-home-assignments.md)

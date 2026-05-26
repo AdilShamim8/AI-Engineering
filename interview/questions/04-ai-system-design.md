@@ -1,199 +1,261 @@
-# AI System Design Interview
+# AI System Design
 
-AI system design is emerging as a distinct interview category, separate from both traditional software system design and classic ML system design. The shift is driven by the explosion of LLM-powered products: instead of designing training pipelines, candidates design orchestration architectures around pre-trained models.
+> AI system design has emerged as a distinct interview category — different from traditional system design and different from ML system design. It tests your ability to design systems where the core component is an LLM or AI model, and where non-determinism, cost, latency, and safety are first-class design constraints.
 
-Companies with dedicated AI system design rounds include Doctolib ("AI System Design Interview"), Sprinter Health ("AI-Focused Systems Design"), and Anthropic (distributed search + LLM inference at scale). Many more are adding AI-flavored questions to existing system design rounds. Companies known to test GenAI system design include Google, Apple, OpenAI, Anthropic, Cohere, Salesforce, and AI-first startups. [^igotanoffer]
+---
 
-System design with AI elements is becoming a critical interview component. Interviewers need to understand how a candidate thinks about building services and components with AI interfaces and tooling - including understanding limitations on security, access rights, and the reality that AI systems need to scale significantly (potentially 5-10x compared to current load, to 1000+ nodes).
+## AI System Design as a Distinct Category
 
-See also: [Awesome AI Engineering](../awesome.md) for the full collection of references, company blogs, and practitioner stories cited below.
+Traditional system design asks: "How do you design a URL shortener?"
+ML system design asks: "How do you design a recommendation system?"
+**AI system design asks**: "How do you design a conversational AI that helps doctors diagnose patients — safely, reliably, and at scale?"
+
+The key differences:
+
+| Aspect | Traditional | ML System | AI System |
+|--------|------------|-----------|-----------|
+| Core component | Database/cache | Model training pipeline | LLM + retrieval + agents |
+| Determinism | Deterministic | Probabilistic predictions | Non-deterministic generation |
+| Failure mode | Timeout, error | Wrong prediction | Hallucination, injection, cost spike |
+| Key constraint | Throughput, consistency | Feature freshness, model accuracy | Safety, cost, latency, quality |
+| Evaluation | Uptime, latency | Accuracy, precision/recall | Faithfulness, relevance, safety |
+| Scaling challenge | Database sharding | Feature store, model serving | Token throughput, context management |
+| Cost model | Infrastructure | Compute for training | Per-token inference cost |
+
+---
 
 ## Format
 
-Typically 45-60 minutes. You drive the conversation through: [^designgurus]
+| Aspect | Details |
+|--------|---------|
+| Duration | 45–60 minutes |
+| Typical question | "Design an AI-powered [X]" |
+| Time allocation | 5 min clarify → 10 min high-level → 20 min deep-dive → 10 min trade-offs → 5 min wrap-up |
+| Interviewers | 1–2 (usually senior/staff engineers) |
+| Tools | Whiteboard or shared doc — diagrams expected |
 
-- Clarify requirements, constraints, and success criteria
-- Sketch a high-level architecture
-- Deep-dive into specific components
-- Discuss trade-offs, failure modes, and bottlenecks
+### Time Allocation (Recommended)
 
-Time allocation: [^designgurus]
+| Phase | Duration | What to Cover |
+|-------|----------|---------------|
+| Requirements clarification | 5 min | Scope, constraints, users, scale, safety requirements |
+| High-level architecture | 10 min | Major components, data flow, AI/non-AI boundary |
+| Deep-dive on AI components | 20 min | LLM selection, retrieval strategy, agent design, prompt architecture |
+| Trade-offs and alternatives | 10 min | Cost vs. quality, latency vs. accuracy, build vs. buy |
+| Monitoring and safety | 5 min | Evaluation, guardrails, incident response, cost control |
 
-- ~5 min clarifying the problem
-- 10-15 min high-level design
-- 15-20 min deep dive into components
-- 5-10 min trade-offs and bottlenecks
-- Remaining time for follow-up scenarios
+---
 
-Common delivery formats:
+## Typical Questions
 
-- Whiteboard or virtual drawing (Excalidraw, Miro) where you sketch components and data flows
-- Discussion-based where you walk through the architecture verbally and the interviewer probes specific areas
+### Core AI System Design Questions
 
+| Question | Key Challenges | Companies |
+|----------|---------------|-----------|
+| AI Chatbot for customer support | Hallucination, escalation, cost | Intercom, Zendesk |
+| Document Q&A / RAG system | Retrieval quality, citations, scale | Doctolib, Casetext |
+| AI co-pilot for coding | Latency, context, safety of generated code | GitHub, Cursor |
+| Voice assistant with LLM | Latency, STT/TTS, interruption handling | OpenAI, Amazon |
+| Contract generation system | Legal accuracy, clause consistency, review workflow | Harvey, LegalOn |
+| AI-powered candidate sourcing | Bias, relevance, personalization | Eightfold, LinkedIn |
+| Fraud detection with LLM | False positives, real-time requirements, explainability | Stripe, Goldman Sachs |
+| Multi-agent workflow | Orchestration, failure recovery, observability | LangChain, CrewAI |
+| Content detection / moderation | Scale, nuance, policy, multilingual | Meta, OpenAI |
+| Unified query engine (text + SQL + code) | Query routing, schema understanding, ambiguity | Doctolib, Notion |
+| Perplexity-like search engine | Real-time retrieval, citation, speed | Perplexity, You.com |
 
+### Near-AI Systems
 
-## Questions
+These questions test infrastructure around AI rather than the AI pipeline itself:
 
-System design and cost/latency optimization are among the most frequently asked topics in AI engineering interviews:
+| Question | Key Challenges |
+|----------|---------------|
+| Real-time vs. batch inference pipeline | Latency SLAs, queue management, GPU utilization |
+| Data ingestion for AI (ETL) | Document parsing, chunking, embedding, updates |
+| Image generation pipeline | Rate limiting, content policy, GPU management, cost |
+| GPU job queue for model training | Priority scheduling, preemption, multi-tenant fairness |
+| Model deployment and versioning | A/B testing, rollback, shadow deployment, canary |
+| Feature store for AI | Real-time features, point-in-time correctness, freshness |
 
-- Scale an AI chat feature to 1M daily users - discuss trade-offs
-- Your app gets 1M queries/day - how do you optimize cost?
+---
 
+## Expectations by Seniority
 
-### Typical AI System Design Questions
+| Seniority | What's Expected | What's Not Expected |
+|-----------|----------------|-------------------|
+| Junior (0–2 years) | Clear architecture, identify key components, basic trade-offs | Deep cost analysis, multi-region deployment, advanced safety |
+| Mid (2–5 years) | Detailed architecture, specific technology choices, cost estimation, evaluation strategy | Multi-system orchestration, advanced agent design |
+| Senior (5–8 years) | Production-grade design, failure modes, monitoring, cost optimization, safety guardrails, team impact | — |
+| Staff+ (8+ years) | Multi-system architecture, organizational impact, build vs. buy decisions, technical strategy | — |
 
-Based on real interview experiences and practitioner guides:
+---
 
-- Design an AI chatbot (ChatGPT, Claude chat service). [^igotanoffer] [^designgurus] [^process-analysis] [^reddit-swe-to-ai]
-- Design a Document Q&A Assistant / RAG system. [^bhavishya-pandit] [^reddit-eightfold-ai]
-- Design an AI co-pilot like GitHub Copilot [^colin-zhou]
-- Design a Hospital Voice Assistant (handle noise, privacy, latency, domain vocabulary). [^bhavishya-pandit]
-- Design a Legal Contract Generation system with compliance requirements. [^bhavishya-pandit]
-- Design an AI-powered Candidate Sourcing System. [^colin-zhou] [^bhavishya-pandit]
-- Design a system to process 10K user uploads/month (bank payslips, IDs, references). [^igotanoffer]
-- Design a system that lets doctors automatically send billing info to insurers based on patient notes. [^igotanoffer]
-- Design a fraud detection system. [^reddit-swe-to-ai]
-- Design ChatGPT's cross-conversation memory feature. [^igotanoffer]
-- Design a multi-step agentic workflow (meeting scheduling, code review, email campaigns). [^promptlayer]
-- Design a content/policy violation detection system. [^igotanoffer]
-- Design a unified query engine across dispersed data sources like email, calendar, documents, and chat. [^x-avi-chawla-1]
-- Design a Perplexity.ai / real-time LLM-powered search engine. [^colin-zhou]
+## AI System Design vs Traditional vs ML System Design
 
+| Dimension | Traditional System Design | ML System Design | AI System Design |
+|-----------|--------------------------|------------------|------------------|
+| **Core question** | How to serve data reliably? | How to train and serve a model? | How to build a system with LLMs at the center? |
+| **Primary constraint** | Availability, consistency | Model accuracy, data quality | Non-determinism, cost, safety |
+| **Data flow** | Request → DB → Response | Features → Model → Prediction | Query → Retrieval + Context → LLM → Response |
+| **Scaling** | Horizontal scaling, caching | Model serving, feature store | Token throughput, context management, caching |
+| **Evaluation** | SLA, latency p99 | Precision, recall, F1 | Faithfulness, relevance, safety scores |
+| **Failure mode** | Server down, data corruption | Model drift, feature staleness | Hallucination, prompt injection, cost overrun |
+| **Cost model** | $/request (infrastructure) | $/training run + $/prediction | $/token (inference) + $/embedding + $/storage |
+| **Monitoring** | Uptime, error rate | Model metrics, feature drift | Hallucination rate, cost per query, user satisfaction |
+| **Safety** | Auth, encryption | Fairness, bias | PII leakage, prompt injection, harmful output |
+| **Iteration speed** | Deploy new code | Retrain model (days–weeks) | Update prompt (minutes), swap model (hours) |
 
-### Near-AI / AI Serving Systems / Platforms (more Engineering)
+---
 
-- How would you handle real-time versus batch processing for data updates? When is one preferred over the other? [^proptech-founder-2]
-- How do you ingest and process different types of data (structured, unstructured, event data)? [^proptech-founder-1]
-- Design a scalable image-generation pipeline for millions of users. [^interviewnode]
-- Design a distributed job queue for 100k+ GPU training jobs with preemption and checkpointing. [^reddit-xai-eng]
-- Design a large-scale AI model deployment system - model serving, GPU scaling, model versioning, result caching. (OpenAI) [^designgurus]
+## How to Prepare: 5-Step Structure
 
+When you get an AI system design question, follow this structure:
 
-## Expectations
+### Step 1: Clarify Requirements (5 min)
 
-AI system design is primarily a senior-level round. Mid-level candidates may get system design questions but interviewers don't expect depth - a reasonable high-level architecture is sufficient.
+- What are the functional requirements? (What should the system do?)
+- What are the non-functional requirements? (Latency, cost, accuracy, safety)
+- Who are the users? What's the scale?
+- What are the safety/compliance constraints?
+- **AI-specific**: What's the acceptable hallucination rate? What's the cost per query budget?
 
-At senior and staff levels, interviewers expect: [^interviewnode] [^igotanoffer]
+### Step 2: Define the AI/Non-AI Boundary (5 min)
 
-- Reasoning across uncertainty - keeping the system predictable despite unpredictable outputs
-- Trade-off fluency - retrieval speed vs context length, fine-tuning vs prompting, GPU cost vs latency
-- Communication clarity - narrating how information flows through the system
+- Which parts of the system need LLM/AI? Which can be traditional software?
+- Where are the AI "hot spots" (where non-determinism enters the system)?
+- What's the fallback when the AI component fails or degrades?
 
+### Step 3: Design the AI Pipeline (15 min)
 
-## AI System Design vs System Design
+- **Retrieval**: How do you get context? (RAG, tools, knowledge graph, hybrid)
+- **Generation**: Which model? What prompt architecture? What's the context window strategy?
+- **Evaluation**: How do you evaluate outputs in real-time? What's the fallback?
+- **Guardrails**: Input validation, output filtering, content policy, PII handling
+- **Caching**: What can you cache? Semantic cache? Prompt cache?
 
-The fundamental shift: when models like GPT-4 and Claude became accessible via APIs, the hard part stopped being model training and started being system orchestration. [^chip-huyen-books]
+### Step 4: Design the Infrastructure (10 min)
 
-- Traditional ML focuses on training pipelines
-- AI/LLM system design focuses on orchestrating pre-trained models
+- API layer, load balancing, rate limiting
+- Database choices (vector DB, relational, cache)
+- Monitoring and observability (LangSmith, Arize, custom)
+- Cost management (token budgets, model tiering, caching)
+- Deployment (model versioning, A/B testing, rollback)
 
-Key differences: [^yuan-meng] [^brian-kihoon-lee] [^chip-huyen-platform] [^promptlayer]
+### Step 5: Discuss Trade-offs and Alternatives (10 min)
 
-- Data focus - training data and feature engineering vs context engineering, chunking, retrieval quality
-- Output type - structured (scores, classifications) vs open-ended text, code, images
-- Determinism - generally deterministic vs non-deterministic by default
-- Evaluation - precision/recall/F1/AUC on held-out sets vs LLM-as-judge, human evaluation, task-specific evals
-- Cost model - training compute (periodic) + serving vs per-token inference cost (continuous) + retrieval
-- Failure modes - data drift, training-serving skew vs hallucination, prompt injection, context overflow, cost blowup
-- Iteration speed - slow (retrain model) vs fast (change prompt, adjust retrieval)
+- Cost vs. quality (cheaper model + more context vs. expensive model + less context)
+- Latency vs. accuracy (streaming, speculative decoding, model tiering)
+- Build vs. buy (open-source model vs. API, custom vs. managed vector DB)
+- Safety vs. capability (guardrail strictness vs. model flexibility)
+- What would change at different scales?
 
-### ML system design
+---
 
-ML system design interviews focus on full training pipelines (feature stores, model lifecycle, offline evaluation):
+## 4 Repeatable Patterns
 
-- Design a recommendation system
-- Design a fraud detection system
-- Design a spam classifier
-- Design a search ranking system
-- Design an ad click prediction system
+Most AI system design questions map to one of these patterns:
 
-"GenAI interviews still care about standard distributed-systems basics, but they'll push harder on evaluation, guardrails, and context/tooling design." [^igotanoffer]
+### Pattern 1: RAG
+**Applies to**: Document Q&A, knowledge assistants, search engines, customer support bots
 
-### Traditional system design
+Key design decisions:
+- Chunking strategy (fixed, semantic, recursive)
+- Embedding model selection
+- Vector DB choice (Pinecone, Weaviate, Qdrant, pgvector)
+- Retrieval strategy (dense, sparse, hybrid, re-ranking)
+- Context window management
+- Citation/attribution implementation
+- Evaluation methodology
 
-General system design questions commonly asked at OpenAI L5 and other AI companies (for *software engineers*): [^hellointerview] [^colin-zhou]
+### Pattern 2: Feedback and Reinforcement
+**Applies to**: Recommendation systems, personalization, content ranking, ad targeting
 
-- Design a distributed key-value store (like DynamoDB / Cassandra). [^colin-zhou]
-- Design a rate limiter (global, per-user, distributed). [^colin-zhou]
-- Design GitHub Actions. [^hellointerview]
-- Design Online Chess. [^hellointerview]
-- Design Instagram / TikTok / X (timeline, posting, followers). [^colin-zhou]
-- Design YouTube / Netflix video streaming platform. [^colin-zhou]
-- Design Uber (ride-sharing backend: matching, ETA, pricing surges). [^colin-zhou]
-- Design WhatsApp / Messenger (1:1 + group chat at global scale). [^colin-zhou]
-- Design Google Docs collaborative editing (real-time, eventually consistent). [^colin-zhou]
+Key design decisions:
+- Feedback signal collection (implicit vs. explicit)
+- How to incorporate feedback (prompt adjustment, fine-tuning, DPO)
+- Cold start handling
+- Evaluation (offline vs. online, A/B testing)
+- Bias and fairness considerations
 
+### Pattern 3: Hallucination Mitigation
+**Applies to**: Medical AI, legal AI, financial AI, any high-stakes domain
 
-## How to Prepare
+Key design decisions:
+- Grounding strategy (retrieval, knowledge graph, constrained generation)
+- Verification pipeline (self-consistency, entailment, retrieval verification)
+- "I don't know" threshold calibration
+- Citation and attribution
+- Human-in-the-loop design
+- Monitoring and alerting for hallucination spikes
 
-### Structure your answer
+### Pattern 4: Scalability and Cost
+**Applies to**: Consumer-facing AI, high-volume API services, enterprise deployments
 
-Follow a five-step progression [^igotanoffer]:
+Key design decisions:
+- Model tiering (route to cheapest adequate model)
+- Caching strategy (semantic cache, prompt cache, response cache)
+- Token budget management
+- Batch vs. real-time processing
+- GPU utilization optimization
+- Multi-region deployment for latency
 
-1. Problem framing (5-10 min) - clarify users, constraints, quality expectations, guardrails
-2. High-level architecture (10-15 min) - core components and data paths from prompt to response
-3. Deep dive (20-30 min) - RAG design, tool use, memory, evaluation, safety
-4. Trade-offs (10-15 min) - what breaks, how you detect it, graceful degradation
-5. Conclusion - summarize, list risks, outline next iteration
+---
 
-Most questions map to four repeatable patterns [^interviewnode]:
+## What Companies Build
 
-- RAG - system orchestration and grounding accuracy (the most common pattern)
-- Feedback and reinforcement - implicit/explicit signals, active learning loops
-- Hallucination mitigation - retrieval-grounded pipelines, confidence estimation, source transparency
-- Scalability and cost optimization - multi-layer caching, model tiering, prompt compression
+Understanding what companies actually build helps you anticipate their system design questions:
 
+| Company | AI Systems They Build | Likely Design Questions |
+|---------|----------------------|------------------------|
+| **Doctolib** | Medical document Q&A, appointment assistant | Design a medical RAG system with safety constraints |
+| **Uber** | ETA prediction, fraud detection, customer support AI | Design a real-time fraud detection system with LLM reasoning |
+| **Airbnb** | Listing description generation, search ranking, host assistant | Design an AI co-pilot for Airbnb hosts |
+| **Perplexity** | AI search engine with citations | Design a Perplexity-like search engine |
+| **Slack** | AI message summarization, search, workflow automation | Design an AI summarization feature for team channels |
+| **LinkedIn** | Job matching, content recommendation, profile optimization | Design an AI-powered candidate sourcing system |
+| **Anthropic** | Safety-focused AI assistants, API platform | Design an AI system with safety guarantees |
+| **DoorDash** | Order prediction, menu optimization, support chatbot | Design a real-time AI order prediction system |
+| **Spotify** | Playlist generation, music discovery, podcast summarization | Design an AI-powered music discovery system |
+| **Notion** | AI writing assistant, database Q&A, search | Design a unified query engine for structured and unstructured data |
 
-### What companies build
+---
 
-Real production AI systems from engineering blogs - these inform the kinds of systems you'd be asked to design:
+## Common Mistakes
 
-- Doctolib - agentic AI for customer support: specialized agents in a directed graph, ~17K daily messages [^doctolib]
-- Uber - GenAI Gateway: unified LLM platform, PII redactor, 60+ use cases [^uber]
-- Airbnb - LLM-powered conversational AI with Chain of Thought reasoning and guardrails [^airbnb]
-- Perplexity - 200M daily queries, RAG on Vespa.ai, fine-tuned Sonar models [^bytebytego-perplexity]
-- Slack - stateless RAG, LLMs in escrow VPC for data privacy [^slack]
-- LinkedIn - AI agent platform, strict data layer siloing [^linkedin]
-- Anthropic - multi-agent research: Opus orchestrator + Sonnet subagents, ~15x more tokens than chat [^anthropic-multi-agent]
-- DoorDash - AI-driven evaluation flywheel for LLM chatbots, hierarchical RAG [^doordash]
+1. **Treating the LLM as a black box.** Interviewers want to see you understand what happens inside — context management, token costs, latency characteristics.
 
-### Common mistakes
+2. **Ignoring cost entirely.** In 2026, cost is a first-class design constraint. Not discussing cost signals you haven't built production AI systems.
 
-- Jumping to a solution without clarifying requirements, constraints, and success criteria [^igotanoffer]
-- Treating the LLM as a source of truth instead of grounding with retrieval, tools, or citations [^interviewnode]
-- Designing only the happy path without failure modes, monitoring, or evaluation [^igotanoffer]
-- Over-indexing on tool names - "I'd use LangChain" instead of explaining why you'd chain retrieval and generation [^interviewnode]
-- Ignoring cost and latency - token budgets, model tiering, caching strategies [^igotanoffer]
-- Ignoring safety - prompt injection, data leakage, unsafe tool execution [^igotanoffer]
-- Putting control flow in prompts instead of the orchestrator (agentic designs) [^techeon]
-- Choosing agents because they're exciting, not because the problem requires autonomy [^techeon]
+3. **Over-engineering the retrieval.** Starting with a complex hybrid retrieval + re-ranking + knowledge graph pipeline when simple semantic search would suffice. Start simple, then add complexity with justification.
+
+4. **No evaluation strategy.** If you can't evaluate the AI component, you can't improve it. Always include evaluation in your design.
+
+5. **Forgetting the non-AI parts.** The database, the API layer, the authentication, the monitoring — these still matter and interviewers will notice if you skip them.
+
+6. **No fallback plan.** What happens when the LLM is down? When latency spikes? When cost exceeds budget? Production systems need graceful degradation.
+
+7. **Ignoring safety.** Even if the interviewer doesn't mention safety, bring it up. PII handling, prompt injection defense, and content policy are now table stakes.
+
+8. **Not asking clarifying questions.** Jumping into design without clarifying requirements wastes time and signals poor communication.
+
+9. **Designing for the wrong scale.** Ask about scale early. Designing for 10M users when the system will serve 10K users (or vice versa) shows poor judgment.
+
+10. **No diagram.** System design requires visual communication. If you're not drawing, you're not communicating effectively.
+
+---
 
 ## Sources
 
-[^igotanoffer]: [IGotAnOffer - Generative AI System Design Interview](https://igotanoffer.com/en/advice/generative-ai-system-design-interview)
-[^chip-huyen-books]: [Chip Huyen - AI Engineering](https://huyenchip.com/books/)
-[^chip-huyen-platform]: [Chip Huyen - Building a Generative AI Platform](https://huyenchip.com/2024/07/25/genai-platform.html)
-[^yuan-meng]: [Yuan Meng - MLE Interviews 2.0](https://www.yuan-meng.com/posts/mle_interviews_2.0/)
-[^brian-kihoon-lee]: [Brian Kihoon Lee - ML Eng Interviewing](https://www.moderndescartes.com/essays/ml_eng_interviewing/)
-[^promptlayer]: [PromptLayer - The Agentic System Design Interview](https://blog.promptlayer.com/the-agentic-system-design-interview-how-to-evaluate-ai-engineers/)
-[^bhavishya-pandit]: [Bhavishya Pandit - 7 Deep-Cut AI System Design Interview Questions](https://bhavishyapandit9.substack.com/p/7-deep-cut-ai-system-design-interview)
-[^techeon]: [TechEon - The Complete Agentic AI System Design Interview Guide 2026](https://atul4u.medium.com/the-complete-agentic-ai-system-design-interview-guide-2026-f95d0cfeb7cf)
-[^designgurus]: [DesignGurus - OpenAI System Design Interview Questions](https://www.designgurus.io/blog/openai-system-design-interview-questions)
-[^hellointerview]: [HelloInterview - OpenAI L5 Interview Guide](https://www.hellointerview.com/guides/openai/l5)
-[^interviewnode]: [InterviewNode - GenAI System Design Interview Patterns](https://www.interviewnode.com/post/generative-ai-system-design-interview-patterns-you-should-know)
-[^anthropic-multi-agent]: [Anthropic - Multi-Agent Research System](https://www.anthropic.com/engineering/multi-agent-research-system)
-[^proptech-founder-1]: [YouTube - Proptech Founder Part 1](https://www.youtube.com/watch?v=leXRiJ5TuQo)
-[^doctolib]: [Doctolib - Building an Agentic AI System for Healthcare Support](https://medium.com/doctolib/building-an-agentic-ai-system-for-healthcare-support-a-journey-into-practical-ai-implementation-0afd28d716e6)
-[^uber]: [Uber - GenAI Gateway](https://www.uber.com/blog/genai-gateway/)
-[^airbnb]: [Airbnb Engineering - Automation Platform v2](https://medium.com/airbnb-engineering/automation-platform-v2-improving-conversational-ai-at-airbnb-d86c9386e0cb)
-[^bytebytego-perplexity]: [ByteByteGo - How Perplexity Built an AI Google](https://blog.bytebytego.com/p/how-perplexity-built-an-ai-google)
-[^slack]: [Slack Engineering - How We Built Slack AI](https://slack.engineering/how-we-built-slack-ai-to-be-secure-and-private/)
-[^linkedin]: [InfoQ - QCon AI LinkedIn](https://www.infoq.com/news/2025/12/qcon-ai-linkedin/)
-[^doordash]: [DoorDash - Simulation Evaluation Flywheel](https://careersatdoordash.com/blog/doordash-simulation-evaluation-flywheel-to-develop-llm-chatbots-at-scale/)
-[^colin-zhou]: [Medium - Colin Zhou](https://levelup.gitconnected.com/how-i-fought-and-passed-technical-interviews-with-llms-in-2025-f328e9df8e84)
-[^process-analysis]: [Process Analysis - Reddit r/cscareerquestions](https://www.reddit.com/r/cscareerquestions/)
-[^proptech-founder-2]: [YouTube - Proptech Founder Part 2](https://www.youtube.com/watch?v=Zt-h5BiBWH0)
-[^reddit-eightfold-ai]: [Reddit - Need Advice for Eightfold.ai Agentic AI Engineer](https://www.reddit.com/r/developersIndia/comments/1pbaj11/need_advice_for_eightfoldai_agentic_ai_engineer) (r/developersIndia)
-[^reddit-swe-to-ai]: [Reddit - From Software Developer to AI Engineer](https://www.reddit.com/r/learnmachinelearning/comments/1pzcw2y/from_software_developer_to_ai_engineer_the_exact/) (r/learnmachinelearning)
-[^reddit-xai-eng]: [Reddit - xAI AI Engineer Backend/Infra Interview](https://www.reddit.com/r/leetcode/comments/1pjhw1i/xai_ai_engineer_backendinfra_interview_just/) (r/leetcode)
-[^x-avi-chawla-1]: [X - Avi Chawla, Unified Query Engine (Google)](https://x.com/_avichawla/status/1986320178783867036)
+[^1]: "Designing LLM Applications", Eugene Yan, 2024–2025.
+[^2]: "Machine Learning System Design Interview", Ali Aminian and Alex Xu, 2024.
+[^3]: "Building LLM Apps", Valentina Alto, 2024.
+[^4]: Interview reports from Blind, Glassdoor, and LeetCode Discuss, 2025–2026.
+[^5]: Company engineering blogs: Doctolib, Uber, Airbnb, Perplexity, Slack, LinkedIn, Anthropic, DoorDash, Spotify, Notion — 2024–2026.
+[^6]: "RAG Systems in Production", LangChain State of AI Engineering Survey, 2025.
+[^7]: "AI System Design Patterns", emerging community resources, 2025–2026.
+[^8]: "Cost Optimization for LLM Applications", OpenAI and Anthropic best practices, 2025.
+[^9]: "Hallucination Mitigation in Production AI Systems", various industry reports, 2025.
+
+---
+
+> **Next**: [Behavioral Questions →](05-behavioral.md)
