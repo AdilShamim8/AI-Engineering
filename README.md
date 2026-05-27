@@ -38,7 +38,6 @@ Everything here is based on real data: 3,100+ actual job descriptions, real inte
 - [Skills that get you hired](interview/03-get-hired.md) — baseline expectations, differentiators, and portfolio strategy
 - [After the interview](interview/04-after-the-interview.md) — handling offers, rejections, and salary negotiation
 - [Interview trends](interview/05-trends.md) — AI cheating, AI-proctored rounds, context engineering interviews
-- [Company-by-company data](interview/data/) — individual interview process descriptions for 65+ companies, linked to source job postings
 
 
 ## Learning Paths
