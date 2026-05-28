@@ -78,14 +78,6 @@ A 4-part event series on AI engineering careers:
 4. [Take-Home Assignments](webinars/04-take-home-assignments.md) — analyzing real assignments and building production-ready solutions — recording available
 
 
-## Learn AI Engineering
-
-If you want to learn the core skills needed for being an AI engineer, check out these courses:
-
-- [AI Engineering Buildcamp: From RAG to Agents](https://maven.com/alexey-grigorev/from-rag-to-agents) — Alexey Grigorev, 9-week intensive on building production-ready AI applications
-- [LLM Zoomcamp](https://github.com/DataTalksClub/llm-zoomcamp/) — DataTalks.Club, free open-source course on LLMs and RAG
-
-
 ## Acknowledgments
 
 This guide builds on the foundational work by [Alexey Grigorev](https://github.com/alexeygrigorev) in the original [AI Engineering Field Guide](https://github.com/alexeygrigorev/ai-engineering-field-guide). The 2026 edition expands the data set, updates all statistics, adds new sections on emerging technologies, and reflects the rapid evolution of the AI engineering landscape.
