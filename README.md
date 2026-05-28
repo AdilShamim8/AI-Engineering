@@ -7,7 +7,7 @@ Everything here is based on real data: 3,100+ actual job descriptions, real inte
 ## What's New in This Edition (May 2026)
 
 - **Updated job market data**: 3,100+ job descriptions analyzed (up from 2,445), covering additional regions including Singapore and remote-first roles
-- **New AI model landscape**: GPT-5/5.5, Claude Opus 4/4.7, Gemini 2.5 Pro/3.1, Grok 4, and 30+ frontier models
+- **New AI model landscape**: GPT-5/5.5, Claude Opus 4/4.7, Gemini 3.1 Pro/3.5, Grok 4, and 30+ frontier models
 - **Agent protocols**: Model Context Protocol (MCP) adoption explosion, Google's Agent-to-Agent (A2A) protocol
 - **Updated frameworks**: OpenAI Agents SDK, Google ADK, Claude Agent SDK, SmolAgents, and PydanticAI now rival LangChain/LangGraph
 - **Salary data**: Updated compensation ranges reflecting the 2026 market with AI premium widening
