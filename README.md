@@ -77,7 +77,6 @@ A 4-part event series on AI engineering careers:
 3. [The Interview Process](webinars/03-the-interview-process.md) — real hiring trends, technical questions, and live coding challenges — recording available
 4. [Take-Home Assignments](webinars/04-take-home-assignments.md) — analyzing real assignments and building production-ready solutions — recording available
 
-
 ## Acknowledgments
 
 This guide builds on the foundational work by [Alexey Grigorev](https://github.com/alexeygrigorev) in the original [AI Engineering Field Guide](https://github.com/alexeygrigorev/ai-engineering-field-guide). The 2026 edition expands the data set, updates all statistics, adds new sections on emerging technologies, and reflects the rapid evolution of the AI engineering landscape.
