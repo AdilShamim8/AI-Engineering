@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧠 LLM-Literacy
+# 🧠 102 — LLM-Literacy
 
 ### *A First-Principles Curriculum for Understanding Large Language Models — From Zero to Production-Ready Engineer*
 
