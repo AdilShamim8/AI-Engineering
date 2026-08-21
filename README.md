@@ -80,3 +80,28 @@ A 4-part event series on AI engineering careers:
 ## Acknowledgments
 
 This guide builds on the foundational work by [Alexey Grigorev](https://github.com/alexeygrigorev) in the original [AI Engineering Field Guide](https://github.com/alexeygrigorev/ai-engineering-field-guide). The 2026 edition expands the dataset, updates all statistics, adds new sections on emerging technologies, and reflects the rapid evolution of the AI engineering landscape.
+
+## Connect With Me
+<p align="center">
+  <a href="https://www.adilshamim.me/">
+    <img src="https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=About.me&logoColor=white" />
+  </a>
+  <a href="https://adilshamim8.medium.com/">
+    <img src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white" />
+  </a>
+  <a href="https://linkedin.com/in/adilshamim8">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+  <a href="https://twitter.com/adil_shamim8">
+    <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" />
+  </a>
+  <a href="https://www.kaggle.com/adilshamim8">
+    <img src="https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white" />
+  </a>
+  <a href="https://leetcode.com/u/AdilShamim8">
+    <img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" />
+  </a>
+</p>
+
+<p align="center">
+</p>
