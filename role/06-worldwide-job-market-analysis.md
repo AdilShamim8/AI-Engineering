@@ -26,3 +26,10 @@ The demand for AI Engineers has expanded rapidly beyond Silicon Valley into a wo
 |---|---|---|---|---|
 | **US Tier 1** | San Francisco Bay Area, New York, Seattle | $175,000 – $245,000 | **$260,000 – $480,000+** | Frontier AI labs, high equity grants, fierce talent wars |
 | **US Tier 2 / Remote** | Austin, Denver, Boston, Chicago, US Remote | $150,000 – $210,000 | **$190,000 – $320,000** | Enterprise SaaS, pragmatic RAG and automation systems |
+| **United Kingdom** | London, Cambridge, Oxford | £95,000 – £155,000 | **£125,000 – £230,000** | FinTech, DeepMind ecosystem, HealthTech hubs |
+| **European Union** | Zurich, Berlin, Amsterdam, Paris | €105,000 – €175,000 | **€130,000 – €240,000** | Strict GDPR/EU AI Act compliance focus, Mistral ecosystem |
+| **Asia-Pacific** | Singapore, Sydney, Tokyo | S$160,000 – S$240,000 | **S$200,000 – S$340,000** | Regional APAC headquarters, banking AI transformation |
+| **India** | Bengaluru, Hyderabad, Gurugram, Pune | ₹3,200,000 – ₹6,500,000 | **₹4,500,000 – ₹9,500,000** | Rapidly shifting from offshore maintenance to core AI architecture |
+| **Global Remote** | Worldwide (Contract / EOR via Deel/Oyster) | $110,000 – $190,000 USD | **$130,000 – $250,000 USD** | Async-first, high autonomy, paid in USD or crypto/stablecoins |
+
+---
