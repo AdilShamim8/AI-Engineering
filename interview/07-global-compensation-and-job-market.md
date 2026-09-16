@@ -68,3 +68,13 @@ Understanding your equity structure is critical to avoiding paper wealth traps:
 When the recruiter asks: *"What are your salary expectations?"*
 > **Script:** *"I want to be fully transparent: right now, my primary focus is evaluating team fit, the technical challenges in your agent architecture, and the scope of impact. Once we determine this is a mutual match, I'm confident we can align on a competitive package reflecting current market rates for this role. Could you share the approved compensation band for this level?"*
 
+### Rule 2: Negotiate Multiple Levers Simultaneously
+Do not negotiate only on base salary. Companies often have hard departmental caps on base, but flexible discretionary pools for:
+- **Sign-on Bonus:** The easiest lever for recruiters to bridge a $20k–$50k gap because it's a one-time charge.
+- **Initial Equity Grant:** High leverage at growing AI scaleups.
+- **Compute / GPU Budget:** Direct monthly stipend ($500–$1,000/mo) for Claude/OpenAI APIs, local GPU workstations, or cloud experimentation.
+- **Level Calibration:** Pushing from Senior (L5) to Staff (L6) creates a step-function jump in total comp that exceeds any small base salary counter-offer.
+
+### Counter-Offer Email Template
+```
+Subject: Offer Evaluation — [Your Name] — AI Engineer Role
