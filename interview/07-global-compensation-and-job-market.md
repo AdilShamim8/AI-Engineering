@@ -78,3 +78,13 @@ Do not negotiate only on base salary. Companies often have hard departmental cap
 ### Counter-Offer Email Template
 ```
 Subject: Offer Evaluation — [Your Name] — AI Engineer Role
+
+Dear [Recruiter / Hiring Manager Name],
+
+Thank you so much for extending this offer. I am genuinely excited about the opportunity 
+to join [Company Name] and lead the engineering behind [specific project/agent system]. 
+The conversations with [Team Members] confirmed that this is where I want to build.
+
+After reviewing the details of the offer against my current interview pipeline and 
+verified market data for Senior AI Engineers in [Location], there remains a gap in total compensation. 
+I currently have a competing offer at [Competing Tier/Company] structured at [$X Total Comp].
