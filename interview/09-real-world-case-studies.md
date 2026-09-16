@@ -34,3 +34,15 @@
 |  [Reasoning LLM (Claude 3.5 Sonnet)] ──► Grounded Report with Exact Citations     |
 +-----------------------------------------------------------------------------------+
 ```
+
+### 2. Key Architectural Decisions
+- **Table Handling:** Financial data lives in tables. Raw text chunking breaks tabular columns. We convert all tables into structured Markdown and compute an LLM-generated table summary, which is prepended to each table slice before embedding.
+- **Parent-Child Ingestion:** Child chunks (200 tokens) are embedded for pinpoint search precision; upon match, the 1000-token Parent Chunk is injected into context so financial context (units, currency, footnote asterisks) is never dropped.
+- **Strict Grounding Guardrail:** If retrieved chunk confidence is below 0.85, system replies: *"Document does not state Q3 EBITDA for the cloud subsidiary."*
+
+---
+
+# 💻 CASE STUDY 2: Autonomous Code Review & Refactoring Agent with MCP
+
+### 1. Problem Statement & Requirements
+- Automatically inspect incoming pull requests, identify bugs, optimize performance, verify test coverage, and submit refactoring suggestions.
