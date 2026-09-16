@@ -1,14 +1,14 @@
 # AI Engineering Interview Process
 
-> Based on analysis of 2,100+ job descriptions, ~120 include structured interview processes across 65+ companies.
+> Based on analysis of 3,100+ global job descriptions across 150+ companies — updated September 16, 2026.
 
 ## Summary Statistics
 
 | Metric | Value |
 |--------|-------|
-| Job descriptions analyzed | 2,100+ |
-| Descriptions with structured process | ~120 (5.7%) |
-| Companies with published processes | 65+ |
+| Job descriptions analyzed | 3,100+ |
+| Descriptions with structured process | ~210 (6.8%) |
+| Companies with published processes | 115+ |
 | Median number of interview steps | 4 |
 | Range of interview steps | 2–7 |
 | Most common first step | Recruiter screen |
