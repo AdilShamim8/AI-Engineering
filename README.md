@@ -27,7 +27,7 @@ Everything here is based on real data: 3,100+ actual job descriptions, real inte
 ## The AI Engineer Role
 
 - [My vision of the role](role/01-my-vision.md) — how I see AI engineering, comparison with DS/ML/DE roles, CRISP-DM for AI
-- [Skills analysis](role/02-skills.md) — top skills, job types, cloud platforms, frameworks (updated May 2026)
+- [Skills analysis](role/02-skills.md) — top skills, job types, cloud platforms, frameworks (updated September 16, 2026)
 - [Responsibilities](role/03-responsibilities.md) — patterns extracted from 6,200+ job responsibilities
 - [Use cases](role/04-use-cases.md) — 5,100+ real use cases showing what companies build with AI
 - [Reality vs. job postings](role/05-reality-vs-postings.md) — what candidates experience vs. what's advertised
@@ -43,7 +43,7 @@ Everything here is based on real data: 3,100+ actual job descriptions, real inte
   - [Project deep dive](interview/questions/03-project-deep-dive.md) — presentation rounds, follow-up probes, what interviewers evaluate
   - [AI system design](interview/questions/04-ai-system-design.md) — system design for AI applications
   - [Behavioral](interview/questions/05-behavioral.md) — values, leadership, problem-solving
-  - [Home assignments](interview/questions/06-home-assignments.md) — take-home assignments and paid work trials from 120+ GitHub repos
+  - [Home assignments](interview/questions/06-home-assignments.md) — take-home assignments and paid work trials from 140+ GitHub repos
 - [Skills that get you hired](interview/03-get-hired.md) — baseline expectations, differentiators, and portfolio strategy
 - [After the interview](interview/04-after-the-interview.md) — handling offers, rejections, and salary negotiation
 - [Interview trends](interview/05-trends.md) — AI cheating, AI-proctored rounds, context engineering interviews
