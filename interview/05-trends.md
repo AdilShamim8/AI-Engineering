@@ -1,6 +1,6 @@
 # Interview Trends
 
-> The AI engineering interview landscape is changing fast. This document tracks the major trends, controversies, and shifts observed in 2025–2026, based on 130+ interview rounds, hiring manager reports, and industry analysis.
+> The AI engineering interview landscape is changing fast. This document tracks the major trends, controversies, and shifts observed in 2025–2026, based on 130+ interview rounds, hiring manager reports, and industry analysis — updated September 16, 2026.
 
 ---
 
@@ -22,13 +22,13 @@ The AI hiring market in 2025–2026 is paradoxical: **demand for AI engineers is
 
 ### AI-Native Role Surge
 
-| Metric | 2024 | 2025 | 2026 (proj.) |
-|--------|------|------|-------------|
-| "AI Engineer" job postings | ~8,000 | ~18,000 | ~32,000 |
-| "ML Engineer" job postings | ~25,000 | ~28,000 | ~30,000 |
-| "Prompt Engineer" job postings | ~3,000 | ~1,500 | ~800 |
-| AI-specific interview guides | 5 | 15 | 30+ |
-| Companies with AI engineering teams | 500+ | 1,200+ | 2,000+ |
+| Metric | 2024 | 2025 | 2026 (Q3 Sept) |
+|--------|------|------|----------------|
+| "AI Engineer" job postings | ~8,000 | ~18,000 | ~35,000+ |
+| "ML Engineer" job postings | ~25,000 | ~28,000 | ~31,000 |
+| "Prompt Engineer" job postings | ~3,000 | ~1,500 | ~600 |
+| AI-specific interview guides | 5 | 15 | 45+ |
+| Companies with AI engineering teams | 500+ | 1,200+ | 2,800+ |
 
 **Key observation**: The "Prompt Engineer" role is dying — subsumed into broader AI engineering. Companies want engineers who can build systems, not just write prompts.
 
