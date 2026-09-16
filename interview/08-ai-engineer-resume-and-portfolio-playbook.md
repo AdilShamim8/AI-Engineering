@@ -52,3 +52,12 @@ When an engineering director clicks your GitHub repository link, they evaluate t
 |  [4] 5-Minute Docker Setup       ──► `docker compose up` runs everything locally   |
 |  [5] Honest Failure Analysis     ──► Section documenting edge-case limitations    |
 +-----------------------------------------------------------------------------------+
+```
+
+### The Critical Evaluation Table in Your Repo
+A repository without an evaluation table looks like a school tutorial. Always include a quantitative comparison:
+
+```markdown
+### 📊 Retrieval Evaluation & Ablation Study
+
+| Configuration | Context Precision@5 | Answer Faithfulness | P95 Latency | Cost per 1k Queries |
