@@ -14,3 +14,12 @@ Data sources used for these documents:
 
 Sections:
 
+- [Interview Process](01-interview-process.md) - common patterns, step counts, time estimates, AI use in hiring, and key takeaways
+- [Interview Questions](02-questions.md) - theory, coding, case study, system design, home assignments, behavioral
+- [Getting Hired](03-get-hired.md) - what interviewers test, portfolio strategy, preparation, and common mistakes
+- [After the Interview](04-after-the-interview.md) - handling offers, rejections, and salary negotiation
+- [Interview Trends](05-trends.md) - realistic assessments, AI cheating, AI-proctored rounds, the "no AI tools" irony
+- [Global Compensation & Negotiation Guide](07-global-compensation-and-job-market.md) - verified 2026 salary benchmarks (US, UK, EU, Singapore, India, Remote), equity mechanics, and negotiation scripts
+- [Resume & Portfolio Playbook](08-ai-engineer-resume-and-portfolio-playbook.md) - ATS optimization, high-impact bullet formulas, and 60-second GitHub repo audit checklist
+- [Production System Design Case Studies](09-real-world-case-studies.md) - 4 full end-to-end interview blueprints: Financial RAG, Coding Agent with MCP, Voice Assistant, and LLM Gateway
+
