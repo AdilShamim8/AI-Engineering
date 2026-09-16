@@ -1,6 +1,7 @@
 # 🧠 103: Agentic AI — Planning, Protocols & Frameworks
 
 [![AI Engineering](https://img.shields.io/badge/Domain-AI%20Engineering-blue.svg?style=for-the-badge&logo=python)](https://github.com)
+[![Edition](https://img.shields.io/badge/Edition-September_16,_2026-blue.svg?style=for-the-badge)](https://github.com)
 [![Topic](https://img.shields.io/badge/Focus-Agentic%20AI%20%26%20MCP-8A2BE2.svg?style=for-the-badge)](https://github.com)
 [![Level](https://img.shields.io/badge/Level-Beginner%20%E2%86%92%20Expert-emerald.svg?style=for-the-badge)](https://github.com)
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
