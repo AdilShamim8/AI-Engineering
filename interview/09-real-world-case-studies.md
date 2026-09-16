@@ -118,3 +118,15 @@ When the user speaks while the bot is talking, the WebRTC client sends a high-pr
 ```
 +-----------------------------------------------------------------------------------+
 |                          ENTERPRISE AI GATEWAY BLUEPRINT                          |
+|                                                                                   |
+|  [Internal Team Microservices] (Send requests to https://ai-gateway.company.internal)|
+|                           │                                                       |
+|                           ▼                                                       |
+|  [Kong / Envoy API Gateway] (API Key Auth + Team Token Quota Enforcement)         |
+|                           │                                                       |
+|                           ▼                                                       |
+|  [Redis Semantic Cache] (HNSW index on query embeddings)                         |
+|         │                                                                         |
+|         ├─► [Similarity >= 0.96?] ──► Return Cached Response (<15ms, $0.00 cost) |
+|         │                                                                         |
+|         ▼ (Cache Miss)                                                            |
