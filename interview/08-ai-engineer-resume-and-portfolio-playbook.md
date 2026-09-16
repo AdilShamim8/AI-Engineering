@@ -70,3 +70,12 @@ A repository without an evaluation table looks like a school tutorial. Always in
 ---
 
 ## 📨 High-Conversion Cold Outreach Blueprints
+
+Never apply through the standard job portal link alone. Send a targeted, value-first message directly to the **Head of AI, VP of Engineering, or Founder**:
+
+```
+Subject: Quick note regarding your [Specific AI Feature/Agent System]
+
+Hi [First Name],
+
+I noticed [Company Name] recently launched [Specific AI Feature/Product], 
