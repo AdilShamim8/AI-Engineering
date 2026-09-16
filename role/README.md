@@ -26,3 +26,18 @@ Analysis of what AI engineers actually do, based on 895 job descriptions from bu
 
 - RAG + Agents dominate. RAG appears in 35.9% of all jobs, agents in 14.4%. Together they cover 70%+ of use cases. If you learn these two patterns deeply, you cover most of the work.
 - The #1 problem AI solves is automating manual workflows (15.4% of use cases). Not glamorous - it's reducing repetitive work at scale.
+- Knowledge access is universal. Every domain (healthcare, legal, finance, enterprise) has the same problem: too much information, can't find what's needed. RAG solves this everywhere.
+
+### Skills that matter
+
+- Python is mandatory (82.5%). After that: AWS (40.1%), RAG (35.9%), Docker (31.0%), prompt engineering (29.1%), Kubernetes (29.1%).
+- Fine-tuning is overhyped. Only 4.0% of roles focus on it as a primary responsibility. 80.8% don't mention it at all. Focus on RAG and agents first.
+- 64.3% still require some ML knowledge - but it's practical ML (PyTorch basics, fine-tuning, embeddings), not deep research expertise.
+
+### What actually gets you hired
+
+- Evaluation is the differentiator. 39.6% of AI-First roles explicitly require evaluation skills. Anyone can build a chatbot - companies hire people who can measure if it works (LLM-as-judge, golden datasets, hallucination detection).
+- Production thinking wins over accuracy obsession. 50.2% of AI-First roles require production/ops skills (Docker, Kubernetes, CI/CD, MLOps, Terraform).
+- 95.6% of roles are applied/production, not research. Only 4.4% are research roles. The market wants people who ship, not people who publish.
+
+
