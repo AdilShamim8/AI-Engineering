@@ -58,3 +58,13 @@ Understanding your equity structure is critical to avoiding paper wealth traps:
 
 ### 3. Early-Stage Startups (Seed to Series B)
 - **Stock Options (ISO/NSO):** The right to purchase shares at a fixed strike price.
+- **Evaluation Rule:** Never accept lower base salary for options unless you have visibility into the 409A valuation, preferred vs. common liquidation preference, and current runway (at least 18–24 months).
+
+---
+
+## 🎯 The Senior Negotiation Playbook
+
+### Rule 1: Never Anchor First
+When the recruiter asks: *"What are your salary expectations?"*
+> **Script:** *"I want to be fully transparent: right now, my primary focus is evaluating team fit, the technical challenges in your agent architecture, and the scope of impact. Once we determine this is a mutual match, I'm confident we can align on a competitive package reflecting current market rates for this role. Could you share the approved compensation band for this level?"*
+
