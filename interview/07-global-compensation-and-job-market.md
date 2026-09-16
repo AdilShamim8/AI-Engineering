@@ -18,3 +18,13 @@ Compensation in AI Engineering carries a distinct **25%–40% premium** over tra
 | **L6 / Staff** | 8–12 Years | $270,000 – $340,000 | $250,000 – $500,000+ | 25% ($75,000) | **$595,000 – $915,000+** |
 | **L7 / Principal** | 12+ Years | $330,000 – $420,000 | $500,000 – $1,200,000+ | 30% ($110,000) | **$940,000 – $1,700,000+** |
 
+*Note: Frontier Labs (OpenAI, Anthropic) frequently grant Profit Participation Units (PPUs) or liquidity-backed grants pushing Senior/Staff packages above $800k–$1.2M.*
+
+---
+
+### 🇬🇧 United Kingdom (London, Cambridge) & 🇪🇺 European Union (Zurich, Berlin, Amsterdam, Paris)
+
+| Level | UK Total Comp (GBP £) | EU / Switzerland Total Comp (EUR € / CHF) |
+|---|---|---|
+| **Junior** | £65,000 – £90,000 | €70,000 – €95,000 (Zurich: CHF 120,000 – 145,000) |
+| **Mid-Level** | £95,000 – £140,000 | €100,000 – €145,000 (Zurich: CHF 150,000 – 195,000) |
