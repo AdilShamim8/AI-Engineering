@@ -43,3 +43,48 @@ This repository covers **four core pillars**:
 ├── 📁 02-Agent Protocols/
 │   ├── 📄 1. Introduction to Model Context Protocol (MCP).md
 │   ├── 📄 2. Tool Interface Standardization.md
+│   ├── 📄 3. Client–Server Architecture for Agents.md
+│   └── 📄 4. Capability Discovery.md
+│
+├── 📁 03-Agentic AI Frameworks/
+│   └── 📄 Frameworks & Libraries.md
+│
+├── 📁 04-Multi-Agent Orchestration/
+│   ├── 📄 1. Multi-Agent Collaboration Patterns.md
+│   └── 📄 2. Human-in-the-Loop & Production Safety.md
+│
+└── 📄 README.md
+```
+
+---
+
+## 📚 Detailed Curriculum & Module Breakdown
+
+### 🧩 Module 1: Planning & Reasoning
+
+Master how autonomous models think, break down problems, select actions, handle state, enforce constraints, and evaluate their execution trajectories.
+
+| # | Topic Document | Core Concepts Covered |
+|---|---|---|
+| **01** | [1. Foundations of Agentic Planning](./01-Planning%20%26%20Reasoning/1.%20Foundations%20of%20Agentic%20Planning.md) | Passive LLMs vs. Active Agents, Plan-Act-Observe-Replan loops, Perception, Memory & Action primitives. |
+| **02** | [2. Reasoning Patterns in LLM Systems](./01-Planning%20%26%20Reasoning/2.%20Reasoning%20Patterns%20in%20LLM%20Systems.md) | Chain-of-Thought (CoT), ReAct, Tree-of-Thoughts (ToT), Graph-of-Thoughts (GoT), Reflexion, and Self-Consistency. |
+| **03** | [3. Single-Agent Planning](./01-Planning%20%26%20Reasoning/3.%20Single-Agent%20Planning.md) | Architecture of solo agents, execution loop design, short-term/long-term/episodic memory integration, error recovery. |
+| **04** | [4. Task Decomposition Strategies](./01-Planning%20%26%20Reasoning/4.%20Task%20Decomposition%20Strategies.md) | Hierarchical goal structures, Directed Acyclic Graphs (DAGs), dynamic re-planning, sub-goal generation. |
+| **05** | [5. Iterative Reasoning Loops](./01-Planning%20%26%20Reasoning/5.%20Iterative%20Reasoning%20Loops.md) | Self-Correction, Critique & Refine loops, Human-in-the-Loop (HITL), termination & convergence criteria. |
+| **06** | [6. Tool-Aware Reasoning](./01-Planning%20%26%20Reasoning/6.%20Tool-Aware%20Reasoning.md) | Function calling paradigms, dynamic API tool selection, parameter validation, schema alignment & fallback strategies. |
+| **07** | [7. State-Aware Planning](./01-Planning%20%26%20Reasoning/7.%20State-Aware%20Planning.md) | World state representation, state mutation tracking, context window management, persistent memory mechanisms. |
+| **08** | [8. Planning Constraints & Control](./01-Planning%20%26%20Reasoning/8.%20Planning%20Constraints%20%26%20Control.md) | Guardrails, token budget limits, infinite loop detection, safety policy enforcement, structural output constraints. |
+| **09** | [9. Failure Modes in Planning Systems](./01-Planning%20%26%20Reasoning/9.%20Failure%20Modes%20in%20Planning%20Systems.md) | Planning hallucinations, error propagation, context drifting, over-planning loops, tool misuse mitigation. |
+| **10** | [10. Evaluation of Reasoning Systems](./01-Planning%20%26%20Reasoning/10.%20Evaluation%20of%20Reasoning%20Systems.md) | Benchmarks (ALFWorld, WebArena, HumanEval, GAIA, AgentBench), path success rate, trajectory cost metrics. |
+
+---
+
+### 🔌 Module 2: Agent Protocols & Model Context Protocol (MCP)
+
+Learn how to decouple model intelligence from tools and data sources through standardized open protocols.
+
+| # | Topic Document | Core Concepts Covered |
+|---|---|---|
+| **01** | [1. Introduction to MCP](./02-Agent%20Protocols/1.%20Introduction%20to%20Model%20Context%20Protocol%20%28MCP%29.md) | The $M \times N$ integration bottleneck, MCP architecture, Core Primitives (Resources, Prompts, Tools). |
+| **02** | [2. Tool Interface Standardization](./02-Agent%20Protocols/2.%20Tool%20Interface%20Standardization.md) | JSON Schema validation, input/output contract enforcement, protocol security boundaries, sandboxing. |
+| **03** | [3. Client–Server Architecture for Agents](./02-Agent%20Protocols/3.%20Client%E2%80%93Server%20Architecture%20for%20Agents.md) | MCP Host vs. Server roles, Transport mechanisms (`stdio`, `SSE`, `HTTP`), payload request/response cycles. |
