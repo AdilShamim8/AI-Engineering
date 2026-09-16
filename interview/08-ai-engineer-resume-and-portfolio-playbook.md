@@ -16,3 +16,12 @@ Recruiters spend an average of **35 to 60 seconds** reviewing an AI engineering 
 
 ---
 
+## ✍️ The High-Impact Bullet Point Formula
+
+Every single bullet point on your resume must follow the **Google XYZ Action-Metric-Method Formula**:
+
+$$\text{Accomplished [X]} \text{ as measured by [Y]} \text{ by implementing [Z]}$$
+
+### ❌ Real Before & After Transformations
+
+#### Example 1: RAG System
