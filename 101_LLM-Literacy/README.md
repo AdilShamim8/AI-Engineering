@@ -11,6 +11,8 @@
 [![Total Content](https://img.shields.io/badge/Content-~1.5MB_of_markdown-purple.svg)](#-content-statistics)
 [![Audience](https://img.shields.io/badge/Audience-Engineers%20%7C%20Builders%20%7C%20Practitioners-orange.svg)](#-who-this-is-for)
 
+> *Verified & Updated: September 16, 2026.*
+
 ---
 
 *"Most people use LLMs. This curriculum teaches you to understand them."*
