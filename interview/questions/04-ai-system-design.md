@@ -1,6 +1,6 @@
 # AI System Design
 
-> AI system design has emerged as a distinct interview category — different from traditional system design and different from ML system design. It tests your ability to design systems where the core component is an LLM or AI model, and where non-determinism, cost, latency, and safety are first-class design constraints.
+> AI system design has emerged as a distinct interview category — updated September 16, 2026. It tests your ability to design systems where the core component is an LLM or AI model, and where non-determinism, cost, latency, and safety are first-class design constraints.
 
 ---
 
@@ -54,7 +54,10 @@ The key differences:
 |----------|---------------|-----------|
 | AI Chatbot for customer support | Hallucination, escalation, cost | Intercom, Zendesk |
 | Document Q&A / RAG system | Retrieval quality, citations, scale | Doctolib, Casetext |
+| Enterprise GraphRAG Knowledge Graph | Entity extraction, graph community clustering, hybrid search | Microsoft, Palantir |
 | AI co-pilot for coding | Latency, context, safety of generated code | GitHub, Cursor |
+| MCP-Based Multi-Agent Developer Swarm | Tool discovery, RPC authentication, human-in-the-loop sandbox | Anthropic, Cognition |
+| Local SLM with Speculative Decoding | Memory footprint, KV cache quant, p99 token throughput | Apple, Meta, Mistral |
 | Voice assistant with LLM | Latency, STT/TTS, interruption handling | OpenAI, Amazon |
 | Contract generation system | Legal accuracy, clause consistency, review workflow | Harvey, LegalOn |
 | AI-powered candidate sourcing | Bias, relevance, personalization | Eightfold, LinkedIn |
