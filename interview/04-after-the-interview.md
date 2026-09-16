@@ -1,6 +1,6 @@
 # After the Interview
 
-> The interview is just the beginning. What you do after — evaluating offers, negotiating, and starting strong — shapes your career trajectory more than any single interview.
+> The interview is just the beginning (Updated September 16, 2026). What you do after — evaluating offers, negotiating, and starting strong — shapes your career trajectory more than any single interview.
 
 ---
 
@@ -177,6 +177,7 @@ Reference checks have become standard at top AI companies in 2026. Be prepared:
 - [ ] Shipped at least one meaningful change to production
 - [ ] Understood the full AI pipeline (data → training → serving → evaluation)
 - [ ] Built relationships with PM, data engineering, and design counterparts
+- [ ] Audited production LLM metrics: prompt caching hit-rates, p99 TTFT, and guardrail false positives
 - [ ] Identified at least one area for improvement and proposed a solution
 - [ ] Established a 1:1 rhythm with your manager
 - [ ] Documented something that was previously undocumented
