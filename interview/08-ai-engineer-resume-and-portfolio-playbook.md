@@ -79,3 +79,20 @@ Subject: Quick note regarding your [Specific AI Feature/Agent System]
 Hi [First Name],
 
 I noticed [Company Name] recently launched [Specific AI Feature/Product], 
+and I was fascinated by the challenge of managing [specific challenge, e.g., 
+hallucination rates / latency across complex multi-turn queries].
+
+I recently built an open-source two-stage hybrid retrieval system with 
+sub-500ms P95 latency and automated RAGAS evaluation that achieved a 
+0.96 faithfulness score on 500+ complex edge cases:
+- Live Demo: [Link]
+- GitHub & Architecture: [Link]
+
+I put together a short 2-minute Loom walkthrough showing how a similar 
+caching and reranking layer could reduce inference latency by ~40% for [Company Name].
+
+Would you be open to a 10-minute chat next Tuesday at 2 PM PST to discuss?
+
+Best,
+[Your Name]
+```
