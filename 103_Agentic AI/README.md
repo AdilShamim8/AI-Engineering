@@ -88,3 +88,48 @@ Learn how to decouple model intelligence from tools and data sources through sta
 | **01** | [1. Introduction to MCP](./02-Agent%20Protocols/1.%20Introduction%20to%20Model%20Context%20Protocol%20%28MCP%29.md) | The $M \times N$ integration bottleneck, MCP architecture, Core Primitives (Resources, Prompts, Tools). |
 | **02** | [2. Tool Interface Standardization](./02-Agent%20Protocols/2.%20Tool%20Interface%20Standardization.md) | JSON Schema validation, input/output contract enforcement, protocol security boundaries, sandboxing. |
 | **03** | [3. Client–Server Architecture for Agents](./02-Agent%20Protocols/3.%20Client%E2%80%93Server%20Architecture%20for%20Agents.md) | MCP Host vs. Server roles, Transport mechanisms (`stdio`, `SSE`, `HTTP`), payload request/response cycles. |
+| **04** | [4. Capability Discovery](./02-Agent%20Protocols/4.%20Capability%20Discovery.md) | Dynamic registration, runtime capability negotiation, multi-server routing, schema inspection. |
+
+---
+
+### 🛠️ Module 3: Agentic AI Frameworks & Ecosystems
+
+An in-depth comparative guide for selecting, designing, and scaling agent applications using industry frameworks.
+
+| Topic Document | Key Frameworks & Technologies Analyzed |
+|---|---|
+| 📄 [Frameworks & Libraries](./03-Agentic%20AI%20Frameworks/Frameworks%20%26%20Libraries.md) | **LangGraph**, **CrewAI**, **Microsoft AutoGen**, **LlamaIndex Workflows**, **Semantic Kernel**, **DSPy**, **Haystack**, **Anthropic Computer Use**. Includes comparative decision matrices and trade-off guides. |
+
+---
+
+### 🤖 Module 4: Multi-Agent Orchestration & Production Safety
+
+Architecting multi-agent collaboration networks, asynchronous human approval checkpoints, secure code sandboxes, and circuit breakers.
+
+| # | Topic Document | Core Concepts Covered |
+|---|---|---|
+| **01** | [1. Multi-Agent Collaboration Patterns](./04-Multi-Agent%20Orchestration/1.%20Multi-Agent%20Collaboration%20Patterns.md) | Hierarchical supervisor-worker, Sequential chat, Consensus & Debate, LangGraph cyclic state graphs, Shared blackboard memory. |
+| **02** | [2. Human-in-the-Loop & Production Safety](./04-Multi-Agent%20Orchestration/2.%20Human-in-the-Loop%20%26%20Production%20Safety.md) | Action risk tiers, Asynchronous interrupts with checkpoint rewind, Ephemeral microVM sandboxing (E2B / gVisor), Token budget & step circuit breakers. |
+
+---
+
+## ⚡ Key Mental Models & Paradigms
+
+```
++-----------------------------------------------------------------------------------+
+|                                 AGENTIC REASONING LOOP                            |
+|                                                                                   |
+|    +-------------+       +-------------------+       +-----------------------+    |
+|    |  User Goal  | ----> | Task Decomposition| ----> |  Reasoning & Planning |    |
+|    +-------------+       +-------------------+       +-----------------------+    |
+|                                                                  |                |
+|                                                                  v                |
+|    +-------------+       +-------------------+       +-----------------------+    |
+|    | Final Goal  | <---- | Observe State &   | <---- | Action Execution      |    |
+|    |  Achieved   |       | Re-Plan / Correct |       | (Tools / MCP Server)  |    |
+|    +-------------+       +-------------------+       +-----------------------+    |
++-----------------------------------------------------------------------------------+
+```
+
+### 🧠 Reasoning Taxonomy Quick Reference
+
