@@ -94,3 +94,15 @@
 |  [VAD (Voice Activity Detection)] ──► Interruption detected? Kill current TTS!    |
 |         │                                                                         |
 |         ▼                                                                         |
+|  [Fast Intent Classifier & Router] ──► (Simple query? GPT-4o-mini; Complex? Sonnet)
+|         │                                                                         |
+|         ▼ (First token streamed in 220ms)                                         |
+|  [Cartesia / ElevenLabs Streaming TTS] (Converts token buffer to raw PCM audio)   |
+|         │ (WebSocket audio packets)                                               |
+|         ▼                                                                         |
+|  [User Speaker] ──► User hears speech start within ~520ms Total Turnaround!       |
++-----------------------------------------------------------------------------------+
+```
+
+### 2. Interruption Handling (Barge-In)
+When the user speaks while the bot is talking, the WebRTC client sends a high-priority `INTERRUPT` frame. The backend immediately cancels the downstream LLM generation worker, empties the audio output playback buffer, and shifts context to listen.
