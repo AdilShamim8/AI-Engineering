@@ -38,3 +38,13 @@ Compensation in AI Engineering carries a distinct **25%–40% premium** over tra
 | Level | Singapore Total Comp (SGD S$) | India Total Comp (INR ₹) |
 |---|---|---|
 | **Junior** | S$95,000 – S$140,000 | ₹1,800,000 – ₹3,200,000 |
+| **Mid-Level** | S$145,000 – S$210,000 | ₹3,500,000 – ₹5,800,000 |
+| **Senior** | S$220,000 – S$340,000 | ₹6,000,000 – ₹11,000,000 |
+| **Staff+** | S$350,000 – S$550,000+ | ₹12,000,000 – ₹22,000,000+ |
+
+---
+
+## 📈 Equity Mechanics: RSUs vs. Stock Options
+
+Understanding your equity structure is critical to avoiding paper wealth traps:
+
