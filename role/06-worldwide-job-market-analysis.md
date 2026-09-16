@@ -54,3 +54,10 @@ The demand for AI Engineers has expanded rapidly beyond Silicon Valley into a wo
 ---
 
 ## 📊 Skill Demand Velocity (2024 vs. 2026)
+
+```
+  Skill / Technology               YoY Change in Job Postings
+  ------------------------------------------------------------
+  Context Engineering & Token Optimization   ▲ +310%
+  Model Context Protocol (MCP)               ▲ +420%
+  Automated Evaluation (RAGAS / TruLens)     ▲ +215%
