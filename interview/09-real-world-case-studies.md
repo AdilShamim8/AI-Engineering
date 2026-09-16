@@ -1,6 +1,6 @@
 # Real-World Production AI System Design Case Studies (2026)
 
-> **Architectural blueprints, latency/cost budgets, failure mitigations, and evaluation frameworks for the 4 most commonly tested AI system design interview questions.**
+> **Architectural blueprints, latency/cost budgets, failure mitigations, and evaluation frameworks for the 4 most commonly tested AI system design interview questions — updated September 16, 2026.**
 
 ---
 
