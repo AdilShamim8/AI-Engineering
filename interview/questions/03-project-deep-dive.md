@@ -1,6 +1,6 @@
 # Project Deep Dive
 
-> The project deep-dive is one of the most important and most underrated rounds in AI engineering interviews. It's your opportunity to demonstrate real production experience, technical depth, and the ability to reason about trade-offs — things that are hard to assess in a coding exercise or system design prompt.
+> The project deep-dive is one of the most important and most underrated rounds in AI engineering interviews (Updated: September 16, 2026). It's your opportunity to demonstrate real production experience, technical depth, and the ability to reason about trade-offs — things that are hard to assess in a coding exercise or system design prompt.
 
 ---
 
@@ -73,6 +73,13 @@ Be ready for these — they come up in almost every project deep-dive:
 - "What's the cost per query? How would you reduce it?"
 - "How would you handle real-time updates to the document corpus?"
 - "What's the bottleneck in this system?"
+- "How did you monitor prompt caching hit rate and TTFT (time-to-first-token) degradations?"
+
+### Agentic & Tool-Execution Probes (2026)
+- "How did you isolate and sandbox untrusted code executed by agents or tools (e.g. gVisor, Firecracker microVMs, Docker)?"
+- "What was your state-recovery mechanism when an agent got stuck in an infinite retry loop or hit a 429 rate limit mid-plan?"
+- "How did you handle human-in-the-loop approvals for sensitive actions without introducing unbounded async latency?"
+- "If your tools were exposed via Model Context Protocol (MCP), how did you handle authentication, permissions, and tool discovery?"
 
 ### Reflection Probes
 - "What would you change if you rebuilt this today?"
