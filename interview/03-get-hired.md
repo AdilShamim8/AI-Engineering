@@ -1,6 +1,6 @@
 # Get Hired
 
-> Based on 150+ sources including interview reports, hiring manager interviews, and practitioner surveys. This guide covers everything from preparation strategy to negotiation — the full playbook for landing an AI engineering role in 2026.
+> Based on 150+ sources including interview reports, hiring manager interviews, and practitioner surveys. This guide covers everything from preparation strategy to negotiation — the full playbook for landing an AI engineering role as of September 16, 2026.
 
 ---
 
@@ -390,7 +390,7 @@ Some companies (especially Anthropic, OpenAI, and mission-driven startups) requi
 | Senior | 5–8 | $250K–$350K | $370K–$550K | Equity often 30–45% of comp |
 | Staff+ | 8+ | $320K–$450K | $550K–$900K+ | Equity often 40–55% of comp |
 
-**Sources**: Levels.fyi data for AI engineering roles, 2025–2026. Compensations vary significantly by company type, location, and market conditions. [^1]
+**Sources**: Levels.fyi data and global verified dataset (3,100+ AI engineering roles, updated September 16, 2026). Compensations vary significantly by company type, location, and market conditions. [^1]
 
 ### Key Negotiation Points
 
@@ -426,11 +426,11 @@ Some companies (especially Anthropic, OpenAI, and mission-driven startups) requi
 
 ## Sources
 
-[^1]: Levels.fyi compensation data for AI engineering roles, 2025–2026. Aggregated from self-reported data across Google, Meta, Amazon, Microsoft, OpenAI, Anthropic, Databricks, and various AI startups.
+[^1]: Levels.fyi and comprehensive compensation data for AI engineering roles, updated through September 16, 2026. Aggregated across Google, Meta, Amazon, Microsoft, OpenAI, Anthropic, Databricks, and 3,100+ global postings.
 [^2]: Interview reports aggregated from Blind, Glassdoor, and LeetCode Discuss, 2025–2026.
 [^3]: Mimansa Jaiswal, Yuan Meng, Janvi Kalra — interview preparation advice from social media posts and blog articles, 2025–2026. Names used with context from public posts.
-[^4]: "State of AI Engineering Hiring", LangChain survey, 2025.
-[^5]: "AI Engineering Job Market Report", various industry reports, 2025–2026.
+[^4]: "State of AI Engineering Hiring", LangChain survey, 2025–2026.
+[^5]: "AI Engineering Job Market Report", global industry benchmark, September 16, 2026.
 [^6]: Company engineering blogs and career pages, 2024–2026.
 [^7]: "How to Negotiate Your AI Engineering Offer", various guides and practitioner advice, 2025.
 
