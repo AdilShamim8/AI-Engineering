@@ -56,3 +56,32 @@ Everything here is based on real data: 3,100+ actual job descriptions, real inte
 
 - [General learning path](learning-paths/README.md) — what to learn and in what order
 - [From Data Engineer](learning-paths/from-data-engineer.md) — smoothest transition, 3-4 months
+- [From Data Scientist](learning-paths/from-data-scientist.md) — evaluation is your superpower, add engineering
+- [From ML Engineer](learning-paths/from-ml-engineer.md) — easiest transition, replace model call with API call
+- [From Backend Engineer](learning-paths/from-backend-engineer.md) — 2-3 months, add AI on top of engineering
+- [From Frontend Engineer](learning-paths/from-frontend-engineer.md) — backend first, then AI, unique full-stack advantage
+
+
+## Portfolio
+
+- [Project ideas](portfolio/README.md) — real project examples that demonstrate AI engineering skills
+
+
+## [Awesome AI Engineering](awesome.md)
+
+Curated collection of resources compiled while researching content for this field guide:
+
+- Practitioner interview stories
+- AI system design guides
+- Company engineering blogs
+- Books and courses
+- Case study collections
+
+See [awesome.md](awesome.md) for the list.
+
+
+## Webinars
+
+A 4-part event series on AI engineering careers:
+
+1. [A Day of an AI Engineer](webinars/01-a-day-of-ai-engineer.md) — the practical reality of the role — recording available
