@@ -1,6 +1,6 @@
 # From ML Engineer to AI Engineer
 
-> The easiest transition: replace your model call with an API call. Everything else you already know.
+> The easiest transition: replace your model call with an API call (Updated: September 16, 2026). Everything else you already know.
 
 ---
 
@@ -8,7 +8,7 @@
 
 ML engineers are already building production systems with models — you understand training, deployment, monitoring, and evaluation. The shift to AI engineering is primarily about replacing self-hosted model calls with LLM API calls, and adding the disciplines of prompt engineering and retrieval. Your existing mental models transfer almost directly.
 
-In 2026, the line between ML engineering and AI engineering has blurred significantly. Most ML engineers are already working with LLMs; the transition is about adopting the specific patterns and tools of the AI engineering ecosystem.
+As of September 16, 2026, the line between ML engineering and AI engineering has blurred significantly. Most ML engineers are already working with LLMs; the transition is about adopting the specific patterns and tools of the AI engineering ecosystem.
 
 ---
 
