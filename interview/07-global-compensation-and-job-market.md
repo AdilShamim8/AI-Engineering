@@ -1,6 +1,6 @@
 # Global AI Engineering Compensation & Negotiation Guide (2026)
 
-> **Empirical compensation benchmarks, equity mechanics, and negotiation strategies for AI Engineers worldwide.**
+> **Empirical compensation benchmarks, equity mechanics, and negotiation strategies for AI Engineers worldwide — updated September 16, 2026.**
 
 ---
 
