@@ -28,3 +28,13 @@ Compensation in AI Engineering carries a distinct **25%–40% premium** over tra
 |---|---|---|
 | **Junior** | £65,000 – £90,000 | €70,000 – €95,000 (Zurich: CHF 120,000 – 145,000) |
 | **Mid-Level** | £95,000 – £140,000 | €100,000 – €145,000 (Zurich: CHF 150,000 – 195,000) |
+| **Senior** | £145,000 – £235,000 | €150,000 – €240,000 (Zurich: CHF 210,000 – 310,000) |
+| **Staff / Lead** | £240,000 – £380,000+ | €250,000 – €400,000+ (Zurich: CHF 320,000 – 520,000+) |
+
+---
+
+### 🇸🇬 Singapore & 🇮🇳 India
+
+| Level | Singapore Total Comp (SGD S$) | India Total Comp (INR ₹) |
+|---|---|---|
+| **Junior** | S$95,000 – S$140,000 | ₹1,800,000 – ₹3,200,000 |
