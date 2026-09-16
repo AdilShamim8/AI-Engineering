@@ -82,3 +82,15 @@
 - **Target Latency:** Voice-to-voice turn-around under 600ms (human conversational comfort threshold).
 
 ```
++-----------------------------------------------------------------------------------+
+|                       STREAMING MULTIMODAL VOICE PIPELINE                         |
+|                                                                                   |
+|  [User Microphone]                                                                |
+|         │ (WebRTC Audio Stream)                                                   |
+|         ▼                                                                         |
+|  [Deepgram Nova-2 Streaming ASR] (Sub-120ms chunked transcription)                |
+|         │ (Partial transcript stream)                                             |
+|         ▼                                                                         |
+|  [VAD (Voice Activity Detection)] ──► Interruption detected? Kill current TTS!    |
+|         │                                                                         |
+|         ▼                                                                         |
