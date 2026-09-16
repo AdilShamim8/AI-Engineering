@@ -106,3 +106,15 @@
 
 ### 2. Interruption Handling (Barge-In)
 When the user speaks while the bot is talking, the WebRTC client sends a high-priority `INTERRUPT` frame. The backend immediately cancels the downstream LLM generation worker, empties the audio output playback buffer, and shifts context to listen.
+
+---
+
+# 🛡️ CASE STUDY 4: High-Throughput Enterprise LLM Gateway & Caching Router
+
+### 1. Problem Statement & Requirements
+- Centralized enterprise AI gateway handling 150M tokens/day across 80 internal engineering teams.
+- Must guarantee 99.99% uptime, prevent single-provider outages, enforce token quotas, and minimize redundant compute costs.
+
+```
++-----------------------------------------------------------------------------------+
+|                          ENTERPRISE AI GATEWAY BLUEPRINT                          |
