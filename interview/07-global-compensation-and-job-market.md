@@ -48,3 +48,13 @@ Compensation in AI Engineering carries a distinct **25%–40% premium** over tra
 
 Understanding your equity structure is critical to avoiding paper wealth traps:
 
+### 1. Public Companies (Google, Microsoft, Amazon, Meta)
+- **RSUs (Restricted Stock Units):** Liquid cash equivalent upon vesting.
+- **Vesting Schedules:** Standard 4-year with 1-year cliff, or backloaded (Amazon: 5%/15%/40%/40%) vs. frontloaded (Google/DoorDash: 33%/33%/22%/12%).
+
+### 2. High-Growth AI Unicorns (Anthropic, Databricks, Scale AI)
+- **Double-Trigger RSUs:** Only vest upon both time served AND an IPO / liquidity event. Tax is deferred until liquidity, protecting you from huge phantom tax liabilities.
+- **Secondary Tender Offers:** Many AI scaleups conduct semi-annual tender offers allowing employees to liquidate 10%–20% of vested equity annually at current valuations.
+
+### 3. Early-Stage Startups (Seed to Series B)
+- **Stock Options (ISO/NSO):** The right to purchase shares at a fixed strike price.
