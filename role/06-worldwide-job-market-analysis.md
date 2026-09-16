@@ -12,3 +12,10 @@ The demand for AI Engineers has expanded rapidly beyond Silicon Valley into a wo
                   GLOBAL AI ENGINEERING DEMAND BREAKDOWN (3,100+ POSTINGS)
                   
   North America (US & Canada)        [==================================] 54.2%
+  Europe (UK, Germany, Switzerland)  [====================] 21.8%
+  Asia-Pacific (Singapore, AU, JP)   [===========] 12.4%
+  South Asia & Middle East           [========] 7.1%
+  Latin America & Africa             [====] 4.5%
+```
+
+---
