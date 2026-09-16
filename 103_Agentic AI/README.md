@@ -8,6 +8,8 @@
 
 > **The Definitive, First-Principles Guide to Engineering Autonomous AI Agents, Universal Agent Protocols (MCP), and Modern Framework Architectures.**
 
+> *Verified & Updated: September 16, 2026.*
+
 ---
 
 ## 📌 Executive Overview
