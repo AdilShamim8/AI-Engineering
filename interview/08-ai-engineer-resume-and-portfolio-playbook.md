@@ -61,3 +61,12 @@ A repository without an evaluation table looks like a school tutorial. Always in
 ### 📊 Retrieval Evaluation & Ablation Study
 
 | Configuration | Context Precision@5 | Answer Faithfulness | P95 Latency | Cost per 1k Queries |
+|---|---|---|---|---|
+| Naive Vector (ChromaDB + Ada-002) | 0.61 | 0.74 | 240ms | $0.45 |
+| Hybrid (Qdrant + BM25) | 0.79 | 0.85 | 310ms | $0.48 |
+| **Hybrid + Cohere Rerank (Our System)** | **0.94** | **0.97** | **420ms** | **$0.62** |
+```
+
+---
+
+## 📨 High-Conversion Cold Outreach Blueprints
