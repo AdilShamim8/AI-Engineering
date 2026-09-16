@@ -58,6 +58,9 @@ Real-world architecture decisions from production systems:
 15. [Structured Output in Production: JSON Schema, Tool Use, and Beyond](https://openai.com/index/structured-outputs/) — Production patterns for reliable structured generation
 16. [From PoC to Production: The AI Engineering Lifecycle (2026)](https://www.databricks.com/blog/poc-to-production-ai) — Databricks' framework for shipping AI systems
 17. [Tool Use Architecture: Function Calling at Scale](https://docs.anthropic.com/en/docs/build-with-claude/tool-use) — Anthropic's guide to robust tool use implementation
+18. [Reasoning Models & Test-Time Compute Scaling](https://openai.com/research/learning-to-reason-with-llms) — Deep dive into test-time compute, search-based reasoning, and reinforcement learning
+19. [GraphRAG: Unifying Knowledge Graphs with LLMs](https://github.com/microsoft/graphrag) — Microsoft Research's production GraphRAG blueprint
+20. [DeepSeek-R1 Architecture & Low-Cost Training](https://github.com/deepseek-ai/DeepSeek-R1) — Open reasoning model architecture and post-training scaling
 
 ---
 
