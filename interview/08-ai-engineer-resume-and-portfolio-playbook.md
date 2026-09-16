@@ -25,3 +25,12 @@ $$\text{Accomplished [X]} \text{ as measured by [Y]} \text{ by implementing [Z]}
 ### ❌ Real Before & After Transformations
 
 #### Example 1: RAG System
+- ❌ **Junior / Weak:** *"Built a RAG chatbot using LangChain, OpenAI, and Pinecone to answer user questions from PDF documents."*
+- ✅ **Production / Senior:** *"Architected a two-stage hybrid RAG pipeline (Dense HNSW + BM25 with Cohere Rerank v3) indexing 4.2M financial filings; cut end-to-end P95 latency from 3.4s to 480ms and increased RAGAS Faithfulness from 0.73 to 0.96."*
+
+#### Example 2: AI Agents
+- ❌ **Junior / Weak:** *"Created an autonomous agent using CrewAI that does web research and writes blog posts."*
+- ✅ **Production / Senior:** *"Engineered a multi-agent research graph in LangGraph featuring asynchronous human-in-the-loop approval gates and ephemeral Docker sandboxing; automated 65 hours/week of tier-2 security triage with 0% false-positive executions."*
+
+#### Example 3: Cost & LLMOps
+- ❌ **Junior / Weak:** *"Optimized OpenAI API calls and reduced monthly bill."*
