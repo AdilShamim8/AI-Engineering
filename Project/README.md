@@ -1,6 +1,6 @@
 ## Learn by Doing. Become an AI Engineer.
 
-> **5 projects. Real systems. Zero hand-holding.**  
+> **5 projects. Real systems. Zero hand-holding.** (Verified & Updated: September 16, 2026)  
 > A hands-on curriculum for engineers who want to go from understanding LLMs to building production AI systems — step by step, project by project.
 
 <table>
