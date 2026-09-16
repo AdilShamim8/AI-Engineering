@@ -1,6 +1,6 @@
 # Learning Paths for AI Engineers
 
-> The definitive guide to building the skills that matter for AI engineering in 2026. Whether you're starting fresh or transitioning from an adjacent role, this section maps the terrain and gives you a structured path forward.
+> The definitive guide to building the skills that matter for AI engineering (Updated: September 16, 2026). Whether you're starting fresh or transitioning from an adjacent role, this section maps the terrain and gives you a structured path forward.
 
 ---
 
@@ -233,4 +233,4 @@ These set you apart and are expected for senior roles:
 
 ---
 
-*Last updated: May 2026*
+*Last updated: September 16, 2026*
