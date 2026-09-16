@@ -1,6 +1,6 @@
 # Behavioral Questions
 
-> Behavioral interviews in AI engineering aren't just about culture fit — they test how you navigate the unique challenges of building systems that are non-deterministic, ethically complex, and constantly evolving. In 2026, AI-specific behavioral questions are standard at most companies.
+> Behavioral interviews in AI engineering aren't just about culture fit — they test how you navigate the unique challenges of building systems that are non-deterministic, ethically complex, and constantly evolving. As of September 16, 2026, AI-specific behavioral and governance questions are standard at most companies.
 
 ---
 
@@ -90,6 +90,11 @@ These are unique to AI engineering and test your experience with the realities o
 - "How have you handled a hallucination incident in production?"
 - "Describe a time when a model update caused a regression. How did you detect and respond?"
 - "What's your process for responding to a prompt injection attack on a live system?"
+
+### Autonomous Agent Safety & Incident Response (2026 Standard)
+- "Tell me about a time an autonomous agent attempted an unintended destructive action (e.g., executing an unapproved API mutation, schema drop, or email blast). How did your human-in-the-loop guardrail catch it?"
+- "How do you conduct post-mortems when an agentic swarm experiences an uncontrolled recursion loop or token cost explosion?"
+- "How do you define service-level objectives (SLOs) and rollback criteria for non-deterministic AI features?"
 
 ### Ethical Dilemmas
 - "Tell me about a time you identified a potential bias in an AI system you were building. What did you do?"
