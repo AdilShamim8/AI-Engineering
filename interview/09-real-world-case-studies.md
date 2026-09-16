@@ -70,3 +70,15 @@
 |                                          │                                        |
 |                                          ▼                                        |
 |              [HUMAN APPROVAL GATE: GitHub Review Comment Created]                 |
++-----------------------------------------------------------------------------------+
+```
+
+---
+
+# 🎙️ CASE STUDY 3: Low-Latency Multimodal Voice Support Agent (<600ms TTFT)
+
+### 1. Problem Statement & Requirements
+- Real-time conversational customer support over VoIP / WebRTC.
+- **Target Latency:** Voice-to-voice turn-around under 600ms (human conversational comfort threshold).
+
+```
