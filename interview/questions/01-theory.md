@@ -1,10 +1,17 @@
 # Theory Questions
 
-> Based on 150+ sources including interview reports, company blogs, and practitioner surveys. Theory questions are the backbone of AI engineering interviews — they test whether you understand *why* AI systems behave the way they do, not just *how* to build them.
+> Based on 150+ sources including interview reports, company blogs, and practitioner surveys — updated September 16, 2026. Theory questions are the backbone of AI engineering interviews — they test whether you understand *why* AI systems behave the way they do, not just *how* to build them.
 
 ---
 
 ## LLM Practice
+
+### Reasoning Models & Test-Time Compute (2026 Meta)
+- How does test-time compute scaling differ from pre-training compute scaling?
+- Explain how reinforcement learning with verifiable rewards (RLVR) is used to train reasoning models (e.g., DeepSeek-R1, OpenAI o1/o3).
+- What is the difference between an Outcome Reward Model (ORM) and a Process Reward Model (PRM)?
+- When should you choose a fast standard model (Claude 3.5 Sonnet / GPT-4o) versus an extended reasoning model in production?
+- How do you handle latency and token billing when using models that generate hidden or extended chain-of-thought tokens?
 
 ### How LLMs Work
 - How do large language models generate text? Walk through the inference process step by step.
