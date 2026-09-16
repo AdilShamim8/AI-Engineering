@@ -22,3 +22,15 @@
 |  Parent Chunks (1000 tokens) + Child Chunks (200 tokens) ──► Qdrant (HNSW + BM25) |
 |                                                                                   |
 |  [Runtime Query Pipeline]                                                         |
+|  User Query ──► [Query Decomposition Agent] (Splits multi-company comparisons)    |
+|                          │                                                        |
+|                          ▼                                                        |
+|  [Hybrid Search + Metadata Filter (ticker, fiscal_year, report_type)]              |
+|                          │                                                        |
+|                          ▼ (Top 30 Chunks)                                        |
+|  [Cohere Rerank v3] ──► Top 4 Chunks ──► [Self-RAG Grounding Grader]              |
+|                                                     │                             |
+|                                                     ▼                             |
+|  [Reasoning LLM (Claude 3.5 Sonnet)] ──► Grounded Report with Exact Citations     |
++-----------------------------------------------------------------------------------+
+```
