@@ -27,3 +27,32 @@ Everything here is based on real data: 3,100+ actual job descriptions, real inte
 ## The AI Engineer Role
 
 - [My vision of the role](role/01-my-vision.md) — how I see AI engineering, comparison with DS/ML/DE roles, CRISP-DM for AI
+- [Skills analysis](role/02-skills.md) — top skills, job types, cloud platforms, frameworks (updated May 2026)
+- [Responsibilities](role/03-responsibilities.md) — patterns extracted from 6,200+ job responsibilities
+- [Use cases](role/04-use-cases.md) — 5,100+ real use cases showing what companies build with AI
+- [Reality vs. job postings](role/05-reality-vs-postings.md) — what candidates experience vs. what's advertised
+- [Worldwide job market analysis](role/06-worldwide-job-market-analysis.md) — global geographical demand, compensation profiles, and company archetypes
+
+
+## Interview Preparation
+
+- [Interview process](interview/01-interview-process.md) — common patterns, step counts, time estimates, AI use in hiring, key takeaways
+- [Interview questions](interview/02-questions.md) — consolidated from 150+ sources
+  - [Theory](interview/questions/01-theory.md) — LLMs, RAG, agents, ML fundamentals, company-specific questions
+  - [Coding](interview/questions/02-coding.md) — coding round formats, DSA problems, ML implementation exercises
+  - [Project deep dive](interview/questions/03-project-deep-dive.md) — presentation rounds, follow-up probes, what interviewers evaluate
+  - [AI system design](interview/questions/04-ai-system-design.md) — system design for AI applications
+  - [Behavioral](interview/questions/05-behavioral.md) — values, leadership, problem-solving
+  - [Home assignments](interview/questions/06-home-assignments.md) — take-home assignments and paid work trials from 120+ GitHub repos
+- [Skills that get you hired](interview/03-get-hired.md) — baseline expectations, differentiators, and portfolio strategy
+- [After the interview](interview/04-after-the-interview.md) — handling offers, rejections, and salary negotiation
+- [Interview trends](interview/05-trends.md) — AI cheating, AI-proctored rounds, context engineering interviews
+- [Global compensation & negotiation guide](interview/07-global-compensation-and-job-market.md) — verified 2026 salary benchmarks across US, UK, EU, SG, India, and Remote
+- [Resume & portfolio playbook](interview/08-ai-engineer-resume-and-portfolio-playbook.md) — ATS optimization, high-impact bullet formulas, and 60-second GitHub repo audit checklist
+- [Production system design case studies](interview/09-real-world-case-studies.md) — 4 end-to-end production interview blueprints
+
+
+## Learning Paths
+
+- [General learning path](learning-paths/README.md) — what to learn and in what order
+- [From Data Engineer](learning-paths/from-data-engineer.md) — smoothest transition, 3-4 months
