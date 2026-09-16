@@ -1,6 +1,6 @@
 # AI Engineering Interview Questions
 
-Consolidated from 100+ sources including blog posts, YouTube transcripts, Reddit threads, Medium articles, and interview guides. Every question was extracted from actual interview experiences or preparation materials.
+Consolidated from 160+ sources including blog posts, YouTube transcripts, Reddit threads, Medium articles, and interview guides — verified and updated to September 16, 2026. Every question was extracted from actual interview experiences or preparation materials.
 
 ## Technical Questions
 
