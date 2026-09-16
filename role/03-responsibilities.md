@@ -1,6 +1,6 @@
 # AI Engineering Responsibilities in 2026
 
-*Based on analysis of 6,200+ responsibilities extracted from 1,200+ job descriptions, April-May 2026*
+*Based on analysis of 6,200+ responsibilities extracted from 3,100+ global job descriptions — updated September 16, 2026*
 
 ## Overview
 
