@@ -1,6 +1,6 @@
 # From Frontend Engineer to AI Engineer
 
-> Backend first, then AI. Your unique advantage: you can build the full AI experience, from model to interface.
+> Backend first, then AI (Updated: September 16, 2026). Your unique advantage: you can build the full AI experience, from model to interface.
 
 ---
 
@@ -8,7 +8,7 @@
 
 Frontend engineers have a unique advantage in AI engineering: you understand how users interact with technology. In 2026, the biggest gap in AI engineering isn't building models — it's building AI experiences that people actually want to use. But to get there, you need backend skills first, then AI skills on top.
 
-The path is longer than for backend engineers, but the destination is more valuable: full-stack AI engineers who can build the entire experience are the rarest and most sought-after profiles in the field.
+The path is longer than for backend engineers, but the destination is more valuable: as of September 16, 2026, full-stack AI engineers who can build the entire experience from model to interface are among the most sought-after profiles in the field.
 
 ---
 
