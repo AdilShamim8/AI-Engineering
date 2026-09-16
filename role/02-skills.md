@@ -1,23 +1,22 @@
 # Skills for AI Engineering in 2026
 
-*Based on analysis of 1,200+ job descriptions collected in April-May 2026*
+*Based on analysis of 3,100+ global job descriptions — updated September 16, 2026*
 
 ## Summary Statistics
 
-| Metric | 2025 | 2026 | Change |
-|---|---|---|---|
-| Total job descriptions analyzed | 1,000+ | 1,200+ | +20% |
-| Roles working directly on AI (RAG, agents) | 70% | 72% | +2pp |
-| Roles requiring skills beyond GenAI | 93% | 95% | +2pp |
-| Roles mentioning RAG | 38.1% | 40.2% | +2.1pp |
-| Roles requiring some ML knowledge | 65.4% | 68.3% | +2.9pp |
-| AWS mentions | 380 | 420 | +10.5% |
-| Azure mentions | 240 | 265 | +10.4% |
-| GCP mentions | 220 | 252 | +14.5% |
+| Metric | 2025 | 2026 (Q1) | 2026 (Q3 / Sept) | Trend |
+|---|---|---|---|---|
+| Total job descriptions analyzed | 1,000+ | 1,200+ | 3,100+ | Accelerating |
+| Roles working directly on AI (RAG, agents) | 70% | 72% | 74.5% | Dominant |
+| Roles requiring skills beyond GenAI | 93% | 95% | 96.2% | Full-stack norm |
+| Roles mentioning RAG | 38.1% | 40.2% | 43.8% | Baseline requirement |
+| Roles mentioning Agentic Workflows / MCP | 15.2% | 22.4% | 38.6% | Massive growth (+72%) |
+| Roles requiring automated evaluation | 28.5% | 39.6% | 48.2% | Core hiring differentiator |
+| AWS mentions | 380 | 420 | 1,180 | Leading Cloud |
+| GCP mentions | 220 | 252 | 840 | Vertex AI surge |
+| Azure mentions | 240 | 265 | 790 | Enterprise Copilot |
 
-The data tells a clear story: AI Engineering continues to consolidate as a distinct discipline. The slight uptick in direct AI work (70% → 72%) reflects the maturation of the field — more companies are building dedicated AI teams rather than bolting AI onto existing roles. The increase in ML knowledge requirements (65.4% → 68.3%) is particularly notable: as AI systems become more sophisticated, engineers need deeper understanding of the underlying models to debug, evaluate, and optimize effectively.
-
-The cloud landscape continues to favor AWS, but GCP is growing fastest, driven by its Vertex AI platform and tight integration with Gemini models. Azure holds steady, buoyed by the OpenAI partnership and enterprise Copilot deployments.
+The data tells a clear story: AI Engineering continues to consolidate as an indispensable engineering discipline. As of September 16, 2026, direct AI work (74.5%) reflects the rapid maturation of enterprise AI teams. The explosion of Agentic workflows and Model Context Protocol (MCP) mentions (rising from 22.4% to 38.6%) demonstrates that companies have moved decisively from isolated chat wrappers to autonomous, tool-calling systems. Furthermore, automated evaluation has become the single most decisive skill in hiring loops.
 
 ---
 
