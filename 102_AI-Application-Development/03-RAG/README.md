@@ -8,6 +8,8 @@
 
 Here's the GitHub repository link: https://github.com/AdilShamim8/RAG-Roadmap-with-Notes-and-Projects
 
+> *Verified & Updated: September 16, 2026.*
+
 ---
 
 ## 📌 Overview
