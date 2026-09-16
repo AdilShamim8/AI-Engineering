@@ -1,6 +1,6 @@
 # From Data Scientist to AI Engineer
 
-> Evaluation is your superpower. Now add engineering rigor to ship AI systems that work in production.
+> Evaluation is your superpower (Updated: September 16, 2026). Now add engineering rigor to ship AI systems that work in production.
 
 ---
 
