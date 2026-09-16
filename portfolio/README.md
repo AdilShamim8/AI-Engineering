@@ -1,6 +1,6 @@
-# Portfolio Project Ideas for AI Engineers (2026)
+# Portfolio Project Ideas for AI Engineers (September 16, 2026)
 
-> Your portfolio is your proof. In a market flooded with "I took a prompt engineering course" candidates, a well-built portfolio is the strongest signal you can send. This guide covers project ideas, interview strategy, and production practices that hiring managers actually look for.
+> Your portfolio is your proof. Verified and updated to September 16, 2026. In a market flooded with "I took a prompt engineering course" candidates, a well-built portfolio is the strongest signal you can send. This guide covers project ideas, interview strategy, and production practices that hiring managers actually look for.
 
 ---
 
