@@ -511,4 +511,4 @@ Use this rubric to self-evaluate your take-home before submitting:
 
 ---
 
-*This note is part of the AI Engineering Field Guide 2026 — Webinars section.*
+*This note is part of the AI Engineering Field Guide — Webinars section (Updated: September 16, 2026).*
