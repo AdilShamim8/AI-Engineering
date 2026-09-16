@@ -1,6 +1,6 @@
 # From Data Engineer to AI Engineer
 
-> The smoothest transition in tech. You already think in pipelines — now apply that thinking to LLM-powered systems.
+> The smoothest transition in tech (Updated: September 16, 2026). You already think in pipelines — now apply that thinking to LLM-powered systems.
 
 ---
 
@@ -8,7 +8,7 @@
 
 Data engineers and AI engineers share the same foundational mindset: move data reliably from point A to point B, transform it, and make it available where it's needed. The difference is that AI engineers add an LLM as a processing step in the pipeline. Your existing skills in orchestration, data quality, and infrastructure map almost directly.
 
-In 2026, the demand for AI engineers who understand data pipelines is enormous — RAG systems are only as good as the data pipelines feeding them, and most companies are struggling with exactly that problem.
+As of September 16, 2026, the demand for AI engineers who understand data pipelines is enormous — RAG systems are only as good as the data pipelines feeding them, and enterprise systems require robust ingestion infrastructure.
 
 ---
 
