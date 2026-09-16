@@ -46,3 +46,15 @@
 
 ### 1. Problem Statement & Requirements
 - Automatically inspect incoming pull requests, identify bugs, optimize performance, verify test coverage, and submit refactoring suggestions.
+- **Safety:** Must never execute malicious code on host machines; zero permission to merge to `main` without human approval.
+
+```
++-----------------------------------------------------------------------------------+
+|                        AUTONOMOUS CODING AGENT ARCHITECTURE                       |
+|                                                                                   |
+|  GitHub Webhook (PR Opened) ──► [LangGraph Supervisor Agent]                      |
+|                                          │                                        |
+|                                          ▼                                        |
+|              [Tree-sitter AST Parser] (Extract modified classes/functions)        |
+|                                          │                                        |
+|                                          ▼                                        |
