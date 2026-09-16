@@ -5,3 +5,10 @@
 ---
 
 ## 🌍 Global Market Geography & Demand Distribution
+
+The demand for AI Engineers has expanded rapidly beyond Silicon Valley into a worldwide talent market. While the United States continues to lead in absolute venture capital funding and frontier model creation, enterprise adoption across London, Zurich, Singapore, and India has surged dramatically.
+
+```
+                  GLOBAL AI ENGINEERING DEMAND BREAKDOWN (3,100+ POSTINGS)
+                  
+  North America (US & Canada)        [==================================] 54.2%
