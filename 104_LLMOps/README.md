@@ -5,6 +5,7 @@
 ### *A Complete First-Principles Masterclass for Production AI Systems*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Edition](https://img.shields.io/badge/Edition-September_16,_2026-blue.svg)](#)
 [![Modules](https://img.shields.io/badge/Modules-6-blue.svg)](#-course-modules)
 [![Topics](https://img.shields.io/badge/Topics-34-green.svg)](#-course-modules)
 [![Level](https://img.shields.io/badge/Level-Beginner%20→%20Advanced-orange.svg)](#)
