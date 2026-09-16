@@ -34,3 +34,12 @@ $$\text{Accomplished [X]} \text{ as measured by [Y]} \text{ by implementing [Z]}
 
 #### Example 3: Cost & LLMOps
 - ❌ **Junior / Weak:** *"Optimized OpenAI API calls and reduced monthly bill."*
+- ✅ **Production / Senior:** *"Implemented semantic caching with Redis and speculative small-model routing (GPT-4o-mini + Claude 3.5 Haiku fallback); reduced monthly LLM token expenditure by 68% ($42,000/year) while maintaining a 99.4% intent completion rate."*
+
+---
+
+## 📂 The GitHub Portfolio Audit: Passing the 2-Minute Test
+
+When an engineering director clicks your GitHub repository link, they evaluate these **5 pillars** in under two minutes:
+
+```
