@@ -1,6 +1,6 @@
 # Defining the AI Engineer Role
 
-Analysis of what AI engineers actually do, based on 895 job descriptions from builtin.com (January 2026).
+Comprehensive analysis of what AI engineers actually do, based on 3,100+ global job descriptions across North America, Europe, Asia-Pacific, and Global Remote markets — updated September 16, 2026.
 
 ## Contents
 
