@@ -1,6 +1,6 @@
 # AI Engineer Resume & Portfolio Playbook (2026)
 
-> **The high-conversion playbook for getting noticed by recruiters, passing ATS filters, and dominating technical portfolio reviews.**
+> **The high-conversion playbook for getting noticed by recruiters, passing ATS filters, and dominating technical portfolio reviews — updated September 16, 2026.**
 
 ---
 
