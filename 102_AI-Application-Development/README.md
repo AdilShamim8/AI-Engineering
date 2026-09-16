@@ -4,6 +4,9 @@
 
 ### *From Fundamentals to Production-Ready AI Systems*
 
+> *Verified & Updated: September 16, 2026.*
+
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Edition](https://img.shields.io/badge/Edition-September_16,_2026-blue.svg)](#-learning-modules)
 [![Modules](https://img.shields.io/badge/Modules-6-blue.svg)](#-learning-modules)
