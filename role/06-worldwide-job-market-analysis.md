@@ -61,3 +61,17 @@ The demand for AI Engineers has expanded rapidly beyond Silicon Valley into a wo
   Context Engineering & Token Optimization   ▲ +310%
   Model Context Protocol (MCP)               ▲ +420%
   Automated Evaluation (RAGAS / TruLens)     ▲ +215%
+  Hybrid Retrieval (Dense + BM25)            ▲ +180%
+  LangGraph / Cyclic State Graphs            ▲ +165%
+  Fine-Tuning (LoRA / QLoRA)                 ▼ -18% (Stabilized for niche tasks)
+  Pure "Prompt Engineering"                  ▼ -82% (Dead as standalone title)
+  Traditional LeetCode DSA                   ▼ -45% (Replaced by System Design & Live Coding)
+```
+
+---
+
+## 💡 What This Means for Your Job Search
+
+1. **Titles Are Noisy:** Search for `AI Engineer`, `Applied AI Engineer`, `Software Engineer - AI/LLM`, `Machine Learning Systems Engineer`, and `Full-Stack AI Developer`.
+2. **Evaluation is the Golden Ticket:** Candidates who know how to set up automated evaluation suites (RAGAS, LLM-as-judge, synthetic golden sets) receive 3.4x more interview callbacks than those who only list frameworks.
+3. **Full-Stack Competence Wins:** 93% of hiring managers prioritize engineers who can deploy a working API in Docker with monitoring over those who only understand prompt theory.
