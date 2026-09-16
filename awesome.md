@@ -1,6 +1,6 @@
 # Awesome AI Engineering (2026)
 
-> A curated collection of resources for AI engineering — interviews, architecture, tools, and community. Updated for May 2026.
+> A curated collection of resources for AI engineering — interviews, architecture, tools, and community. Updated for September 16, 2026.
 
 ---
 
@@ -434,4 +434,4 @@ Found a broken link or have a resource to add? Open a PR! We especially welcome:
 
 ---
 
-*Last updated: May 2026. The AI engineering landscape moves fast — if a resource feels outdated, it probably is. Always check the original source for the latest version.*
+*Last updated: September 16, 2026. The AI engineering landscape moves fast — if a resource feels outdated, it probably is. Always check the original source for the latest version.*
