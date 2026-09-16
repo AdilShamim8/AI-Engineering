@@ -1,6 +1,8 @@
 # 🚀 Topic 6: CI/CD for AI Systems
 ## From Zero → Production-Grade AI Deployment Pipeline
 
+> *Verified & Updated: September 16, 2026.*
+
 ---
 
 > **Before I explain anything — let me ask you first:**
