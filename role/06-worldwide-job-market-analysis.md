@@ -33,3 +33,10 @@ The demand for AI Engineers has expanded rapidly beyond Silicon Valley into a wo
 | **Global Remote** | Worldwide (Contract / EOR via Deel/Oyster) | $110,000 – $190,000 USD | **$130,000 – $250,000 USD** | Async-first, high autonomy, paid in USD or crypto/stablecoins |
 
 ---
+
+## 🏢 The 3 Company Archetypes Hiring AI Engineers
+
+### 1. Frontier AI Labs & Foundations
+- **Examples:** OpenAI, Anthropic, Google DeepMind, Meta FAIR, Mistral AI, Cohere.
+- **What they build:** Foundational foundation models, multimodal reasoning engines, inference optimizations, alignment research.
+- **Hiring Focus:** Deep PyTorch/JAX distributed systems, CUDA kernels, tokenization mechanics, synthetic training pipelines, post-training RLHF/DPO.
