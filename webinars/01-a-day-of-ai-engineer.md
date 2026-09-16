@@ -215,4 +215,4 @@ Jenny, who has worked at both:
 
 ---
 
-*This note is part of the AI Engineering Field Guide 2026 — Webinars section.*
+*This note is part of the AI Engineering Field Guide — Webinars section (Updated: September 16, 2026).*
