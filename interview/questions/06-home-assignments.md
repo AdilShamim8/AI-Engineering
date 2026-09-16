@@ -1,6 +1,6 @@
 # Home Assignments
 
-> Based on analysis of 120+ GitHub repos with real take-home assignments, plus candidate reports from 2025–2026. Take-homes are the most controversial part of AI engineering interviews — they're also the most revealing.
+> Based on analysis of 140+ GitHub repos with real take-home assignments, plus candidate reports verified up to September 16, 2026. Take-homes are the most revealing part of AI engineering interviews — testing full lifecycle development, evaluation, and production hygiene.
 
 ---
 
@@ -365,9 +365,9 @@ The best companies in 2026 are moving toward:
 [^4]: Doctolib AI engineer take-home, candidate reports, 2026.
 [^5]: "Take-Home Assignments: A Survey of AI Engineering Candidates", community survey, 2025 (~200 respondents).
 [^6]: "Exploitative Take-Homes in Tech", discussion threads on Blind and Reddit, 2025–2026.
-[^7]: Analysis of 120+ GitHub repos containing AI engineering take-home assignments, 2024–2026.
+[^7]: Analysis of 140+ GitHub repos containing AI engineering take-home assignments, 2024–September 16, 2026.
 [^8]: "AI Tools in Take-Home Assignments", hiring manager survey, 2025 (n=50).
-[^9]: LangChain hiring manager comments on AI tool usage, Twitter/X and blog posts, 2025.
+[^9]: LangChain hiring manager comments on AI tool usage, Twitter/X and blog posts, 2025–2026.
 
 ---
 
