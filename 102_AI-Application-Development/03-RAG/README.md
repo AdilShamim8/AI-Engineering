@@ -40,3 +40,19 @@ This module provides a **first-principles, production-ready curriculum** coverin
 |                                                                                   |
 |  [User Query] ──► [Query Transformation (Multi-Query / HyDE)]                     |
 |                            │                                                      |
+|                            ▼                                                      |
+|  [Hybrid Retrieval: Dense (HNSW) + Sparse (BM25)] ──► Top 25 Candidates          |
+|                            │                                                      |
+|                            ▼                                                      |
+|  [Cross-Encoder Reranker (Cohere / BGE)] ──► Top 3-5 Filtered Chunks              |
+|                            │                                                      |
+|                            ▼                                                      |
+|  [Grounded LLM Generation + Strict Source Citations] ──► Final User Response      |
++-----------------------------------------------------------------------------------+
+```
+
+---
+
+<div align="center">
+  <sub>Part of the <b>AI Engineering Field Guide</b> by Adil Shamim.</sub>
+</div>
