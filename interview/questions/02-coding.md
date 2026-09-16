@@ -1,6 +1,6 @@
 # Coding Questions
 
-> Coding interviews for AI engineering have evolved significantly. In 2026, you're as likely to be asked to build a RAG pipeline as you are to invert a binary tree. Here's what to expect and how to prepare.
+> Coding interviews for AI engineering have evolved significantly. As of September 16, 2026, you're as likely to be asked to build a RAG pipeline or implement an async SSE streaming engine as you are to invert a binary tree. Here's what to expect and how to prepare.
 
 ---
 
@@ -59,6 +59,7 @@ This is the most distinctive coding format in AI engineering interviews. You're 
 | Beam search | Medium | Low | 25–35 min |
 | Simple RAG pipeline | Medium | High | 30–40 min |
 | Tool-calling parser | Medium | Medium | 20–30 min |
+| Async SSE Streaming & Abort Handler | Medium | High | 20–30 min |
 
 ### Example: Implement Self-Attention
 
@@ -149,6 +150,48 @@ def rag_query(query: str, corpus: list[str]) -> str:
 ```
 
 **What interviewers look for**: Understanding of the RAG pipeline structure, correct embedding usage, retrieval quality, prompt design, and awareness of production concerns (caching, error handling, cost).
+
+### Example: Async SSE Token Streaming Endpoint (FastAPI)
+
+```python
+from fastapi import FastAPI, Request
+from fastapi.responses import StreamingResponse
+import openai
+import json
+import asyncio
+
+app = FastAPI()
+client = openai.AsyncOpenAI()
+
+async def event_generator(prompt: str, request: Request):
+    try:
+        response = await client.chat.completions.create(
+            model="gpt-4o",
+            messages=[{"role": "user", "content": prompt}],
+            stream=True
+        )
+        async for chunk in response:
+            # Check if client disconnected / aborted request
+            if await request.is_disconnected():
+                break
+            delta = chunk.choices[0].delta.content or ""
+            if delta:
+                payload = json.dumps({"token": delta})
+                yield f"data: {payload}\n\n"
+        yield "data: [DONE]\n\n"
+    except asyncio.CancelledError:
+        pass
+
+@app.post("/stream")
+async def stream_completion(request: Request, body: dict):
+    return StreamingResponse(
+        event_generator(body.get("prompt", ""), request),
+        media_type="text/event-stream",
+        headers={"Cache-Control": "no-cache", "Connection": "keep-alive"}
+    )
+```
+
+**What interviewers look for**: Handling client disconnection (`is_disconnected()`), SSE standard protocol (`data: ...\n\n`), async generator backpressure, and exception handling for cancelled tasks.
 
 ---
 
