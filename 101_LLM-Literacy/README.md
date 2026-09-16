@@ -1,10 +1,11 @@
 <div align="center">
 
-# 🧠 102 — LLM-Literacy
+# 🧠 101 — LLM-Literacy
 
 ### *A First-Principles Curriculum for Understanding Large Language Models — From Zero to Production-Ready Engineer*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Edition](https://img.shields.io/badge/Edition-September_16,_2026-blue.svg)](#-curriculum-overview)
 [![Modules](https://img.shields.io/badge/Modules-3-blue.svg)](#-curriculum-overview)
 [![Files](https://img.shields.io/badge/Files-18-green.svg)](#-curriculum-overview)
 [![Total Content](https://img.shields.io/badge/Content-~1.5MB_of_markdown-purple.svg)](#-content-statistics)
