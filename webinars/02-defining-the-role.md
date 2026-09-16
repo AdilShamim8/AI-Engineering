@@ -332,4 +332,4 @@ Ryan McDowell: "I've never checked a degree requirement when hiring. I check if 
 
 ---
 
-*This note is part of the AI Engineering Field Guide 2026 — Webinars section.*
+*This note is part of the AI Engineering Field Guide — Webinars section (Updated: September 16, 2026).*
