@@ -133,3 +133,50 @@ Architecting multi-agent collaboration networks, asynchronous human approval che
 
 ### 🧠 Reasoning Taxonomy Quick Reference
 
+| Pattern | Description | Best Used For |
+|---|---|---|
+| **ReAct** | Interleaves Reasoning (`Thought`) with Action (`Act`) and Observation (`Obs`). | Tool-using agents performing step-by-step tasks. |
+| **CoT (Chain of Thought)** | Linear step-by-step reasoning prior to output generation. | Arithmetic, multi-step math, and logical problems. |
+| **ToT (Tree of Thoughts)** | Explores multiple branch paths with evaluation/backtracking. | Complex search spaces, chess, strategic planning. |
+| **GoT (Graph of Thoughts)** | Non-linear network combining thoughts from multiple branches. | Synthesizing diverse ideas, complex data aggregation. |
+| **Reflexion** | Evaluates past execution feedback to self-correct in subsequent attempts. | Code generation, iterative optimization, self-healing. |
+
+---
+
+## 🎯 Who Is This For?
+
+- **AI Engineers & Developers**: Engineers building autonomous agents, multi-agent orchestrations, or custom tool integrations.
+- **System Architects**: Tech leads evaluating agentic frameworks (LangGraph vs CrewAI vs AutoGen) or designing enterprise MCP infrastructures.
+- **Researchers & Students**: Anyone seeking a clean, intuitive, and mathematical understanding of agentic planning algorithms.
+
+---
+
+## 🚀 How to Study This Curriculum
+
+1. **Start with Module 01 (Planning & Reasoning)**: Build intuition on how agents break down goals, handle state, and prevent loops.
+2. **Move to Module 02 (Agent Protocols)**: Understand how modern agents standardize communication with tools and databases via Model Context Protocol (MCP).
+3. **Finish with Module 03 (Frameworks & Libraries)**: Learn when to use production frameworks (LangGraph, CrewAI, AutoGen) versus building custom lightweight agentic loops.
+
+---
+
+## 🤝 Contributing
+
+Contributions, fixes, and improvements are welcome! If you find a typo, want to expand on a topic, or introduce new code examples:
+
+1. Fork the Repository
+2. Create your Feature Branch (`git checkout -b feature/agentic-expansion`)
+3. Commit your Changes (`git commit -m 'Add deep dive on multi-agent consensus'`)
+4. Push to the Branch (`git push origin feature/agentic-expansion`)
+5. Open a Pull Request
+
+---
+
+## 📜 License
+
+This repository is available under the [MIT License](LICENSE).
+
+---
+
+<div align="center">
+  <sub>Built with ❤️ for the AI Engineering Community. Master the future of Autonomous Intelligence.</sub>
+</div>
