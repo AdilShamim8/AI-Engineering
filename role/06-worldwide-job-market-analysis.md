@@ -40,3 +40,10 @@ The demand for AI Engineers has expanded rapidly beyond Silicon Valley into a wo
 - **Examples:** OpenAI, Anthropic, Google DeepMind, Meta FAIR, Mistral AI, Cohere.
 - **What they build:** Foundational foundation models, multimodal reasoning engines, inference optimizations, alignment research.
 - **Hiring Focus:** Deep PyTorch/JAX distributed systems, CUDA kernels, tokenization mechanics, synthetic training pipelines, post-training RLHF/DPO.
+
+### 2. AI-Native Scaleups & Unicorns
+- **Examples:** Databricks, Scale AI, Perplexity, Cursor, Cognition, Harvey, Glean, Pinecone.
+- **What they build:** AI-first developer tools, enterprise semantic search, autonomous coding agents, domain-specific vertical workflows.
+- **Hiring Focus:** Extreme engineering velocity, MCP protocols, complex LangGraph state orchestration, low-latency streaming infrastructure, evaluation rigor.
+
+### 3. Enterprise Adopters & Modernizers (Fortune 500)
