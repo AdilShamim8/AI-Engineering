@@ -1,6 +1,6 @@
 # From Backend Engineer to AI Engineer
 
-> 2–3 months: add AI on top of engineering. Your production instincts are the hardest skill to learn — and you already have them.
+> 2–3 months: add AI on top of engineering (Updated: September 16, 2026). Your production instincts are the hardest skill to learn — and you already have them.
 
 ---
 
@@ -8,7 +8,7 @@
 
 The biggest challenge in AI engineering isn't the AI — it's the engineering. Making LLM-powered systems reliable, observable, and maintainable in production requires exactly the skills backend engineers have honed for years: API design, error handling, monitoring, database management, and system reliability. You just need to add the AI layer on top.
 
-In 2026, companies are desperate for AI engineers who can actually ship. Backend engineers who add AI skills are the most employable people in the field.
+As of September 16, 2026, companies are seeking AI engineers who can actually ship. Backend engineers who add AI skills are among the most employable people in the tech ecosystem.
 
 ---
 
