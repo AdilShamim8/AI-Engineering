@@ -1,4 +1,6 @@
-# My Vision: The AI Engineer
+# My Vision: The AI Engineer (September 16, 2026 Edition)
+
+> Field guide and perspective on the AI Engineer discipline — verified and updated to September 16, 2026.
 
 ## The Core Responsibility
 
