@@ -19,3 +19,10 @@ The demand for AI Engineers has expanded rapidly beyond Silicon Valley into a wo
 ```
 
 ---
+
+## 🏙️ Top Worldwide Tech Hubs & Compensation Profiles
+
+| Region | Primary Tech Hubs | Average Base Salary | Average Total Comp (Base + Equity + Bonus) | Market Characteristics |
+|---|---|---|---|---|
+| **US Tier 1** | San Francisco Bay Area, New York, Seattle | $175,000 – $245,000 | **$260,000 – $480,000+** | Frontier AI labs, high equity grants, fierce talent wars |
+| **US Tier 2 / Remote** | Austin, Denver, Boston, Chicago, US Remote | $150,000 – $210,000 | **$190,000 – $320,000** | Enterprise SaaS, pragmatic RAG and automation systems |
