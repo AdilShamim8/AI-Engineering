@@ -1,6 +1,8 @@
 # 🧠 COMPLETE MASTERCLASS: AI Agent Frameworks & Libraries
 ### *Every Framework You Need to Know — Deep, Simple, Interview-Ready*
 
+> *Curriculum Module — Verified and updated for 2026 production frameworks (September 16, 2026).*
+
 ---
 
 ## 🔥 BEFORE WE DIVE IN — Let Me Ask You First
