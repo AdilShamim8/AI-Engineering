@@ -1,6 +1,6 @@
 # Reality vs. Job Postings: The AI Engineer Gap
 
-*What job postings say vs. what AI Engineers actually do — and why the gap matters*
+*What job postings say vs. what AI Engineers actually do (Verified & Updated: September 16, 2026) — and why the gap matters*
 
 ## The Core Confusion: AI Engineer vs. ML Engineer
 
