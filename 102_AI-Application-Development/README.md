@@ -1,10 +1,11 @@
-﻿<div align="center">
+<div align="center">
 
 # 🧠 102 — AI Application Development
 
 ### *From Fundamentals to Production-Ready AI Systems*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Edition](https://img.shields.io/badge/Edition-September_16,_2026-blue.svg)](#-learning-modules)
 [![Modules](https://img.shields.io/badge/Modules-6-blue.svg)](#-learning-modules)
 [![Topics](https://img.shields.io/badge/Topics-35%2B-green.svg)](#-learning-modules)
 [![Level](https://img.shields.io/badge/Level-Intermediate_%E2%86%92_Advanced-orange.svg)](#-who-is-this-for)
@@ -86,17 +87,19 @@ This module builds intuition for why traditional keyword search fails and how ve
 
 > *"Giving LLMs access to knowledge they were never trained on"*
 
-RAG is the most widely deployed pattern in production AI systems. This module covers architecture, chunking strategies, retrieval methods, and evaluation.
+RAG is the most widely deployed pattern in production AI systems. This module covers architecture, chunking strategies, dense/sparse/hybrid retrieval, cross-encoder re-ranking, advanced GraphRAG/Self-RAG, and automated evaluation.
 
-📎 **Full RAG curriculum** → [RAG Roadmap with Notes and Projects](https://github.com/AdilShamim8/RAG-Roadmap-with-Notes-and-Projects)
+| # | Topic | Key Concepts |
+|---|-------|-------------|
+| 1 | [RAG Architecture & Foundations](03-RAG/1.%20RAG%20Architecture%20&%20Foundations.md) | Triad of RAG, naive vs advanced RAG, failure taxonomy |
+| 2 | [Document Ingestion & Chunking Strategies](03-RAG/2.%20Document%20Ingestion%20&%20Chunking%20Strategies.md) | Semantic, sliding window, hierarchical & parent-document chunking |
+| 3 | [Dense, Sparse & Hybrid Retrieval](03-RAG/3.%20Dense,%20Sparse%20&%20Hybrid%20Retrieval.md) | Bi-encoders, BM25, Reciprocal Rank Fusion (RRF), ColBERT late interaction |
+| 4 | [Re-Ranking, Context Compression & Fusion](03-RAG/4.%20Re-Ranking,%20Context%20Compression%20&%20Fusion.md) | Cross-encoders, Cohere/BGE rerankers, Long-Context reordering, LLMLingua |
+| 5 | [Advanced RAG Patterns (GraphRAG, Self-RAG, Corrective RAG)](03-RAG/5.%20Advanced%20RAG%20Patterns%20(GraphRAG,%20Self-RAG,%20Corrective%20RAG).md) | Knowledge graphs, self-reflection tokens, web fallback loops |
+| 6 | [RAG Evaluation & Benchmarking (RAGAS, TruLens, DeepEval)](03-RAG/6.%20RAG%20Evaluation%20&%20Benchmarking%20(RAGAS,%20TruLens,%20DeepEval).md) | Faithfulness, answer relevance, context precision/recall, golden test sets |
+| 7 | [Production RAG Architecture, Caching & Failure Modes](03-RAG/7.%20Production%20RAG%20Architecture,%20Caching%20&%20Failure%20Modes.md) | Exact/semantic caching, streaming SSE, RBAC security, incident runbooks |
 
-**Topics Covered:**
-- RAG architecture from first principles
-- Chunking strategies (fixed, semantic, hierarchical)
-- Retrieval methods: dense, sparse, hybrid
-- Re-ranking and context compression
-- Evaluation with RAGAs and benchmarks
-- Production deployment patterns
+📎 **External Curriculum Companion** → [RAG Roadmap with Notes and Projects](https://github.com/AdilShamim8/RAG-Roadmap-with-Notes-and-Projects)
 
 ---
 
