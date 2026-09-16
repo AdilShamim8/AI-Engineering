@@ -130,3 +130,18 @@ When the user speaks while the bot is talking, the WebRTC client sends a high-pr
 |         ├─► [Similarity >= 0.96?] ──► Return Cached Response (<15ms, $0.00 cost) |
 |         │                                                                         |
 |         ▼ (Cache Miss)                                                            |
+|  [LiteLLM Smart Router & Cascading Fallback Pool]                                 |
+|         │                                                                         |
+|         ├─► Primary: Claude 3.5 Sonnet (Direct API)                              |
+|         │    └─► (HTTP 429/500 or timeout > 4s?)                                  |
+|         ├─► Secondary Fallback: GPT-4o (Azure OpenAI)                             |
+|         │    └─► (Provider Outage?)                                               |
+|         └─► Tertiary Fallback: vLLM Self-Hosted Llama-3.3-70B on Private AWS GPUs |
+|                           │                                                       |
+|                           ▼                                                       |
+|  [Async OpenTelemetry + Langfuse Telemetry] (Token usage, latency, spend per team)|
++-----------------------------------------------------------------------------------+
+```
+
+### 2. Cost Attribution & Chargebacks
+Every request is tagged with an `x-team-id` and `x-project-id` header. The gateway logs exact prompt and completion token counts to ClickHouse, allowing automated monthly department chargebacks and budget limit enforcement.
