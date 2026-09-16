@@ -10,3 +10,15 @@
 - **Scale:** 10,000,000+ 10-K, 10-Q, and 8-K annual/quarterly financial filings spanning 15 years.
 - **Traffic:** 2,500 queries/minute from institutional equity research analysts.
 - **SLA:** P95 response latency < 1.2s; 0% tolerance for ungrounded financial hallucinations; mandatory source citations with exact page numbers and table coordinates.
+
+```
++-----------------------------------------------------------------------------------+
+|                     FINANCIAL AGENTIC RAG SYSTEM ARCHITECTURE                     |
+|                                                                                   |
+|  [Ingestion Pipeline]                                                             |
+|  PDF SEC Filings ──► [MinerU / Marker OCR] ──► Tables to Markdown + Summaries     |
+|                              │                                                    |
+|                              ▼                                                    |
+|  Parent Chunks (1000 tokens) + Child Chunks (200 tokens) ──► Qdrant (HNSW + BM25) |
+|                                                                                   |
+|  [Runtime Query Pipeline]                                                         |
