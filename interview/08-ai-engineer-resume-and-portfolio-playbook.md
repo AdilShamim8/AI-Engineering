@@ -43,3 +43,12 @@ $$\text{Accomplished [X]} \text{ as measured by [Y]} \text{ by implementing [Z]}
 When an engineering director clicks your GitHub repository link, they evaluate these **5 pillars** in under two minutes:
 
 ```
++-----------------------------------------------------------------------------------+
+|                        THE 5-PILLAR REPO AUDIT CHECKLIST                          |
+|                                                                                   |
+|  [1] Live Demo Link              ──► Clickable, zero-login interactive web app    |
+|  [2] Architecture Flowchart      ──► Clear Mermaid diagram showing data & tools   |
+|  [3] Quantitative Eval Table     ──► RAGAS/TruLens metrics comparing 2 approaches |
+|  [4] 5-Minute Docker Setup       ──► `docker compose up` runs everything locally   |
+|  [5] Honest Failure Analysis     ──► Section documenting edge-case limitations    |
++-----------------------------------------------------------------------------------+
