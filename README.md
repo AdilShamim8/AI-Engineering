@@ -1,10 +1,10 @@
 # AI Engineering Field Guide (2026 Edition)
 
-> Data-driven field guide to AI engineering roles, skills, and interviews — updated May 26, 2026.
+> Data-driven field guide to AI engineering roles, skills, and interviews — updated September 16, 2026.
 
 Everything here is based on real data: 3,100+ actual job descriptions, real interview experiences, and real stories from practitioners. This is not AI-generated filler dumped into a repo — every insight comes from analyzing actual data and synthesizing patterns from it.
 
-## What's New in This Edition (May 2026)
+## What's New in This Edition (September 16, 2026)
 
 - **Updated job market data**: 3,100+ job descriptions analyzed (up from 2,445), covering additional regions including Singapore and remote-first roles
 - **New AI model landscape**: GPT-5/5.5, Claude Opus 4/4.7, Gemini 3.1 Pro/3.5, Grok 4, and 30+ frontier models
