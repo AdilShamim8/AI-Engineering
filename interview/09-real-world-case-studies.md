@@ -58,3 +58,15 @@
 |              [Tree-sitter AST Parser] (Extract modified classes/functions)        |
 |                                          │                                        |
 |                                          ▼                                        |
+|  [Model Context Protocol (MCP) Client]                                            |
+|       │                                                                           |
+|       ├─► MCP Tool 1: Code Search Server (Ripgrep / Embedding index)              |
+|       ├─► MCP Tool 2: Ephemeral Sandbox Runner (E2B MicroVM)                      |
+|       │    * Executes `pytest` in isolated Linux container                        |
+|       └─► MCP Tool 3: Linter & Static Security Analyzer (Semgrep / Ruff)          |
+|                                          │                                        |
+|                                          ▼                                        |
+|              [Critic / Refactor Agent] (Drafts code patch & verification)         |
+|                                          │                                        |
+|                                          ▼                                        |
+|              [HUMAN APPROVAL GATE: GitHub Review Comment Created]                 |
