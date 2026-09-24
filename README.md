@@ -136,6 +136,5 @@ This guide builds on the foundational work by [Alexey Grigorev](https://github.c
 </div>
 
 ---
-
 > 💡 **2026 Production Engineering Takeaway (Core Principles):**
 > Robust AI engineering requires deterministic software engineering surrounding probabilistic model outputs. Focus on evaluation suites, reproducible benchmarking, and production monitoring to ensure reliable business outcomes.
