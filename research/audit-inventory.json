@@ -1,0 +1,1908 @@
+{
+  "baseline_commit": "91fc529c891b0cb4cd9547271916fefef64b0306",
+  "reviewed_on": "2026-10-09",
+  "scope": "Full structural scan; claim candidates are triage flags, not verified errors or facts.",
+  "documents": [
+    {
+      "path": "101_LLM-Literacy/01-LLM 101/1. What Is a Large Language Model (Conceptual Layer).md",
+      "sha256": "c3c4ccc7e7b986a7d6149177249072681ba739c47575e37322a9cacb356c742d",
+      "bytes": 29425,
+      "lines": 991,
+      "headings": 58,
+      "external_url_candidates": 6,
+      "code_blocks_by_label": {
+        "unspecified": 46
+      },
+      "claim_candidates": 8
+    },
+    {
+      "path": "101_LLM-Literacy/01-LLM 101/2. Transformer Architecture (System Layer).md",
+      "sha256": "4d3a4724838e6850a287a842bd997440d13123eb7bc48f9c0fc93bab18ef6a45",
+      "bytes": 58243,
+      "lines": 1742,
+      "headings": 87,
+      "external_url_candidates": 7,
+      "code_blocks_by_label": {
+        "unspecified": 85
+      },
+      "claim_candidates": 20
+    },
+    {
+      "path": "101_LLM-Literacy/01-LLM 101/3. Tokenization & Embeddings (Representation Layer).md",
+      "sha256": "d7cd6d1aedfb2562748f4dacbbb586d76eb7d7a9be0886b51cf9da8c878fd0b3",
+      "bytes": 60855,
+      "lines": 1954,
+      "headings": 108,
+      "external_url_candidates": 10,
+      "code_blocks_by_label": {
+        "unspecified": 82,
+        "python": 1
+      },
+      "claim_candidates": 14
+    },
+    {
+      "path": "101_LLM-Literacy/01-LLM 101/4. Training Paradigm (Learning Layer).md",
+      "sha256": "b35279fce8793ba023b1f03fe24050a6cbcc9c3efb2ed7a44487a996b7c9e274",
+      "bytes": 73693,
+      "lines": 2095,
+      "headings": 90,
+      "external_url_candidates": 10,
+      "code_blocks_by_label": {
+        "unspecified": 68
+      },
+      "claim_candidates": 44
+    },
+    {
+      "path": "101_LLM-Literacy/01-LLM 101/5. Inference Mechanics (Runtime Layer).md",
+      "sha256": "ecabb786db939dc80c537fd86142715a6ef85f33da782f5909d0dceb0ed384c9",
+      "bytes": 84497,
+      "lines": 2402,
+      "headings": 98,
+      "external_url_candidates": 10,
+      "code_blocks_by_label": {
+        "unspecified": 69
+      },
+      "claim_candidates": 144
+    },
+    {
+      "path": "101_LLM-Literacy/01-LLM 101/6. Model Ecosystem & Types.md",
+      "sha256": "910eff5ebcf19e91b73207ae682a8c4239fb5e876d23ebdc648026a8fd888fb6",
+      "bytes": 89558,
+      "lines": 2216,
+      "headings": 94,
+      "external_url_candidates": 14,
+      "code_blocks_by_label": {
+        "unspecified": 58
+      },
+      "claim_candidates": 48
+    },
+    {
+      "path": "101_LLM-Literacy/01-LLM 101/7. Evaluation & Benchmarks.md",
+      "sha256": "b8e714e24c1aa0cfcdab5115dc319cf3a93fc4756685c77551ca7e4872b673c4",
+      "bytes": 98985,
+      "lines": 2605,
+      "headings": 102,
+      "external_url_candidates": 15,
+      "code_blocks_by_label": {
+        "unspecified": 64
+      },
+      "claim_candidates": 137
+    },
+    {
+      "path": "101_LLM-Literacy/01-LLM 101/8. Limitations & Failure Modes.md",
+      "sha256": "bd6e93a24d9d5868c95171160f0312d820163eca75fac1c838590e9f3d62097a",
+      "bytes": 104402,
+      "lines": 2656,
+      "headings": 103,
+      "external_url_candidates": 13,
+      "code_blocks_by_label": {
+        "unspecified": 61
+      },
+      "claim_candidates": 68
+    },
+    {
+      "path": "101_LLM-Literacy/02-Prompt Engineering/1. Mental Model of Prompting (Foundation Layer).md",
+      "sha256": "fec30983ce0ad7fdc9daec1006c45d3bac0fd4844e4258dafe60c09b65a1220d",
+      "bytes": 28884,
+      "lines": 877,
+      "headings": 66,
+      "external_url_candidates": 4,
+      "code_blocks_by_label": {
+        "unspecified": 28,
+        "python": 1
+      },
+      "claim_candidates": 16
+    },
+    {
+      "path": "101_LLM-Literacy/02-Prompt Engineering/2. Prompt Structure & Anatomy.md",
+      "sha256": "725cd7bf316f6fff4ad4d54d0ca182781beece7f9c81df12e3f2bf58dfb72e1f",
+      "bytes": 52430,
+      "lines": 1316,
+      "headings": 89,
+      "external_url_candidates": 4,
+      "code_blocks_by_label": {
+        "unspecified": 41,
+        "python": 4,
+        "xml": 1
+      },
+      "claim_candidates": 33
+    },
+    {
+      "path": "101_LLM-Literacy/02-Prompt Engineering/3. Instruction Design Patterns.md",
+      "sha256": "98fe8e47abb1bb41b6d0468efdb82625cb640cea37f2f1f5bbc8c25b224fbc4e",
+      "bytes": 70585,
+      "lines": 1698,
+      "headings": 99,
+      "external_url_candidates": 5,
+      "code_blocks_by_label": {
+        "unspecified": 53,
+        "`": 4
+      },
+      "claim_candidates": 19
+    },
+    {
+      "path": "101_LLM-Literacy/02-Prompt Engineering/4. Structured Output Prompting.md",
+      "sha256": "4d46d68db532b9219c822de665ba7257339024ff4a5520e52c77d9994ff19a90",
+      "bytes": 106932,
+      "lines": 2791,
+      "headings": 208,
+      "external_url_candidates": 6,
+      "code_blocks_by_label": {
+        "unspecified": 35,
+        "json": 7,
+        "typescript": 1,
+        "python": 24
+      },
+      "claim_candidates": 87
+    },
+    {
+      "path": "101_LLM-Literacy/02-Prompt Engineering/5. Prompt Robustness & Reliability.md",
+      "sha256": "c4d82c9ff191dd286f198780ff1ff6e965930b7a171a50266a772ca845cc8073",
+      "bytes": 115746,
+      "lines": 2993,
+      "headings": 127,
+      "external_url_candidates": 5,
+      "code_blocks_by_label": {
+        "unspecified": 29,
+        "python": 19,
+        "yaml": 2
+      },
+      "claim_candidates": 81
+    },
+    {
+      "path": "101_LLM-Literacy/02-Prompt Engineering/6. Prompt Evaluation & Metrics.md",
+      "sha256": "6f4983f1dfe51d70d3a28943de94218fa2a387516c0d5389bd2c7163eb657a0b",
+      "bytes": 128233,
+      "lines": 3041,
+      "headings": 127,
+      "external_url_candidates": 6,
+      "code_blocks_by_label": {
+        "unspecified": 30,
+        "python": 11
+      },
+      "claim_candidates": 98
+    },
+    {
+      "path": "101_LLM-Literacy/02-Prompt Engineering/7. Security & Safety in Prompting.md",
+      "sha256": "48a73b06f0e29d79ac006542da7904f3c85bf68e1fda224e948eb255725b73ad",
+      "bytes": 118353,
+      "lines": 2751,
+      "headings": 78,
+      "external_url_candidates": 6,
+      "code_blocks_by_label": {
+        "unspecified": 22,
+        "sql": 1,
+        "python": 13
+      },
+      "claim_candidates": 35
+    },
+    {
+      "path": "101_LLM-Literacy/03-Context Engineering/1. Introduction to Context Engineering.md",
+      "sha256": "84cc3204e3ee6f694f0470a4a1ccad8f56f000996e2fc683703945003503ac83",
+      "bytes": 31627,
+      "lines": 929,
+      "headings": 70,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 34
+      },
+      "claim_candidates": 19
+    },
+    {
+      "path": "101_LLM-Literacy/03-Context Engineering/2. What Constitutes Context.md",
+      "sha256": "072e02bd19770118d2a455c8c691b045facbf34c84ca632f4ba95f9ea5068127",
+      "bytes": 56500,
+      "lines": 1585,
+      "headings": 132,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 76
+      },
+      "claim_candidates": 60
+    },
+    {
+      "path": "101_LLM-Literacy/03-Context Engineering/3. Techniques to Manage Context.md",
+      "sha256": "9bf4bad8fe898a162a428d073274ba07f7424af35b69b859b0bb8ca4673fdd59",
+      "bytes": 100770,
+      "lines": 2903,
+      "headings": 185,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 50,
+        "python": 23,
+        "xml": 1,
+        "markdown": 1,
+        "json": 1
+      },
+      "claim_candidates": 40
+    },
+    {
+      "path": "101_LLM-Literacy/README.md",
+      "sha256": "8ff227d425b2250c435bdffe329d2dfc551fe59d6ad063bc0a9a9c887e6a2874",
+      "bytes": 55882,
+      "lines": 847,
+      "headings": 42,
+      "external_url_candidates": 7,
+      "code_blocks_by_label": {
+        "unspecified": 3
+      },
+      "claim_candidates": 12
+    },
+    {
+      "path": "102_AI-Application-Development/01-Orchestration/1. Introduction to Orchestration.md",
+      "sha256": "bfe3199b4a35285d0710375a3496478fdffeb53107a8f07d43541e5f24782854",
+      "bytes": 36690,
+      "lines": 909,
+      "headings": 55,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 25,
+        "python": 2
+      },
+      "claim_candidates": 19
+    },
+    {
+      "path": "102_AI-Application-Development/01-Orchestration/2. Core Orchestration Patterns.md",
+      "sha256": "2ec03e8973a0c0e816c696a5af0edc2f3d8d47817ba95480f5eda500dae1efdd",
+      "bytes": 81100,
+      "lines": 2023,
+      "headings": 94,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 32,
+        "python": 3
+      },
+      "claim_candidates": 31
+    },
+    {
+      "path": "102_AI-Application-Development/01-Orchestration/3. Structured Output.md",
+      "sha256": "db2ed8f9fcea52876cc19766f348cfd8ce6ce6cfbd24a205022a6a39a661ae5f",
+      "bytes": 81286,
+      "lines": 2036,
+      "headings": 178,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 17,
+        "python": 18,
+        "json": 2
+      },
+      "claim_candidates": 43
+    },
+    {
+      "path": "102_AI-Application-Development/01-Orchestration/4. Tool Integration & Function Calling.md",
+      "sha256": "cdda2495fa501194cb704beabc31f7918d3634a7cc927f11835d20ee35d129e6",
+      "bytes": 98432,
+      "lines": 2228,
+      "headings": 146,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 18,
+        "python": 11
+      },
+      "claim_candidates": 40
+    },
+    {
+      "path": "102_AI-Application-Development/02-Vector Databases/1. Introduction to Vector Databases.md",
+      "sha256": "2c0c54cf1100dc4cb8f47a6524a44d37dd0bad456581299ce40e566cc6978d9e",
+      "bytes": 42612,
+      "lines": 962,
+      "headings": 68,
+      "external_url_candidates": 8,
+      "code_blocks_by_label": {
+        "unspecified": 31
+      },
+      "claim_candidates": 20
+    },
+    {
+      "path": "102_AI-Application-Development/02-Vector Databases/2. Embeddings & Vector Space Fundamentals.md",
+      "sha256": "8e58869b69e70cca61a3ab3808664e30587ba864049d60734d00a09ca4a8d43d",
+      "bytes": 75605,
+      "lines": 1938,
+      "headings": 152,
+      "external_url_candidates": 8,
+      "code_blocks_by_label": {
+        "unspecified": 72,
+        "python": 1
+      },
+      "claim_candidates": 19
+    },
+    {
+      "path": "102_AI-Application-Development/02-Vector Databases/3. Ecosystem & Tools.md",
+      "sha256": "1070562192038a450f578c1f560295fbefd679e76d5c71cc9d56c6c7e318aa4b",
+      "bytes": 111412,
+      "lines": 2137,
+      "headings": 221,
+      "external_url_candidates": 8,
+      "code_blocks_by_label": {
+        "unspecified": 24,
+        "python": 6
+      },
+      "claim_candidates": 19
+    },
+    {
+      "path": "102_AI-Application-Development/03-RAG/1. RAG Architecture & Foundations.md",
+      "sha256": "6afd84f62224cf93b35d7a3d78dc0705f5a8f68e9162aad7d98481d01dc15fe2",
+      "bytes": 8720,
+      "lines": 129,
+      "headings": 18,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 1
+      },
+      "claim_candidates": 8
+    },
+    {
+      "path": "102_AI-Application-Development/03-RAG/2. Document Ingestion & Chunking Strategies.md",
+      "sha256": "e9759dd017447cbfb81a1ac64b5f7745b53a9df637b22cc914525b34e2aa4706",
+      "bytes": 9309,
+      "lines": 158,
+      "headings": 17,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 2,
+        "python": 2
+      },
+      "claim_candidates": 8
+    },
+    {
+      "path": "102_AI-Application-Development/03-RAG/3. Dense, Sparse & Hybrid Retrieval.md",
+      "sha256": "4dc5db5965aff32d4a652ea82bf6d6d8bc7602fc8f4dfb60d344e634ec5ee875",
+      "bytes": 8324,
+      "lines": 144,
+      "headings": 12,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 1,
+        "python": 1
+      },
+      "claim_candidates": 9
+    },
+    {
+      "path": "102_AI-Application-Development/03-RAG/4. Re-Ranking, Context Compression & Fusion.md",
+      "sha256": "ee5b0bdfe8bf1f2360c350fdbe8ab29f9d4413a9e56859cc45515fa2c208dbcb",
+      "bytes": 7972,
+      "lines": 147,
+      "headings": 11,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 2,
+        "python": 1
+      },
+      "claim_candidates": 8
+    },
+    {
+      "path": "102_AI-Application-Development/03-RAG/5. Advanced RAG Patterns (GraphRAG, Self-RAG, Corrective RAG).md",
+      "sha256": "8df7d85172b29be7c8e504498e2d26253dcca16b62f6e4dd390237a923dff6bc",
+      "bytes": 10272,
+      "lines": 147,
+      "headings": 15,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 3
+      },
+      "claim_candidates": 3
+    },
+    {
+      "path": "102_AI-Application-Development/03-RAG/6. RAG Evaluation & Benchmarking (RAGAS, TruLens, DeepEval).md",
+      "sha256": "5ff038d0f75b3f03f21404079d7edc4032e8b0dbeff3c2f8c045e4c47669cc14",
+      "bytes": 7429,
+      "lines": 161,
+      "headings": 15,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 2,
+        "python": 1
+      },
+      "claim_candidates": 7
+    },
+    {
+      "path": "102_AI-Application-Development/03-RAG/7. Production RAG Architecture, Caching & Failure Modes.md",
+      "sha256": "34193945e9228b44c49c04dc11f81a8a412d71ef7e1d2717a032d24f3f7edbfa",
+      "bytes": 8659,
+      "lines": 160,
+      "headings": 12,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 1,
+        "python": 1
+      },
+      "claim_candidates": 8
+    },
+    {
+      "path": "102_AI-Application-Development/03-RAG/README.md",
+      "sha256": "e25237969af125f44a96f671e00a50c2ad16967f2be2a41a1e51b00a4593a32f",
+      "bytes": 5305,
+      "lines": 65,
+      "headings": 5,
+      "external_url_candidates": 5,
+      "code_blocks_by_label": {
+        "unspecified": 1
+      },
+      "claim_candidates": 11
+    },
+    {
+      "path": "102_AI-Application-Development/04-Memory/1. Introduction to Memory in AI Systems.md",
+      "sha256": "8ea3f920b76bc0f85ddbbcdbc8f8dbcd2cd5ba8c9bab32c5bf6502d46ba0ce0c",
+      "bytes": 37833,
+      "lines": 791,
+      "headings": 57,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 28,
+        "python": 1
+      },
+      "claim_candidates": 8
+    },
+    {
+      "path": "102_AI-Application-Development/04-Memory/2. Types of Memory.md",
+      "sha256": "f37c2e1873bd20df5cfac2f9ececd8f3a919787ded239a252b7aac087bdd3e4b",
+      "bytes": 98453,
+      "lines": 2703,
+      "headings": 102,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 31,
+        "python": 12
+      },
+      "claim_candidates": 19
+    },
+    {
+      "path": "102_AI-Application-Development/04-Memory/3. Memory Storage Mechanisms.md",
+      "sha256": "4f80e791d90decd0780051ceb1e03965c91150951b1f9ad1cdf50ed0127b689f",
+      "bytes": 145229,
+      "lines": 3788,
+      "headings": 87,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 31,
+        "python": 8
+      },
+      "claim_candidates": 13
+    },
+    {
+      "path": "102_AI-Application-Development/04-Memory/4. Memory Retrieval Strategies.md",
+      "sha256": "bca5799352a4d1d09174740738714d23be95c1733e3ef0cd4b9556174a97227a",
+      "bytes": 123745,
+      "lines": 3326,
+      "headings": 65,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 25,
+        "python": 6
+      },
+      "claim_candidates": 48
+    },
+    {
+      "path": "102_AI-Application-Development/04-Memory/5. Memory Compression & Pruning.md",
+      "sha256": "63f470e76121ac625dec6dff024cdc01da2c74c3bca5d5796e8256327e1fe2d9",
+      "bytes": 127413,
+      "lines": 3282,
+      "headings": 62,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 25,
+        "python": 6
+      },
+      "claim_candidates": 62
+    },
+    {
+      "path": "102_AI-Application-Development/04-Memory/6. Memory in Agentic Systems.md",
+      "sha256": "06fd60f3a360446778c9875de9e952510295b6a49b7abeb819eed0e53a13ffd7",
+      "bytes": 137490,
+      "lines": 3785,
+      "headings": 64,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 23,
+        "python": 6
+      },
+      "claim_candidates": 33
+    },
+    {
+      "path": "102_AI-Application-Development/04-Memory/7. Memory Failure Modes.md",
+      "sha256": "88f16b865219655e3aaa26d06920307db84be94ed3a8111a5d99f47be722c10f",
+      "bytes": 116854,
+      "lines": 2996,
+      "headings": 60,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 24,
+        "python": 6
+      },
+      "claim_candidates": 28
+    },
+    {
+      "path": "102_AI-Application-Development/04-Memory/8. Tools & Frameworks for Memory Management.md",
+      "sha256": "4f3513627bd5a5743ba6a3968ab98e88d519abd401d84897713afa7b2761fb68",
+      "bytes": 61033,
+      "lines": 1554,
+      "headings": 168,
+      "external_url_candidates": 1,
+      "code_blocks_by_label": {
+        "unspecified": 6,
+        "python": 25,
+        "bash": 1
+      },
+      "claim_candidates": 15
+    },
+    {
+      "path": "102_AI-Application-Development/05-Fine-Tuning/1. Fine-Tuning Fundamentals.md",
+      "sha256": "5b645f64355d804c0cacd01d190d0e05d4de855f530b23b0f387ab2358bce30e",
+      "bytes": 30439,
+      "lines": 815,
+      "headings": 53,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 32
+      },
+      "claim_candidates": 11
+    },
+    {
+      "path": "102_AI-Application-Development/05-Fine-Tuning/10. Evaluation of Fine-Tuned Models.md",
+      "sha256": "11eac0731d90cc8ffcbb12dfc62301c8bf35e0f9587453f6c1f79e784b00e5f6",
+      "bytes": 135089,
+      "lines": 2886,
+      "headings": 55,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 39
+      },
+      "claim_candidates": 153
+    },
+    {
+      "path": "102_AI-Application-Development/05-Fine-Tuning/11. Overfitting & Catastrophic Forgetting.md",
+      "sha256": "d0bc54b4b62dc8ef677696e3a82d34fd0f25724b1ec01b563c8bbd1304fcca2b",
+      "bytes": 130932,
+      "lines": 2930,
+      "headings": 72,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 31,
+        "python": 3
+      },
+      "claim_candidates": 157
+    },
+    {
+      "path": "102_AI-Application-Development/05-Fine-Tuning/12. Adapter Management & Versioning.md",
+      "sha256": "300b3a391ecfbbf190ecadf1ed2e6d4d06ebce5bc13e6f7cb48eb43f4a21eb03",
+      "bytes": 141310,
+      "lines": 3296,
+      "headings": 110,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 23,
+        "python": 5
+      },
+      "claim_candidates": 56
+    },
+    {
+      "path": "102_AI-Application-Development/05-Fine-Tuning/13. Deployment of Fine-Tuned Models.md",
+      "sha256": "a5cffe69cf7b49068b5ac24531abb6a7c76efc6f526569dc77ec41ec35722489",
+      "bytes": 151086,
+      "lines": 3186,
+      "headings": 105,
+      "external_url_candidates": 2,
+      "code_blocks_by_label": {
+        "unspecified": 25,
+        "python": 4
+      },
+      "claim_candidates": 110
+    },
+    {
+      "path": "102_AI-Application-Development/05-Fine-Tuning/2. Pretraining vs Fine-Tuning.md",
+      "sha256": "9fd65512b8385801c42be6df027e078b8dc7c39d9d5498d78e10c4a74ae78121",
+      "bytes": 54692,
+      "lines": 1256,
+      "headings": 61,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 39
+      },
+      "claim_candidates": 14
+    },
+    {
+      "path": "102_AI-Application-Development/05-Fine-Tuning/3. Supervised Fine-Tuning (SFT).md",
+      "sha256": "f79e6b3a869215f0963f3a9200f8456e9a913a2457e02fae85a0c83d3ebf35e4",
+      "bytes": 77142,
+      "lines": 1956,
+      "headings": 92,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 57,
+        "json": 1
+      },
+      "claim_candidates": 63
+    },
+    {
+      "path": "102_AI-Application-Development/05-Fine-Tuning/4. Preference-Based Tuning (RLHF, DPO \u2013 Overview).md",
+      "sha256": "b37f2908e75a723e00e614771b0269b1b84265397b801e07c8dbd1644c2b28af",
+      "bytes": 78146,
+      "lines": 1830,
+      "headings": 81,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 49
+      },
+      "claim_candidates": 26
+    },
+    {
+      "path": "102_AI-Application-Development/05-Fine-Tuning/5. Parameter-Efficient Fine-Tuning (PEFT).md",
+      "sha256": "c954c3f074570fdff2a72b866c4e234f98ee86ea5ee7925a830a9eeb67d84671",
+      "bytes": 98938,
+      "lines": 2362,
+      "headings": 112,
+      "external_url_candidates": 2,
+      "code_blocks_by_label": {
+        "unspecified": 55,
+        "python": 2
+      },
+      "claim_candidates": 52
+    },
+    {
+      "path": "102_AI-Application-Development/05-Fine-Tuning/6. LoRA (Low-Rank Adaptation).md",
+      "sha256": "0dbcabb15ea0a029eed96d413f8b5dcbe3123368972b2596e8c2037fec92eff3",
+      "bytes": 103365,
+      "lines": 2392,
+      "headings": 145,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 43,
+        "python": 1
+      },
+      "claim_candidates": 56
+    },
+    {
+      "path": "102_AI-Application-Development/05-Fine-Tuning/7. QLoRA (Quantized LoRA).md",
+      "sha256": "4298fccc0bf487b8d076778e24d63b300b4a3dbd5236b96b78616ebb8d27c720",
+      "bytes": 120995,
+      "lines": 2558,
+      "headings": 112,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 39,
+        "python": 3
+      },
+      "claim_candidates": 79
+    },
+    {
+      "path": "102_AI-Application-Development/05-Fine-Tuning/8. Data Preparation for Fine-Tuning.md",
+      "sha256": "ec09d4a7f8f71252f6d219f35d8f4188c07fdc34b61dbc6a382c75060e36106c",
+      "bytes": 117559,
+      "lines": 2603,
+      "headings": 82,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 36,
+        "python": 5
+      },
+      "claim_candidates": 102
+    },
+    {
+      "path": "102_AI-Application-Development/05-Fine-Tuning/9. Fine-Tuning vs RAG vs Prompt Engineering.md",
+      "sha256": "dc8e8bc30e4b6b314039558c76a75a036f506ba52b740560504cc14345f245b7",
+      "bytes": 120006,
+      "lines": 2346,
+      "headings": 55,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 36
+      },
+      "claim_candidates": 66
+    },
+    {
+      "path": "102_AI-Application-Development/06-AI-Automation/1. Introduction to AI Automation.md",
+      "sha256": "238a7de41a8fcb700d3d06752fd9923c3ad75049c21db46c0e958a118bd01497",
+      "bytes": 31684,
+      "lines": 1154,
+      "headings": 63,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 45
+      },
+      "claim_candidates": 28
+    },
+    {
+      "path": "102_AI-Application-Development/06-AI-Automation/2. Automation Design Patterns.md",
+      "sha256": "c3530713eb3566a7068a853b254474cbfaac60ec411432e2fed698d5879ed8c7",
+      "bytes": 80205,
+      "lines": 2738,
+      "headings": 118,
+      "external_url_candidates": 2,
+      "code_blocks_by_label": {
+        "unspecified": 80,
+        "python": 1
+      },
+      "claim_candidates": 41
+    },
+    {
+      "path": "102_AI-Application-Development/06-AI-Automation/3. Tool Integration for Automation.md",
+      "sha256": "0cd53307e252b1d2fc7ad6859376a5e6454bff9f36c43afce1be131cc7ec0234",
+      "bytes": 114306,
+      "lines": 3377,
+      "headings": 171,
+      "external_url_candidates": 8,
+      "code_blocks_by_label": {
+        "unspecified": 35,
+        "python": 7
+      },
+      "claim_candidates": 30
+    },
+    {
+      "path": "102_AI-Application-Development/06-AI-Automation/4. Workflow Orchestration Tools.md",
+      "sha256": "4a6468c7c74744999ebaece6f868a5e7cead61b151e08597934025cecab0324d",
+      "bytes": 92288,
+      "lines": 2546,
+      "headings": 60,
+      "external_url_candidates": 6,
+      "code_blocks_by_label": {
+        "unspecified": 46,
+        "javascript": 1
+      },
+      "claim_candidates": 12
+    },
+    {
+      "path": "102_AI-Application-Development/README.md",
+      "sha256": "5c8c419ad08408afcac88ed99a57973e03aec2c4506253e330c55650091112db",
+      "bytes": 17323,
+      "lines": 359,
+      "headings": 20,
+      "external_url_candidates": 10,
+      "code_blocks_by_label": {
+        "unspecified": 4,
+        "bash": 1
+      },
+      "claim_candidates": 6
+    },
+    {
+      "path": "103_Agentic AI/01-Planning & Reasoning/1. Foundations of Agentic Planning.md",
+      "sha256": "d68c142688291280845945408520238993e841ef8d4d7182cf6f4c25c16e583b",
+      "bytes": 45013,
+      "lines": 1028,
+      "headings": 62,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 31,
+        "python": 4
+      },
+      "claim_candidates": 12
+    },
+    {
+      "path": "103_Agentic AI/01-Planning & Reasoning/10. Evaluation of Reasoning Systems.md",
+      "sha256": "1498102a54d930cefddf6cef89fec177399740a8d613cd1dec527a5b3dfd4902",
+      "bytes": 59258,
+      "lines": 1426,
+      "headings": 67,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 36
+      },
+      "claim_candidates": 37
+    },
+    {
+      "path": "103_Agentic AI/01-Planning & Reasoning/2. Reasoning Patterns in LLM Systems.md",
+      "sha256": "14b485594c2d8973fff47f8c13470cf76e5bd31cf304a799d338e9b749a18637",
+      "bytes": 84517,
+      "lines": 1856,
+      "headings": 121,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 39,
+        "python": 5
+      },
+      "claim_candidates": 15
+    },
+    {
+      "path": "103_Agentic AI/01-Planning & Reasoning/3. Single-Agent Planning.md",
+      "sha256": "cce8edcaf9b29a3a4e6fecf8cfbec72114f346f3c267ea79962baa2848bc89a9",
+      "bytes": 138709,
+      "lines": 3331,
+      "headings": 182,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 44,
+        "python": 8
+      },
+      "claim_candidates": 14
+    },
+    {
+      "path": "103_Agentic AI/01-Planning & Reasoning/4. Task Decomposition Strategies.md",
+      "sha256": "769f20effb0b81791821842d83f40db1f95f575c3e319d7af4a56226e8ef6f27",
+      "bytes": 138608,
+      "lines": 3327,
+      "headings": 113,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 32,
+        "python": 5
+      },
+      "claim_candidates": 20
+    },
+    {
+      "path": "103_Agentic AI/01-Planning & Reasoning/5. Iterative Reasoning Loops.md",
+      "sha256": "5ce82f05b17f70820f2400705cc409a52b6ec0dc51c43058f1f6c4510b3adb28",
+      "bytes": 167760,
+      "lines": 3958,
+      "headings": 131,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 32,
+        "python": 5
+      },
+      "claim_candidates": 74
+    },
+    {
+      "path": "103_Agentic AI/01-Planning & Reasoning/6. Tool-Aware Reasoning.md",
+      "sha256": "ea6d56383ee09528d6daabef9cff711d78c58f4fce13fb65de6abc878aec38ae",
+      "bytes": 51041,
+      "lines": 1581,
+      "headings": 63,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 42,
+        "python": 2,
+        "json": 1
+      },
+      "claim_candidates": 31
+    },
+    {
+      "path": "103_Agentic AI/01-Planning & Reasoning/7. State-Aware Planning.md",
+      "sha256": "02e1db61771e0dede01221cbab03bc0d3a2c4ead4acaf44f8a29940c9ed82bc6",
+      "bytes": 74288,
+      "lines": 2009,
+      "headings": 64,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 47,
+        "python": 1,
+        "json": 1
+      },
+      "claim_candidates": 30
+    },
+    {
+      "path": "103_Agentic AI/01-Planning & Reasoning/8. Planning Constraints & Control.md",
+      "sha256": "bbdf92804e0f8f123e2a2e521c6b187146cc4d36487514dce99d8280154900dd",
+      "bytes": 103682,
+      "lines": 2773,
+      "headings": 87,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 64,
+        "python": 3
+      },
+      "claim_candidates": 83
+    },
+    {
+      "path": "103_Agentic AI/01-Planning & Reasoning/9. Failure Modes in Planning Systems.md",
+      "sha256": "1a040038d41a725e595ec97a620e69c4a4d1e2af3ca2974c0993acb8073cb7cd",
+      "bytes": 105758,
+      "lines": 2749,
+      "headings": 88,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 61,
+        "python": 3
+      },
+      "claim_candidates": 40
+    },
+    {
+      "path": "103_Agentic AI/02-Agent Protocols/1. Introduction to Model Context Protocol (MCP).md",
+      "sha256": "f16baaad21fb84a35b4bf1926fcd90d3ef8f8a5942b5da03ff124774ee6c9bd2",
+      "bytes": 28265,
+      "lines": 620,
+      "headings": 57,
+      "external_url_candidates": 4,
+      "code_blocks_by_label": {
+        "unspecified": 14,
+        "json": 1
+      },
+      "claim_candidates": 7
+    },
+    {
+      "path": "103_Agentic AI/02-Agent Protocols/2. Tool Interface Standardization.md",
+      "sha256": "59c4e535fe830a37dedaf926b014a21023a0bf3dda2b969f5f81633ad9dede67",
+      "bytes": 44371,
+      "lines": 1082,
+      "headings": 67,
+      "external_url_candidates": 6,
+      "code_blocks_by_label": {
+        "unspecified": 18,
+        "json": 9,
+        "python": 2
+      },
+      "claim_candidates": 13
+    },
+    {
+      "path": "103_Agentic AI/02-Agent Protocols/3. Client\u2013Server Architecture for Agents.md",
+      "sha256": "a258dbb4c90e754ddbf57f8f38cad90e1d2db754604e00c73eddf63f8fe5c7cf",
+      "bytes": 64380,
+      "lines": 1446,
+      "headings": 96,
+      "external_url_candidates": 9,
+      "code_blocks_by_label": {
+        "unspecified": 35,
+        "python": 4,
+        "json": 2
+      },
+      "claim_candidates": 17
+    },
+    {
+      "path": "103_Agentic AI/02-Agent Protocols/4. Capability Discovery.md",
+      "sha256": "ce1fbbb43b9e389581e0d63ec466b134569ae86c2f2fed0042c8e49cde1c0fc7",
+      "bytes": 71355,
+      "lines": 1708,
+      "headings": 79,
+      "external_url_candidates": 14,
+      "code_blocks_by_label": {
+        "unspecified": 26,
+        "json": 4,
+        "python": 1
+      },
+      "claim_candidates": 18
+    },
+    {
+      "path": "103_Agentic AI/03-Agentic AI Frameworks/Frameworks & Libraries.md",
+      "sha256": "e988c5599d73b588ec4177b951aeacb8bbaabc0f19f5c1b3658493d7bd6e3df3",
+      "bytes": 54039,
+      "lines": 1300,
+      "headings": 121,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 27,
+        "python": 1
+      },
+      "claim_candidates": 15
+    },
+    {
+      "path": "103_Agentic AI/04-Multi-Agent Orchestration/1. Multi-Agent Collaboration Patterns.md",
+      "sha256": "a2b245b6e6170ce45525a6be7c46699d0fb4d1c6fea92b504434b63790dae7b9",
+      "bytes": 7940,
+      "lines": 142,
+      "headings": 12,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 1,
+        "python": 1
+      },
+      "claim_candidates": 2
+    },
+    {
+      "path": "103_Agentic AI/04-Multi-Agent Orchestration/2. Human-in-the-Loop & Production Safety.md",
+      "sha256": "c63df30dbd1402127976a8f99037d5ea4911126694a9ef7c76fa14bc7e6022f9",
+      "bytes": 6260,
+      "lines": 109,
+      "headings": 14,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 1,
+        "python": 1
+      },
+      "claim_candidates": 4
+    },
+    {
+      "path": "103_Agentic AI/README.md",
+      "sha256": "00ba4fed0ac3692693a60edb5aa5e1e05280c0a1472b42f9d443ff962cbf8c2f",
+      "bytes": 12502,
+      "lines": 191,
+      "headings": 14,
+      "external_url_candidates": 6,
+      "code_blocks_by_label": {
+        "unspecified": 2
+      },
+      "claim_candidates": 18
+    },
+    {
+      "path": "104_LLMOps/1. UX &Product Design/1. AI Interaction Design.md",
+      "sha256": "9a45251a678e8599c5c1947fd0eae12e26c5b44c2d91ce0d6e2ad5b4972e145d",
+      "bytes": 40843,
+      "lines": 1130,
+      "headings": 108,
+      "external_url_candidates": 6,
+      "code_blocks_by_label": {
+        "unspecified": 30,
+        "python": 4,
+        "jsx": 1,
+        "typescript": 2
+      },
+      "claim_candidates": 7
+    },
+    {
+      "path": "104_LLMOps/1. UX &Product Design/2. Trust & Transparency.md",
+      "sha256": "9741eea65121e804e034e019eb5cd01ce742f2b0ff707756e1041ba080bd42ef",
+      "bytes": 70648,
+      "lines": 1851,
+      "headings": 134,
+      "external_url_candidates": 8,
+      "code_blocks_by_label": {
+        "unspecified": 42,
+        "python": 14
+      },
+      "claim_candidates": 44
+    },
+    {
+      "path": "104_LLMOps/1. UX &Product Design/3. Latency & Responsiveness.md",
+      "sha256": "a09be7f29ed0d9ffd5bb0c8ba16a53aa01917995089f0c6b4cd2b26093f6ee02",
+      "bytes": 88629,
+      "lines": 2298,
+      "headings": 134,
+      "external_url_candidates": 7,
+      "code_blocks_by_label": {
+        "unspecified": 32,
+        "python": 10,
+        "javascript": 2,
+        "typescript": 4
+      },
+      "claim_candidates": 23
+    },
+    {
+      "path": "104_LLMOps/1. UX &Product Design/4. Feedback & Control.md",
+      "sha256": "8c33c9c8b038903b2b1203b07da06ad335dd6391886b649ae2a3d426782170a6",
+      "bytes": 125421,
+      "lines": 3113,
+      "headings": 111,
+      "external_url_candidates": 7,
+      "code_blocks_by_label": {
+        "unspecified": 29,
+        "python": 14
+      },
+      "claim_candidates": 30
+    },
+    {
+      "path": "104_LLMOps/2. Deployment/1. Deployment Architectures.md",
+      "sha256": "1b4dc987edfa7ad52061ce62ac3fba018825c10d3635dd544e51ec853a138999",
+      "bytes": 33096,
+      "lines": 1115,
+      "headings": 146,
+      "external_url_candidates": 10,
+      "code_blocks_by_label": {
+        "unspecified": 31,
+        "python": 11,
+        "bash": 3,
+        "dockerfile": 1
+      },
+      "claim_candidates": 29
+    },
+    {
+      "path": "104_LLMOps/2. Deployment/2. Backend Deployment.md",
+      "sha256": "f8b71eb654062c1263c0bf86f2073eca71e6063410454d047d7ccdbaa54a213e",
+      "bytes": 69946,
+      "lines": 2000,
+      "headings": 134,
+      "external_url_candidates": 4,
+      "code_blocks_by_label": {
+        "unspecified": 31,
+        "bash": 2,
+        "python": 18,
+        "javascript": 1
+      },
+      "claim_candidates": 15
+    },
+    {
+      "path": "104_LLMOps/2. Deployment/3. Containerization & Infrastructure.md",
+      "sha256": "8962f892f59e661eb7109d03763cb0ad822fc16ce25a53111e0e156ad1254d75",
+      "bytes": 91868,
+      "lines": 2536,
+      "headings": 340,
+      "external_url_candidates": 7,
+      "code_blocks_by_label": {
+        "unspecified": 28,
+        "dockerfile": 2,
+        "bash": 4,
+        "python": 2,
+        "yaml": 7,
+        "nginx": 1,
+        "json": 1
+      },
+      "claim_candidates": 37
+    },
+    {
+      "path": "104_LLMOps/2. Deployment/4. Model Serving (Self-Hosted).md",
+      "sha256": "0c281babe7d7b2372971d38cd95c5666e79650e4639e02a7adc84743517be260",
+      "bytes": 79648,
+      "lines": 2358,
+      "headings": 207,
+      "external_url_candidates": 13,
+      "code_blocks_by_label": {
+        "unspecified": 35,
+        "python": 9,
+        "bash": 5,
+        "dockerfile": 2,
+        "yaml": 4
+      },
+      "claim_candidates": 49
+    },
+    {
+      "path": "104_LLMOps/2. Deployment/5. Scaling & Performance.md",
+      "sha256": "7041764548bb2f81886dc9b7d857e2cd16a9a7bf5d40f9e9d7f1aa78e44b7d29",
+      "bytes": 123599,
+      "lines": 3412,
+      "headings": 99,
+      "external_url_candidates": 2,
+      "code_blocks_by_label": {
+        "unspecified": 20,
+        "python": 17,
+        "yaml": 1,
+        "javascript": 1
+      },
+      "claim_candidates": 41
+    },
+    {
+      "path": "104_LLMOps/2. Deployment/6. CI/CD for AI Systems.md",
+      "sha256": "f23c37b68eb3f0b8b8e6b7dd6ed0199cb2725a55f0f8e74c6247767299dfc667",
+      "bytes": 122063,
+      "lines": 3145,
+      "headings": 164,
+      "external_url_candidates": 10,
+      "code_blocks_by_label": {
+        "unspecified": 34,
+        "python": 5,
+        "bash": 3,
+        "yaml": 3,
+        "groovy": 1,
+        "hcl": 2
+      },
+      "claim_candidates": 45
+    },
+    {
+      "path": "104_LLMOps/3. Observability/1. Request & Trace Logging.md",
+      "sha256": "cdb180055fbf1cd2bcadbb2a5f72e134c1b034906de817c492931e9506f86e7b",
+      "bytes": 60560,
+      "lines": 1706,
+      "headings": 108,
+      "external_url_candidates": 2,
+      "code_blocks_by_label": {
+        "unspecified": 31,
+        "python": 15
+      },
+      "claim_candidates": 27
+    },
+    {
+      "path": "104_LLMOps/3. Observability/2. Token, Cost & Latency Monitoring.md",
+      "sha256": "07716137e273f12fa8f6cd2dd420e316d135fe7cc9eac7aec9aa4ac90e3b34f4",
+      "bytes": 83948,
+      "lines": 2363,
+      "headings": 141,
+      "external_url_candidates": 1,
+      "code_blocks_by_label": {
+        "unspecified": 27,
+        "python": 13,
+        "promql": 1,
+        "yaml": 1
+      },
+      "claim_candidates": 58
+    },
+    {
+      "path": "104_LLMOps/3. Observability/3. Workflow-Level Monitoring.md",
+      "sha256": "7ab8f95584ec70bfe7e6b3bbece95ccdba6bdfc22f7401124d8cf0e9bd9bc512",
+      "bytes": 124062,
+      "lines": 3494,
+      "headings": 93,
+      "external_url_candidates": 1,
+      "code_blocks_by_label": {
+        "unspecified": 26,
+        "python": 11
+      },
+      "claim_candidates": 37
+    },
+    {
+      "path": "104_LLMOps/3. Observability/4. Quality & Behavior Monitoring.md",
+      "sha256": "9adcbe002d04fb77cb4665003db7f30bc461840981fb2dc22ab18249d4ae003d",
+      "bytes": 126069,
+      "lines": 3572,
+      "headings": 108,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 19,
+        "python": 9
+      },
+      "claim_candidates": 40
+    },
+    {
+      "path": "104_LLMOps/3. Observability/5. Alerting & Incident Response.md",
+      "sha256": "2953d7d5e19f4f8651e175e380d323d67be2f4188655808560eb8ca1618888f7",
+      "bytes": 159336,
+      "lines": 4205,
+      "headings": 58,
+      "external_url_candidates": 19,
+      "code_blocks_by_label": {
+        "unspecified": 19,
+        "python": 10
+      },
+      "claim_candidates": 59
+    },
+    {
+      "path": "104_LLMOps/4. Safety & Guardrails/1. Input Safety.md",
+      "sha256": "1c4df84a8ef9cb802acdd24465ce0d4cc03f96716fd7f319e5eec826490e709b",
+      "bytes": 75242,
+      "lines": 2230,
+      "headings": 119,
+      "external_url_candidates": 7,
+      "code_blocks_by_label": {
+        "unspecified": 12,
+        "python": 17
+      },
+      "claim_candidates": 33
+    },
+    {
+      "path": "104_LLMOps/4. Safety & Guardrails/2. Output Filtering.md",
+      "sha256": "3deed4649ade15849c6e177c065e80c389a6348163408d1fa7a3c64e1999db83",
+      "bytes": 103817,
+      "lines": 2757,
+      "headings": 98,
+      "external_url_candidates": 8,
+      "code_blocks_by_label": {
+        "unspecified": 14,
+        "python": 9
+      },
+      "claim_candidates": 30
+    },
+    {
+      "path": "104_LLMOps/4. Safety & Guardrails/3. Tool Safety.md",
+      "sha256": "4e69d294f1d6eb249ad8171f10982774b33bcffa806103317336f27b0de70236",
+      "bytes": 135927,
+      "lines": 3538,
+      "headings": 107,
+      "external_url_candidates": 13,
+      "code_blocks_by_label": {
+        "unspecified": 11,
+        "python": 7
+      },
+      "claim_candidates": 29
+    },
+    {
+      "path": "104_LLMOps/4. Safety & Guardrails/4. Prompt Injection & Jailbreak Defense.md",
+      "sha256": "98cb4a188267c8014c5a6d53d7ea87a7ca2845694e8a76714e210a99c200c043",
+      "bytes": 102639,
+      "lines": 2573,
+      "headings": 137,
+      "external_url_candidates": 1,
+      "code_blocks_by_label": {
+        "unspecified": 23,
+        "python": 12
+      },
+      "claim_candidates": 36
+    },
+    {
+      "path": "104_LLMOps/4. Safety & Guardrails/5. Policy & Usage Controls.md",
+      "sha256": "22c6e5493680fd11fbb2432e67a4fd7d496bec559ebe813e90a7a30f0a3d51ee",
+      "bytes": 140188,
+      "lines": 3426,
+      "headings": 130,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 28,
+        "python": 12,
+        "sql": 1
+      },
+      "claim_candidates": 21
+    },
+    {
+      "path": "104_LLMOps/4. Safety & Guardrails/6. Human-in-the-Loop Safeguards.md",
+      "sha256": "0eb29ad508a0a949bf504f016a68d2928c57307f801c4420ed1743964efb932d",
+      "bytes": 166905,
+      "lines": 4057,
+      "headings": 147,
+      "external_url_candidates": 1,
+      "code_blocks_by_label": {
+        "unspecified": 21,
+        "python": 8
+      },
+      "claim_candidates": 40
+    },
+    {
+      "path": "104_LLMOps/5. Governance/1. Data Governance.md",
+      "sha256": "7b720d4d2032bdf05a17881e44d58693fef0e99f944f2865c9c9f3275507482b",
+      "bytes": 49243,
+      "lines": 1517,
+      "headings": 115,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 40,
+        "python": 7,
+        "sql": 1
+      },
+      "claim_candidates": 15
+    },
+    {
+      "path": "104_LLMOps/5. Governance/2. Access & Identity Management.md",
+      "sha256": "3f82713fe30a871b6f7f7cacf3872ddec729f83018569e9db05ac4c3b0bfa120",
+      "bytes": 95313,
+      "lines": 2432,
+      "headings": 157,
+      "external_url_candidates": 14,
+      "code_blocks_by_label": {
+        "unspecified": 36,
+        "python": 7
+      },
+      "claim_candidates": 32
+    },
+    {
+      "path": "104_LLMOps/5. Governance/3. Model & Prompt Governance.md",
+      "sha256": "a725e41c56dc20dde7b52de22ebe0869b615e80bc47770679eff35eb2f3ad4d2",
+      "bytes": 100610,
+      "lines": 2570,
+      "headings": 177,
+      "external_url_candidates": 3,
+      "code_blocks_by_label": {
+        "unspecified": 21,
+        "python": 5,
+        "yaml": 1,
+        "bash": 1
+      },
+      "claim_candidates": 26
+    },
+    {
+      "path": "104_LLMOps/5. Governance/4. Compliance & Regulatory Considerations.md",
+      "sha256": "82a7c2ab810d1fda8f042b39b70da8dadf384c510bd4ca0320b40087e91127d8",
+      "bytes": 134537,
+      "lines": 3175,
+      "headings": 118,
+      "external_url_candidates": 4,
+      "code_blocks_by_label": {
+        "unspecified": 29,
+        "python": 7
+      },
+      "claim_candidates": 34
+    },
+    {
+      "path": "104_LLMOps/5. Governance/5. Risk Management & Documentation.md",
+      "sha256": "37371de6596bf93cf94adf36e6cdf5728c9aa6bea65f8adc822abc69b6d4363c",
+      "bytes": 126276,
+      "lines": 2891,
+      "headings": 100,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 19,
+        "python": 3,
+        "markdown": 2,
+        "sql": 1
+      },
+      "claim_candidates": 43
+    },
+    {
+      "path": "104_LLMOps/5. Governance/6. Auditability & Transparency.md",
+      "sha256": "e4cc7dc279257026ab0e14d923dbd0adc31a3922f8115c4f1ebdc8fa55f7ba17",
+      "bytes": 44313,
+      "lines": 1254,
+      "headings": 52,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 37
+      },
+      "claim_candidates": 21
+    },
+    {
+      "path": "104_LLMOps/6. Managed AI Platforms/1. What Managed AI Platforms Provide.md",
+      "sha256": "7fb41d0b3cec620c5bac7fe0d836fcb75400bc4495574f50f46e746696c0f560",
+      "bytes": 48953,
+      "lines": 1512,
+      "headings": 115,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 40,
+        "python": 7,
+        "sql": 1
+      },
+      "claim_candidates": 14
+    },
+    {
+      "path": "104_LLMOps/6. Managed AI Platforms/2. Core Capabilities.md",
+      "sha256": "6de9d93de6112110a304450531e0f2f69b5493b4c7b89faabebf470dd0f0c53c",
+      "bytes": 71073,
+      "lines": 1878,
+      "headings": 56,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 40
+      },
+      "claim_candidates": 36
+    },
+    {
+      "path": "104_LLMOps/6. Managed AI Platforms/3. Deployment & Scaling Features.md",
+      "sha256": "923a3febe97aff78009ae5b6fe849b9cfa1bf1277ada67fad2c3b0d5c4b434ca",
+      "bytes": 95391,
+      "lines": 2481,
+      "headings": 67,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 48
+      },
+      "claim_candidates": 60
+    },
+    {
+      "path": "104_LLMOps/6. Managed AI Platforms/4. Security & Compliance.md",
+      "sha256": "8cdb0366d735ac361ce44a3d900288b2fe6d5beea100811ae486d9eb72db8f03",
+      "bytes": 116686,
+      "lines": 2662,
+      "headings": 59,
+      "external_url_candidates": 1,
+      "code_blocks_by_label": {
+        "unspecified": 41
+      },
+      "claim_candidates": 56
+    },
+    {
+      "path": "104_LLMOps/6. Managed AI Platforms/5. Popular Managed AI Platforms.md",
+      "sha256": "37df45a4cdd1962cbeaff0154d6c9aad0291985c5a8281189d1f595c847c19c2",
+      "bytes": 66377,
+      "lines": 1760,
+      "headings": 120,
+      "external_url_candidates": 1,
+      "code_blocks_by_label": {
+        "unspecified": 82,
+        "python": 1
+      },
+      "claim_candidates": 29
+    },
+    {
+      "path": "104_LLMOps/6. Managed AI Platforms/6. When to Use Managed Platforms.md",
+      "sha256": "04a2940d5827dc5483e18c3d4dd496b510bb428c6c2035e59fc37f7d6d340118",
+      "bytes": 39827,
+      "lines": 1058,
+      "headings": 54,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 37
+      },
+      "claim_candidates": 16
+    },
+    {
+      "path": "104_LLMOps/6. Managed AI Platforms/7. Trade-Offs.md",
+      "sha256": "8b868d58e448df7e3691d4d5dbbd33c6d5338c4598cc789cff5a60b7da8cec77",
+      "bytes": 62137,
+      "lines": 1501,
+      "headings": 59,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 40,
+        "python": 1
+      },
+      "claim_candidates": 28
+    },
+    {
+      "path": "104_LLMOps/README.md",
+      "sha256": "b478421b1bae73c5e9f9ec70f42e4dc08cd230497622d2146b7cfa171c810d64",
+      "bytes": 15444,
+      "lines": 337,
+      "headings": 20,
+      "external_url_candidates": 8,
+      "code_blocks_by_label": {
+        "unspecified": 3,
+        "bash": 1
+      },
+      "claim_candidates": 3
+    },
+    {
+      "path": "Project/README.md",
+      "sha256": "637402f1ec684e90750c2c49a675a6d3fabccc71f8c652358e9983c7d9df79d6",
+      "bytes": 2175,
+      "lines": 49,
+      "headings": 1,
+      "external_url_candidates": 5,
+      "code_blocks_by_label": {},
+      "claim_candidates": 1
+    },
+    {
+      "path": "README.md",
+      "sha256": "ebf3187c04a8a42033dc413bbb80e12951ff1a42beade0ea292ef4f71881592c",
+      "bytes": 8652,
+      "lines": 141,
+      "headings": 11,
+      "external_url_candidates": 18,
+      "code_blocks_by_label": {},
+      "claim_candidates": 12
+    },
+    {
+      "path": "awesome.md",
+      "sha256": "0313c2bc1b36430ea0ca228e6f4f5799572c1e709151d9b323c7f9f693ed1643",
+      "bytes": 33097,
+      "lines": 446,
+      "headings": 46,
+      "external_url_candidates": 214,
+      "code_blocks_by_label": {},
+      "claim_candidates": 48
+    },
+    {
+      "path": "interview/01-interview-process.md",
+      "sha256": "2cdad8186b9e02bf67eb40224900af100b15eb8eeb7b55e84192f52b5fa221aa",
+      "bytes": 12817,
+      "lines": 246,
+      "headings": 24,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {},
+      "claim_candidates": 36
+    },
+    {
+      "path": "interview/02-questions.md",
+      "sha256": "d8ac452ef7e6af30b077d53095f7ef35df70b00a9d5d87f488e6b95c01a376d0",
+      "bytes": 3332,
+      "lines": 33,
+      "headings": 3,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {},
+      "claim_candidates": 4
+    },
+    {
+      "path": "interview/03-get-hired.md",
+      "sha256": "c81f38f88576968a92f8c97a9190b2829e303081a75d56860c42a7941e42cef0",
+      "bytes": 22330,
+      "lines": 439,
+      "headings": 57,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {},
+      "claim_candidates": 52
+    },
+    {
+      "path": "interview/04-after-the-interview.md",
+      "sha256": "65cbed20868e573071d8994b4b84da538e71586025163e43f8a7c37c3be1a90e",
+      "bytes": 9836,
+      "lines": 189,
+      "headings": 24,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {},
+      "claim_candidates": 6
+    },
+    {
+      "path": "interview/05-trends.md",
+      "sha256": "1dfc13907b158d1065f6eb285e2698126663cba612e71bab219b31fb7db1cec0",
+      "bytes": 26791,
+      "lines": 605,
+      "headings": 82,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {},
+      "claim_candidates": 48
+    },
+    {
+      "path": "interview/07-global-compensation-and-job-market.md",
+      "sha256": "6372f2f3127df21a26233773a4b097fd6f3aa0489e9da80a8df7bfb158979f58",
+      "bytes": 6109,
+      "lines": 105,
+      "headings": 13,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 1
+      },
+      "claim_candidates": 14
+    },
+    {
+      "path": "interview/08-ai-engineer-resume-and-portfolio-playbook.md",
+      "sha256": "58570657486b5cc206086de2c88c779ecd4731a23cf834121ceeae5e6824ccad",
+      "bytes": 5131,
+      "lines": 98,
+      "headings": 12,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 2,
+        "markdown": 1
+      },
+      "claim_candidates": 8
+    },
+    {
+      "path": "interview/09-real-world-case-studies.md",
+      "sha256": "0b9f2b3ff135765a8a03f5d98ef836c9ebd090a3d874971fd777273ebc252718",
+      "bytes": 10808,
+      "lines": 147,
+      "headings": 12,
+      "external_url_candidates": 1,
+      "code_blocks_by_label": {
+        "unspecified": 4
+      },
+      "claim_candidates": 6
+    },
+    {
+      "path": "interview/README.md",
+      "sha256": "ba0cd78a8d34c888b74327060d11fae0eb44a2f9b370973527beaf5a98bea546",
+      "bytes": 1819,
+      "lines": 28,
+      "headings": 1,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {},
+      "claim_candidates": 2
+    },
+    {
+      "path": "interview/questions/01-theory.md",
+      "sha256": "d2d7eaa7007d689ac9822d539d294e13fc07da815517ae17eacd7cb1bd45e6ec",
+      "bytes": 23050,
+      "lines": 433,
+      "headings": 78,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {},
+      "claim_candidates": 11
+    },
+    {
+      "path": "interview/questions/02-coding.md",
+      "sha256": "dd36051d46c76c89a7f764144e64c934011c455c90eb1ca85965e8c4ca9b06d7",
+      "bytes": 12491,
+      "lines": 297,
+      "headings": 22,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "python": 4
+      },
+      "claim_candidates": 6
+    },
+    {
+      "path": "interview/questions/03-project-deep-dive.md",
+      "sha256": "8cc8d63d677aa7a847946e0fcea731ceab76516b464710f036cb554aabf0c19d",
+      "bytes": 10200,
+      "lines": 216,
+      "headings": 31,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {},
+      "claim_candidates": 7
+    },
+    {
+      "path": "interview/questions/04-ai-system-design.md",
+      "sha256": "0ee0e69249463eba99ad89e0fb752f36e1dc00fd845fdec5516fc01cd7bc70f0",
+      "bytes": 14316,
+      "lines": 264,
+      "headings": 23,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {},
+      "claim_candidates": 7
+    },
+    {
+      "path": "interview/questions/05-behavioral.md",
+      "sha256": "7b1dbec3c781ac7523a587f3bb0f9c97710bfbd3b532e9577bac869a65878056",
+      "bytes": 11426,
+      "lines": 189,
+      "headings": 17,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {},
+      "claim_candidates": 10
+    },
+    {
+      "path": "interview/questions/06-home-assignments.md",
+      "sha256": "c05077546c733f480ac22708b8ee7d27b4122d0aadeab2afab5d9454691cb054",
+      "bytes": 16617,
+      "lines": 374,
+      "headings": 48,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "markdown": 1
+      },
+      "claim_candidates": 29
+    },
+    {
+      "path": "interview/questions/questions.md",
+      "sha256": "7399774e5d25cbc46125dfef61a9ebba75e46ccc41bc9409922851b226b81d2c",
+      "bytes": 75156,
+      "lines": 782,
+      "headings": 47,
+      "external_url_candidates": 152,
+      "code_blocks_by_label": {},
+      "claim_candidates": 29
+    },
+    {
+      "path": "learning-paths/README.md",
+      "sha256": "bdb80138d8236be2d62f6b55cffce0093412c3054cdfd1adf2991700d0dd89f6",
+      "bytes": 16955,
+      "lines": 236,
+      "headings": 24,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 1
+      },
+      "claim_candidates": 8
+    },
+    {
+      "path": "learning-paths/from-backend-engineer.md",
+      "sha256": "b396bf3371f06d3f938670c531999412e208806492a1c92a67153a46194b3960",
+      "bytes": 8421,
+      "lines": 122,
+      "headings": 15,
+      "external_url_candidates": 7,
+      "code_blocks_by_label": {},
+      "claim_candidates": 2
+    },
+    {
+      "path": "learning-paths/from-data-engineer.md",
+      "sha256": "9c24c70c47904c0c41506f772d04f97ff7fb2d24fbb0ead35b489b248c73e3f5",
+      "bytes": 7479,
+      "lines": 120,
+      "headings": 15,
+      "external_url_candidates": 7,
+      "code_blocks_by_label": {},
+      "claim_candidates": 5
+    },
+    {
+      "path": "learning-paths/from-data-scientist.md",
+      "sha256": "192659efa51b8b4f923e2dcd0d2504229c86e260cbbc0c7e58956f72aa960311",
+      "bytes": 7275,
+      "lines": 116,
+      "headings": 15,
+      "external_url_candidates": 7,
+      "code_blocks_by_label": {},
+      "claim_candidates": 2
+    },
+    {
+      "path": "learning-paths/from-frontend-engineer.md",
+      "sha256": "582f9719b176c409fa5254b55c283126d8ee45c1d2358b1f42a4ab530f653e4d",
+      "bytes": 9514,
+      "lines": 158,
+      "headings": 25,
+      "external_url_candidates": 10,
+      "code_blocks_by_label": {},
+      "claim_candidates": 4
+    },
+    {
+      "path": "learning-paths/from-ml-engineer.md",
+      "sha256": "92201b3462c2d4c5e4df6777a13bb115acff13dcebe79dcabf2fd73698578d9f",
+      "bytes": 8430,
+      "lines": 121,
+      "headings": 15,
+      "external_url_candidates": 7,
+      "code_blocks_by_label": {},
+      "claim_candidates": 3
+    },
+    {
+      "path": "portfolio/README.md",
+      "sha256": "e9c86dbe1f62ce158935612d4dbdeddfe1a72eae9252f98231604b0478654b69",
+      "bytes": 22075,
+      "lines": 456,
+      "headings": 44,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "markdown": 1
+      },
+      "claim_candidates": 23
+    },
+    {
+      "path": "role/01-my-vision.md",
+      "sha256": "8188f249031bb4d8d758a8218680d6dec27d598324890cb3649dde7ef6fa7fa7",
+      "bytes": 15061,
+      "lines": 176,
+      "headings": 19,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {},
+      "claim_candidates": 14
+    },
+    {
+      "path": "role/02-skills.md",
+      "sha256": "44e2249f0c3ca301b8613e04bc36a1011a13db249b6efd03ff20cd4a407f6560",
+      "bytes": 31404,
+      "lines": 637,
+      "headings": 54,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 12
+      },
+      "claim_candidates": 201
+    },
+    {
+      "path": "role/03-responsibilities.md",
+      "sha256": "0fecf67b153c86165dfed9b1fb37d38fa447ac3dfd87065898a3fc96b8f816d8",
+      "bytes": 33322,
+      "lines": 540,
+      "headings": 36,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 5
+      },
+      "claim_candidates": 68
+    },
+    {
+      "path": "role/04-use-cases.md",
+      "sha256": "019402b92ab3a3a40ca100a03d188730da5d4e700fd088be1570b14934ccebb6",
+      "bytes": 31072,
+      "lines": 598,
+      "headings": 36,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 4
+      },
+      "claim_candidates": 64
+    },
+    {
+      "path": "role/05-reality-vs-postings.md",
+      "sha256": "10bdfaf70cfc1de80b0e96022dd75e9f1d643759811c14c7c6ff0a28c43d88e3",
+      "bytes": 15520,
+      "lines": 278,
+      "headings": 20,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 2
+      },
+      "claim_candidates": 13
+    },
+    {
+      "path": "role/06-worldwide-job-market-analysis.md",
+      "sha256": "13859b8621d45242b37977bbff82b41dafd0ef7465259fdc4fc114a36eabf541",
+      "bytes": 5108,
+      "lines": 77,
+      "headings": 9,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 2
+      },
+      "claim_candidates": 19
+    },
+    {
+      "path": "role/README.md",
+      "sha256": "af78b67454b97f732af9ba0d38c9dd47f005e323f630aabd3c273fdb4e15fcf7",
+      "bytes": 3168,
+      "lines": 43,
+      "headings": 7,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {},
+      "claim_candidates": 15
+    },
+    {
+      "path": "webinars/01-a-day-of-ai-engineer.md",
+      "sha256": "3baa573ad5d2056d7777bf35351066c227536ffd5186756c46e85cd2882e16e9",
+      "bytes": 12259,
+      "lines": 218,
+      "headings": 22,
+      "external_url_candidates": 3,
+      "code_blocks_by_label": {},
+      "claim_candidates": 9
+    },
+    {
+      "path": "webinars/02-defining-the-role.md",
+      "sha256": "fcc22302cc56eef1f5c6e6c6a713a9c49d362654531687663bca69e15fee0639",
+      "bytes": 17185,
+      "lines": 335,
+      "headings": 27,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 1
+      },
+      "claim_candidates": 62
+    },
+    {
+      "path": "webinars/03-the-interview-process.md",
+      "sha256": "6dc30461e05918a91d68a73aaf2373edbe399001894d6fbf9c8092c2f08c0c47",
+      "bytes": 18147,
+      "lines": 422,
+      "headings": 34,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 6
+      },
+      "claim_candidates": 26
+    },
+    {
+      "path": "webinars/04-take-home-assignments.md",
+      "sha256": "1f4cde90ff1c49ab0254fa94d231908c362986b8b9d7353dd06fb14f330ddde3",
+      "bytes": 22584,
+      "lines": 514,
+      "headings": 41,
+      "external_url_candidates": 0,
+      "code_blocks_by_label": {
+        "unspecified": 3,
+        "python": 2,
+        "markdown": 1
+      },
+      "claim_candidates": 46
+    },
+    {
+      "path": "webinars/README.md",
+      "sha256": "c44666f86ebe9a17d0cec3a7c0265da1afe12bdf9bbf919b0d6366d8505d7418",
+      "bytes": 922,
+      "lines": 12,
+      "headings": 1,
+      "external_url_candidates": 4,
+      "code_blocks_by_label": {},
+      "claim_candidates": 5
+    }
+  ]
+}
