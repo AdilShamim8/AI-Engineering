@@ -1,43 +1,20 @@
-# Defining the AI Engineer Role
+# Defining the AI engineer role
 
-Comprehensive analysis of what AI engineers actually do, based on 3,100+ global job descriptions across North America, Europe, Asia-Pacific, and Global Remote markets — updated September 16, 2026.
+Reviewed October 9, 2026. Role titles overlap; use responsibilities, scope, and evidence rather than treating “AI engineer” as a uniform worldwide occupation.
 
 ## Contents
 
-1. [My vision of the role](01-my-vision.md) - how I see AI engineering, comparison with DS/ML/DE roles, CRISP-DM for AI
-2. [Skills analysis](02-skills.md) - top skills, job types, cloud platforms, frameworks
-3. [Responsibilities](03-responsibilities.md) - 5,694 extracted responsibilities across 895 jobs
-4. [Use cases](04-use-cases.md) - 4,525 real use cases showing what companies build with AI
-5. [Reality vs. job postings](05-reality-vs-postings.md) - what candidates experience vs. what's advertised
-6. [Worldwide job market analysis](06-worldwide-job-market-analysis.md) - global geographical demand, compensation profiles, and company archetypes
+1. [My vision of the role](01-my-vision.md) — an editorial perspective on AI engineering and adjacent disciplines.
+2. [Skills and evidence](02-skills.md) — reproduced latest-scrape annotation counts and an engineering competency rubric.
+3. [Responsibilities](03-responsibilities.md) — engineering ownership and reviewable deliverables.
+4. [Use cases](04-use-cases.md) — application patterns, data requirements, and measurable outcomes.
+5. [Reality versus postings](05-reality-vs-postings.md) — practical role assessment; legacy archetype percentages are unverified.
+6. [Job-market methodology](06-worldwide-job-market-analysis.md) — sampling, regional comparability, and compensation interpretation.
 
-## Key Takeaways
+## What the evidence supports
 
-### What is an "AI Engineer" in 2026?
+The [pinned real-job dataset](../research/README.md) contains raw advertisements and LLM-derived annotations. The latest available folder is September 23, 2026. Our executable analysis counts 1,086 records in that folder; it does not estimate worldwide demand, salary premiums, or hiring success.
 
-- It's a new role, distinct from ML Engineer. AI engineers integrate pre-trained models into applications (RAG, agents, orchestration). ML engineers train models. But titles are broken - "AI Engineer" means different things at different companies.
-- Three types of roles hide under the same title:
-  - AI-First (69.4%) - builds RAG systems, agents, LLM-powered features
-  - AI-Support (28.5%) - builds platforms, infrastructure, tooling for AI teams
-  - ML (1.8%) - traditional ML rebranded
-- It's fundamentally a full-stack role. 93.1% of roles need skills beyond GenAI. Only 1.4% expect pure GenAI work. You need cloud, Docker, CI/CD, often web development too.
+Application engineering often involves connecting models, data, tools and user interfaces; model engineering includes training, adaptation and inference systems; platform engineering makes these workflows reliable. These responsibilities can coexist in the same role. The upstream taxonomy is an analysis convention, not a universal boundary between professions.
 
-### What they actually build
-
-- RAG + Agents dominate. RAG appears in 35.9% of all jobs, agents in 14.4%. Together they cover 70%+ of use cases. If you learn these two patterns deeply, you cover most of the work.
-- The #1 problem AI solves is automating manual workflows (15.4% of use cases). Not glamorous - it's reducing repetitive work at scale.
-- Knowledge access is universal. Every domain (healthcare, legal, finance, enterprise) has the same problem: too much information, can't find what's needed. RAG solves this everywhere.
-
-### Skills that matter
-
-- Python is mandatory (82.5%). After that: AWS (40.1%), RAG (35.9%), Docker (31.0%), prompt engineering (29.1%), Kubernetes (29.1%).
-- Fine-tuning is overhyped. Only 4.0% of roles focus on it as a primary responsibility. 80.8% don't mention it at all. Focus on RAG and agents first.
-- 64.3% still require some ML knowledge - but it's practical ML (PyTorch basics, fine-tuning, embeddings), not deep research expertise.
-
-### What actually gets you hired
-
-- Evaluation is the differentiator. 39.6% of AI-First roles explicitly require evaluation skills. Anyone can build a chatbot - companies hire people who can measure if it works (LLM-as-judge, golden datasets, hallucination detection).
-- Production thinking wins over accuracy obsession. 50.2% of AI-First roles require production/ops skills (Docker, Kubernetes, CI/CD, MLOps, Terraform).
-- 95.6% of roles are applied/production, not research. Only 4.4% are research roles. The market wants people who ship, not people who publish.
-
-
+For development, learn software fundamentals, data handling, model limitations, evaluation and operations. Advance by producing evidence: reproducible experiments, permission tests, failure analysis, deployment measurements and architecture decisions. The [advanced learning path](../learning-paths/advanced-engineering.md) provides concrete exit criteria.
