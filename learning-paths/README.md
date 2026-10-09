@@ -1,5 +1,7 @@
 # Learning Paths for AI Engineers
 
+For an evidence-based progression beyond introductory material, follow [From foundations to advanced engineering](advanced-engineering.md): real datasets, baselines, held-out evaluation, authorization, recovery and inspectable deliverables. Reviewed October 9, 2026. Transition durations below are planning estimates, not measured guarantees.
+
 > The definitive guide to building the skills that matter for AI engineering (Updated: September 16, 2026). Whether you're starting fresh or transitioning from an adjacent role, this section maps the terrain and gives you a structured path forward.
 
 ---
