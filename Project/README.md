@@ -1,6 +1,6 @@
 ## Learn by Doing. Become an AI Engineer.
 
-> **5 projects. Real systems. Zero hand-holding.** (Verified & Updated: September 16, 2026)  
+> **Five project directions.** Curriculum reviewed October 9, 2026. Linked projects have not been executed or independently certified as production-ready in this review.
 > A hands-on curriculum for engineers who want to go from understanding LLMs to building production AI systems — step by step, project by project.
 
 <table>
@@ -22,7 +22,7 @@
     <tr>
       <td align="center"><b>102</b></td>
       <td><a href="https://github.com/AdilShamim8/Customer-Support-Chatbot-102"><b>Customer Support Chatbot</b></a></td>
-      <td>A production-ready support bot with memory and context</td>
+      <td>A support-bot project exploring memory and context</td>
       <td><code>RAG</code> <code>Memory</code> <code>Conversation Design</code></td>
     </tr>
     <tr>
@@ -47,3 +47,9 @@
 </table>
 
 > Each project builds on the last. Start at 101. Ship something real at every step.
+
+## Advance through evidence
+
+Treat these links as project directions, not proof of deployed behavior. For each project, document dataset rights and provenance, a simpler baseline, a frozen evaluation protocol, per-item failures, authorization boundaries, measured latency/cost and a recovery plan. Use real licensed records for factual measurements; label fixtures and simulated interactions as such.
+
+The [advanced path](../learning-paths/advanced-engineering.md) defines exit criteria. The [research guide](../research/README.md) provides an executed real-job dataset audit and dated references for retrieval and software-agent tasks. A project title or polished demo does not establish production readiness.
