@@ -332,7 +332,7 @@ Please make sure your contributions follow the existing teaching style — first
 
 ## 📄 License
 
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License** — see the [LICENSE](../LICENSE) file for details.
 
 ---
 
