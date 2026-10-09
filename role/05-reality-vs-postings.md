@@ -1,6 +1,8 @@
 # Reality vs. Job Postings: The AI Engineer Gap
 
-*What job postings say vs. what AI Engineers actually do (Verified & Updated: September 16, 2026) — and why the gap matters*
+*Practical role assessment, reviewed October 9, 2026. Archetypes are an editorial framework, not measured population shares.*
+
+See [the reproduced job snapshot](../research/README.md) for sample-level evidence. Legacy prevalence and career-return claims without records are unverified.
 
 ## The Core Confusion: AI Engineer vs. ML Engineer
 
@@ -24,7 +26,7 @@ In practice, ~70% of "AI Engineer" postings are primarily about using models, no
 
 Based on observation of hundreds of AI Engineering teams, the actual work falls into four archetypes:
 
-### The Orchestrator (~45%)
+### The Orchestrator
 
 The most common archetype. Orchestrators wire together models, data sources, tools, and user interfaces into working systems. They spend their time on:
 - Designing system architecture for AI features
@@ -36,7 +38,7 @@ The most common archetype. Orchestrators wire together models, data sources, too
 
 **Skills:** System design, API integration, RAG architecture, provider management, Python/TypeScript
 
-### The Evals Specialist (~40%)
+### The Evals Specialist
 
 The second most common archetype. Evals Specialists focus on measuring and improving AI output quality. They spend their time on:
 - Building evaluation datasets and frameworks
@@ -48,7 +50,7 @@ The second most common archetype. Evals Specialists focus on measuring and impro
 
 **Skills:** Statistics, evaluation frameworks (Ragas, DeepEval), human annotation, A/B testing, quality metrics
 
-### The Efficiency Wrapper (~10%)
+### The Efficiency Wrapper
 
 Efficiency Wrappers focus on making AI systems cost-effective and performant. They spend their time on:
 - Optimizing token usage and prompt efficiency
@@ -60,7 +62,7 @@ Efficiency Wrappers focus on making AI systems cost-effective and performant. Th
 
 **Skills:** Cost optimization, model routing, caching, infrastructure, monitoring, provider APIs
 
-### The Context Engineer (~5%) *(NEW for 2026)*
+### The Context Engineer
 
 The newest archetype. Context Engineers focus on the information architecture of AI systems — what the model sees, in what format, and at what time. They spend their time on:
 - Designing retrieval strategies for different query types
@@ -271,7 +273,7 @@ Most AI Engineers are at Level 2-3 today. Level 4-5 is where the differentiation
 
 6. **Combo roles are a trap** — If a job asks you to be an AI Engineer, ML Engineer, and full-stack developer, run. Or at least negotiate for higher compensation.
 
-7. **MCP/A2A skills are the biggest gap** — The protocols are new, the talent pool is tiny, and demand is growing. Investing here is the highest-ROI career move in 2026.
+7. **MCP/A2A skills are the biggest gap** — Protocol integration can be useful when a role requires it. Prioritize the responsibilities and evidence in the specific job description; no callback or return-on-learning estimate is established here.
 
 8. **Context engineering is the next differentiator** — After evaluation, context engineering is the skill that will separate senior from junior AI Engineers. Start developing it now.
 
