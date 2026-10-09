@@ -1,45 +1,16 @@
 # Get Hired
 
-> Based on 150+ sources including interview reports, hiring manager interviews, and practitioner surveys. This guide covers everything from preparation strategy to negotiation — the full playbook for landing an AI engineering role as of September 16, 2026.
+> Preparation advice reviewed October 9, 2026. Interview accounts are anecdotes, not a representative hiring survey. Use the employer's current process and demonstrate your own measured work.
 
 ---
 
 ## What Interviewers Test
 
-### The Baseline (What Job Descriptions Say)
+### Demonstrate competencies rather than quoting prevalence
 
-| Skill Category | Frequency in Job Descriptions |
-|---------------|-------------------------------|
-| Python | 92% |
-| LLM/AI experience | 88% |
-| Cloud platforms (AWS/GCP/Azure) | 75% |
-| Machine learning fundamentals | 70% |
-| RAG / retrieval systems | 65% |
-| API design and development | 60% |
-| Docker / containerization | 55% |
-| Data pipelines | 50% |
-| Agent systems | 45% |
-| Evaluation and testing | 40% |
-| Safety and guardrails | 30% |
+Prepare to explain implementation, model limitations, retrieval, data quality, evaluation, authorization, operations and tradeoffs. Job requirements and interview formats vary by employer. The previous percentage tables had no traceable sampling records and have been removed.
 
-### What's Actually Tested (Based on Interview Reports)
-
-| Skill Category | Frequency in Interviews |
-|---------------|------------------------|
-| System design (AI-specific) | 85% |
-| LLM behavior understanding | 80% |
-| RAG pipeline design | 75% |
-| Trade-off reasoning | 72% |
-| Production deployment experience | 68% |
-| Evaluation methodology | 60% |
-| Agent design and implementation | 55% |
-| Cost optimization | 50% |
-| Coding (traditional DSA) | 45% |
-| Safety and guardrails | 40% |
-| Communication with non-technical stakeholders | 38% |
-| Context engineering | 25% (rapidly growing) |
-
-**The gap**: Job descriptions emphasize tools and frameworks. Interviews test understanding, judgment, and production awareness. Knowing LangChain doesn't impress anyone — knowing when *not* to use LangChain does.
+Bring a reproducible experiment, a baseline, failed cases, dataset provenance and an architecture decision record. See [the advanced path](../learning-paths/advanced-engineering.md) and [reproduced job-posting tags](../role/02-skills.md).
 
 ---
 
@@ -381,22 +352,15 @@ Some companies (especially Anthropic, OpenAI, and mission-driven startups) requi
 
 ## Negotiation and Offers
 
-### 2026 Compensation Data (US Market)
+### Compare actual offer terms
 
-| Level | Years | Base Salary | Total Comp (incl. equity) | Notes |
-|-------|-------|-------------|--------------------------|-------|
-| Junior | 0–2 | $130K–$180K | $160K–$270K | Equity often 10–20% of comp |
-| Mid | 2–5 | $180K–$260K | $270K–$430K | Equity often 20–35% of comp |
-| Senior | 5–8 | $250K–$350K | $370K–$550K | Equity often 30–45% of comp |
-| Staff+ | 8+ | $320K–$450K | $550K–$900K+ | Equity often 40–55% of comp |
-
-**Sources**: Levels.fyi data and global verified dataset (3,100+ AI engineering roles, updated September 16, 2026). Compensations vary significantly by company type, location, and market conditions. [^1]
+The previous salary ranges were not supported by traceable records. Use [the compensation comparison guide](07-global-compensation-and-job-market.md) to separate recurring cash, one-time cash and equity, and retain dates and location-specific evidence.
 
 ### Key Negotiation Points
 
 1. **Know your market value.** Use Levels.fyi, Blind, and Glassdoor to understand compensation ranges for your target role and level.
 
-2. **Total compensation matters more than base salary.** At AI startups, equity can be 30–50% of total comp. At big tech, it can be 40–55%.
+2. **Total compensation matters more than base salary.** Separate cash from equity and compare the actual grant and vesting terms; no universal equity share is established here.
 
 3. **Negotiate the equity, not just the base.** At startups, equity has the most upside. At big tech, equity refreshers are standard.
 
@@ -426,11 +390,11 @@ Some companies (especially Anthropic, OpenAI, and mission-driven startups) requi
 
 ## Sources
 
-[^1]: Levels.fyi and comprehensive compensation data for AI engineering roles, updated through September 16, 2026. Aggregated across Google, Meta, Amazon, Microsoft, OpenAI, Anthropic, Databricks, and 3,100+ global postings.
+[^1]: Legacy aggregate compensation attribution was not reproducible. See the compensation comparison guide for evidence requirements.
 [^2]: Interview reports aggregated from Blind, Glassdoor, and LeetCode Discuss, 2025–2026.
 [^3]: Mimansa Jaiswal, Yuan Meng, Janvi Kalra — interview preparation advice from social media posts and blog articles, 2025–2026. Names used with context from public posts.
-[^4]: "State of AI Engineering Hiring", LangChain survey, 2025–2026.
-[^5]: "AI Engineering Job Market Report", global industry benchmark, September 16, 2026.
+[^4]: Unverified legacy survey attribution; no identifiable survey release was established in this review.
+[^5]: Unverified legacy report attribution; no identifiable report was established in this review.
 [^6]: Company engineering blogs and career pages, 2024–2026.
 [^7]: "How to Negotiate Your AI Engineering Offer", various guides and practitioner advice, 2025.
 
