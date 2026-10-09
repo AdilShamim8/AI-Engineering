@@ -1,12 +1,12 @@
-# Webinars
+# Supplemental career notes
 
-A 4-part event series on AI engineering careers, hosted by [Alexey Grigorev](https://github.com/alexeygrigorev) through [Maven](https://maven.com/) and [AI Shipping Labs](https://aishippinglabs.com/) (All sessions completed & recordings verified: September 16, 2026).
+Evidence status reviewed October 9, 2026. These pages contain legacy summaries and examples. This checkout does not provide transcripts or independently checked recording, duration, speaker and survey records; the earlier blanket “recordings verified” claim has been removed.
 
-| # | Webinar | Date | Status |
-|---|---------|------|--------|
-| 1 | [A Day of an AI Engineer](01-a-day-of-ai-engineer.md) | Feb 16, 2026 | Recording & recap available |
-| 2 | [Defining the AI Engineer Role](02-defining-the-role.md) | Feb 24, 2026 | Recording & recap available |
-| 3 | [The Interview Process](03-the-interview-process.md) | Mar 3, 2026 | Recording & recap available |
-| 4 | [Take-Home Assignments](04-take-home-assignments.md) | Mar 9, 2026 | Recording & recap available |
+| Topic | Notes | Evidence status |
+|---|---|---|
+| Day-to-day engineering | [A day of an AI engineer](01-a-day-of-ai-engineer.md) | Illustrative workflow; not a verified time-use study |
+| Role definition | [Defining the role](02-defining-the-role.md) | Legacy prevalence/compensation claims remain unverified |
+| Interview preparation | [Interview process](03-the-interview-process.md) | Legacy survey/process frequencies remain unverified |
+| Assignments | [Take-home assignments](04-take-home-assignments.md) | Preparation examples; not a verified assignment-frequency dataset |
 
-Have questions? [Submit them here](https://app.sli.do/event/vJEZ6h5zbFRAzPfrANZxZd) - all questions will be covered during the events or afterwards.
+For source-backed counts and current benchmark references, use [research](../research/README.md). For practical learning, use [the advanced path](../learning-paths/advanced-engineering.md). Do not attribute speakers, dates, recordings or employer practices from these notes without checking the original source.
