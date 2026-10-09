@@ -1,6 +1,6 @@
-# Real-World Production AI System Design Case Studies (2026)
+# Production AI system-design exercises
 
-> **Architectural blueprints, latency/cost budgets, failure mitigations, and evaluation frameworks for the 4 most commonly tested AI system design interview questions — updated September 16, 2026.**
+> Reviewed October 9, 2026. These four architectures are hypothetical exercises, not verified production case studies or a ranking of interview frequency. Workload sizes, timings, thresholds and availability figures below are proposed assumptions/targets, not measured results. Historical model/tool names are illustrative; check current provider documentation before implementation.
 
 ---
 
@@ -9,7 +9,7 @@
 ### 1. Problem Statement & Requirements
 - **Scale:** 10,000,000+ 10-K, 10-Q, and 8-K annual/quarterly financial filings spanning 15 years.
 - **Traffic:** 2,500 queries/minute from institutional equity research analysts.
-- **SLA:** P95 response latency < 1.2s; 0% tolerance for ungrounded financial hallucinations; mandatory source citations with exact page numbers and table coordinates.
+- **Illustrative requirements:** P95 completion latency target < 1.2s under a specified workload; unsupported financial answers require review/abstention rather than a promised zero error rate; mandatory source citations with exact page numbers and table coordinates.
 
 ```
 +-----------------------------------------------------------------------------------+
@@ -38,7 +38,7 @@
 ### 2. Key Architectural Decisions
 - **Table Handling:** Financial data lives in tables. Raw text chunking breaks tabular columns. We convert all tables into structured Markdown and compute an LLM-generated table summary, which is prepended to each table slice before embedding.
 - **Parent-Child Ingestion:** Child chunks (200 tokens) are embedded for pinpoint search precision; upon match, the 1000-token Parent Chunk is injected into context so financial context (units, currency, footnote asterisks) is never dropped.
-- **Strict Grounding Guardrail:** If retrieved chunk confidence is below 0.85, system replies: *"Document does not state Q3 EBITDA for the cloud subsidiary."*
+- **Strict Grounding Guardrail:** Calibrate an answerability/abstention rule on reviewed evidence; a similarity value is not a universal confidence threshold. For an unsupported answer, the system may reply: *"Document does not state Q3 EBITDA for the cloud subsidiary."*
 
 ---
 
@@ -79,7 +79,7 @@
 
 ### 1. Problem Statement & Requirements
 - Real-time conversational customer support over VoIP / WebRTC.
-- **Target Latency:** Voice-to-voice turn-around under 600ms (human conversational comfort threshold).
+- **Target Latency:** Voice-to-voice turn-around under 600ms as an illustrative design target; measure end-of-user-speech to first audible response separately from text TTFT.
 
 ```
 +-----------------------------------------------------------------------------------+
@@ -113,7 +113,7 @@ When the user speaks while the bot is talking, the WebRTC client sends a high-pr
 
 ### 1. Problem Statement & Requirements
 - Centralized enterprise AI gateway handling 150M tokens/day across 80 internal engineering teams.
-- Must guarantee 99.99% uptime, prevent single-provider outages, enforce token quotas, and minimize redundant compute costs.
+- Targets 99.99% availability, requiring a defined measurement window and an error-budget/recovery plan, prevent single-provider outages, enforce token quotas, and minimize redundant compute costs.
 
 ```
 +-----------------------------------------------------------------------------------+
@@ -127,7 +127,7 @@ When the user speaks while the bot is talking, the WebRTC client sends a high-pr
 |                           ▼                                                       |
 |  [Redis Semantic Cache] (HNSW index on query embeddings)                         |
 |         │                                                                         |
-|         ├─► [Similarity >= 0.96?] ──► Return Cached Response (<15ms, $0.00 cost) |
+|         ├─► [Similarity >= 0.96?] ──► Revalidate scope/version, then return cached response |
 |         │                                                                         |
 |         ▼ (Cache Miss)                                                            |
 |  [LiteLLM Smart Router & Cascading Fallback Pool]                                 |
@@ -145,3 +145,12 @@ When the user speaks while the bot is talking, the WebRTC client sends a high-pr
 
 ### 2. Cost Attribution & Chargebacks
 Every request is tagged with an `x-team-id` and `x-project-id` header. The gateway logs exact prompt and completion token counts to ClickHouse, allowing automated monthly department chargebacks and budget limit enforcement.
+
+
+## Required validation before calling an exercise a case study
+
+Use a real licensed corpus/workflow, record provenance and task IDs, implement a simpler baseline, and execute a frozen evaluation. Publish failure slices, first-token versus completion/voice latency, workload/concurrency, total cost and uncertainty. Financial claims require source/units verification; code agents require isolated test execution; voice flows require interruption and consent checks; gateways require permission-scoped caching and validated fallback contracts.
+
+For any architecture with cache reuse, derive identity and effective permissions before cache lookup. Include source and policy revisions and test revocation/deletion. For writes, test idempotency and ambiguous timeouts. An availability target requires measured service behavior and recovery exercises, not a diagram.
+
+See [the advanced path](../learning-paths/advanced-engineering.md), [production RAG controls](../102_AI-Application-Development/03-RAG/7.%20Production%20RAG%20Architecture%2C%20Caching%20%26%20Failure%20Modes.md), and [the evidence policy](../research/evidence-policy.md).
