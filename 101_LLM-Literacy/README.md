@@ -824,7 +824,7 @@ Contributions are welcome. This curriculum is built on precision and depth — p
 
 ## 📄 License
 
-This repository is licensed under the [MIT License](LICENSE).
+This repository is licensed under the [MIT License](../LICENSE).
 
 You are free to use, share, adapt, and build upon this curriculum — commercially or non-commercially — with attribution.
 
