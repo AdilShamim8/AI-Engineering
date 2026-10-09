@@ -1,6 +1,6 @@
 # AI Engineering Interview Questions
 
-Consolidated from 160+ sources including blog posts, YouTube transcripts, Reddit threads, Medium articles, and interview guides — verified and updated to September 16, 2026. Every question was extracted from actual interview experiences or preparation materials.
+Consolidated from 160+ sources including blog posts, YouTube transcripts, Reddit threads, Medium articles, and interview guides — originally labeled September 16, 2026. Individual source attributions remain to be checked; this collection is a preparation aid, not a verified frequency dataset. Navigation reviewed October 9, 2026.
 
 ## Technical Questions
 
@@ -534,7 +534,7 @@ These are the probing questions interviewers ask during project deep dives to te
 
 ## Take-Home Assignments
 
-See also: [GitHub Repos: AI Engineering Interview Assignments](../data/sources/github-repos.md) for 100+ repos of actual candidate submissions.
+See also: [Upstream interview records](https://github.com/alexeygrigorev/ai-engineering-field-guide/tree/ed590319553252e2b8275486597b144ac55a4f3c/interview/data). This checkout does not contain the previously linked assignment-repository inventory; its count and candidate-submission attribution are unverified.
 
 ### RAG / Chatbot Systems
 
@@ -675,7 +675,7 @@ Reported by candidates:
 [^fahd-mirza-2]: [YouTube - Fahd Mirza (Upwork)](https://www.youtube.com/watch?v=fahd-mirza-upwork)
 [^zen-van-riel]: [Zen Van Riel](https://zenvanriel.com/ai-engineer-blog/ai-engineering-interview-big-tech-guide/)
 [^fonzi-ai]: [Medium - Fonzi AI](https://medium.com/fonzi-ai/what-ive-learned-from-sitting-in-on-50-ai-engineer-interviews-c493696453c4)
-[^github-repos]: [GitHub Repos: AI Engineering Interview Assignments](../data/sources/github-repos.md) - 100+ repos of actual take-home assignments, Q4 2025 / Q1 2026
+[^github-repos]: [Upstream interview records](https://github.com/alexeygrigorev/ai-engineering-field-guide/tree/ed590319553252e2b8275486597b144ac55a4f3c/interview/data). This is an external source directory, not the absent local assignment-repository inventory; the legacy assignment count is unverified.
 [^gh-rokomari]: [GitHub - RokomariTask](https://github.com/gazitanbhir/RokomariTask) - Rokomari.com AI Engineer
 [^gh-streamkar]: [GitHub - Streamkar-Chatbot](https://github.com/Tejasv2002/Streamkar-Chatbot) - StreamKar RAG chatbot
 [^gh-dge-1]: [GitHub - DGE-assignment](https://github.com/nazar-zhcet26/DGE-assignment) - DGE agentic RAG
