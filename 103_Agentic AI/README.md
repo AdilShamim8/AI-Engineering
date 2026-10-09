@@ -4,7 +4,7 @@
 [![Edition](https://img.shields.io/badge/Edition-September_16,_2026-blue.svg?style=for-the-badge)](https://github.com)
 [![Topic](https://img.shields.io/badge/Focus-Agentic%20AI%20%26%20MCP-8A2BE2.svg?style=for-the-badge)](https://github.com)
 [![Level](https://img.shields.io/badge/Level-Beginner%20%E2%86%92%20Expert-emerald.svg?style=for-the-badge)](https://github.com)
-[![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
+[![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](../LICENSE)
 
 > **The Definitive, First-Principles Guide to Engineering Autonomous AI Agents, Universal Agent Protocols (MCP), and Modern Framework Architectures.**
 
@@ -176,7 +176,7 @@ Contributions, fixes, and improvements are welcome! If you find a typo, want to 
 
 ## 📜 License
 
-This repository is available under the [MIT License](LICENSE).
+This repository is available under the [MIT License](../LICENSE).
 
 ---
 
