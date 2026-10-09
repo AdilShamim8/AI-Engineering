@@ -1,0 +1,114 @@
+[
+  {
+    "id": "beir",
+    "repository": "beir-cellar/beir",
+    "commit": "ef83d29307061c65d04b035b4f4e7c18bd8374af",
+    "url": "https://raw.githubusercontent.com/beir-cellar/beir/ef83d29307061c65d04b035b4f4e7c18bd8374af/README.md",
+    "sha256": "d030c5374d29194e6c23ded13314dc6964b253c137cbcf606765a4222f4bc4e1",
+    "reviewed_on": "2026-10-09",
+    "publication_or_release": "2021",
+    "date_basis": "Dates stated in the pinned source or publication identifier; null means not established."
+  },
+  {
+    "id": "scifact",
+    "repository": "allenai/scifact",
+    "commit": "68b98a56d93e0f9da0d2aab4e6c3294699a0f72e",
+    "url": "https://raw.githubusercontent.com/allenai/scifact/68b98a56d93e0f9da0d2aab4e6c3294699a0f72e/README.md",
+    "sha256": "3f0eb7f6d009b3785fede6592918b8b583e7193d26f14173fdf0c79aba1dcc79",
+    "reviewed_on": "2026-10-09",
+    "publication_or_release": "2020-04",
+    "date_basis": "Dates stated in the pinned source or publication identifier; null means not established."
+  },
+  {
+    "id": "swebench",
+    "repository": "SWE-bench/SWE-bench",
+    "commit": "02e7a74ffd0b707aab73d203fe87bdc7c76afc8e",
+    "url": "https://raw.githubusercontent.com/SWE-bench/SWE-bench/02e7a74ffd0b707aab73d203fe87bdc7c76afc8e/README.md",
+    "sha256": "06841624d7b5130dfe3cc6714642e9a8fd2a608c95c66ae0180e409f12b73aaa",
+    "reviewed_on": "2026-10-09",
+    "publication_or_release": "2023-10",
+    "date_basis": "Dates stated in the pinned source or publication identifier; null means not established."
+  },
+  {
+    "id": "mteb",
+    "repository": "embeddings-benchmark/mteb",
+    "commit": "930659e02593994fa74ccd4a8951f5d081ca941e",
+    "url": "https://raw.githubusercontent.com/embeddings-benchmark/mteb/930659e02593994fa74ccd4a8951f5d081ca941e/README.md",
+    "sha256": "7d4d66862ca3fd92d8c1949aca25d684362ee9aa40462d046bdfde5d9e86729a",
+    "reviewed_on": "2026-10-09",
+    "publication_or_release": "2022-10; multilingual extension 2025-02",
+    "date_basis": "Dates stated in the pinned source or publication identifier; null means not established."
+  },
+  {
+    "id": "tau-bench",
+    "repository": "sierra-research/tau-bench",
+    "commit": "59a200c6d575d595120f1cb70fea53cef0632f6b",
+    "url": "https://raw.githubusercontent.com/sierra-research/tau-bench/59a200c6d575d595120f1cb70fea53cef0632f6b/README.md",
+    "sha256": "1a4b1b00634fe46fd677dd11dfa25a9bf357b5d7c3d726ff83025e8f104329f9",
+    "reviewed_on": "2026-10-09",
+    "publication_or_release": "2024-06",
+    "date_basis": "Dates stated in the pinned source or publication identifier; null means not established."
+  },
+  {
+    "id": "mcp",
+    "repository": "modelcontextprotocol/modelcontextprotocol",
+    "commit": "c518f7a927cff918bce35d3522fcdb046d264d7c",
+    "url": "https://raw.githubusercontent.com/modelcontextprotocol/modelcontextprotocol/c518f7a927cff918bce35d3522fcdb046d264d7c/README.md",
+    "sha256": "7e98444c73ed5d923a3b02b1247e9cdf678d31a30cc32b1503bdcd906aa984e2",
+    "reviewed_on": "2026-10-09",
+    "publication_or_release": "schema 2026-07-28",
+    "date_basis": "Dates stated in the pinned source or publication identifier; null means not established."
+  },
+  {
+    "id": "qdrant",
+    "repository": "qdrant/qdrant-client",
+    "commit": "cf747f4b6fa71ba35dfb467931f3fa65f2cdf263",
+    "url": "https://raw.githubusercontent.com/qdrant/qdrant-client/cf747f4b6fa71ba35dfb467931f3fa65f2cdf263/README.md",
+    "sha256": "668410ed85174072122d80788c50ef7f19ea1ac88ebf394c4d9e0b6f8504561e",
+    "reviewed_on": "2026-10-09",
+    "publication_or_release": null,
+    "date_basis": "Dates stated in the pinned source or publication identifier; null means not established."
+  },
+  {
+    "id": "ragas",
+    "repository": "vibrantlabsai/ragas",
+    "commit": "298b68274234c060deacab3cf5fb52aa3a20e885",
+    "url": "https://raw.githubusercontent.com/vibrantlabsai/ragas/298b68274234c060deacab3cf5fb52aa3a20e885/README.md",
+    "sha256": "af20b2258507b12bf930e897b63ee5bb87aac4a4696da078ea5a3c29addb6db7",
+    "reviewed_on": "2026-10-09",
+    "publication_or_release": null,
+    "date_basis": "Dates stated in the pinned source or publication identifier; null means not established."
+  },
+  {
+    "id": "tau-current",
+    "repository": "sierra-research/tau2-bench",
+    "commit": "4ce7c0397c1eb65c9bbe59aeacfe1ca44a1cd699",
+    "url": "https://raw.githubusercontent.com/sierra-research/tau2-bench/4ce7c0397c1eb65c9bbe59aeacfe1ca44a1cd699/README.md",
+    "sha256": "ed39688aa5d40bd73007355df65f4e41a6c250960642e56764c3ad44da1df8d2",
+    "reviewed_on": "2026-10-09",
+    "publication_or_release": "2025-06; voice and knowledge papers 2026-03; grading update 2026-07",
+    "date_basis": "Dates stated in the pinned source or publication identifier; null means not established."
+  },
+  {
+    "id": "job-data",
+    "repository": "alexeygrigorev/ai-engineering-field-guide",
+    "commit": "ed590319553252e2b8275486597b144ac55a4f3c",
+    "url": "https://raw.githubusercontent.com/alexeygrigorev/ai-engineering-field-guide/ed590319553252e2b8275486597b144ac55a4f3c/job-market/README.md",
+    "sha256": "fa03c6b7bcdfc857ecda948ffac85952e70ea53dc48f135b16c12ad8ace57c05",
+    "reviewed_on": "2026-10-09",
+    "source_revision_date": "2026-09-23",
+    "publication_or_release": "scrape folders 2026-02-04 through 2026-09-23",
+    "date_basis": "Dates stated in the pinned source or publication identifier; null means not established."
+  },
+  {
+    "id": "extraction-evaluation",
+    "repository": "alexeygrigorev/ai-engineering-field-guide",
+    "commit": "ed590319553252e2b8275486597b144ac55a4f3c",
+    "url": "https://raw.githubusercontent.com/alexeygrigorev/ai-engineering-field-guide/ed590319553252e2b8275486597b144ac55a4f3c/job-market/_internal/eval/README.md",
+    "sha256": "ad078bec91b1c3ed74a6ab220c43e84885dfd83bca192ef805a40142b6f754ea",
+    "reviewed_on": "2026-10-09",
+    "source_revision_date": "2026-09-23",
+    "publication_or_release": "2026-08 (maintainer evaluation)",
+    "date_basis": "Dates stated in the pinned source or publication identifier; null means not established."
+  }
+]
