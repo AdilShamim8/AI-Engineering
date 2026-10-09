@@ -1,77 +1,39 @@
-# Worldwide AI Engineering Job Market Analysis (2026)
+# Understanding AI engineering job markets
 
-> **Based on an empirical analysis of 3,100+ verified job descriptions across North America, Europe, Asia-Pacific, and Global Remote markets — updated September 16, 2026.**
+Reviewed October 9, 2026. Regional comparisons need comparable data; a global title does not make a job-board sample representative.
 
----
+## Evidence available here
 
-## 🌍 Global Market Geography & Demand Distribution
+The [reproduced job snapshot](../research/job-market-summary.json) describes 1,086 stored records observed September 23, 2026, from the original field guide's dataset. It supports sample-level counts, not a worldwide demand distribution. The earlier page's regional percentages, salary ranges, year-over-year growth figures, callback multiplier, and hiring-manager percentage lacked traceable records and have been removed.
 
-The demand for AI Engineers has expanded rapidly beyond Silicon Valley into a worldwide talent market. While the United States continues to lead in absolute venture capital funding and frontier model creation, enterprise adoption across London, Zurich, Singapore, and India has surged dramatically.
+The upstream dataset covers selected job-board locations and contains both raw descriptions and model-derived annotations. A location can describe eligibility, office location, remote scope, or several cities. These must be resolved explicitly before aggregating by geography. One advertisement can contain multiple locations; counting each as a separate vacancy inflates demand.
 
-```
-                  GLOBAL AI ENGINEERING DEMAND BREAKDOWN (3,100+ POSTINGS)
-                  
-  North America (US & Canada)        [==================================] 54.2%
-  Europe (UK, Germany, Switzerland)  [====================] 21.8%
-  Asia-Pacific (Singapore, AU, JP)   [===========] 12.4%
-  South Asia & Middle East           [========] 7.1%
-  Latin America & Africa             [====] 4.5%
-```
+## Build a regional comparison that can be checked
 
----
+| Measurement decision | Required documentation |
+|---|---|
+| Sampling frame | Boards/employer pages, countries, languages, collection period, search terms, inclusion/exclusion rules |
+| Unit of analysis | Advertisement, distinct requisition, employer, or observed hiring event; these are different quantities |
+| Geography | Office versus eligibility versus remote scope; multi-location and unknown-location handling |
+| Role scope | Application engineering, model engineering, platform engineering, customer deployment; written classification rules |
+| Duplicates | Requisition IDs, cross-board copies, recurring observations and normalized-description checks |
+| Compensation | Local currency, base/bonus/equity distinction, disclosure coverage, period, level and employment type |
+| Validation | Reviewed raw records, annotation disagreement, missingness, sampling bias and reproducible code |
 
-## 🏙️ Top Worldwide Tech Hubs & Compensation Profiles
+Report results for the observed sample. Do not describe a change in advertisement wording or extraction model as a change in the labor market. Comparisons across dates require stable coverage, definitions and extraction methods.
 
-| Region | Primary Tech Hubs | Average Base Salary | Average Total Comp (Base + Equity + Bonus) | Market Characteristics |
-|---|---|---|---|---|
-| **US Tier 1** | San Francisco Bay Area, New York, Seattle | $175,000 – $245,000 | **$260,000 – $480,000+** | Frontier AI labs, high equity grants, fierce talent wars |
-| **US Tier 2 / Remote** | Austin, Denver, Boston, Chicago, US Remote | $150,000 – $210,000 | **$190,000 – $320,000** | Enterprise SaaS, pragmatic RAG and automation systems |
-| **United Kingdom** | London, Cambridge, Oxford | £95,000 – £155,000 | **£125,000 – £230,000** | FinTech, DeepMind ecosystem, HealthTech hubs |
-| **European Union** | Zurich, Berlin, Amsterdam, Paris | €105,000 – €175,000 | **€130,000 – €240,000** | Strict GDPR/EU AI Act compliance focus, Mistral ecosystem |
-| **Asia-Pacific** | Singapore, Sydney, Tokyo | S$160,000 – S$240,000 | **S$200,000 – S$340,000** | Regional APAC headquarters, banking AI transformation |
-| **India** | Bengaluru, Hyderabad, Gurugram, Pune | ₹3,200,000 – ₹6,500,000 | **₹4,500,000 – ₹9,500,000** | Rapidly shifting from offshore maintenance to core AI architecture |
-| **Global Remote** | Worldwide (Contract / EOR via Deel/Oyster) | $110,000 – $190,000 USD | **$130,000 – $250,000 USD** | Async-first, high autonomy, paid in USD or crypto/stablecoins |
+For salary comparisons, keep each geography and currency separate before using a documented, dated conversion. Zurich is in Switzerland, not the EU. Singapore-dollar salaries do not describe Sydney or Tokyo. Contractor revenue, employee salary, and expected private-company equity liquidity are different measures.
 
----
+## Evaluate an actual role
 
-## 🏢 The 3 Company Archetypes Hiring AI Engineers
+Read the responsibilities rather than relying on a title. Identify whether the job owns model development, application behavior, platform reliability, or customer integration. Inspect the employer's current posting for location eligibility, employment type, responsibilities, compensation disclosure and interview requirements.
 
-### 1. Frontier AI Labs & Foundations
-- **Examples:** OpenAI, Anthropic, Google DeepMind, Meta FAIR, Mistral AI, Cohere.
-- **What they build:** Foundational foundation models, multimodal reasoning engines, inference optimizations, alignment research.
-- **Hiring Focus:** Deep PyTorch/JAX distributed systems, CUDA kernels, tokenization mechanics, synthetic training pipelines, post-training RLHF/DPO.
+Useful questions for a hiring team:
 
-### 2. AI-Native Scaleups & Unicorns
-- **Examples:** Databricks, Scale AI, Perplexity, Cursor, Cognition, Harvey, Glean, Pinecone.
-- **What they build:** AI-first developer tools, enterprise semantic search, autonomous coding agents, domain-specific vertical workflows.
-- **Hiring Focus:** Extreme engineering velocity, MCP protocols, complex LangGraph state orchestration, low-latency streaming infrastructure, evaluation rigor.
+- What system or business outcome will this engineer own?
+- Which datasets and evaluations establish that it works?
+- Who owns security, on-call, deployment, and model/provider migrations?
+- Is the role primarily product engineering, model research, infrastructure, or customer deployment?
+- What level and compensation band are approved for this location and employment arrangement?
 
-### 3. Enterprise Adopters & Modernizers (Fortune 500)
-- **Examples:** JPMorgan Chase, Bloomberg, Walmart, Epic Systems, Pfizer, Siemens.
-- **What they build:** Internal knowledge management (Enterprise RAG), customer service automation, document analysis, compliance validation.
-- **Hiring Focus:** Security, RBAC multi-tenant isolation, audit logging, predictable latency, cost reduction, integration with legacy SQL/SAP databases.
-
----
-
-## 📊 Skill Demand Velocity (2024 vs. 2026)
-
-```
-  Skill / Technology               YoY Change in Job Postings
-  ------------------------------------------------------------
-  Context Engineering & Token Optimization   ▲ +310%
-  Model Context Protocol (MCP)               ▲ +420%
-  Automated Evaluation (RAGAS / TruLens)     ▲ +215%
-  Hybrid Retrieval (Dense + BM25)            ▲ +180%
-  LangGraph / Cyclic State Graphs            ▲ +165%
-  Fine-Tuning (LoRA / QLoRA)                 ▼ -18% (Stabilized for niche tasks)
-  Pure "Prompt Engineering"                  ▼ -82% (Dead as standalone title)
-  Traditional LeetCode DSA                   ▼ -45% (Replaced by System Design & Live Coding)
-```
-
----
-
-## 💡 What This Means for Your Job Search
-
-1. **Titles Are Noisy:** Search for `AI Engineer`, `Applied AI Engineer`, `Software Engineer - AI/LLM`, `Machine Learning Systems Engineer`, and `Full-Stack AI Developer`.
-2. **Evaluation is the Golden Ticket:** Candidates who know how to set up automated evaluation suites (RAGAS, LLM-as-judge, synthetic golden sets) receive 3.4x more interview callbacks than those who only list frameworks.
-3. **Full-Stack Competence Wins:** 93% of hiring managers prioritize engineers who can deploy a working API in Docker with monitoring over those who only understand prompt theory.
+These questions support a more reliable job search than unsupported claims about universal AI premiums or framework-driven callback rates. See [skills and evidence](02-skills.md), [compensation comparison](../interview/07-global-compensation-and-job-market.md), and [research methodology](../research/README.md).
