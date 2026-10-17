@@ -1,6 +1,6 @@
-# Portfolio Project Ideas for AI Engineers (September 16, 2026)
+# Portfolio — Project Ideas and Built Projects
 
-> Your portfolio is your proof. Verified and updated to September 16, 2026. In a market flooded with "I took a prompt engineering course" candidates, a well-built portfolio is the strongest signal you can send. This guide covers project ideas, interview strategy, and production practices that hiring managers actually look for.
+> Your portfolio is your proof. Verified and updated to September 16, 2026. In a market flooded with "I took a prompt engineering course" candidates, a well-built portfolio is the strongest signal you can send. This guide covers project ideas, interview strategy, and production practices that hiring managers actually look for. For completed projects with source code, see [Built projects](#built-projects) below.
 
 ---
 
@@ -454,3 +454,29 @@ This is a 10/10 answer. It shows tool proficiency, critical thinking, and engine
 ---
 
 *Your portfolio is not just proof of what you can build — it's proof of how you think. Make it count.*
+
+---
+
+## Built projects
+
+> Curriculum reviewed October 9, 2026. Linked projects have not been executed or independently certified as production-ready in this review. *(Merged from the former `Project/` directory, October 17, 2026.)*
+
+### Learn by doing — five project directions, each building on the last
+
+| Step | Project | What you build | Core skills |
+|---|---|---|---|
+| **101** | [LLM Playground](https://github.com/AdilShamim8/LLM-Playground-101) | An interactive environment to experiment with language models | `LLM APIs` `Prompt Engineering` `Streaming` |
+| **102** | [Customer Support Chatbot](https://github.com/AdilShamim8/Customer-Support-Chatbot-102) | A support-bot project exploring memory and context | `RAG` `Memory` `Conversation Design` |
+| **103** | [Ask the Web](https://github.com/AdilShamim8/Ask-the-Web-103) | An LLM agent with real-time web access and grounding | `Tool Use` `Web Search` `Grounding` |
+| **104** | [Deep Research](https://github.com/AdilShamim8/Deep-Research-104) | A multi-step autonomous research and synthesis system | `Agentic Workflows` `Planning` `Synthesis` |
+| **105** | [Multi-Modal AI](https://github.com/AdilShamim8/Multi-Modal-105) | A system that processes vision, audio, and text together | `Vision` `Audio` `Cross-modal Reasoning` |
+
+Start at 101; ship something real at every step.
+
+### Advance through evidence
+
+Treat these links as project directions, not proof of deployed behavior. For each project, document dataset rights and provenance, a simpler baseline, a frozen evaluation protocol (see the [AI Evaluation section](../105_AI-Evaluation/README.md)), per-item failures, authorization boundaries, measured latency/cost and a recovery plan. Use real licensed records for factual measurements; label fixtures and simulated interactions as such.
+
+The [advanced path](../learning-paths/advanced-engineering.md) defines exit criteria. The [research guide](../research/README.md) provides an executed real-job dataset audit and dated references for retrieval and software-agent tasks. A project title or polished demo does not establish production readiness.
+
+For project **specifications with "done when" criteria** (as opposed to built repositories), see the [12 portfolio projects in the accelerated roadmap](../roadmap/accelerated-roadmap/projects.md).
