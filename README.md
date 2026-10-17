@@ -15,6 +15,16 @@ The reproduced source contains **8,051 stored job observations across nine scrap
 
 Advanced practice requires a baseline, versioned data, held-out evaluation, failure analysis, authorization checks, measured operating costs and a recovery plan. The curriculum retains its introductory explanations; the advanced path connects them to reviewable engineering artifacts.
 
+## Roadmaps (Full + Accelerated 100-Day)
+
+Two complete roadmaps for becoming an AI engineer, plus a full interview-preparation track — structure adapted verbatim from the CampusX AI Engineering Roadmap 2026, with every learning resource replaced by free worldwide alternatives:
+
+- [Roadmap hub — which one to follow](roadmap/README.md) — comparison, and how important each topic is for interviews vs the real-world job
+- [Full Roadmap](roadmap/full-roadmap/README.md) — 16 levels · 7 phases · 286 sessions · 14 projects; 100% coverage from software fundamentals to interview prep
+- [Accelerated Roadmap — 100 Days of AI Engineering](roadmap/accelerated-roadmap/README.md) — 6 modules · 100 days; the core ~80% you need to land your first AI engineering job
+- [The 100 GenAI / AI Engineer Interview Questions](roadmap/accelerated-roadmap/interview-questions.md) — copied exactly, with strong-answer outlines and a practice loop
+- [12 portfolio projects](roadmap/accelerated-roadmap/projects.md) — full specifications with "done when" criteria and a target-role selection table
+
 ## Technical Curriculum (101–104)
 
 - [101 — LLM Literacy](101_LLM-Literacy/README.md) — first-principles guide to transformer mechanics, inference sampling, prompt & context engineering
