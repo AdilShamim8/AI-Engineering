@@ -32,6 +32,7 @@ RAG is the longest module (32 days) because it is the most frequently asked inte
 ## After the 100 days
 
 - [**Interview Prep — the 100 questions**](interview-questions.md) — question types, all 100 questions with strong-answer outlines, and how to practice (mock interview loop with a 3-round structure and scoring rubric).
+- [**Interview Answers — all 100 answered in full**](interview-answers.md) — every question expanded into a complete, speakable model answer, mirroring the question bank section by section.
 - [**Portfolio Projects**](projects.md) — 12 fully specified projects with must-haves, stretch goals, suggested data and "done when" criteria, plus a portfolio-selection table by target role and a list of projects to avoid.
 
 ---
@@ -52,4 +53,4 @@ This track covers the core. For deeper or specialist topics, the [full roadmap](
 1. **One day at a time.** Each unit is a day of work; the day ranges are in every module page and unit header.
 2. **Do the "Try it" exercises.** Every unit has one — the track is built on building, not watching.
 3. **Finish each module's outcome.** Move on when you can do everything in the module's "By the end" statement.
-4. **Then defend it.** The interview questions and portfolio projects are the proof that the 100 days worked.
+4. **Then defend it.** The interview questions with full model answers and the portfolio projects are the proof that the 100 days worked.

@@ -183,6 +183,7 @@ demonstrate that you can reason like an AI engineer under interview conditions, 
 *Independently researched free worldwide resources (verified October 2026). No paid or CampusX course links are included.*
 
 - [The 100 interview questions in this roadmap](../accelerated-roadmap/interview-questions.md) — practice bank with strong-answer outlines for every question.
+- [The 100 interview questions, answered in full](../accelerated-roadmap/interview-answers.md) — every question expanded into a complete, speakable model answer.
 - [This repository's interview section](../../interview/README.md) — process, question banks by round, salary negotiation and resume playbook.
 - [Introduction to Machine Learning Interviews (free book repo)](https://github.com/chiphuyen/ml-interviews-book) — Chip Huyen's open interview-preparation book.
 - [AI System Design Guide (GitHub)](https://github.com/ombharatiya/ai-system-design-guide) — system-design practice for AI applications.

@@ -1,6 +1,6 @@
 # AI Engineer Roadmaps (2026)
 
-Two complete roadmaps for becoming an AI engineer — a **full in-depth roadmap** that covers 100% of the craft, and an **accelerated 100-day roadmap** that covers the ~80% you need to land your first job — plus a **complete interview preparation track** with the 100 most-asked GenAI/AI-engineer interview questions.
+Two complete roadmaps for becoming an AI engineer — a **full in-depth roadmap** that covers 100% of the craft, and an **accelerated 100-day roadmap** that covers the ~80% you need to land your first job — plus a **complete interview preparation track** with the 100 most-asked GenAI/AI-engineer interview questions, every one answered in full.
 
 > **Source attribution:** the roadmap structure, levels, modules, session counts, interview/on-the-job weights, and the 100 interview questions in this section are adapted verbatim from the [CampusX AI Engineering Roadmap 2026](https://ai-engineer-roadmap-2026.vercel.app/) (© 2026 CampusX, retrieved October 17, 2026). This repository is not affiliated with CampusX. Every *Free learning resources* section is independently curated from free worldwide alternatives — no CampusX courses or paid referrals are included anywhere in this section.
 
@@ -11,11 +11,11 @@ Two complete roadmaps for becoming an AI engineer — a **full in-depth roadmap*
 | | [Full Roadmap](full-roadmap/README.md) | [Accelerated Roadmap (100 Days)](accelerated-roadmap/README.md) |
 |---|---|---|
 | **Goal** | Master AI engineering end to end, at depth | Get job-ready with the core ~80% as fast as possible |
-| **Structure** | 16 levels · 7 phases · 286 sessions · 145+ modules | 6 modules · 100 days · 86 units |
+| **Structure** | 16 levels · 7 phases · 286 sessions · 165 modules | 6 modules · 100 days · 86 units |
 | **Coverage** | 100% — including multimodal, fine-tuning, managed platforms, context engineering | ~80% — LLMs, APIs, prompting, RAG, agents, shipping to production |
 | **Best for** | Career switchers with time, engineers targeting senior scope | Working professionals, bootcamp-style timelines, first-job seekers |
 | **Projects** | 14 capstone projects across levels | Course project + [12 portfolio projects](accelerated-roadmap/projects.md) |
-| **Interview prep** | [Level 15](full-roadmap/level-15-interview-prep.md) | [The 100 interview questions](accelerated-roadmap/interview-questions.md) |
+| **Interview prep** | [Level 15](full-roadmap/level-15-interview-prep.md) | [The 100 interview questions](accelerated-roadmap/interview-questions.md) + [full answers](accelerated-roadmap/interview-answers.md) |
 | **Time estimate** | Multi-month, at your own pace | 100 days of focused work |
 
 **Recommended path:** finish the [100-day accelerated roadmap](accelerated-roadmap/README.md) first to become employable, then return to the [full roadmap](full-roadmap/README.md) for the specialist levels — managed platforms (L11), multimodal (L12), fine-tuning (L13) — as your career demands them. Every accelerated module names exactly what it skips and where to find it in the full roadmap.
@@ -68,7 +68,8 @@ roadmap/
     ├── README.md                ← 100 days · 6 modules · 86 units
     ├── module-1 … module-6      ← one page per module: units, day-by-day
     ├── projects.md              ← 12 portfolio projects with "done when" criteria
-    └── interview-questions.md   ← the 100 interview questions, copied exactly
+    ├── interview-questions.md   ← the 100 interview questions, copied exactly
+    └── interview-answers.md     ← all 100 questions answered in full
 ```
 
 Both roadmaps are cross-linked with the rest of this repository: every level lists the matching curriculum notes in [101 LLM Literacy](../101_LLM-Literacy/README.md), [102 AI Application Development](../102_AI-Application-Development/README.md), [103 Agentic AI](../103_Agentic%20AI/README.md) and [104 LLMOps](../104_LLMOps/README.md), plus this guide's own [interview section](../interview/README.md).

@@ -4,6 +4,8 @@
 
 > **Source:** these 100 questions and their strong-answer outlines are copied verbatim from the [CampusX AI Engineering Roadmap interview prep](https://ai-engineer-roadmap-2026.vercel.app/100-days/interview-prep/) (retrieved October 17, 2026). Practice guidance below each question is part of the original. This repository is not affiliated with CampusX; see the [interview section](../../interview/README.md) for this guide's own interview materials.
 
+> **Every question is answered in full** in the companion file: [Interview Answers — the 100 questions, answered](interview-answers.md). Each outline below is the original one-line checklist; the companion expands it into a complete, speakable model answer.
+
 ---
 
 ## Question types
