@@ -181,7 +181,7 @@ Compare them on
 
 **Outcome** · Understand the agent-framework landscape and choose a framework based on architecture rather than popularity.
 
-#### Capstone: Build a Production-Style Agent
+#### Capstone: Build a Production-Style Agent (M5.11 · 1 session)
 
 - Choosing a substantial project Choose one substantial project.
 - Option A · Research agent

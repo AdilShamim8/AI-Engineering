@@ -157,7 +157,7 @@ It directly **turns what you know into answers**. Being able to explain trade-of
 
 **Outcome** · Make strong technical thinking visible to the interviewer.
 
-#### Capstone: Full Mock GenAI Interview Loop
+#### Capstone: Full Mock GenAI Interview Loop (M15.10 · 2 sessions)
 
 - Simulate a complete interview Simulate a complete AI-engineering interview.
 - Round 1 · Scenario & debugging

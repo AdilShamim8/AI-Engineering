@@ -150,7 +150,7 @@ Most business AI products need answers **grounded in company data**. A lot of re
 
 **Outcome** · Use RAG frameworks productively while still understanding the retrieval and generation mechanics underneath them.
 
-#### Capstone: Build a Hybrid Search Engine
+#### Capstone: Build a Hybrid Search Engine (M4.7 · 1 session)
 
 - Ingest, chunk, embed & index a real corpus Ingest and clean a real document corpus, preserve useful metadata, chunk the documents, generate embeddings, and index them in a vector database.
 - Dense + BM25 + hybrid retrieval Implement dense search + **BM25** + hybrid retrieval, including metadata filters where useful.
@@ -158,7 +158,7 @@ Most business AI products need answers **grounded in company data**. A lot of re
 
 a working hybrid retrieval system ready to become the retrieval component of a RAG application.
 
-#### Capstone: Deploy an Advanced RAG Application
+#### Capstone: Deploy an Advanced RAG Application (M4.15 · 1 session)
 
 - A document Q&A app end to end Build a document Q&A application over a real corpus with ingestion, chunking, retrieval, generation, citations, and abstention.
 - A baseline plus one real improvement Establish a baseline **RAG** pipeline and add at least one meaningful improvement such as reranking, query transformation, **RAG-Fusion**, hybrid retrieval, or an advanced **RAG** variant.

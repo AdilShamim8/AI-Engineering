@@ -193,7 +193,7 @@ Moving
 
 **Outcome** · Adopt a platform without being trapped by it, and move a workload between platforms without discovering the coupling too late.
 
-#### Capstone: deploy on a managed platform
+#### Capstone: deploy on a managed platform (M11.10 · 1 session)
 
 - Redeploy an app you already built Take an application you built in an earlier level and redeploy it against a managed platform, keeping the behavior and changing the plumbing.
 - Cloud identity, no API key Authenticate through cloud identity with least-privilege access to a named set of models, and remove the provider API key from the application entirely.

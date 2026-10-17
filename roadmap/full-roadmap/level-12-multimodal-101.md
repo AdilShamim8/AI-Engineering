@@ -249,7 +249,7 @@ Finishing a long run
 
 **Outcome** · Decide which parts of a multimodal system belong on the user's device and accept the quality trade knowingly.
 
-#### Capstone: ship a multimodal build
+#### Capstone: ship a multimodal build (M12.13 · 1 session)
 
 - Pick one realistic build Choose one realistic build and take it all the way: a voice agent, a document-understanding pipeline, a visual search tool, or a research-report generator.
 - At least two modalities Combine at least two modalities in a single application so the build exercises a real cross-modal boundary rather than one model in isolation.

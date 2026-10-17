@@ -137,7 +137,7 @@ Hooks, plugins & the professional loop
 
 **Outcome** · Take a service that works locally, containerize it, deploy it, and debug it when the production environment behaves differently.
 
-#### Capstone: Ship a No-AI REST Service
+#### Capstone: Ship a No-AI REST Service (M0.8 · 1 session)
 
 - The full no-AI stack Build a complete application using **Python** + **FastAPI** + **PostgreSQL** + **Git** + **Docker** + deployment, with no LLM or AI dependency.
 - Choosing a realistic domain Design a small but realistic domain such as task management, bookmarks, expense tracking, inventory, notes, or support tickets.

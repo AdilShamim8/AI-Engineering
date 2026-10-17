@@ -206,7 +206,7 @@ Tracing and online evaluation
 
 **Outcome** · Detect, contain, and recover from LLM-specific incidents with a practised response rather than improvisation.
 
-#### Capstone: LLMOps Project
+#### Capstone: LLMOps Project (M10.11 · 3 sessions)
 
 - One app, the whole lifecycle Take the agent from Level 5 or the **RAG** application from Level 4 through the whole lifecycle of this level.
 - Versioned prompts & tracked runs Version every prompt in a registry with a production label, and record experiments with their parameters, metrics, and artifacts.

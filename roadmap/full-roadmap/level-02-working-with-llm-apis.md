@@ -117,7 +117,7 @@ This is the **core of the daily work**: calling models, getting structured outpu
 - **Comparing orchestration approaches** — Compare orchestration approaches on development speed, abstraction overhead, debugging, portability, dependency complexity, state management, and control.
 - **Choosing one for your application** — Develop the ability to choose between raw SDKs, **LangChain**, graph-based frameworks, **LlamaIndex**, **DSPy**, or a custom orchestration layer based on the application.
 
-#### Capstone: streaming tool-using assistant
+#### Capstone: streaming tool-using assistant (M2.12 · 1 session)
 
 - A streaming assistant with real tools Build a conversational assistant that maintains history, uses system instructions, streams responses, and exposes at least 2–3 real tools/APIs.
 - Sequential or parallel tool use Support sequential or parallel tool use where appropriate and validate all model-generated tool arguments.

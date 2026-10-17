@@ -100,7 +100,7 @@ Secure LLM, RAG, and agent systems against model-specific attacks, unsafe action
 
 **Outcome** · Recognize when an AI application creates governance or compliance obligations.
 
-#### Capstone: Red-Team & Secure an Agentic RAG App
+#### Capstone: Red-Team & Secure an Agentic RAG App (M8.9 · 1 session)
 
 - Attack an app you already built Take an application built in earlier levels and attack it using:
 - Direct & indirect prompt injection direct and indirect prompt injection

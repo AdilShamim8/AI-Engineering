@@ -109,7 +109,7 @@ Harnesses for long-running work
 
 **Outcome** · Design a harness that keeps an agent productive and on track across long tasks that no single context window can hold.
 
-#### Capstone: Context-Managed Long-Horizon Agent
+#### Capstone: Context-Managed Long-Horizon Agent (M6.9 · 1 session)
 
 - A long task that degrades naively Take a tool-using agent from Level 5 and run it through a long task where naive context accumulation causes degradation.
 - An explicit context budget Define an explicit context budget and dynamically decide what to keep, retrieve, compress, offload, or discard.

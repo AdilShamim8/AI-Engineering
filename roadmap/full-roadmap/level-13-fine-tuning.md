@@ -192,7 +192,7 @@ Owning it in production
 
 **Outcome** · Deploy a fine-tuned model behind your existing gateway with versioning, rollback, and measured latency and cost, and know when it needs retraining.
 
-#### Capstone: a LoRA that beats a prompted baseline
+#### Capstone: a LoRA that beats a prompted baseline (M13.10 · 1 session)
 
 - A narrow task with a measured failure Choose one narrow, real task where the best prompt you can write still fails in a way you can measure.
 - Metric & threshold up front Write down the failure, the metric that will judge success, and the threshold the tune must clear before any training starts.

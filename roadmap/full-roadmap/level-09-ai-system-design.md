@@ -142,7 +142,7 @@ Deep research agent
 
 **Outcome** · Defend architectural decisions rather than merely draw boxes and arrows.
 
-#### Capstone: AI System Design Document
+#### Capstone: AI System Design Document (M9.10 · 1 session)
 
 - A complete design document Choose a substantial AI product and produce a complete design covering:
 - Requirements & success criteria requirements and success criteria

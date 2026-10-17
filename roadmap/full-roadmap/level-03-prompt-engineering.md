@@ -78,7 +78,7 @@ You **write and revise prompts constantly**. Small changes to instructions often
 - **Wording is not a security boundary** — Understand that prompt wording alone is not a security boundary; permissions and sensitive actions must be controlled by application code.
 - **Deeper defences come later** — Leave deeper adversarial security and defenses for the later security level.
 
-#### Optimize a Real Prompt
+#### Capstone: Optimize a Real Prompt (module 09 · capstone)
 
 - Choosing a realistic task Choose one realistic task such as classification, extraction, support answering, or a domain-specific assistant.
 - A test set and competing prompt versions Create a small test set and develop multiple prompt versions. Compare them on:
