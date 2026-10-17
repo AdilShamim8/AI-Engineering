@@ -174,7 +174,7 @@ a design you could defend in an AI system-design interview or an engineering arc
 - [AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html) — free cloud architecture guidance covering reliability, cost and performance trade-offs.
 - [ByteByteGo System Design Newsletter](https://bytebytego.com/) — free weekly articles on caching, queues, load balancing and scaling patterns.
 - [This repository's production case studies](../../interview/09-real-world-case-studies.md) — design exercises with validation requirements.
-- [Google — Architecting AI applications guidance](https://cloud.google.com/architecture/ai-architecture) — free reference architectures for retrieval, agents and serving.
+- [Google Cloud Architecture Center — AI and ML resources](https://cloud.google.com/architecture/ai-ml) — free reference architectures for retrieval, agents and serving.
 
 ## In this repository
 

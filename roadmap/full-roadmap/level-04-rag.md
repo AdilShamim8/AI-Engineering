@@ -183,7 +183,7 @@ a complete RAG application that goes substantially beyond a basic retrieve → s
 - [Sentence Transformers documentation](https://sbert.net/) — generating and working with open embedding models.
 - [MTEB leaderboard](https://github.com/embeddings-benchmark/mteb) — compare embedding models on retrieval tasks.
 - [Microsoft GraphRAG (GitHub)](https://github.com/microsoft/graphrag) — reference implementation of graph-based retrieval.
-- [HyDE / RAG-Fusion notebooks](https://github.com/langchain-ai/langchain/blob/master/cookbook/) — community implementations of query transformation techniques in the LangChain cookbook.
+- [LangChain — RAG tutorial](https://python.langchain.com/docs/tutorials/rag/) — official end-to-end retrieval tutorial; and the [Hugging Face Open-Source AI Cookbook's advanced RAG recipes](https://huggingface.co/learn/cookbook/en/advanced_rag) for query-transformation techniques.
 
 ## In this repository
 

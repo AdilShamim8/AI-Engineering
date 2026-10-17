@@ -220,7 +220,7 @@ a served fine-tuned model that beats a strong prompted baseline on a stated metr
 - [Build a Large Language Model (From Scratch) — Sebastian Raschka (GitHub)](https://github.com/rasbt/LLMs-from-scratch) — code repository accompanying the book; the pretraining-to-finetuning mechanics, free to study.
 - [Axolotl documentation](https://axolotl-ai-cloud.github.io/axolotl/) — configuration-driven fine-tuning.
 - [Google Colab](https://colab.research.google.com/) and [Kaggle Notebooks](https://www.kaggle.com/code) — free GPU access for small tunes.
-- [vLLM — multi-LoRA serving](https://docs.vllm.ai/features/compatibility.html) — serving many adapters on one base model.
+- [vLLM — LoRA adapters in serving](https://docs.vllm.ai/en/latest/features/lora.html) — serving many adapters on one base model.
 
 ## In this repository
 

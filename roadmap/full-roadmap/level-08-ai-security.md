@@ -129,7 +129,7 @@ an AI system designed to remain safe even when the model makes a bad decision or
 - [OWASP Top 10 for LLM Applications](https://genai.owasp.org/llm-top-10) — the canonical, freely available list of LLM application risks (updated 2026 edition).
 - [OWASP Gen AI Security Project](https://genai.owasp.org/) — free guides, checklists and agentic security resources.
 - [Simon Willison's blog — prompt injection tag](https://simonwillison.net/tags/prompt-injection/) — the most consistently current practitioner writing on injection attacks and defenses.
-- [Anthropic — Countering real-world prompt injection attacks](https://www.anthropic.com/news/countering-real-world-prompt-injection-attacks) — provider-side research on mitigations.
+- [Anthropic — Mitigating prompt injections in browser use](https://www.anthropic.com/research/prompt-injection-defenses) — provider-side research on layered injection defenses.
 - [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) — free framework for governance, risk and trustworthy AI.
 - [EU AI Act — official portal](https://artificialintelligenceact.eu/) — free access to the regulation text and timelines.
 - [Microsoft — AI security and red teaming guidance](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/prompt-engineering) — provider guidance on securing generative AI deployments.
