@@ -211,7 +211,7 @@ Jenny, who has worked at both:
 
 - [Building LLM Apps: A Step-by-Step Guide](https://huyenchip.com/2023/04/11/llm-engineering.html) — Chip Huyen
 - [Prompt Engineering Guide](https://www.promptingguide.ai/) — DAIR.AI
-- [The AI Engineering Stack](https://www.latent.space/p/ai-engineering-stack) — Latent Space Podcast
+- [The Rise of the AI Engineer](https://www.latent.space/p/ai-engineer) — Latent Space
 
 ---
 

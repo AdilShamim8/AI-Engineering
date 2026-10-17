@@ -771,7 +771,7 @@ Reported by candidates:
 [^x-avi-chawla-1]: [X - Avi Chawla, Unified Query Engine (Google)](https://x.com/_avichawla/status/1986320178783867036)
 [^x-interviewstack-meta]: [X - InterviewStack.io, Meta LoRA Question](https://x.com/gnan54796/status/2007302142550565123)
 [^x-michael-taiwo]: [X - Michael Taiwo, AI Literacy Interview Questions](https://x.com/AskMichaelTaiwo/status/1987201166157946887)
-[^x-aryyann8]: [X - AI Engineer Intern Interview](https://x.com/aryyann8/status/2009314129878896960) (Jan 2026)
+[^x-aryyann8]: X - AI Engineer Intern Interview (Jan 2026). Original post URL no longer resolves (removed or relocated); attribution retained, content unverified.
 [^reddit-genai-product]: [Reddit - Technical Interview for GenAI Engineer Role](https://www.reddit.com/r/leetcode/comments/1rd6yki/technical_interview_for_genai_engineer_role_for_a) (r/leetcode)
 [^reddit-amazon-genai]: [Reddit - ML Engineer GenAI Amazon](https://www.reddit.com/r/datascience/comments/1jrdrpx/ml_engineer_genai_amazon/) (r/datascience)
 [^glassdoor-quantiphi]: [Glassdoor - Quantiphi ML Engineer Interview](https://www.glassdoor.com/Interview/NLP-related-question-tokenization-fine-tuning-ML-LIFE-CYCLE-QTN_8617277.htm)
