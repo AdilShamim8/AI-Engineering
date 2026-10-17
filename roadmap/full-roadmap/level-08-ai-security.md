@@ -132,11 +132,12 @@ an AI system designed to remain safe even when the model makes a bad decision or
 - [Anthropic — Mitigating prompt injections in browser use](https://www.anthropic.com/research/prompt-injection-defenses) — provider-side research on layered injection defenses.
 - [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) — free framework for governance, risk and trustworthy AI.
 - [EU AI Act — official portal](https://artificialintelligenceact.eu/) — free access to the regulation text and timelines.
-- [Microsoft — AI security and red teaming guidance](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/prompt-engineering) — provider guidance on securing generative AI deployments.
+- [Microsoft AI Red Team guidance](https://learn.microsoft.com/en-us/security/ai-red-team) — provider guidance on AI red teaming and securing generative AI deployments.
 - [PyRIT (Python Risk Identification Toolkit, Microsoft)](https://github.com/Azure/PyRIT) — open-source red-teaming automation for LLM systems.
 
 ## In this repository
 
+- **[106 — AI Security & Safety](../../106_AI-Security-Safety/README.md)** — the dedicated knowledge base for this level: [threat modeling](../../106_AI-Security-Safety/01-threat-modeling.md), [prompt injection defense](../../106_AI-Security-Safety/02-prompt-injection-defense.md), [red teaming](../../106_AI-Security-Safety/03-red-teaming.md), [agent & MCP security](../../106_AI-Security-Safety/04-agent-mcp-security.md), [AI alignment](../../106_AI-Security-Safety/05-ai-alignment.md), [responsible AI](../../106_AI-Security-Safety/06-responsible-ai.md)
 - [Safety & guardrails curriculum](../../104_LLMOps/4.%20Safety%20%26%20Guardrails/1.%20Input%20Safety.md)
 - [Prompt injection & jailbreak defense note](../../104_LLMOps/4.%20Safety%20%26%20Guardrails/4.%20Prompt%20Injection%20%26%20Jailbreak%20Defense.md)
 - [Governance curriculum](../../104_LLMOps/5.%20Governance/1.%20Data%20Governance.md)

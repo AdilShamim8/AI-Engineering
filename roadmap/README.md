@@ -72,7 +72,7 @@ roadmap/
     └── interview-answers.md     ← all 100 questions answered in full
 ```
 
-Both roadmaps are cross-linked with the rest of this repository: every level lists the matching curriculum notes in [101 LLM Literacy](../101_LLM-Literacy/README.md), [102 AI Application Development](../102_AI-Application-Development/README.md), [103 Agentic AI](../103_Agentic%20AI/README.md) and [104 LLMOps](../104_LLMOps/README.md), plus this guide's own [interview section](../interview/README.md).
+Both roadmaps are cross-linked with the rest of this repository: every level lists the matching curriculum notes in [101 LLM Literacy](../101_LLM-Literacy/README.md), [102 AI Application Development](../102_AI-Application-Development/README.md), [103 Agentic AI](../103_Agentic%20AI/README.md) and [104 LLMOps](../104_LLMOps/README.md), the reference knowledge bases [105 AI Evaluation](../105_AI-Evaluation/README.md) and [106 AI Security & Safety](../106_AI-Security-Safety/README.md), plus this guide's own [interview section](../interview/README.md).
 
 ---
 

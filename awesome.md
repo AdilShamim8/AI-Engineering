@@ -84,6 +84,13 @@ Choose tools against a measured workflow. A framework alone does not establish c
 - [DeepEval](https://github.com/confident-ai/deepeval) — LLM application-evaluation tooling.
 - [TruLens](https://github.com/truera/trulens) — Evaluation and tracking for LLM experiments and agents.
 - [promptfoo](https://github.com/promptfoo/promptfoo) — Prompt/application testing and security-evaluation tooling.
+- [MT-Bench / FastChat LLM judge](https://github.com/lm-sys/FastChat/tree/main/fastchat/llm_judge) — The original MT-Bench questions and judging code from the LLM-as-a-Judge paper.
+- [OpenAI Evals](https://github.com/openai/evals) — Framework for benchmarking language models.
+- [Hamel Husain — Your AI Product Needs Evals](https://hamel.dev/blog/posts/evals/) — The practitioner essay on failure-driven eval suites.
+- [Anthropic Engineering — Demystifying evals for AI agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents) — How a frontier lab structures agent evaluation (Jan 2026).
+- [METR — Recent Frontier Models Are Reward Hacking](https://metr.substack.com/p/2025-06-05-recent-reward-hacking) — Measured reward hacking in frontier-model evaluation runs (June 2025).
+- [Wang et al. — How We Broke Top AI Agent Benchmarks](https://arxiv.org/abs/2605.12673) — Demonstrated exploits of eight major agent benchmarks (April 2026).
+- [This guide's AI Evaluation section](105_AI-Evaluation/README.md) — fundamentals, LLM-as-a-Judge, agent benchmarks, RAG evaluation, eval engineering.
 - [This guide's reproducible research](research/README.md) — Pinned job-posting analysis, source dates, dataset limits and reproduction commands.
 
 Inspect each dataset's license, origin, annotations and split. Keep real observations, model-derived labels and simulated/synthetic examples distinct. Scores are specific to a task, configuration and evaluation version.
@@ -111,7 +118,19 @@ Collections provide discovery, not independent verification of every deployment 
 ## Security references
 
 - [OWASP Top 10 for LLM Applications](https://github.com/OWASP/www-project-top-10-for-large-language-model-applications) — LLM application risks and mitigations.
+- [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026) — Agentic-specific risks ASI01–ASI10 (goal hijack, tool misuse, memory poisoning, cascading failures).
 - [garak](https://github.com/NVIDIA/garak) — LLM vulnerability-scanning project.
+- [PyRIT](https://github.com/Azure/PyRIT) — Microsoft's red-teaming framework for multi-turn attack campaigns (Crescendo, TAP, Skeleton Key).
+- [promptfoo red teaming](https://www.promptfoo.dev/docs/red-team/) — OWASP-mapped adversarial testing in CI; plugins cover 50+ vulnerability types.
+- [Simon Willison — prompt injection tag](https://simonwillison.net/tags/prompt-injection/) — The most consistently current practitioner record of injection attacks and defenses.
+- [Anthropic — Mitigating prompt injections in browser use](https://www.anthropic.com/research/prompt-injection-defenses) — Provider research on layered injection defense (Nov 2025).
+- [Anthropic — Disrupting the first reported AI-orchestrated cyber espionage campaign](https://www.anthropic.com/news/disrupting-AI-espionage) — The Claude Code espionage case (Nov 2025); primary-source disclosure.
+- [Invariant Labs — MCP tool poisoning](https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks) — Tool poisoning, rug pulls and cross-server shadowing demonstrated.
+- [Cloud Security Alliance — MCP Security Crisis](https://labs.cloudsecurityalliance.org/research/csa-research-note-mcp-security-crisis-20260504-csa-styled) — Analysis of the April 2026 STDIO transport flaw and MCP supply-chain exposure.
+- [CaMeL — Defeating Prompt Injections by Design](https://arxiv.org/abs/2503.18813) — Google DeepMind's capability-based architecture for provable injection defense.
+- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) — Voluntary risk-management framework with a [Generative AI Profile](https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence).
+- [EU AI Act portal](https://artificialintelligenceact.eu/implementation-timeline/) — Regulation text and the phased implementation timeline.
+- [This guide's AI Security & Safety section](106_AI-Security-Safety/README.md) — threat modeling, red teaming, agent & MCP security, alignment, responsible AI.
 
 Test actual permissions, data boundaries and side effects. Passing a scanner does not establish complete resistance to injection or leakage.
 

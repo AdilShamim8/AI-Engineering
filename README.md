@@ -3,6 +3,8 @@
 A curriculum and field guide for building, evaluating and operating AI systems.
 
 > **Evidence review: October 9, 2026.** The latest job-data snapshot inspected is September 23, 2026. Review dates and source publication/collection dates are separate. Some long-form legacy claims still need source-level verification; see the [audit](research/audit-2026-10-09.md).
+>
+> **Section review: October 17, 2026.** The [AI Evaluation](105_AI-Evaluation/README.md) and [AI Security & Safety](106_AI-Security-Safety/README.md) sections were added with all references verified on that date.
 
 ## Start here
 
@@ -25,12 +27,14 @@ Two complete roadmaps for becoming an AI engineer, plus a full interview-prepara
 - [The 100 GenAI / AI Engineer Interview Questions](roadmap/accelerated-roadmap/interview-questions.md) — copied exactly, with strong-answer outlines and a practice loop
 - [12 portfolio projects](roadmap/accelerated-roadmap/projects.md) — full specifications with "done when" criteria and a target-role selection table
 
-## Technical Curriculum (101–104)
+## Technical Curriculum (101–106)
 
 - [101 — LLM Literacy](101_LLM-Literacy/README.md) — first-principles guide to transformer mechanics, inference sampling, prompt & context engineering
 - [102 — AI Application Development](102_AI-Application-Development/README.md) — orchestration, vector databases, complete RAG curriculum, memory systems, and fine-tuning
 - [103 — Agentic AI](103_Agentic%20AI/README.md) — autonomous planning loops, Model Context Protocol (MCP), agentic frameworks, and multi-agent orchestration
 - [104 — LLMOps](104_LLMOps/README.md) — deployment architectures, observability, safety guardrails, governance, and enterprise scaling
+- [105 — AI Evaluation](105_AI-Evaluation/README.md) — evaluation fundamentals, LLM-as-a-Judge, agent benchmarks and the integrity crisis, RAG evaluation practice, and eval engineering in CI/CD
+- [106 — AI Security & Safety](106_AI-Security-Safety/README.md) — threat modeling (OWASP LLM + Agentic Top 10), prompt injection defense, red teaming, agent & MCP security, AI alignment, and responsible AI governance
 
 
 ## The AI Engineer Role
@@ -73,7 +77,7 @@ Two complete roadmaps for becoming an AI engineer, plus a full interview-prepara
 
 ## Portfolio
 
-- [Project ideas](portfolio/README.md) — real project examples that demonstrate AI engineering skills
+- [Project ideas and built projects](portfolio/README.md) — project specifications with evaluation guidance, plus the five built project repositories (101–105)
 
 
 ## [Awesome AI Engineering](awesome.md)
