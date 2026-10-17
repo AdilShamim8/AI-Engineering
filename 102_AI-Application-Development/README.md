@@ -12,7 +12,7 @@
 [![Modules](https://img.shields.io/badge/Modules-6-blue.svg)](#-learning-modules)
 [![Topics](https://img.shields.io/badge/Topics-35%2B-green.svg)](#-learning-modules)
 [![Level](https://img.shields.io/badge/Level-Intermediate_%E2%86%92_Advanced-orange.svg)](#-who-is-this-for)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/AdilShamim8/102_AI-Application-Development/pulls)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/AdilShamim8/AI-Engineering/pulls)
 
 <br/>
 
@@ -299,7 +299,7 @@ This approach is based on the **retrieval practice effect** — forcing predicti
 
 **1. Clone the repository**
 ```bash
-git clone https://github.com/AdilShamim8/102_AI-Application-Development.git
+git clone https://github.com/AdilShamim8/AI-Engineering.git
 cd 102_AI-Application-Development
 ```
 

@@ -679,11 +679,11 @@ Reported by candidates:
 [^gh-rokomari]: [GitHub - RokomariTask](https://github.com/gazitanbhir/RokomariTask) - Rokomari.com AI Engineer
 [^gh-streamkar]: [GitHub - Streamkar-Chatbot](https://github.com/Tejasv2002/Streamkar-Chatbot) - StreamKar RAG chatbot
 [^gh-dge-1]: [GitHub - DGE-assignment](https://github.com/nazar-zhcet26/DGE-assignment) - DGE agentic RAG
-[^gh-dge-2]: [GitHub - DGE_RAG_APP](https://github.com/Youssef-Matloob/DGE_RAG_APP) - DGE RAG application
+[^gh-dge-2]: GitHub - DGE_RAG_APP - DGE RAG application (repository no longer resolves; attribution retained, content unverified)
 [^gh-bmw]: [GitHub - bmw-ai-engineer-case-study](https://github.com/SHUBHAM-max449/bmw-ai-engineer-case-study) - BMW Group AI Engineer Intern
 [^gh-ncapek]: [GitHub - ai_engineer_interview_2025](https://github.com/ncapek/ai_engineer_interview_2025) - RAG chatbot with MongoDB Atlas
 [^gh-bithealth-1]: [GitHub - bithealth-crfc](https://github.com/verneylmavt/bithealth-crfc) - Bithealth code refactoring
-[^gh-bithealth-2]: [GitHub - bithealth_home_assesment](https://github.com/fakhrulnurmulyana/bithealth_home_assesment) - Bithealth assessment
+[^gh-bithealth-2]: GitHub - bithealth_home_assesment - Bithealth assessment (repository no longer resolves; attribution retained, content unverified)
 [^gh-bithealth-3]: [GitHub - bithealth-assesment](https://github.com/futurebiomedeng/bithealth-assesment) - Bithealth assessment
 [^gh-bithealth-4]: [GitHub - bithealthtest](https://github.com/Nerrad07/bithealthtest) - Bithealth intern
 [^gh-bithealth-5]: [GitHub - TechnicalTest-Bithealth](https://github.com/jnny04/TechnicalTest-Bithealth) - Bithealth RAG service
@@ -708,7 +708,7 @@ Reported by candidates:
 [^gh-spur-1]: [GitHub - spur-live-chat-agent](https://github.com/selvamsmk/spur-live-chat-agent) - Spur live chat agent
 [^gh-spur-2]: [GitHub - spur-ai-chat](https://github.com/richiesinhala/spur-ai-chat) - Spur AI chat with Prisma/Svelte
 [^gh-trestle]: [GitHub - Trestle_AI_Engineer_Intern_Assignment](https://github.com/gulmittal/Trestle_AI_Engineer_Intern_Assignment-) - Trestle marksheet extraction
-[^gh-emitrr-1]: [GitHub - Physician-Notetaker](https://github.com/Iammilansoni/Physician-Notetaker) - Emitrr medical transcription
+[^gh-emitrr-1]: GitHub - Physician-Notetaker - Emitrr medical transcription (repository no longer resolves; attribution retained, content unverified)
 [^gh-emitrr-2]: [GitHub - Emitrr submission 2](https://github.com/search?q=emitrr+ai+engineer&type=repositories) - Emitrr AI Engineer Intern
 [^gh-legal-doc]: [GitHub - Files.Invis](https://github.com/Udaykeerthan67/Files.Invis) - AI-powered legal document analysis
 [^gh-mindwell]: [GitHub - mindwell-assignment-2026](https://github.com/mathemage/mindwell-assignment-2026) - Mindwell AI Engineer case study
