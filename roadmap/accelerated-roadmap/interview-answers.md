@@ -6,6 +6,8 @@
 
 Each model answer is written the way a strong candidate would actually deliver it in an interview: direct, structured, and grounded in trade-offs and measurement. Where a number or tool is named, it is a realistic 2026 reference point — always sanity-check current pricing and model names before quoting them in an interview.
 
+> **Need more practice?** The full interview question bank — 350+ theory, coding, system-design, behavioral, and take-home questions, each with an expert answer — lives in [the interview section](../../interview/questions/01-theory.md).
+
 ---
 
 ## LLM Fundamentals
