@@ -26,11 +26,13 @@ A third theme runs through this section because it dominated the 2025–2026 res
 | 3 | [Agent benchmarks](03-agent-benchmarks.md) | SWE-bench family, GAIA, WebArena/OSWorld, τ-bench, pass^k — and the benchmark-integrity crisis | you evaluate agents or quote benchmark numbers |
 | 4 | [RAG evaluation](04-rag-evaluation.md) | Component/pipeline/application/safety levels, RAGAS & DeepEval in practice | you build retrieval systems |
 | 5 | [Eval engineering](05-eval-engineering.md) | Turning evals into CI/CD gates, regression suites, observability handoff, tooling | you want evals to block bad releases |
+| 6 | [Evaluation dataset engineering](06-evaluation-datasets.md) | Golden-set taxonomies, synthesis methods and their circularity traps, size statistics, versioning and governance | your eval numbers depend on what you evaluate on |
+| 7 | [Online experimentation](07-online-experimentation.md) | A/B, interleaving, shadow and canary designs; captured vs computed metrics; judge-in-the-loop; statistical hygiene | you need answers offline evals can't give |
 | 🎓 | **[The LLM Evaluations course](course/README.md)** | Video-by-video English notes + transcripts for the full 19-lecture CampusX playlist (~20 h): foundations → benchmarks → RAG evaluation → production monitoring | you want a guided, step-by-step build-up rather than reference lookups |
 
 ## The course layer
 
-The five notes above are the **reference layer** — concept maps for people who know what they're looking for. The [`course/`](course/README.md) subfolder is the **curriculum layer**: a complete, ordered walk through the CampusX *LLM Evaluations: The Step-by-Step Playlist for 2026* — every lecture transcribed from Hindi to English, expanded into structured notes, and cross-linked back into these reference notes. If you're new to evaluation, start with the [course](course/README.md); use these five notes as the depth layer when a specific topic matters.
+The five notes above are the **reference layer** — concept maps for people who know what they're looking for. The [`course/`](course/README.md) subfolder is the **curriculum layer**: a complete, ordered walk through the CampusX *LLM Evaluations: The Step-by-Step Playlist for 2026* — every lecture transcribed from Hindi to English, expanded into structured notes, and cross-linked back into these reference notes. If you're new to evaluation, start with the [course](course/README.md); use these seven notes as the depth layer when a specific topic matters.
 
 ## How this connects to the rest of the repository
 
@@ -42,10 +44,11 @@ The five notes above are the **reference layer** — concept maps for people who
 - **[106 — AI Security & Safety](../106_AI-Security-Safety/README.md)** extends evaluation into adversarial territory: red teaming is evaluation with an adversary, and safety evals share machinery with quality evals.
 - **[The evidence policy](../research/evidence-policy.md)** applies to every number quoted here: benchmark results are *measurements under specific conditions*, not universal properties of a model.
 
-## The five questions this section teaches you to answer
+## The questions this section teaches you to answer
 
 1. **"How would you know your system works?"** — with a task-defined eval set, explicit metrics, and a baseline, not a vibe. *(notes 1, 4, 5)*
 2. **"Why should I trust your LLM-as-a-judge score?"** — because you measured its agreement with humans, checked its biases, and calibrated it. *(note 2)*
 3. **"Model X tops benchmark Y — so what?"** — you know what the benchmark measures, what it doesn't, whether it's contaminated or saturated, and whether the harness itself moved the score. *(note 3)*
 4. **"Did last week's prompt change make things better or worse?"** — your regression suite can answer, per metric, with uncertainty. *(note 5)*
-5. **"What happens in production when reality drifts from the eval set?"** — you have online evaluation feeding failures back into the offline suite. *(notes 1, 5)*
+5. **"What happens in production when reality drifts from the eval set?"** — you have online evaluation feeding failures back into the offline suite. *(notes 1, 5, 7)*
+6. **"How many golden cases do you need — and how do you know they're not lying to you?"** — with size statistics, circularity controls, and drift audits on the dataset itself. *(note 6)*
