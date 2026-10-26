@@ -26,6 +26,11 @@ A third theme runs through this section because it dominated the 2025–2026 res
 | 3 | [Agent benchmarks](03-agent-benchmarks.md) | SWE-bench family, GAIA, WebArena/OSWorld, τ-bench, pass^k — and the benchmark-integrity crisis | you evaluate agents or quote benchmark numbers |
 | 4 | [RAG evaluation](04-rag-evaluation.md) | Component/pipeline/application/safety levels, RAGAS & DeepEval in practice | you build retrieval systems |
 | 5 | [Eval engineering](05-eval-engineering.md) | Turning evals into CI/CD gates, regression suites, observability handoff, tooling | you want evals to block bad releases |
+| 🎓 | **[The LLM Evaluations course](course/README.md)** | Video-by-video English notes + transcripts for the full 19-lecture CampusX playlist (~20 h): foundations → benchmarks → RAG evaluation → production monitoring | you want a guided, step-by-step build-up rather than reference lookups |
+
+## The course layer
+
+The five notes above are the **reference layer** — concept maps for people who know what they're looking for. The [`course/`](course/README.md) subfolder is the **curriculum layer**: a complete, ordered walk through the CampusX *LLM Evaluations: The Step-by-Step Playlist for 2026* — every lecture transcribed from Hindi to English, expanded into structured notes, and cross-linked back into these reference notes. If you're new to evaluation, start with the [course](course/README.md); use these five notes as the depth layer when a specific topic matters.
 
 ## How this connects to the rest of the repository
 
