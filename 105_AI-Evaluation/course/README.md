@@ -61,7 +61,9 @@ The instructor's framing is unapologetically practical: as an AI engineer you bu
 2. **Read the notes before or instead of the video.** The notes are written to stand alone — every concept, example, analogy, and side remark from the lecture is here, restructured for reading.
 3. **Do the hands-on parts.** Lectures 13, 14, 17 and 19 are code-alongs (retriever metrics, RAG Triad, operational evals, LangSmith). Reproduce them on your own RAG project.
 4. **Use the transcripts for detail work.** When notes mention something you want verbatim (a prompt, a metric name, a slide's wording), search the transcript.
-5. **Connect to the knowledge base.** Each note cross-links the corresponding [Section 105 reference notes](../README.md) (LLM-as-a-Judge, agent benchmarks, RAG evaluation, eval engineering) for the research-grade depth: papers, surveys, and failure cases beyond the course.
+5. **Test yourself after each unit.** The [self-assessment quiz](flashcards.md) has 60 questions with verified answers across the four units — if you miss more than 2 per unit, re-read that unit's notes.
+6. **Look up terms in the glossary.** The [course glossary](glossary.md) defines all 120 terms the course uses, each linked back to the lecture that teaches it.
+7. **Connect to the knowledge base.** Each note cross-links the corresponding [Section 105 reference notes](../README.md) (LLM-as-a-Judge, agent benchmarks, RAG evaluation, eval engineering) for the research-grade depth: papers, surveys, and failure cases beyond the course.
 
 ## Conventions used in these notes
 
