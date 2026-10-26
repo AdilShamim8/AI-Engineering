@@ -35,7 +35,7 @@ The instructor's framing is unapologetically practical: as an AI engineer you bu
 
 | # | Lecture | Duration | Notes | Transcript |
 |---|---|---|---|---|
-| 1 | Master LLM Evaluations — playlist overview | 23:24 | [01-course-overview.md](01-course-overview.md) | — |
+| 1 | Master LLM Evaluations — playlist overview | 23:24 | [01-course-overview.md](01-course-overview.md) | [transcript](transcripts/01-course-overview.md) |
 | 2 | Introduction — Model Evals vs Application Evals | 24:32 | [02-model-vs-application-evals.md](02-model-vs-application-evals.md) | [transcript](transcripts/02-model-vs-application-evals.md) |
 | 3 | How to Evaluate LLM Applications — the Complete Workflow | ~17:00 | [03-evaluation-workflow.md](03-evaluation-workflow.md) | [transcript](transcripts/03-evaluation-workflow.md) |
 | 4 | Why Your AI Application Needs Multiple Eval Pipelines | 28:03 | [04-multiple-eval-pipelines.md](04-multiple-eval-pipelines.md) | [transcript](transcripts/04-multiple-eval-pipelines.md) |
