@@ -11,7 +11,7 @@ Individual references in [the consolidated question collection](questions/questi
 ## Sections
 
 - [Interview process](01-interview-process.md) — preparation patterns; legacy prevalence figures remain unverified.
-- [Interview questions](02-questions.md) — theory, coding, project review, system design, assignments and behavioral practice.
+- [Interview questions](02-questions.md) — theory, coding, project review, system design, assignments and behavioral practice — every question in the six category files now carries an expert answer (`**A:**`, added October 27, 2026).
 - [Getting hired](03-get-hired.md) — demonstrate engineering judgment through inspectable project evidence.
 - [After the interview](04-after-the-interview.md) — questions for evaluating an offer and starting a role.
 - [Interview trends](05-trends.md) — discussion topics; verify company-specific claims before reuse.
