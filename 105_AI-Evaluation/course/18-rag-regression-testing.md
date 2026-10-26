@@ -3,6 +3,8 @@
 > **Lecture 18 of 19** · Unit 4: Production Evaluation · 54:16
 > RAG Regression Testing Explained: How to Prevent Silent AI Failures (CampusX, LLM Evaluations playlist)
 > [Course hub](README.md) · [Transcript](transcripts/18-rag-regression-testing.md)
+>
+> *Source note: this lecture's auto-captions were mis-detected by YouTube as Bengali (from Hindi audio); the transcript was translated from the Bengali rendering and verified segment-by-segment for fidelity.*
 
 ---
 
