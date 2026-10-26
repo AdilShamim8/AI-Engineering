@@ -55,6 +55,14 @@ The instructor's framing is unapologetically practical: as an AI engineer you bu
 | 18 | RAG Regression Testing — Preventing Silent AI Failures | 54:16 | [18-rag-regression-testing.md](18-rag-regression-testing.md) | [transcript](transcripts/18-rag-regression-testing.md) |
 | 19 | Online RAG Evaluation — Monitoring Production LLMs with LangSmith | 1:14:24 | [19-online-eval-langsmith-monitoring.md](19-online-eval-langsmith-monitoring.md) | [transcript](transcripts/19-online-eval-langsmith-monitoring.md) |
 
+## Study materials
+
+| Material | What it is | Use it when… |
+|---|---|---|
+| [Glossary](glossary.md) | All 120 course terms, defined and linked to the lecture that teaches each | a term in a note is unfamiliar, or before an interview sweep |
+| [Self-assessment quiz](flashcards.md) | 60 questions with verified answers, 15 per unit | you finished a unit and want to check retention before moving on |
+| [Cheat sheet](cheatsheet.md) | Every formula, number, and decision rule from all 19 lectures on one page | revising after the course, or right before an interview |
+
 ## How to study this course
 
 1. **Watch/read in order the first time.** The course is deliberately cumulative: the model-vs-application distinction from lecture 2 is used in every later lecture; the eval methods from lecture 5 power the RAG metrics in lectures 13–15.
