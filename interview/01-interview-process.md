@@ -201,6 +201,10 @@ Based on aggregated reports from ~200 candidates who went through AI engineering
 
 ---
 
+## Practice materials for every stage
+
+Each stage of the process above has a matched, expert-answered practice file: [theory questions](questions/01-theory.md) for the technical screens, [coding](questions/02-coding.md) for live rounds, [project deep-dive probes](questions/03-project-deep-dive.md) for the presentation stage, [AI system design](questions/04-ai-system-design.md) for design rounds, [behavioral](questions/05-behavioral.md) for the manager loop, and [home assignments](questions/06-home-assignments.md) for the take-home. Start from the [questions index](02-questions.md).
+
 ## Key Takeaways
 
 1. **There is no standard process.** Unlike software engineering (where the "LeetCode + system design" format is well-established), AI engineering interviews vary wildly between companies. Prepare for anything.
