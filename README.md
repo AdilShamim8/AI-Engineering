@@ -33,7 +33,7 @@ Two complete roadmaps for becoming an AI engineer, plus a full interview-prepara
 - [102 — AI Application Development](102_AI-Application-Development/README.md) — orchestration, vector databases, complete RAG curriculum, memory systems, and fine-tuning
 - [103 — Agentic AI](103_Agentic%20AI/README.md) — autonomous planning loops, Model Context Protocol (MCP), agentic frameworks, and multi-agent orchestration
 - [104 — LLMOps](104_LLMOps/README.md) — deployment architectures, observability, safety guardrails, governance, and enterprise scaling
-- [105 — AI Evaluation](105_AI-Evaluation/README.md) — evaluation fundamentals, LLM-as-a-Judge, agent benchmarks and the integrity crisis, RAG evaluation practice, and eval engineering in CI/CD — plus a complete [19-lecture LLM Evaluations course](105_AI-Evaluation/course/README.md) with full English notes and transcripts
+- [105 — AI Evaluation](105_AI-Evaluation/README.md) — evaluation fundamentals, LLM-as-a-Judge, agent benchmarks and the integrity crisis, RAG evaluation practice, eval engineering in CI/CD, [dataset engineering](105_AI-Evaluation/06-evaluation-datasets.md), and [online experimentation](105_AI-Evaluation/07-online-experimentation.md) — plus a complete [19-lecture LLM Evaluations course](105_AI-Evaluation/course/README.md) with full English notes and transcripts, a [glossary](105_AI-Evaluation/course/glossary.md), a [self-assessment quiz](105_AI-Evaluation/course/flashcards.md), and a [cheat sheet](105_AI-Evaluation/course/cheatsheet.md)
 - [106 — AI Security & Safety](106_AI-Security-Safety/README.md) — threat modeling (OWASP LLM + Agentic Top 10), prompt injection defense, red teaming, agent & MCP security, AI alignment, and responsible AI governance
 
 
@@ -50,13 +50,13 @@ Two complete roadmaps for becoming an AI engineer, plus a full interview-prepara
 ## Interview Preparation
 
 - [Interview process](interview/01-interview-process.md) — common patterns, step counts, time estimates, AI use in hiring, key takeaways
-- [Interview questions](interview/02-questions.md) — practice topics and individually attributed legacy reports
-  - [Theory](interview/questions/01-theory.md) — LLMs, RAG, agents, ML fundamentals, company-specific questions
-  - [Coding](interview/questions/02-coding.md) — coding round formats, DSA problems, ML implementation exercises
-  - [Project deep dive](interview/questions/03-project-deep-dive.md) — presentation rounds, follow-up probes, what interviewers evaluate
-  - [AI system design](interview/questions/04-ai-system-design.md) — system design for AI applications
-  - [Behavioral](interview/questions/05-behavioral.md) — values, leadership, problem-solving
-  - [Home assignments](interview/questions/06-home-assignments.md) — assignment preparation and public examples; verify each source
+- [Interview questions](interview/02-questions.md) — practice topics and individually attributed legacy reports — **every question now carries an expert answer (`**A:**`)**
+  - [Theory](interview/questions/01-theory.md) — LLMs, RAG, agents, context engineering, evaluation, safety, fine-tuning, MCP — answered
+  - [Coding](interview/questions/02-coding.md) — coding round formats, DSA problems, from-scratch ML implementations — answered
+  - [Project deep dive](interview/questions/03-project-deep-dive.md) — presentation rounds, follow-up probes, what interviewers evaluate — answered
+  - [AI system design](interview/questions/04-ai-system-design.md) — system design for AI applications — answered
+  - [Behavioral](interview/questions/05-behavioral.md) — values, leadership, problem-solving — answered
+  - [Home assignments](interview/questions/06-home-assignments.md) — assignment preparation and public examples — answered
 - [Skills that get you hired](interview/03-get-hired.md) — baseline expectations, differentiators, and portfolio strategy
 - [After the interview](interview/04-after-the-interview.md) — handling offers, rejections, and salary negotiation
 - [Interview trends](interview/05-trends.md) — AI cheating, AI-proctored rounds, context engineering interviews
