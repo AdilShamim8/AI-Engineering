@@ -2,7 +2,7 @@
 
 > **Lecture 1 of 19** · Unit 0: Orientation · 23:24
 > Master LLM Evaluations: The Step-by-Step Playlist for 2026 | New Playlist | CampusX — the launch trailer in which Nitish Singh announces the course, argues why LLM evaluation matters, and walks through the roadmap he promises to deliver.
-> [Course hub](README.md)
+> [Course hub](README.md) · [Transcript](transcripts/01-course-overview.md)
 
 ---
 
