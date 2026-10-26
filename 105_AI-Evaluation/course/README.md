@@ -80,7 +80,7 @@ The instructor's framing is unapologetically practical: as an AI engineer you bu
 - **Timestamps** like `(12:18)` mark where in the lecture a concept is discussed.
 - **> 💡 Expert commentary** blocks add context the lecture didn't cover — clarifications, corrections, industry practice, and pointers to primary sources. They are clearly separated so the instructor's voice stays intact.
 - Code, prompts, and tool names are formatted as the lecture presents them.
-- The transcripts are machine-translated from Hindi auto-captions and lightly cleaned; they preserve everything the instructor said, in his own (translated) words.
+- The transcripts are machine-translated from the auto-captions and lightly cleaned; they preserve everything the instructor said, in his own (translated) words. Most lectures' auto-captions were Hindi; two (lectures 16 and 18) were mis-detected as Bengali by YouTube and were translated from the Bengali rendering — the header of each transcript notes which.
 
 ## Relationship to the rest of this repository
 
