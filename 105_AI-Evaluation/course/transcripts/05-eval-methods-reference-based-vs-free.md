@@ -119,11 +119,11 @@
 
 [37:02] then the answer is good. If it gives examples, then the answer is good. If it has a balanced conclusion, then the answer is good. So basically what am I doing? I am creating a rubric for each of my questions. So I have created five rubrics for each of my questions that if these five dimensions are in the answer, then I will consider it a good answer. Right? So this is my rubric. It's not a dataset friends. It's not a dataset. No, it's a rubric that can evaluate a question. Right? Now the dataset
 
-[37:35] 
+[37:35] What we'll do is set up a rubric. Let's say for the moment that our UPSC paper has three questions. Just three questions — there could be more, but for now assume three. The first question is: 'Ethical governance is impossible without administrative accountability — discuss.' — a 15-mark question. The second question is: 'Examine the role of the Governor in Centre-State relations'
 
-[38:12] 
+[38:12] ' — is given. Okay? Now what did I do? I brought in an expert who evaluates papers very well. And I told him: just tell me this one thing — which aspects should I check in the answers to these questions? What must be written in an answer for me to count it as a good answer? Then that expert laid out these four-five points. He said: if the answer contains
 
-[38:50] 
+[38:50] then the answer is good. If it contains examples, the answer is good. If it has a balanced conclusion, the answer is good. So essentially, what am I doing? I am setting up a rubric for each of my questions. So I have set five rubric points for each of my questions — if these five dimensions are present in the answer, I will count it as a good answer.
 
 [39:25] What should it look like? The dataset will look something like this. The dataset will have an answer ID. Which question's answer is this? What is written in the answer? Now, don't assume that there's a summary here, just assume that the correct answer is here. I'm writing it here. The correct answer is here. The student's correct answer is written here. And then, who has evaluated this answer. It's by a human evaluator. Anyway, we are creating our golden dataset. The golden dataset is being created by a human evaluator. And assume that it's only 50 to 100 rows. So we didn't need to evaluate too many notebooks. We only had to evaluate 50 to 100 notebooks. We just brought in one subject matter expert. He evaluated these 50 notebooks or 50 answers. Not notebooks. Let me write down 50 to 100 answers. So you can understand that it wasn't a huge task. Okay? So my person came here. He saw this was which answer. Which question's answer is this. He read that answer and then based on this rubric, he saw that this is a one-mark question's answer. Based on this rubric, he ticked that the first
 
