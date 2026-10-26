@@ -512,3 +512,10 @@ Use this rubric to self-evaluate your take-home before submitting:
 ---
 
 *This note is part of the AI Engineering Field Guide — Webinars section (Updated: September 16, 2026).*
+
+---
+
+## Where to go deeper
+
+- **[Home assignments — expert answers](../interview/questions/06-home-assignments.md)** — the same assignment types (RAG, agents, evaluation frameworks, full-stack) with per-task expert approaches: the core deliverable, the differentiators that earn top marks, time allocation, and the common mistakes to avoid.
+- **[The LLM Evaluations course](../105_AI-Evaluation/course/README.md)** — the evaluation framework that separates top-decile submissions is taught end-to-end here: golden datasets, RAG Triad, G-Eval, safety evals, regression testing, and production monitoring.
