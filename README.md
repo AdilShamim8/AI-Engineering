@@ -33,7 +33,7 @@ Two complete roadmaps for becoming an AI engineer, plus a full interview-prepara
 - [102 — AI Application Development](102_AI-Application-Development/README.md) — orchestration, vector databases, complete RAG curriculum, memory systems, and fine-tuning
 - [103 — Agentic AI](103_Agentic%20AI/README.md) — autonomous planning loops, Model Context Protocol (MCP), agentic frameworks, and multi-agent orchestration
 - [104 — LLMOps](104_LLMOps/README.md) — deployment architectures, observability, safety guardrails, governance, and enterprise scaling
-- [105 — AI Evaluation](105_AI-Evaluation/README.md) — evaluation fundamentals, LLM-as-a-Judge, agent benchmarks and the integrity crisis, RAG evaluation practice, and eval engineering in CI/CD
+- [105 — AI Evaluation](105_AI-Evaluation/README.md) — evaluation fundamentals, LLM-as-a-Judge, agent benchmarks and the integrity crisis, RAG evaluation practice, and eval engineering in CI/CD — plus a complete [19-lecture LLM Evaluations course](105_AI-Evaluation/course/README.md) with full English notes and transcripts
 - [106 — AI Security & Safety](106_AI-Security-Safety/README.md) — threat modeling (OWASP LLM + Agentic Top 10), prompt injection defense, red teaming, agent & MCP security, AI alignment, and responsible AI governance
 
 
