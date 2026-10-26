@@ -183,6 +183,7 @@ Agent safety evaluation
 ## In this repository
 
 - **[105 — AI Evaluation](../../105_AI-Evaluation/README.md)** — the dedicated knowledge base for this level: [evaluation fundamentals](../../105_AI-Evaluation/01-evaluation-fundamentals.md), [LLM-as-a-Judge](../../105_AI-Evaluation/02-llm-as-a-judge.md), [agent benchmarks](../../105_AI-Evaluation/03-agent-benchmarks.md), [RAG evaluation](../../105_AI-Evaluation/04-rag-evaluation.md), [eval engineering](../../105_AI-Evaluation/05-eval-engineering.md)
+- **[The LLM Evaluations course](../../105_AI-Evaluation/course/README.md)** — a complete step-by-step curriculum layer for this level: 19 lectures of video-by-video English notes and transcripts (foundations → eval methods → offline/online → benchmarks → leaderboards → model selection → RAG evaluation → production monitoring), built from a full Hindi-language course and cross-linked to the knowledge-base notes above
 - [RAG evaluation & benchmarking note (RAGAS, TruLens, DeepEval)](../../102_AI-Application-Development/03-RAG/6.%20RAG%20Evaluation%20%26%20Benchmarking%20%28RAGAS%2C%20TruLens%2C%20DeepEval%29.md)
 - [Evidence policy for measurable claims](../../research/evidence-policy.md)
 
