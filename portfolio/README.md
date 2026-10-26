@@ -6,7 +6,7 @@
 
 ## Project Ideas by Level
 
-> **The highest-leverage portfolio project for 2026**: an AI application *with its own evaluation suite* — golden datasets, RAG Triad metrics, safety evals, regression gates, and a monitoring loop. The [LLM Evaluations course](105_AI-Evaluation/course/README.md) teaches this end-to-end in 19 lectures (four of them code-alongs), and its [progress tracker](105_AI-Evaluation/course/progress-tracker.md) doubles as the project plan. A RAG chatbot with a visible eval suite beats a fancier chatbot without one: it proves you know whether your system works.
+> **The highest-leverage portfolio project for 2026**: an AI application *with its own evaluation suite* — golden datasets, RAG Triad metrics, safety evals, regression gates, and a monitoring loop. The [LLM Evaluations course](../105_AI-Evaluation/course/README.md) teaches this end-to-end in 19 lectures (four of them code-alongs), and its [progress tracker](../105_AI-Evaluation/course/progress-tracker.md) doubles as the project plan. A RAG chatbot with a visible eval suite beats a fancier chatbot without one: it proves you know whether your system works.
 
 ### 1. Marketplace with AI Pre-Filling (Beginner)
 
