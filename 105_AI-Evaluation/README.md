@@ -2,7 +2,7 @@
 
 *How to know — with evidence, not vibes — that an AI system works.*
 
-> Reviewed October 17, 2026. Every reference in this section was checked on that date. This section is a **knowledge base**, not a course: it explains the concepts, the research, and the tooling, and cross-links the deeper curriculum notes elsewhere in this repository.
+> Reviewed October 27, 2026 (notes 1–5 reviewed October 17; notes 6–7 and the course study materials added October 27). Every reference has been checked. This section is a **knowledge base**, not a course: it explains the concepts, the research, and the tooling, and cross-links the deeper curriculum notes elsewhere in this repository.
 
 ---
 
