@@ -63,6 +63,7 @@ The instructor's framing is unapologetically practical: as an AI engineer you bu
 | [Self-assessment quiz](flashcards.md) | 60 questions with verified answers, 15 per unit | you finished a unit and want to check retention before moving on |
 | [Cheat sheet](cheatsheet.md) | Every formula, number, and decision rule from all 19 lectures on one page | revising after the course, or right before an interview |
 | [Progress tracker](progress-tracker.md) | Per-lecture checklist with quiz checkpoints and time budgets | you want a structured plan through the 34-hour full path |
+| [How this course is organized](how-this-course-is-organized.md) | The seven teaching principles behind the playlist, and the study structure they produce | you want to apply the same method to another course |
 
 ## How to study this course
 
