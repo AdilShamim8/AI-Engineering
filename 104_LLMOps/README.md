@@ -145,6 +145,8 @@ When a user sends one message to your AI app, **10–20 hidden operations** happ
 | 4 | **Quality & Behavior Monitoring** | LLM-as-a-judge, output drift detection, hallucination rate tracking |
 | 5 | **Alerting & Incident Response** | PagerDuty integration, anomaly detection, runbooks, SLO/SLA management |
 
+> **Where the depth lives**: the mechanics of *judging production traffic* — sampling rates, the same-evaluator golden rule, judge-drift control charts — are covered in [105 — AI Evaluation, note 7 (online experimentation)](../105_AI-Evaluation/07-online-experimentation.md), and the hands-on build (LangSmith tracing, dashboards, alerts, online toxicity judging) is [LLM Evaluations course lecture 19](../105_AI-Evaluation/course/19-online-eval-langsmith-monitoring.md).
+
 ---
 
 ### Module 4 — 🛡️ Safety & Guardrails
