@@ -2,6 +2,8 @@
 
 Consolidated from 160+ sources including blog posts, YouTube transcripts, Reddit threads, Medium articles, and interview guides — originally labeled September 16, 2026. Individual source attributions remain to be checked; this collection is a preparation aid, not a verified frequency dataset. Navigation reviewed October 9, 2026.
 
+> **Expert answers live in the category files.** This file is the raw consolidated collection; the answered, interview-ready versions are [Theory](01-theory.md), [Coding](02-coding.md), [Project deep-dive](03-project-deep-dive.md), [AI system design](04-ai-system-design.md), [Behavioral](05-behavioral.md), and [Home assignments](06-home-assignments.md) — every question there carries an `**A:**` expert answer (added October 27, 2026).
+
 ## Technical Questions
 
 ### LLM Fundamentals
