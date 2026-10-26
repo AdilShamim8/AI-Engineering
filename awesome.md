@@ -91,6 +91,7 @@ Choose tools against a measured workflow. A framework alone does not establish c
 - [METR — Recent Frontier Models Are Reward Hacking](https://metr.substack.com/p/2025-06-05-recent-reward-hacking) — Measured reward hacking in frontier-model evaluation runs (June 2025).
 - [Wang et al. — How We Broke Top AI Agent Benchmarks](https://arxiv.org/abs/2605.12673) — Demonstrated exploits of eight major agent benchmarks (April 2026).
 - [This guide's AI Evaluation section](105_AI-Evaluation/README.md) — fundamentals, LLM-as-a-Judge, agent benchmarks, RAG evaluation, eval engineering.
+- [This guide's LLM Evaluations course](105_AI-Evaluation/course/README.md) — 19-lecture step-by-step curriculum with full English notes and transcripts: eval workflow, methods, benchmarks, leaderboards, model selection, RAG evaluation, and production monitoring.
 - [This guide's reproducible research](research/README.md) — Pinned job-posting analysis, source dates, dataset limits and reproduction commands.
 
 Inspect each dataset's license, origin, annotations and split. Keep real observations, model-derived labels and simulated/synthetic examples distinct. Scores are specific to a task, configuration and evaluation version.
