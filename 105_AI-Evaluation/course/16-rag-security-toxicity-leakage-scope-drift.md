@@ -3,6 +3,8 @@
 > **Lecture 16 of 19** · Unit 4: Production Evaluation · 1:35:19
 > Securing Your RAG Application: Testing for Toxicity, Leakage & Scope Drift (CampusX, LLM Evaluations playlist)
 > [Course hub](README.md) · [Transcript](transcripts/16-rag-security-toxicity-leakage-scope-drift.md)
+>
+> *Source note: this lecture's auto-captions were mis-detected by YouTube as Bengali (from Hindi audio); the transcript was translated from the Bengali rendering and verified segment-by-segment for fidelity.*
 
 ---
 
