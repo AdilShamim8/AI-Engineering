@@ -1,6 +1,6 @@
 # Interview Questions
 
-> The AI engineering interview question landscape in 2026 is broader and more specialized than ever. Based on 150+ sources and real interviews — updated September 16, 2026.
+> The AI engineering interview question landscape in 2026 is broader and more specialized than ever. Based on 150+ sources and real interviews — updated September 16, 2026. **Every question now ships with an expert answer** (added October 27, 2026) — look for the `**A:**` entries under each question.
 
 ## The Question Landscape in 2026
 
@@ -18,12 +18,12 @@ The biggest shifts from 2024 to 2026:
 
 | Category | File | Focus |
 |----------|------|-------|
-| Theory | [questions/01-theory.md](questions/01-theory.md) | LLMs, RAG, agents, context engineering, evaluation, monitoring, cost optimization, safety, fine-tuning, MCP |
-| Coding | [questions/02-coding.md](questions/02-coding.md) | Live coding, ML implementation, AI coding, AI-assisted rounds, code review |
-| Project Deep Dive | [questions/03-project-deep-dive.md](questions/03-project-deep-dive.md) | Presenting past projects, trade-off reasoning, production awareness |
-| AI System Design | [questions/04-ai-system-design.md](questions/04-ai-system-design.md) | Designing AI-powered systems, RAG architectures, agent workflows, deployment |
-| Behavioral | [questions/05-behavioral.md](questions/05-behavioral.md) | Culture fit, AI ethics, ambiguity, stakeholder communication |
-| Home Assignments | [questions/06-home-assignments.md](questions/06-home-assignments.md) | Take-home projects, RAG builds, agent systems, evaluation frameworks |
+| Theory | [questions/01-theory.md](questions/01-theory.md) | LLMs, RAG, agents, context engineering, evaluation, monitoring, cost optimization, safety, fine-tuning, MCP — **answered** |
+| Coding | [questions/02-coding.md](questions/02-coding.md) | Live coding, ML implementation, AI coding, AI-assisted rounds, code review — **answered** |
+| Project Deep Dive | [questions/03-project-deep-dive.md](questions/03-project-deep-dive.md) | Presenting past projects, trade-off reasoning, production awareness — **answered** |
+| AI System Design | [questions/04-ai-system-design.md](questions/04-ai-system-design.md) | Designing AI-powered systems, RAG architectures, agent workflows, deployment — **answered** |
+| Behavioral | [questions/05-behavioral.md](questions/05-behavioral.md) | Culture fit, AI ethics, ambiguity, stakeholder communication — **answered** |
+| Home Assignments | [questions/06-home-assignments.md](questions/06-home-assignments.md) | Take-home projects, RAG builds, agent systems, evaluation frameworks — **answered** |
 | Production Case Studies | [09-real-world-case-studies.md](09-real-world-case-studies.md) | 4 full production design solutions: Financial RAG, Coding Agent, Voice Bot, LLM Gateway |
 | Global Compensation | [07-global-compensation-and-job-market.md](07-global-compensation-and-job-market.md) | Verified 2026 salary benchmarks, equity structures, and counter-offer scripts |
 | Resume & Portfolio | [08-ai-engineer-resume-and-portfolio-playbook.md](08-ai-engineer-resume-and-portfolio-playbook.md) | ATS filters, XYZ bullet point formulas, and 60-second GitHub repo audit checklist |
