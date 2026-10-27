@@ -4,7 +4,7 @@
 
 The other notes in this section give you the *methodology* — threat models, defense layers, red-team loops. This note gives you the **data**: the public datasets and benchmarks that turn "we tested our system" into a number someone else can interpret. It is the dataset companion to [red teaming](03-red-teaming.md) and the security-side counterpart of the [evaluation-dataset methodology](../105_AI-Evaluation/06-evaluation-datasets.md) in 105.
 
-Everything below is cross-checked against the [AI-Safety repository](https://github.com/AdilShamim8/AI-Safety)'s dataset catalog — 43 cards, each with provenance, license, and page-verified size facts, verified October 21–25, 2026 — where full per-dataset evidence lives. That catalog's discipline applies here too: every size claim carries its access level, and discrepancies between mirrors and canonical sources are recorded rather than smoothed over.
+Everything below is cross-checked against the [AI-Safety repository](https://github.com/AdilShamim8/AI-Safety)'s dataset catalog — 47 cards, each with provenance, license, and page-verified size facts (43 verified October 21–25, 2026; four research-evaluation cards — GDPval, METR RE-Bench, METR Time Horizons, the Stanford canaries evidence — added by the catalog's own October 27 extension) — where full per-dataset evidence lives. That catalog's discipline applies here too: every size claim carries its access level, and discrepancies between mirrors and canonical sources are recorded rather than smoothed over.
 
 ## How to read this catalog
 
@@ -125,7 +125,7 @@ The methodological warning that travels with this whole group: bias benchmarks m
 
 ## References
 
-- [AI-Safety repository — dataset catalog](https://github.com/AdilShamim8/AI-Safety): 43 verified cards (`datasets/cards/`), machine-readable catalog (`datasets/catalog.yaml`), each entry carrying provenance, access level, license, and page-verified size facts — the evidence base for every composition claim in this note
+- [AI-Safety repository — dataset catalog](https://github.com/AdilShamim8/AI-Safety): 47 verified cards (`datasets/cards/`), machine-readable catalog (`datasets/catalog.yaml`), each entry carrying provenance, access level, license, and page-verified size facts — the evidence base for every composition claim in this note
 - AdvBench: Zou et al., [Universal and Transferable Adversarial Attacks on Aligned Language Models](https://arxiv.org/abs/2307.15043) · canonical data at [`llm-attacks/llm-attacks`](https://github.com/llm-attacks/llm-attacks)
 - JailbreakBench: Chao et al., [arXiv:2404.01318](https://arxiv.org/abs/2404.01318) · dataset [`JailbreakBench/JBB-Behaviors`](https://huggingface.co/datasets/JailbreakBench/JBB-Behaviors)
 - HarmBench: Mazeika et al., [arXiv:2402.04249](https://arxiv.org/abs/2402.04249) · code [`centerforaisafety/HarmBench`](https://github.com/centerforaisafety/HarmBench)
