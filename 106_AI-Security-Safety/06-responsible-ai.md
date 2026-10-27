@@ -67,6 +67,7 @@ For a team shipping an LLM application without a compliance department, this is 
 4. **Classify your deployment against the EU tiers** if you have any EU exposure; high-risk uses trigger obligations *before* the 2027 dates in procurement practice, not after.
 5. **Keep the audit trail**: versions, prompts, evals, incidents, decisions. [Auditability](../104_LLMOps/README.md) is the control that makes every other control verifiable after the fact.
 6. **Have an incident plan**: detection (canaries, monitoring), containment (kill switch, rollback), disclosure path (who decides, in what timeframe). The [Air Canada case](../105_AI-Evaluation/01-evaluation-fundamentals.md) is what the absence of this looks like in a tribunal record.
+7. **Watch the world's incident record** — the [incident databases](08-incident-databases.md) are the governance instrument most teams ignore: the [AI Incident Database](https://incidentdatabase.ai/) for curated precedent, MIT's classified tracker (1,776 real-world incidents) for pattern queries, and the [OECD AIM](https://oecd.ai/en/incidents) monitor (~18,579 incidents & hazards) for worldwide horizon scanning — all free, all citable in a risk register. A governance record that says "we reviewed the external failure record as of this date" is materially stronger than one that only cites internal testing, and EU-style serious-incident reporting duties are easiest to satisfy when the external monitoring loop already exists.
 
 ## References
 
@@ -77,4 +78,4 @@ For a team shipping an LLM application without a compliance department, this is 
 - [Governance curriculum (104/5)](../104_LLMOps/README.md) — operational controls: data governance, access, compliance, auditability
 - [Roadmap Level 8, module M8.8](../roadmap/full-roadmap/level-08-ai-security.md) — the syllabus entry for this topic
 
-Previous: [AI alignment](05-ai-alignment.md) · [Back to section home](README.md)
+Previous: [AI alignment](05-ai-alignment.md) · Next: [Security & safety datasets](07-security-safety-datasets.md)
