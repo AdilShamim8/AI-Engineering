@@ -57,3 +57,29 @@ Text-only security testing is incomplete for any vision-language system: the mod
 - Complementary research result (not a dataset, but the reason these matter): visual adversarial examples were shown to jailbreak aligned LLMs where pure-text attacks failed ([arXiv:2306.13213](https://arxiv.org/abs/2306.13213)).
 
 The transfer lesson generalizes: every new input modality (images, audio, screen captures, tool outputs) resets the alignment work. Test the boundary explicitly, and prefer benchmarks whose payloads live *in the non-text modality* rather than text about it.
+
+## 4. Adversarial robustness & supply-chain artifacts
+
+Pre-LLM adversarial ML still matters: it is where the *protocol discipline* of this whole field was invented, and where supply-chain threats to models live.
+
+- **[RobustBench](https://arxiv.org/abs/2010.09670)** — the standardization effort for adversarial robustness evaluation (image classification scope): a protocol ledger that **pins the threat model and the attack budget** before any number is reported. Its contribution is the *protocol*, not the data: robustness numbers without a stated attack budget are meaningless, a lesson directly transferable to LLM evals (state your attack budget or don't report an ASR).
+- **[TrojAI](https://www.iarpa.gov/research-programs/trojai)** — an IARPA research program whose data units are **trained model artifacts (poisoned and clean)**, released in rounds with held-out challenge sets, under a NIST open data license. The catalog's honest note: even the program's own "Leftovers" collection is labeled low-quality by its maintainers. TrojAI matters because it is the public reference for **backdoor/trojan detection** — the model-supply-chain threat that package registries and fine-tune marketplaces now make practical.
+- **[Adversarial NLI (ANLI)](https://arxiv.org/abs/1910.14599)** — the classic human-and-model-in-the-loop *iterative* adversarial collection: humans craft examples that fool the current model, the model trains, repeat. Three rounds of escalating difficulty. It remains the cleanest published demonstration of the red-team/defend arms race as a *data-collection protocol* — exactly the loop your CI should run against its own confirmed attacks.
+
+## 5. Safety behavior, refusal quality & preference data
+
+The safety side of the section: what "behaves as intended" is measured against, and the datasets alignment techniques are actually trained on (the connection to [AI alignment](05-ai-alignment.md)).
+
+| Dataset | Role | Verified composition | License |
+|---|---|---|---|
+| [TruthfulQA](https://huggingface.co/datasets/truthfulqa/truthful_qa) | Imitative falsehoods — does the model repeat common misconceptions | 817 validation rows; adversarial categories (Misconceptions, Proverbs, Misquotations, Conspiracies, Superstitions) | Apache-2.0 |
+| [BeaverTails](https://huggingface.co/datasets/PKU-Alignment/BeaverTails) | Fine-grained safety annotation | 364K rows; **14 harm dimensions** (animal abuse through discrimination to self-harm) | **CC BY-NC 4.0** |
+| [Anthropic HH-RLHF](https://huggingface.co/datasets/Anthropic/hh-rlhf) | The preference dataset behind RLHF-era alignment | 169K chosen/rejected pairs; includes red-team attack dialogues | MIT |
+| [PKU-SafeRLHF](https://arxiv.org/abs/2406.15513) | Decoupled helpfulness/harmlessness preferences | 265K QA pairs with safety meta-labels; 19 harm categories × 3 severity levels | **CC BY-NC 4.0** |
+| [SafetyBench](https://github.com/thu-coai/safetybench) | Safety *knowledge* (not behavior) | 11,435 multiple-choice questions, 7 categories, **Chinese and English**; ACL 2024 | MIT |
+| [XSTest](https://github.com/paul-rottger/xstest) | Over-refusal: does the model refuse *safe* prompts | 250 safe prompts across 10 types + 200 unsafe contrasts; NAACL 2024 | CC BY 4.0 (prompts) |
+| [OR-Bench](https://github.com/justincui03/or-bench) | Over-refusal at scale | 80,000 over-refusal prompts, ~1,000 hard subset, 600 toxic contrasts | CC BY 4.0 |
+| [Do-Not-Answer](https://arxiv.org/abs/2308.13387) | What a safeguard *should* decline, by risk area | Risk-area taxonomy with two-model annotation | Apache-2.0 |
+| [WMDP](https://wmdp.ai) | Hazardous-knowledge ceiling & unlearning benchmark | 3,668 MCQs across biosecurity, cybersecurity, chemical security; filtered for public release; paired with the RMU unlearning method | MIT |
+
+Two structural points. First, the **preference-data trio** (HH-RLHF, BeaverTails, PKU-SafeRLHF) is the concrete answer to "what is alignment *trained on*": pairs where one response is safer than another, labeled by dimension and severity. When an alignment claim interests you, ask which preference distribution it was optimized against — the datasets are small enough to inspect, and their harm taxonomies differ in ways that shape model behavior. Second, the **over-refusal quartet** (XSTest, OR-Bench, Do-Not-Answer, plus JBB's benign half from Section 1) exists because refusing everything is a trivial way to pass safety evals; every safety report should carry an over-refusal number from at least one of these. WMDP sits apart as the misuse-measurement instrument — its dual role as eval and unlearning benchmark is the template for [dangerous-capability governance](06-responsible-ai.md).
