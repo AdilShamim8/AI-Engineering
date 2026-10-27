@@ -26,7 +26,7 @@ Invariant Labs documented the attack classes that come with Model Context Protoc
 - **Rug pull** — the server changes its tool description *after* the user approved it. Approval captures a snapshot; the model sees the current text.
 - **Cross-server tool shadowing** — with multiple MCP servers connected, one malicious server's description can override or manipulate how the agent uses *another, trusted* server (including hijacking credentials across servers).
 
-A peer-reviewed STRIDE/DREAD threat model of MCP ([Huang et al., MDPI, 2026](https://www.mdpi.com/2624-800X/6/3/84)) found **5 of 7 major MCP clients implemented no static validation of server-provided metadata** — the attacks worked because the ecosystem trusted tool text by default. OWASP's agentic list encodes the lesson as [ASI04: Agentic Supply Chain Compromise](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026).
+A peer-reviewed STRIDE/DREAD threat model of MCP ([Huang et al., MDPI, 2026](https://www.mdpi.com/2624-800X/6/3/84)) catalogued how tool poisoning and prompt injection exploit the protocol's trust in server-provided text — the attacks work because the ecosystem reads tool descriptions as instructions without validating them. OWASP's agentic list encodes the lesson as [ASI04: Agentic Supply Chain Compromise](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026).
 
 ### 3. The STDIO supply-chain flaw (April 2026)
 
