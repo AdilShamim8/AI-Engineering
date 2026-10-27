@@ -61,7 +61,7 @@ Rank findings by *consequence × reachability*, then map each to a layer from th
 
 ## References
 
-- [PyRIT](https://github.com/Azure/PyRIT) — Lopez Munoz et al., *PyRIT: A Framework for Security Risk Identification and Red Teaming of Generative AI Systems*, 2024 — [arXiv:2404.02144](https://arxiv.org/abs/2404.02144)
+- [PyRIT](https://github.com/microsoft/pyrit) — Lopez Munoz et al., *PyRIT: A Framework for Security Risk Identification and Red Teaming in Generative AI System*, 2024 — [arXiv:2410.02828](https://arxiv.org/abs/2410.02828) (citation corrected October 27, 2026: the previously cited arXiv:2404.02144 is an unrelated astronomy paper; the repo also moved from Azure/PyRIT to microsoft/pyrit)
 - [garak](https://github.com/NVIDIA/garak) — Derczynski et al., 2024 — [arXiv:2406.11036](https://arxiv.org/abs/2406.11036)
 - [promptfoo red team documentation](https://www.promptfoo.dev/docs/red-team/) — includes the OWASP-mapped plugin list
 - Dheekonda, Pearce & Landers, *Redefining AI Red Teaming in the Agentic Era: From Weeks to Hours*, 2026 — [arXiv:2605.04019](https://arxiv.org/abs/2605.04019)
