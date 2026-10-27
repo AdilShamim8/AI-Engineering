@@ -15,7 +15,7 @@ The headline finding: **GPT-4 as judge agreed with human preferences at over 80%
 
 The same paper also did the field the favor of documenting the judge's biases at birth (next section), which is why "LLM-as-a-judge is biased" is not a critique of the technique but part of its operating manual.
 
-Since then the literature has grown into a research area of its own — the survey by Gu et al. ([arXiv:2411.15594](https://arxiv.org/abs/2411.15594), published in *Machine Learning* 2026) catalogs the biases, mitigation techniques, and application domains — and practitioner tooling ([DeepEval](https://github.com/confident-ai/deepeval), [promptfoo](https://github.com/promptfoo/promptfoo), [Ragas](https://github.com/vibrantlabsai/ragas), Langfuse, Arize Phoenix) has made judge-based metrics a default component of eval suites.
+Since then the literature has grown into a research area of its own — the survey by Gu et al. ([arXiv:2411.15594](https://arxiv.org/abs/2411.15594), revised through October 2025) catalogs the biases, mitigation techniques, and application domains — and practitioner tooling ([DeepEval](https://github.com/confident-ai/deepeval), [promptfoo](https://github.com/promptfoo/promptfoo), [Ragas](https://github.com/vibrantlabsai/ragas), Langfuse, Arize Phoenix) has made judge-based metrics a default component of eval suites.
 
 ## The documented biases
 
@@ -72,7 +72,7 @@ Anthropic's engineering posts on agent evals ([*Demystifying evals for AI agents
 ## References
 
 - Zheng et al., *Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena*, NeurIPS 2023 — [arXiv:2306.05685](https://arxiv.org/abs/2306.05685)
-- Gu et al., *A Survey on LLM-as-a-Judge*, 2024 (journal version *Machine Learning*, 2026) — [arXiv:2411.15594](https://arxiv.org/abs/2411.15594)
+- Gu et al., *A Survey on LLM-as-a-Judge*, 2024 (last revised v6, October 2025) — [arXiv:2411.15594](https://arxiv.org/abs/2411.15594)
 - Dubois et al., *Length-Controlled AlpacaEval*, COLM 2024 — [arXiv:2404.04475](https://arxiv.org/abs/2404.04475)
 - You et al., *Agent-as-a-Judge* — [arXiv:2601.05111](https://arxiv.org/abs/2601.05111)
 - *From Agent Traces to Trust: A Survey of Evidence in LLM Agent Evaluation* — [arXiv:2606.04990](https://arxiv.org/abs/2606.04990)
