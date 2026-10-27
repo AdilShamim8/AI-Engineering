@@ -131,7 +131,7 @@ Collections provide discovery, not independent verification of every deployment 
 - [CaMeL — Defeating Prompt Injections by Design](https://arxiv.org/abs/2503.18813) — Google DeepMind's capability-based architecture for provable injection defense.
 - [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) — Voluntary risk-management framework with a [Generative AI Profile](https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence).
 - [EU AI Act portal](https://artificialintelligenceact.eu/implementation-timeline/) — Regulation text and the phased implementation timeline.
-- [This guide's AI Security & Safety section](106_AI-Security-Safety/README.md) — threat modeling, red teaming, agent & MCP security, alignment, responsible AI.
+- [This guide's AI Security & Safety section](106_AI-Security-Safety/README.md) — threat modeling, red teaming, agent & MCP security, alignment, responsible AI, plus the [security & safety dataset catalog](106_AI-Security-Safety/07-security-safety-datasets.md) and [worldwide incident databases](106_AI-Security-Safety/08-incident-databases.md) (AIID, MITRE ATLAS, OECD AIM).
 
 Test actual permissions, data boundaries and side effects. Passing a scanner does not establish complete resistance to injection or leakage.
 
