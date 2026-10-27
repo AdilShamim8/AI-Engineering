@@ -4,7 +4,7 @@ A curriculum and field guide for building, evaluating and operating AI systems.
 
 > **Evidence review: October 9, 2026.** The latest job-data snapshot inspected is September 23, 2026. Review dates and source publication/collection dates are separate. Some long-form legacy claims still need source-level verification; see the [audit](research/audit-2026-10-09.md).
 >
-> **Section review: October 17, 2026.** The [AI Evaluation](105_AI-Evaluation/README.md) and [AI Security & Safety](106_AI-Security-Safety/README.md) sections were added with all references verified on that date.
+> **Section review: October 27, 2026.** The [AI Evaluation](105_AI-Evaluation/README.md) and [AI Security & Safety](106_AI-Security-Safety/README.md) sections were added with all references verified; the security section was extended on this date with a [dataset catalog](106_AI-Security-Safety/07-security-safety-datasets.md) and [incident databases](106_AI-Security-Safety/08-incident-databases.md), all figures verified against live sources.
 
 ## Start here
 
@@ -34,7 +34,7 @@ Two complete roadmaps for becoming an AI engineer, plus a full interview-prepara
 - [103 — Agentic AI](103_Agentic%20AI/README.md) — autonomous planning loops, Model Context Protocol (MCP), agentic frameworks, and multi-agent orchestration
 - [104 — LLMOps](104_LLMOps/README.md) — deployment architectures, observability, safety guardrails, governance, and enterprise scaling
 - [105 — AI Evaluation](105_AI-Evaluation/README.md) — evaluation fundamentals, LLM-as-a-Judge, agent benchmarks and the integrity crisis, RAG evaluation practice, eval engineering in CI/CD, [dataset engineering](105_AI-Evaluation/06-evaluation-datasets.md), and [online experimentation](105_AI-Evaluation/07-online-experimentation.md) — plus a complete [19-lecture LLM Evaluations course](105_AI-Evaluation/course/README.md) with full English notes and transcripts, a [glossary](105_AI-Evaluation/course/glossary.md), a [self-assessment quiz](105_AI-Evaluation/course/flashcards.md), and a [cheat sheet](105_AI-Evaluation/course/cheatsheet.md)
-- [106 — AI Security & Safety](106_AI-Security-Safety/README.md) — threat modeling (OWASP LLM + Agentic Top 10), prompt injection defense, red teaming, agent & MCP security, AI alignment, and responsible AI governance
+- [106 — AI Security & Safety](106_AI-Security-Safety/README.md) — threat modeling (OWASP LLM + Agentic Top 10, MITRE ATLAS), prompt injection defense, red teaming, agent & MCP security, AI alignment, responsible AI governance, the [security & safety dataset catalog](106_AI-Security-Safety/07-security-safety-datasets.md), and [worldwide incident databases](106_AI-Security-Safety/08-incident-databases.md)
 
 
 ## The AI Engineer Role
