@@ -34,7 +34,7 @@ METR — the nonprofit that runs capability evaluations — reported in June 202
 
 ### 2. Benchmarks can be exploited by design
 
-A Berkeley team (Wang, Mang, Cheung, Sen, Song) built an automated scanning agent that audited eight prominent agent benchmarks and demonstrated near-perfect scores **without solving any tasks** ([*How We Broke Top AI Agent Benchmarks*](https://moogician.github.io/blog/2026/trustworthy-benchmarks-cont/), paper [arXiv:2605.12673](https://arxiv.org/abs/2605.12673), April 2026):
+A Berkeley team (Wang, Li, Mang, Cheung, Sen, Song) built an automated scanning agent — BenchJack — that audited the most prominent agent benchmarks (ten in the paper's full audit, surfacing 219 distinct flaws across eight classes) and demonstrated near-perfect scores **without solving any tasks** ([*How We Broke Top AI Agent Benchmarks*](https://moogician.github.io/blog/2026/trustworthy-benchmarks-cont/), paper [arXiv:2605.12673](https://arxiv.org/abs/2605.12673), May 2026):
 
 - a 10-line `conftest.py` that forces all tests to pass "resolves" every SWE-bench Verified instance;
 - a fake `curl` wrapper scores 100% on Terminal-Bench;
@@ -76,7 +76,7 @@ When you need to evaluate *your* agent (the application-eval case), the research
 - TheAgentCompany: Xu et al., 2024 — [arXiv:2412.14161](https://arxiv.org/abs/2412.14161)
 - τ-bench family: Yao et al. — [repository](https://github.com/sierra-research/tau2-bench)
 - *A Survey on Evaluation of LLM-based Agents* — [arXiv:2503.16416](https://arxiv.org/abs/2503.16416) (updated April 2026)
-- Wang et al., *How We Broke Top AI Agent Benchmarks*, April 2026 — [arXiv:2605.12673](https://arxiv.org/abs/2605.12673) · [companion blog](https://moogician.github.io/blog/2026/trustworthy-benchmarks-cont/)
+- Wang, Li, Mang, Cheung, Sen & Song, *Do Androids Dream of Breaking the Game? Systematically Auditing AI Agent Benchmarks with BenchJack*, May 2026 — [arXiv:2605.12673](https://arxiv.org/abs/2605.12673) · companion blog: [*How We Broke Top AI Agent Benchmarks*](https://moogician.github.io/blog/2026/trustworthy-benchmarks-cont/)
 - METR, *Recent Frontier Models Are Reward Hacking*, June 2025 — [metr.substack.com](https://metr.substack.com/p/2025-06-05-recent-reward-hacking)
 - Anthropic Engineering, *Quantifying infrastructure noise in agentic coding evals*, Feb 2026 — [anthropic.com/engineering/infrastructure-noise](https://www.anthropic.com/engineering/infrastructure-noise)
 - Anthropic Engineering, *Eval awareness in Claude Opus 4.6's BrowseComp performance*, Mar 2026 — [anthropic.com/engineering/eval-awareness-browsecomp](https://www.anthropic.com/engineering/eval-awareness-browsecomp)
