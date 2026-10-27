@@ -26,7 +26,7 @@ Invariant Labs documented the attack classes that come with Model Context Protoc
 - **Rug pull** — the server changes its tool description *after* the user approved it. Approval captures a snapshot; the model sees the current text.
 - **Cross-server tool shadowing** — with multiple MCP servers connected, one malicious server's description can override or manipulate how the agent uses *another, trusted* server (including hijacking credentials across servers).
 
-A peer-reviewed STRIDE/DREAD threat model of MCP ([Kalo et al., MDPI, 2025](https://www.mdpi.com/2624-800X/6/3/84)) found **5 of 7 major MCP clients implemented no static validation of server-provided metadata** — the attacks worked because the ecosystem trusted tool text by default. OWASP's agentic list encodes the lesson as [ASI04: Agentic Supply Chain Compromise](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026).
+A peer-reviewed STRIDE/DREAD threat model of MCP ([Huang et al., MDPI, 2026](https://www.mdpi.com/2624-800X/6/3/84)) found **5 of 7 major MCP clients implemented no static validation of server-provided metadata** — the attacks worked because the ecosystem trusted tool text by default. OWASP's agentic list encodes the lesson as [ASI04: Agentic Supply Chain Compromise](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026).
 
 ### 3. The STDIO supply-chain flaw (April 2026)
 
@@ -74,7 +74,7 @@ MCP is the right *integration* standard and the wrong *trust* boundary. Practica
 - Anthropic, [*Disrupting the first reported AI-orchestrated cyber espionage campaign*](https://www.anthropic.com/news/disrupting-AI-espionage) (Nov 13, 2025)
 - Invariant Labs, [*MCP Security Notification: Tool Poisoning Attacks*](https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks) (2025)
 - Cloud Security Alliance, [*MCP Security Crisis: Systemic Design Flaws in AI Agent Infrastructure*](https://labs.cloudsecurityalliance.org/research/csa-research-note-mcp-security-crisis-20260504-csa-styled) (May 2026)
-- Kalo et al., *Model Context Protocol Threat Modeling and Analysis* — [MDPI 6(3):84](https://www.mdpi.com/2624-800X/6/3/84) (2025)
+- Huang, Huang, Tran & Milani Fard, *Model Context Protocol Threat Modeling and Analysis of Vulnerabilities to Prompt Injection with Tool Poisoning* — [MDPI 6(3):84](https://www.mdpi.com/2624-800X/6/3/84) (2026)
 - NSA Cybersecurity Information Sheet, [*Security Considerations for MCP*](https://www.nsa.gov/Portals/75/documents/Cybersecurity/CSI_MCP_SECURITY.pdf)
 - [OWASP Top 10 for Agentic Applications](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026) — ASI01–ASI10
 - [MCP curriculum in 103](../103_Agentic%20AI/02-Agent%20Protocols/1.%20Introduction%20to%20Model%20Context%20Protocol%20(MCP).md) — the protocol itself

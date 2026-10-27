@@ -67,7 +67,7 @@ Read ASI09 next to the [MCP client research](04-agent-mcp-security.md): several 
 ## Threat-modeling procedure that works for AI systems
 
 1. **Draw the data flow diagram** including the model, retrieval store, tools, external content sources, and humans. Mark the boundaries from the table above.
-2. **For each boundary, ask STRIDE-flavored questions** — the [MCP threat-modeling paper](https://www.mdpi.com/2624-800X/6/3/84) (Kalo et al., 2025) applies STRIDE/DREAD to MCP architectures and is a useful template for agent stacks: who can *spoof* this tool's response, *tamper* with this corpus entry, *repudiate* this action, *disclose* this context, *deny* this service, *escalate* through this permission?
+2. **For each boundary, ask STRIDE-flavored questions** — the [MCP threat-modeling paper](https://www.mdpi.com/2624-800X/6/3/84) (Huang et al., 2026) applies STRIDE/DREAD to MCP architectures and is a useful template for agent stacks: who can *spoof* this tool's response, *tamper* with this corpus entry, *repudiate* this action, *disclose* this context, *deny* this service, *escalate* through this permission?
 3. **Enumerate the "untrusted input + privileged capability + exfiltration path" triples.** Injection attacks need all three legs; breaking any leg breaks the attack class (this is the design principle behind [CaMeL](02-prompt-injection-defense.md)).
 4. **Classify actions by consequence.** Read-only vs consequential vs irreversible. Irreversible actions (payments, deletes, sends) get human approval and idempotency keys regardless of model confidence — see [tool safety](../104_LLMOps/README.md) and [agent security](04-agent-mcp-security.md).
 5. **Write the attacks you will test for** — this becomes the initial [red-team suite](03-red-teaming.md). A threat model that never converts into tests is documentation, not defense.
@@ -77,7 +77,7 @@ Read ASI09 next to the [MCP client research](04-agent-mcp-security.md): several 
 
 - [OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/) — project page; current list at [genai.owasp.org/llm-top-10](https://genai.owasp.org/llm-top-10/)
 - [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026) — ASI01–ASI10
-- Kalo et al., *Model Context Protocol Threat Modeling and Analysis* (STRIDE/DREAD over MCP), 2025 — [MDPI](https://www.mdpi.com/2624-800X/6/3/84)
+- Huang, Huang, Tran & Milani Fard, *Model Context Protocol Threat Modeling and Analysis of Vulnerabilities to Prompt Injection with Tool Poisoning* (STRIDE/DREAD over MCP), 2026 — [MDPI](https://www.mdpi.com/2624-800X/6/3/84)
 - [Roadmap Level 8 — AI Security](../roadmap/full-roadmap/level-08-ai-security.md) — module M8.1 is the syllabus version of this note
 - [104 — Safety & Guardrails curriculum](../104_LLMOps/README.md) — implementation-level notes on each control
 - Simon Willison's [prompt injection archive](https://simonwillison.net/tags/prompt-injection/) — the most consistently current incident record
