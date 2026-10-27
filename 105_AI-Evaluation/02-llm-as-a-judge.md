@@ -59,7 +59,7 @@ A production judge prompt is a measurement instrument, not a conversation:
 
 ## Agent-as-a-Judge: judging trajectories, not just answers
 
-The newest branch of the field extends judging from outputs to *agent behavior*: scoring the trajectory — plan quality, tool selection, step efficiency, recovery from errors — rather than only the final answer. The survey by Yu et al. ([arXiv:2601.05111](https://arxiv.org/abs/2601.05111)) frames the design space. In practice this means the judge receives the full trace (user goal, steps, tool calls and results, final state) and scores dimensions like "were any tool calls unnecessary?" or "did the agent notice the failure and recover?" This connects directly to [agent benchmark](03-agent-benchmarks.md) measurement and to the trace-evaluation survey ([arXiv:2606.04990](https://arxiv.org/abs/2606.04990)).
+The newest branch of the field extends judging from outputs to *agent behavior*: scoring the trajectory — plan quality, tool selection, step efficiency, recovery from errors — rather than only the final answer. The survey by You et al. ([arXiv:2601.05111](https://arxiv.org/abs/2601.05111)) frames the design space. In practice this means the judge receives the full trace (user goal, steps, tool calls and results, final state) and scores dimensions like "were any tool calls unnecessary?" or "did the agent notice the failure and recover?" This connects directly to [agent benchmark](03-agent-benchmarks.md) measurement and to the trace-evaluation survey ([arXiv:2606.04990](https://arxiv.org/abs/2606.04990)).
 
 Anthropic's engineering posts on agent evals ([*Demystifying evals for AI agents*](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents), January 2026; [*Effective harnesses for long-running agents*](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents), November 2025) describe the production version of this: pass/fail end-state checks plus LLM-graded rubrics over transcripts, with infrastructure that keeps long-running evals cheap and reproducible.
 
@@ -74,7 +74,7 @@ Anthropic's engineering posts on agent evals ([*Demystifying evals for AI agents
 - Zheng et al., *Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena*, NeurIPS 2023 — [arXiv:2306.05685](https://arxiv.org/abs/2306.05685)
 - Gu et al., *A Survey on LLM-as-a-Judge*, 2024 (journal version *Machine Learning*, 2026) — [arXiv:2411.15594](https://arxiv.org/abs/2411.15594)
 - Dubois et al., *Length-Controlled AlpacaEval*, COLM 2024 — [arXiv:2404.04475](https://arxiv.org/abs/2404.04475)
-- Yu et al., *A Survey on Agent-as-a-Judge* — [arXiv:2601.05111](https://arxiv.org/abs/2601.05111)
+- You et al., *Agent-as-a-Judge* — [arXiv:2601.05111](https://arxiv.org/abs/2601.05111)
 - *From Agent Traces to Trust: A Survey of Evidence in LLM Agent Evaluation* — [arXiv:2606.04990](https://arxiv.org/abs/2606.04990)
 - LangChain, [*How to calibrate LLM-as-judge with human corrections*](https://www.langchain.com/resources/llm-as-a-judge) (March 2026)
 - Tooling with first-class judge metrics: [DeepEval](https://github.com/confident-ai/deepeval) · [promptfoo](https://github.com/promptfoo/promptfoo) · [Ragas](https://github.com/vibrantlabsai/ragas) (RAG-specific judges)
