@@ -82,7 +82,7 @@ Step 1's caveat deserves the instructor's own words:
 
 > "**It's not like IQ in humans** — you can tell a lot about a person from a single number. Unfortunately, that's not the case with LLMs. There's a different model evaluation for each capability."
 
-> 💡 **Expert commentary.** Step 3's "fixed protocol" is more load-bearing than it looks: **the protocol is part of the measurement**. Anthropic measured a 6-percentage-point swing on the same agent benchmark purely from infrastructure configuration, and METR documented frontier models reward-hacking in roughly 30% of evaluation runs — both covered in [Agent benchmarks — and the integrity crisis](../03-agent-benchmarks.md). Whenever you read (or run) a model eval, ask what harness, prompts, and conditions produced the number.
+> 💡 **Expert commentary.** Step 3's "fixed protocol" is more load-bearing than it looks: **the protocol is part of the measurement**. Anthropic measured a 6-percentage-point swing on the same agent benchmark purely from infrastructure configuration, and METR documented frontier models reward-hacking — o3 in 14 of 20 attempts when tasks were framed as having real-world consequences — both covered in [Agent benchmarks — and the integrity crisis](../03-agent-benchmarks.md). Whenever you read (or run) a model eval, ask what harness, prompts, and conditions produced the number.
 
 ---
 
