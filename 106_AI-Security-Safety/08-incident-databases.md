@@ -55,3 +55,26 @@ AIM's role in your process is horizon scanning: it will surface non-English-cove
 ## 5. NIST's ARIA program — evaluation infrastructure, not a database
 
 Rounding out the institutional layer: [ARIA](https://ai-challenges.nist.gov/) (Assessing Risks and Impacts of AI), launched by NIST in May 2024, is best understood not as another incident list but as the research program building **how to evaluate AI risks sociotechnically at scale** — experimental evaluation of real systems in realistic contexts, feeding the [NIST AI RMF](06-responsible-ai.md) ecosystem with methods rather than anecdotes. Its companion Constructing an Open Risk Index (CORIX) work aims at structured risk indexes. For a practitioner, ARIA matters as the place where the assessment *methodology* your regulator will eventually reference is being worked out — worth a periodic check, not a daily one.
+
+## 6. Operationalizing the record — the intelligence loop
+
+These databases earn their keep when they close a loop with your own system. The minimum viable loop, in order:
+
+1. **Subscribe.** AIM for breadth (filter to your industry and autonomy levels), AIID/MIT tracker for depth (filter to your domains), ATLAS for the technique feed. A monthly 30-minute review is enough cadence for most teams; security-critical deployments want it weekly.
+2. **Triage against your architecture.** For each relevant incident, ask the one question that matters: *could our stack produce this failure?* If yes or unsure, it becomes a row in your risk register with the source citation attached.
+3. **Map to ATLAS techniques.** Translate the incident narrative into technique identifiers, and check your coverage ledger from [threat modeling](01-threat-modeling.md). Incidents reveal which techniques are *actually being used* — that is your prioritization signal for closing gaps.
+4. **Feed the red team.** New incident patterns become new attack objectives — each one either a confirmed-vulnerable case (fix + [regression test](03-red-teaming.md)) or a documented control pass. The [Claude Code espionage campaign](04-agent-mcp-security.md) is the worked example: a novel incident class that every agent team should have converted into tests within a release cycle.
+5. **Write it into the governance record.** The [responsible-AI documentation set](06-responsible-ai.md) should reference the incident record you reviewed and when — "we checked the world's failure record as of this date" is a strong sentence in any audit, and a defensible one.
+
+One discipline note: incident counts are *reporting rates*, not harm rates. Coverage skews toward English-language media, high-visibility sectors, and harms that photograph well. The numbers are for direction and trend, not denominators — the same epistemic honesty the [evidence policy](../research/evidence-policy.md) demands elsewhere in this repository.
+
+## References
+
+- [AI Incident Database](https://incidentdatabase.ai/) — Responsible AI Collaborative; the curated core record
+- [MIT AI Risk Incident Tracker](https://airisk.mit.edu/ai-incident-tracker) — 1,776 classified AIID incidents; MIT Risk Repository + CSET harm taxonomies; verified October 27, 2026
+- [MITRE ATLAS](https://atlas.mitre.org/) — 16 tactics / 208 techniques / 40 mitigations / 73 case studies; verified October 27, 2026
+- [OECD AI Incidents Monitor (AIM)](https://oecd.ai/en/incidents) — ~18,579 incidents & hazards; Azure + Event Registry; verified October 27, 2026
+- [NIST ARIA](https://ai-challenges.nist.gov/) — Assessing Risks and Impacts of AI program (launched May 2024)
+- Cross-cutting: [threat modeling](01-threat-modeling.md) (where the record feeds in) · [red teaming](03-red-teaming.md) (where incidents become tests) · [security & safety datasets](07-security-safety-datasets.md) (the lab-side counterpart) · [AI-Safety repository's incident reviews](https://github.com/AdilShamim8/AI-Safety) (14 worked incident analyses in its research notes)
+
+Previous: [Security & safety datasets](07-security-safety-datasets.md) · [Back to section home](README.md)
