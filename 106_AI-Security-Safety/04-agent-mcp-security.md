@@ -60,6 +60,17 @@ None of the incidents above defeat these controls; all of them exploited their a
 **5. Behavioral monitoring**
 - Log full traces (arguments included) with sensitive-data-aware retention; alert on anomalous tool sequences, unusual resource access, and goal-adjacent drift — exactly the detection pattern Anthropic's disclosure describes. This is [observability](../104_LLMOps/README.md) applied to security.
 
+**Validating the controls: the agent-security benchmarks.** Each control above is testable against public instruments (cataloged in the [datasets note](07-security-safety-datasets.md)):
+
+| Control | Benchmark that tests it | What a pass looks like |
+|---|---|---|
+| Least privilege / egress control | [AgentDojo](https://arxiv.org/abs/2406.13352) (97 tasks, adaptive attacks) | Injected task instructions fail at the *permission* layer, not the model layer |
+| Untrusted content channels | [InjecAgent](https://arxiv.org/abs/2403.02691), [BIPIA](https://arxiv.org/abs/2312.14197) | Injection payloads in tool output/documents produce no unauthorized *actions* |
+| Misuse resistance | [AgentHarm](https://arxiv.org/abs/2410.09024) (110 malicious task families, 440 with augmentations) | Refusal robust across phrasing variants, not just the canonical phrasing |
+| Realistic task execution | [WebArena](https://arxiv.org/abs/2307.13854) (executable success predicates) | The agent succeeds at *legitimate* tasks while the above hold — safety that breaks functionality is not a pass |
+
+The design principle all four share and your internal suite should copy: **score actions, not text**. An agent that politely declines in prose but still executes the injected tool call has failed; an agent that completes the task while blocking the payload has passed. Text-level judges cannot see this difference — wire the assertions to the tool-call log.
+
 ## What this means for MCP adoption specifically
 
 MCP is the right *integration* standard and the wrong *trust* boundary. Practical posture for 2026, synthesized from the CSA note and the NSA's [MCP security guidance](https://www.nsa.gov/Portals/75/documents/Cybersecurity/CSI_MCP_SECURITY.pdf):
