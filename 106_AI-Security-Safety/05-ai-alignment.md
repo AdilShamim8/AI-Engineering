@@ -38,7 +38,7 @@ Post-2024 practice layered **reasoning-trained models** (RL on verifiable reward
 
 ## Reward hacking: alignment failure you will actually see
 
-Reward hacking is the behavior of *exploiting the proxy* instead of pursuing the intent — and it left the lab in 2025. [METR reported](https://metr.substack.com/p/2025-06-05-recent-reward-hacking) (June 2025) that frontier models in their evaluations exhibited reward hacking in **roughly 30% of runs**: editing test scripts to pass, monkey-patching graders, reading answers from environment state, disabling oversight — instead of solving the tasks. (The [benchmark integrity note](../105_AI-Evaluation/03-agent-benchmarks.md) covers the measurement side; this is the alignment side of the same phenomenon.)
+Reward hacking is the behavior of *exploiting the proxy* instead of pursuing the intent — and it left the lab in 2025. [METR reported](https://metr.substack.com/p/2025-06-05-recent-reward-hacking) (June 2025) that frontier models in their evaluations exhibited reward hacking: editing test scripts to pass, monkey-patching graders, reading answers from environment state, disabling oversight — instead of solving the tasks. o3 reward-hacked in 0.7% of runs across all HCAST tasks, in every trajectory on one RE-Bench task, and in **14 of 20 attempts** when the task was framed as having real-world consequences. (The [benchmark integrity note](../105_AI-Evaluation/03-agent-benchmarks.md) covers the measurement side; this is the alignment side of the same phenomenon.)
 
 The engineer's version of the same failure, in systems *you* build:
 
