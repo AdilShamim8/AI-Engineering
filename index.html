@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Engineering Field Guide — Start Here (2026 Edition)</title>
+<meta name="description" content="A free, self-study library for becoming an AI engineer: a 6-section technical curriculum (101-106), two roadmaps, a 19-lecture evaluation course, and complete interview preparation.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+<style>
+  :root{
+    --bg:#f6f7fb; --card:#ffffff; --ink:#0f172a; --muted:#51607a; --line:#e4e8f2;
+    --accent:#4338ca; --accent2:#6366f1; --chipbg:#eef2ff;
+    --s101:#2563eb; --s102:#7c3aed; --s103:#d97706; --s104:#0d9488; --s105:#db2777; --s106:#dc2626;
+    --dark1:#0b1220; --dark2:#131c36;
+    --radius:14px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; background:var(--bg); color:var(--ink); line-height:1.6; -webkit-font-smoothing:antialiased}
+  a{color:var(--accent); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 22px}
+  section{scroll-margin-top:76px; padding:52px 0 8px}
+
+  /* ---------- NAV ---------- */
+  nav{position:sticky; top:0; z-index:50; background:rgba(255,255,255,.88); backdrop-filter:blur(10px); border-bottom:1px solid var(--line)}
+  .nav-in{max-width:1080px; margin:0 auto; padding:10px 22px; display:flex; align-items:center; gap:18px; flex-wrap:wrap}
+  .brand{display:flex; align-items:center; gap:9px; font-weight:800; font-size:15.5px; color:var(--ink); white-space:nowrap}
+  .brand:hover{text-decoration:none}
+  .brand .bolt{width:26px; height:26px; border-radius:8px; background:linear-gradient(135deg,#4f46e5,#0ea5e9); color:#fff; display:grid; place-items:center; font-size:14px}
+  .nav-links{display:flex; gap:2px; overflow-x:auto; scrollbar-width:none; flex:1; min-width:0}
+  .nav-links::-webkit-scrollbar{display:none}
+  .nav-links a{color:#3b4a66; font-size:13.5px; font-weight:600; padding:6px 10px; border-radius:8px; white-space:nowrap}
+  .nav-links a:hover{background:var(--chipbg); color:var(--accent); text-decoration:none}
+  .nav-search{position:relative; flex:0 0 210px}
+  .nav-search input{width:100%; padding:8px 12px 8px 32px; border:1px solid var(--line); border-radius:10px; font-size:13.5px; background:#fff; outline:none; transition:border .15s, box-shadow .15s}
+  .nav-search input:focus{border-color:var(--accent2); box-shadow:0 0 0 3px rgba(99,102,241,.15)}
+  .nav-search .mag{position:absolute; left:10px; top:50%; transform:translateY(-50%); color:#94a3b8; font-size:13px; pointer-events:none}
+  .search-drop{position:absolute; top:calc(100% + 6px); left:0; right:0; background:#fff; border:1px solid var(--line); border-radius:12px; box-shadow:0 14px 40px rgba(15,23,42,.14); max-height:340px; overflow-y:auto; display:none; z-index:60}
+  .search-drop.show{display:block}
+  .search-drop .sr{display:flex; flex-direction:column; gap:1px; padding:6px}
+  .search-drop a{padding:8px 10px; border-radius:8px; font-size:13px; color:var(--ink); display:block; overflow:hidden}
+  .search-drop a:hover,.search-drop a.active{background:var(--chipbg); text-decoration:none}
+  .search-drop a .pth{display:block; color:var(--muted); font-size:11px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+  .search-drop .none{padding:12px; color:var(--muted); font-size:13px; text-align:center}
+
+  /* ---------- HERO ---------- */
+  header.hero{background:radial-gradient(900px 400px at 15% -10%, rgba(79,70,229,.35), transparent 55%), radial-gradient(700px 380px at 90% 0%, rgba(14,165,233,.22), transparent 50%), linear-gradient(160deg, var(--dark1), var(--dark2)); color:#fff; padding:74px 0 66px; position:relative; overflow:hidden}
+  header.hero::after{content:""; position:absolute; inset:0; background-image:linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px); background-size:44px 44px; pointer-events:none}
+  .hero-in{position:relative; z-index:2; max-width:1080px; margin:0 auto; padding:0 22px}
+  .kicker{display:inline-flex; align-items:center; gap:8px; background:rgba(99,102,241,.18); border:1px solid rgba(129,140,248,.4); color:#c7d2fe; font-size:12.5px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; padding:6px 14px; border-radius:999px; margin-bottom:22px}
+  h1{font-size:clamp(30px, 5vw, 46px); line-height:1.12; letter-spacing:-.02em; font-weight:850; max-width:760px}
+  h1 .grad{background:linear-gradient(90deg,#a5b4fc,#67e8f9); -webkit-background-clip:text; background-clip:text; color:transparent}
+  .sub{margin:18px 0 6px; font-size:17px; color:#c7d2e4; max-width:680px}
+  .chips{display:flex; flex-wrap:wrap; gap:9px; margin:26px 0 30px}
+  .chip{background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.14); border-radius:999px; padding:7px 15px; font-size:13.5px; color:#e2e8f0}
+  .chip b{color:#fff}
+  .cta-row{display:flex; gap:12px; flex-wrap:wrap}
+  .btn{display:inline-flex; align-items:center; gap:8px; padding:11px 20px; border-radius:11px; font-weight:700; font-size:14.5px; border:1px solid transparent; cursor:pointer}
+  .btn:hover{text-decoration:none; transform:translateY(-1px); transition:transform .12s}
+  .btn-p{background:linear-gradient(135deg,#6366f1,#4f46e5); color:#fff; box-shadow:0 8px 24px rgba(79,70,229,.4)}
+  .btn-g{background:rgba(255,255,255,.08); color:#fff; border-color:rgba(255,255,255,.22)}
+
+  /* ---------- SECTION HEADERS ---------- */
+  .sec-head{margin-bottom:26px}
+  .sec-eyebrow{font-size:12px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--accent2); margin-bottom:6px}
+  h2{font-size:clamp(22px,3vw,30px); letter-spacing:-.015em; font-weight:800}
+  .sec-lede{color:var(--muted); margin-top:8px; max-width:760px; font-size:15.5px}
+
+  /* ---------- START HERE ---------- */
+  .layers{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:16px; margin:22px 0}
+  .layer{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:20px 20px 18px; position:relative; overflow:hidden}
+  .layer::before{content:""; position:absolute; top:0; left:0; right:0; height:4px; background:var(--lc, var(--accent))}
+  .layer h3{font-size:16px; margin-bottom:6px}
+  .layer p{font-size:13.8px; color:var(--muted)}
+  .layer .ln{font-size:11.5px; font-weight:800; color:var(--lc,var(--accent)); letter-spacing:.06em; text-transform:uppercase; margin-bottom:8px}
+  .callout{background:#fffbeb; border:1px solid #fde68a; border-radius:var(--radius); padding:16px 20px; margin:20px 0; font-size:14.5px}
+  .callout b{color:#92400e}
+  .callout .t{font-weight:800; color:#92400e; display:flex; align-items:center; gap:8px; margin-bottom:4px; font-size:13px; text-transform:uppercase; letter-spacing:.06em}
+  table.guide{width:100%; border-collapse:collapse; background:var(--card); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; font-size:14px; margin:20px 0}
+  table.guide th{background:#f8fafc; text-align:left; padding:11px 15px; font-size:12.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); border-bottom:1px solid var(--line)}
+  table.guide td{padding:12px 15px; border-bottom:1px solid #eef1f7; vertical-align:top}
+  table.guide tr:last-child td{border-bottom:none}
+  table.guide td:first-child{width:38%; font-weight:600}
+  .flow{display:grid; grid-template-columns:repeat(6,1fr); gap:10px; margin:24px 0 10px}
+  .flow a{display:block; background:var(--card); border:1px solid var(--line); border-top:4px solid var(--fc); border-radius:12px; padding:13px 12px; text-align:center; color:var(--ink); transition:transform .12s, box-shadow .12s}
+  .flow a:hover{text-decoration:none; transform:translateY(-2px); box-shadow:0 10px 22px rgba(15,23,42,.08)}
+  .flow .n{font-weight:850; font-size:15px; color:var(--fc)}
+  .flow .w{font-size:12.5px; font-weight:700; color:var(--ink); display:block; margin:2px 0}
+  .flow .d{font-size:11.5px; color:var(--muted); display:block; line-height:1.35}
+  .steps{counter-reset:step; display:grid; gap:12px; margin:20px 0}
+  .step{counter-increment:step; background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:16px 18px 14px 62px; position:relative}
+  .step::before{content:counter(step); position:absolute; left:16px; top:15px; width:32px; height:32px; border-radius:10px; background:var(--chipbg); color:var(--accent); font-weight:850; font-size:15px; display:grid; place-items:center; border:1px solid #dfe3fb}
+  .step h4{font-size:15px; margin-bottom:4px}
+  .step h4 .time{font-size:11.5px; font-weight:700; color:var(--muted); background:#f1f5f9; padding:2px 9px; border-radius:999px; margin-left:8px; vertical-align:1px}
+  .step p{font-size:13.8px; color:var(--muted)}
+  .note-pair{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:20px 0}
+  .note-card{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:18px 20px}
+  .note-card h4{font-size:14.5px; margin-bottom:6px; display:flex; align-items:center; gap:8px}
+  .note-card p{font-size:13.5px; color:var(--muted)}
+
+  /* ---------- CURRICULUM CARDS ---------- */
+  .cur-grid{display:grid; gap:18px; margin-top:24px}
+  .cur{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden}
+  .cur-head{display:flex; gap:16px; align-items:flex-start; padding:20px 22px 14px; border-top:4px solid var(--cc)}
+  .badge{flex:0 0 auto; width:52px; height:52px; border-radius:14px; color:#fff; font-weight:850; font-size:17px; display:grid; place-items:center; background:var(--cc); box-shadow:0 6px 16px color-mix(in srgb, var(--cc) 35%, transparent)}
+  .cur-head h3{font-size:19px; letter-spacing:-.01em}
+  .cur-head .tag{color:var(--muted); font-size:14px; margin-top:3px}
+  .count-chip{margin-left:auto; flex:0 0 auto; background:#f1f5f9; color:#334155; font-size:12px; font-weight:700; padding:4px 11px; border-radius:999px; white-space:nowrap}
+  .cur-body{padding:0 22px 18px}
+  .learn{font-size:14px; color:#334155; margin-bottom:12px}
+  .subchips{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:14px}
+  .subchip{font-size:12.5px; font-weight:600; color:#3b4a66; background:#f6f8fc; border:1px solid var(--line); padding:5px 12px; border-radius:999px; display:inline-flex; gap:6px; align-items:center}
+  .subchip:hover{border-color:var(--cc); color:var(--cc); text-decoration:none}
+  .subchip .c{color:var(--muted); font-weight:700; font-size:11.5px}
+  details.filebox{border:1px solid var(--line); border-radius:11px; background:#fbfcfe}
+  details.filebox summary{cursor:pointer; padding:10px 15px; font-size:13.5px; font-weight:700; color:#334155; user-select:none; list-style:none; display:flex; align-items:center; gap:8px}
+  details.filebox summary::-webkit-details-marker{display:none}
+  details.filebox summary .tw{transition:transform .15s; font-size:10px; color:var(--muted)}
+  details[open].filebox summary .tw{transform:rotate(90deg)}
+  .filegroup{padding:4px 10px 10px}
+  .filegroup .fg-title{font-size:11.5px; font-weight:800; text-transform:uppercase; letter-spacing:.07em; color:var(--muted); padding:8px 8px 4px}
+  .filelist{display:grid; grid-template-columns:1fr 1fr; gap:2px 18px}
+  .filelist a{font-size:13px; color:#37455f; padding:5px 8px; border-radius:7px; display:block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+  .filelist a:hover{background:var(--chipbg); color:var(--accent); text-decoration:none}
+  .filelist a::before{content:"📄 "; font-size:11px; opacity:.55}
+
+  /* ---------- COURSE ---------- */
+  .course-hero{background:linear-gradient(150deg, #4c1d95, #6d28d9 45%, #7c3aed); border-radius:18px; color:#fff; padding:30px 28px; margin-bottom:22px; position:relative; overflow:hidden}
+  .course-hero::after{content:""; position:absolute; inset:0; background:radial-gradient(500px 200px at 85% -20%, rgba(255,255,255,.16), transparent 60%)}
+  .course-hero .ck{position:relative; z-index:2; font-size:12px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:#e9d5ff; margin-bottom:8px}
+  .course-hero h3{position:relative; z-index:2; font-size:clamp(20px,3vw,27px); letter-spacing:-.01em; max-width:640px}
+  .course-hero p{position:relative; z-index:2; color:#e6ddff; font-size:14.5px; margin-top:10px; max-width:700px}
+  .course-hero .meta{position:relative; z-index:2; display:flex; flex-wrap:wrap; gap:8px; margin-top:16px}
+  .course-hero .m{background:rgba(255,255,255,.13); border:1px solid rgba(255,255,255,.2); border-radius:999px; padding:4px 13px; font-size:12.5px; font-weight:600}
+  table.lec{width:100%; border-collapse:collapse; background:var(--card); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; font-size:13.8px; margin:18px 0}
+  table.lec th{background:#f8fafc; text-align:left; padding:10px 14px; font-size:12px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); border-bottom:1px solid var(--line)}
+  table.lec td{padding:10px 14px; border-bottom:1px solid #eef1f7; vertical-align:top}
+  table.lec tr:last-child td{border-bottom:none}
+  table.lec tr:hover td{background:#fafbfe}
+  table.lec .num{font-weight:800; color:#7c3aed; width:34px}
+  table.lec .dur{white-space:nowrap; color:var(--muted); font-variant-numeric:tabular-nums; width:64px}
+  .aids{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px; margin:18px 0}
+  .aid{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:16px 18px}
+  .aid h4{font-size:14.5px; margin-bottom:5px}
+  .aid p{font-size:13px; color:var(--muted)}
+  .aid .ic{font-size:20px; margin-bottom:8px; display:block}
+
+  /* ---------- GENERIC CARD GRIDS ---------- */
+  .grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; margin:22px 0}
+  .grid3{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px; margin:22px 0}
+  .card{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:18px 20px}
+  .card h4{font-size:15.5px; margin-bottom:6px}
+  .card p{font-size:13.5px; color:var(--muted)}
+  .card .go{display:inline-block; margin-top:10px; font-size:13px; font-weight:700}
+  .card ul{margin:8px 0 0 2px; list-style:none}
+  .card ul li{font-size:13.3px; color:#3b4a66; padding:3px 0 3px 18px; position:relative}
+  .card ul li::before{content:"→"; position:absolute; left:0; color:var(--accent2); font-weight:700}
+
+  /* ---------- FILE BROWSER ---------- */
+  .fb-bar{display:flex; gap:12px; flex-wrap:wrap; margin:18px 0}
+  .fb-bar input[type=text]{flex:1; min-width:220px; padding:10px 15px; border:1px solid var(--line); border-radius:11px; font-size:14px; background:#fff; outline:none}
+  .fb-bar input[type=text]:focus{border-color:var(--accent2); box-shadow:0 0 0 3px rgba(99,102,241,.14)}
+  .fb-bar select{padding:10px 12px; border:1px solid var(--line); border-radius:11px; font-size:13.5px; background:#fff; color:var(--ink); font-weight:600; outline:none}
+  .fb-count{font-size:13px; color:var(--muted); margin-bottom:10px}
+  .fb-group{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); margin-bottom:12px; overflow:hidden}
+  .fb-group summary{cursor:pointer; padding:13px 18px; font-weight:750; font-size:14.5px; display:flex; align-items:center; gap:10px; list-style:none; user-select:none}
+  .fb-group summary::-webkit-details-marker{display:none}
+  .fb-group summary .cnt{font-size:12px; color:var(--muted); background:#f1f5f9; padding:2px 10px; border-radius:999px; font-weight:700}
+  .fb-group summary .dot{width:10px; height:10px; border-radius:3px; background:var(--gc, var(--accent))}
+  .fb-list{display:grid; grid-template-columns:1fr 1fr; gap:2px 20px; padding:2px 14px 14px; border-top:1px solid #f0f2f8}
+  .fb-list a{font-size:13px; color:#37455f; padding:5px 8px; border-radius:7px; display:block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+  .fb-list a:hover{background:var(--chipbg); color:var(--accent); text-decoration:none}
+  .fb-list .sub{font-size:11px; color:#94a3b8; font-weight:600}
+  .fb-empty{padding:30px; text-align:center; color:var(--muted); font-size:14px}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--dark1); color:#94a3b8; margin-top:64px; padding:46px 0 40px; font-size:13.5px}
+  .foot-grid{display:grid; grid-template-columns:2fr 1fr 1fr; gap:34px}
+  footer h5{color:#e2e8f0; font-size:13px; text-transform:uppercase; letter-spacing:.08em; margin-bottom:12px}
+  footer a{color:#a5b4fc}
+  footer ul{list-style:none}
+  footer li{padding:3px 0}
+  .foot-note{border-top:1px solid #1e293b; margin-top:32px; padding-top:22px; font-size:12.5px; color:#64748b; max-width:900px}
+  .foot-note b{color:#94a3b8}
+
+  @media (max-width:860px){
+    .flow{grid-template-columns:repeat(3,1fr)}
+    .filelist,.fb-list{grid-template-columns:1fr}
+    .note-pair{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr}
+    .nav-search{flex:1 1 160px; order:5}
+    table.lec .dur{display:none}
+  }
+  @media (max-width:520px){
+    .flow{grid-template-columns:repeat(2,1fr)}
+    .cur-head{flex-wrap:wrap}
+    .count-chip{margin-left:0}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <a class="brand" href="#top"><span class="bolt">⚡</span>AI&nbsp;Eng&nbsp;Field&nbsp;Guide</a>
+    <div class="nav-links">
+      <a href="#start">Start&nbsp;Here</a>
+      <a href="#curriculum">Curriculum&nbsp;101–106</a>
+      <a href="#course">19-Lecture&nbsp;Course</a>
+      <a href="#roadmaps">Roadmaps</a>
+      <a href="#interview">Interview</a>
+      <a href="#career">Career</a>
+      <a href="#research">Research</a>
+      <a href="#files">All&nbsp;Files</a>
+    </div>
+    <div class="nav-search">
+      <span class="mag">🔍</span>
+      <input id="q" type="text" placeholder="Search 250+ notes…" autocomplete="off" aria-label="Search the repository">
+      <div class="search-drop" id="qdrop"><div class="sr" id="qresults"></div></div>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-in">
+    <span class="kicker">2026 Edition · Free · Self-Study</span>
+    <h1>The AI Engineering <span class="grad">Field Guide</span> — every note, one page</h1>
+    <p class="sub">A complete, self-study library for becoming an AI engineer: a six-section technical curriculum written from first principles, two guided roadmaps, a full 19-lecture evaluation course, and interview preparation with worked answers — organized here so any beginner can find their way in.</p>
+    <div class="chips">
+      <span class="chip"><b>243</b> study notes</span>
+      <span class="chip"><b>6</b> curriculum sections · 101–106</span>
+      <span class="chip"><b>19</b>-lecture course (~20&nbsp;h video)</span>
+      <span class="chip"><b>100</b> interview Q&amp;As answered</span>
+      <span class="chip"><b>286</b>-session full roadmap</span>
+      <span class="chip"><b>47</b> verified dataset cards (sister repo)</span>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-p" href="#start">🚀 &nbsp;I'm new — start here</a>
+      <a class="btn btn-g" href="https://github.com/AdilShamim8/AI-Engineering" target="_blank" rel="noopener">★ &nbsp;Repository on GitHub</a>
+      <a class="btn btn-g" href="#files">🗂 &nbsp;Browse all files</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<!-- ==================== START HERE ==================== -->
+<section id="start">
+  <div class="sec-head">
+    <div class="sec-eyebrow">Beginner onboarding</div>
+    <h2>New here? Start with this section</h2>
+    <p class="sec-lede">This repository has three layers. You don't need all of them at once — pick the layer that matches your situation, and open the others when you need them.</p>
+  </div>
+
+  <div class="layers">
+    <div class="layer" style="--lc:var(--s101)">
+      <div class="ln">Layer 1 · The knowledge</div>
+      <h3>Technical Curriculum (101–106)</h3>
+      <p>Six numbered sections — LLM Literacy → Application Development → Agentic AI → LLMOps → Evaluation → Security &amp; Safety. Written from first principles: no machine-learning background required. <a href="#curriculum">Explore ↓</a></p>
+    </div>
+    <div class="layer" style="--lc:var(--s103)">
+      <div class="ln">Layer 2 · The schedule</div>
+      <h3>Roadmaps (Full + 100-Day)</h3>
+      <p>Guided, day-by-day study plans through the same material: a 286-session full roadmap, a 100-day accelerated plan, 100 interview questions, and 12 portfolio projects. <a href="#roadmaps">Explore ↓</a></p>
+    </div>
+    <div class="layer" style="--lc:var(--s105)">
+      <div class="ln">Layer 3 · The job</div>
+      <h3>Interview &amp; Career Material</h3>
+      <p>The AI-engineer role explained, learning paths from five adjacent careers, a portfolio guide, and interview preparation where every question carries a worked answer. <a href="#interview">Explore ↓</a></p>
+    </div>
+  </div>
+
+  <div class="callout">
+    <div class="t">✅ Prerequisites — you need less than you think</div>
+    You can already program (<b>Python</b> is the most useful language here). That's it. <b>No machine-learning background is required</b> — section 101 teaches every concept from scratch, and every later section links back to what it builds on.
+  </div>
+
+  <h3 style="font-size:17px; margin-top:30px">Which part should you open first?</h3>
+  <table class="guide">
+    <tr><th>Your situation</th><th>Start here</th><th>What it is</th></tr>
+    <tr>
+      <td>"I'm completely new to LLMs and AI engineering"</td>
+      <td><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/101_LLM-Literacy/README.md">101 — LLM Literacy</a></td>
+      <td>The on-ramp: how LLMs work, prompting, context engineering — from zero</td>
+    </tr>
+    <tr>
+      <td>"I want a day-by-day plan to become job-ready"</td>
+      <td><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/accelerated-roadmap/README.md">Accelerated Roadmap (100 days)</a></td>
+      <td>6 modules · 100 days · the core ~80% employers expect</td>
+    </tr>
+    <tr>
+      <td>"I want full depth, at my own pace"</td>
+      <td><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/full-roadmap/README.md">Full Roadmap</a></td>
+      <td>16 levels · 286 sessions · 100% coverage from software fundamentals to interview prep</td>
+    </tr>
+    <tr>
+      <td>"I need to learn one specific topic"</td>
+      <td><a href="#curriculum">Curriculum sections 101–106</a></td>
+      <td>Reference knowledge base — open just the section you need</td>
+    </tr>
+    <tr>
+      <td>"I'm switching from another engineering role"</td>
+      <td><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/learning-paths/README.md">Learning Paths</a></td>
+      <td>Transition guides from data / backend / frontend / ML engineering, with durations</td>
+    </tr>
+    <tr>
+      <td>"I have an interview coming up"</td>
+      <td><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/interview/README.md">Interview Preparation</a></td>
+      <td>The process, 100 answered questions, system design, negotiation</td>
+    </tr>
+  </table>
+
+  <h3 style="font-size:17px; margin-top:30px">Your first 60 minutes — a concrete first session</h3>
+  <div class="steps">
+    <div class="step">
+      <h4>Read the repository's own introduction <span class="time">~10 min</span></h4>
+      <p>Open the <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/README.md">main README</a> and skim how the three layers fit together. Don't follow every link yet — just get the map.</p>
+    </div>
+    <div class="step">
+      <h4>Read your very first technical note <span class="time">~15 min</span></h4>
+      <p><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/101_LLM-Literacy/01-LLM%20101/1.%20What%20Is%20a%20Large%20Language%20Model%20%28Conceptual%20Layer%29.md">"What Is a Large Language Model?"</a> — the conceptual layer, explained from zero. This is note 1 of the whole curriculum; if you understand it, you're ready for everything that follows.</p>
+    </div>
+    <div class="step">
+      <h4>See where you're headed <span class="time">~10 min</span></h4>
+      <p>Skim <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/accelerated-roadmap/module-1-llm-fundamentals.md">Module 1 of the Accelerated Roadmap</a> (LLM fundamentals, days 1–15). You won't know these terms yet — that's the point: it's a preview of the trail, not today's climb.</p>
+    </div>
+    <div class="step">
+      <h4>Locate your personal entry point <span class="time">~25 min</span></h4>
+      <p>If you already work in tech, read the transition guide for your current role in <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/learning-paths/README.md">Learning Paths</a> (data engineer, data scientist, ML engineer, backend, frontend — each with a duration estimate). Coming from outside tech? Follow the <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/full-roadmap/README.md">Full Roadmap</a>, which starts at software fundamentals.</p>
+    </div>
+  </div>
+
+  <h3 style="font-size:17px; margin-top:30px">The curriculum, in learning order</h3>
+  <p style="color:var(--muted); font-size:14.5px">The six sections build on each other — read them in order the first time, then use them as reference.</p>
+  <div class="flow">
+    <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/101_LLM-Literacy/README.md" style="--fc:var(--s101)"><span class="n">101</span><span class="w">Understand</span><span class="d">how LLMs actually work — and how to steer them with prompts &amp; context</span></a>
+    <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/README.md" style="--fc:var(--s102)"><span class="n">102</span><span class="w">Build</span><span class="d">applications: orchestration, vector databases, RAG, memory, fine-tuning</span></a>
+    <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/103_Agentic%20AI/README.md" style="--fc:var(--s103)"><span class="n">103</span><span class="w">Automate</span><span class="d">autonomy: planning loops, tool protocols (MCP), frameworks, multi-agent systems</span></a>
+    <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/README.md" style="--fc:var(--s104)"><span class="n">104</span><span class="w">Operate</span><span class="d">production: deployment, observability, safety guardrails, governance</span></a>
+    <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/README.md" style="--fc:var(--s105)"><span class="n">105</span><span class="w">Prove</span><span class="d">evidence: proving your system works — includes a full 19-lecture course</span></a>
+    <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/106_AI-Security-Safety/README.md" style="--fc:var(--s106)"><span class="n">106</span><span class="w">Defend</span><span class="d">threat modeling, prompt-injection defense, red teaming, alignment, responsible AI</span></a>
+  </div>
+
+  <div class="note-pair">
+    <div class="note-card">
+      <h4>🗺 Roadmaps = the guided tour</h4>
+      <p>They tell you <b>what to study and in what order</b> — your schedule. The full roadmap covers 100% of the field in 16 levels; the accelerated one compresses it to the core ~80% in 100 days. Follow a roadmap as your plan.</p>
+    </div>
+    <div class="note-card">
+      <h4>📚 Curriculum = the reference library</h4>
+      <p>Deep notes on each topic, organized 101–106. Whenever a roadmap mentions a topic you want in full, open the matching curriculum section. Use them as your dictionary while you build.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CURRICULUM ==================== -->
+<section id="curriculum">
+  <div class="sec-head">
+    <div class="sec-eyebrow">Layer 1 · The knowledge</div>
+    <h2>The Technical Curriculum — sections 101–106</h2>
+    <p class="sec-lede">Six numbered sections in learning order. Each subsection's notes are numbered — open the folder and read them 1, 2, 3… Every folder below links straight to GitHub, where the notes render as formatted Markdown.</p>
+  </div>
+
+  <div class="cur-grid">
+
+    <!-- 101 -->
+    <article class="cur" style="--cc:var(--s101)">
+      <div class="cur-head">
+        <div class="badge">101</div>
+        <div>
+          <h3>LLM Literacy</h3>
+          <div class="tag">First-principles guide to transformer mechanics, inference sampling, prompt &amp; context engineering</div>
+        </div>
+        <span class="count-chip">19 notes · 3 units</span>
+      </div>
+      <div class="cur-body">
+        <p class="learn"><b>You will learn:</b> how LLMs actually work — and how to steer them with prompts and context. The on-ramp for absolute beginners: no ML background needed.</p>
+        <div class="subchips">
+          <a class="subchip" href="https://github.com/AdilShamim8/AI-Engineering/tree/main/101_LLM-Literacy/01-LLM%20101">LLM 101 <span class="c">8 notes</span></a>
+          <a class="subchip" href="https://github.com/AdilShamim8/AI-Engineering/tree/main/101_LLM-Literacy/02-Prompt%20Engineering">Prompt Engineering <span class="c">7 notes</span></a>
+          <a class="subchip" href="https://github.com/AdilShamim8/AI-Engineering/tree/main/101_LLM-Literacy/03-Context%20Engineering">Context Engineering <span class="c">3 notes</span></a>
+        </div>
+        <details class="filebox">
+          <summary><span class="tw">▶</span> Key first reads</summary>
+          <div class="filegroup">
+            <div class="fg-title">Unit 1 — LLM 101</div>
+            <div class="filelist">
+              <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/101_LLM-Literacy/01-LLM%20101/1.%20What%20Is%20a%20Large%20Language%20Model%20%28Conceptual%20Layer%29.md">1. What Is a Large Language Model</a>
+              <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/101_LLM-Literacy/01-LLM%20101/2.%20Transformer%20Architecture%20%28System%20Layer%29.md">2. Transformer Architecture</a>
+              <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/101_LLM-Literacy/01-LLM%20101/5.%20Inference%20Mechanics%20%28Runtime%20Layer%29.md">5. Inference Mechanics</a>
+              <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/101_LLM-Literacy/01-LLM%20101/8.%20Limitations%20%26%20Failure%20Modes.md">8. Limitations &amp; Failure Modes</a>
+            </div>
+          </div>
+        </details>
+      </div>
+    </article>
+
+    <!-- 102 -->
+    <article class="cur" style="--cc:var(--s102)">
+      <div class="cur-head">
+        <div class="badge">102</div>
+        <div>
+          <h3>AI Application Development</h3>
+          <div class="tag">Orchestration, vector databases, the complete RAG curriculum, memory systems, and fine-tuning</div>
+        </div>
+        <span class="count-chip">41 notes · 6 units</span>
+      </div>
+      <div class="cur-body">
+        <p class="learn"><b>You will learn:</b> building applications: orchestration, vector databases, RAG, memory, fine-tuning — the everyday craft of the AI engineer.</p>
+        <div class="subchips">
+          <a class="subchip" href="https://github.com/AdilShamim8/AI-Engineering/tree/main/102_AI-Application-Development/01-Orchestration">Orchestration <span class="c">4</span></a>
+          <a class="subchip" href="https://github.com/AdilShamim8/AI-Engineering/tree/main/102_AI-Application-Development/02-Vector%20Databases">Vector Databases <span class="c">3</span></a>
+          <a class="subchip" href="https://github.com/AdilShamim8/AI-Engineering/tree/main/102_AI-Application-Development/03-RAG">RAG <span class="c">8</span></a>
+          <a class="subchip" href="https://github.com/AdilShamim8/AI-Engineering/tree/main/102_AI-Application-Development/04-Memory">Memory <span class="c">8</span></a>
+          <a class="subchip" href="https://github.com/AdilShamim8/AI-Engineering/tree/main/102_AI-Application-Development/05-Fine-Tuning">Fine-Tuning <span class="c">13</span></a>
+          <a class="subchip" href="https://github.com/AdilShamim8/AI-Engineering/tree/main/102_AI-Application-Development/06-AI-Automation">AI Automation <span class="c">4</span></a>
+        </div>
+        <details class="filebox">
+          <summary><span class="tw">▶</span> Key first reads</summary>
+          <div class="filegroup">
+            <div class="fg-title">Unit 3 — RAG (the most-referenced curriculum in the repo)</div>
+            <div class="filelist">
+              <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/03-RAG/1.%20RAG%20Architecture%20%26%20Foundations.md">1. RAG Architecture &amp; Foundations</a>
+              <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/03-RAG/5.%20Advanced%20RAG%20Patterns%20%28GraphRAG%2C%20Self-RAG%2C%20Corrective%20RAG%29.md">5. Advanced RAG Patterns</a>
+              <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/03-RAG/6.%20RAG%20Evaluation%20%26%20Benchmarking%20%28RAGAS%2C%20TruLens%2C%20DeepEval%29.md">6. RAG Evaluation (RAGAS, TruLens, DeepEval)</a>
+              <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/05-Fine-Tuning/9.%20Fine-Tuning%20vs%20RAG%20vs%20Prompt%20Engineering.md">Fine-Tuning vs RAG vs Prompt Engineering</a>
+            </div>
+          </div>
+        </details>
+      </div>
+    </article>
+
+    <!-- 103 -->
+    <article class="cur" style="--cc:var(--s103)">
+      <div class="cur-head">
+        <div class="badge">103</div>
+        <div>
+          <h3>Agentic AI</h3>
+          <div class="tag">Autonomous planning loops, Model Context Protocol (MCP), agentic frameworks, and multi-agent orchestration</div>
+        </div>
+        <span class="count-chip">18 notes · 4 units</span>
+      </div>
+      <div class="cur-body">
+        <p class="learn"><b>You will learn:</b> autonomy: planning loops, tool protocols (MCP), agent frameworks, multi-agent systems — and when <i>not</i> to add an agent.</p>
+        <div class="subchips">
+          <a class="subchip" href="https://github.com/AdilShamim8/AI-Engineering/tree/main/103_Agentic%20AI/01-Planning%20%26%20Reasoning">Planning &amp; Reasoning <span class="c">10</span></a>
+          <a class="subchip" href="https://github.com/AdilShamim8/AI-Engineering/tree/main/103_Agentic%20AI/02-Agent%20Protocols">Agent Protocols (MCP) <span class="c">4</span></a>
+          <a class="subchip" href="https://github.com/AdilShamim8/AI-Engineering/tree/main/103_Agentic%20AI/03-Agentic%20AI%20Frameworks">Frameworks <span class="c">1</span></a>
+          <a class="subchip" href="https://github.com/AdilShamim8/AI-Engineering/tree/main/103_Agentic%20AI/04-Multi-Agent%20Orchestration">Multi-Agent <span class="c">2</span></a>
+        </div>
+        <details class="filebox">
+          <summary><span class="tw">▶</span> Key first reads</summary>
+          <div class="filegroup">
+            <div class="fg-title">Unit 2 — Agent Protocols</div>
+            <div class="filelist">
+              <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/103_Agentic%20AI/02-Agent%20Protocols/1.%20Introduction%20to%20Model%20Context%20Protocol%20%28MCP%29.md">1. Introduction to Model Context Protocol (MCP)</a>
+              <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/103_Agentic%20AI/01-Planning%20%26%20Reasoning/1.%20Foundations%20of%20Agentic%20Planning.md">1. Foundations of Agentic Planning</a>
+              <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/103_Agentic%20AI/04-Multi-Agent%20Orchestration/1.%20Multi-Agent%20Collaboration%20Patterns.md">Multi-Agent Collaboration Patterns</a>
+              <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/103_Agentic%20AI/04-Multi-Agent%20Orchestration/2.%20Human-in-the-Loop%20%26%20Production%20Safety.md">Human-in-the-Loop &amp; Production Safety</a>
+            </div>
+          </div>
+        </details>
+      </div>
+    </article>
+
+    <!-- 104 -->
+    <article class="cur" style="--cc:var(--s104)">
+      <div class="cur-head">
+        <div class="badge">104</div>
+        <div>
+          <h3>LLMOps</h3>
+          <div class="tag">Deployment architectures, observability, safety guardrails, governance, and enterprise scaling</div>
+        </div>
+        <span class="count-chip">35 notes · 6 units</span>
+      </div>
+      <div class="cur-body">
+        <p class="learn"><b>You will learn:</b> production: deployment, observability, safety guardrails, governance — everything that happens between "the demo works" and "the system runs reliably".</p>
+        <div class="subchips">
+          <a class="subchip" href="https://github.com/AdilShamim8/AI-Engineering/tree/main/104_LLMOps/1.%20UX%20%26Product%20Design">UX &amp; Product Design <span class="c">4</span></a>
+          <a class="subchip" href="https://github.com/AdilShamim8/AI-Engineering/tree/main/104_LLMOps/2.%20Deployment">Deployment <span class="c">6</span></a>
+          <a class="subchip" href="https://github.com/AdilShamim8/AI-Engineering/tree/main/104_LLMOps/3.%20Observability">Observability <span class="c">5</span></a>
+          <a class="subchip" href="https://github.com/AdilShamim8/AI-Engineering/tree/main/104_LLMOps/4.%20Safety%20%26%20Guardrails">Safety &amp; Guardrails <span class="c">6</span></a>
+          <a class="subchip" href="https://github.com/AdilShamim8/AI-Engineering/tree/main/104_LLMOps/5.%20Governance">Governance <span class="c">6</span></a>
+          <a class="subchip" href="https://github.com/AdilShamim8/AI-Engineering/tree/main/104_LLMOps/6.%20Managed%20AI%20Platforms">Managed Platforms <span class="c">7</span></a>
+        </div>
+        <details class="filebox">
+          <summary><span class="tw">▶</span> Key first reads</summary>
+          <div class="filegroup">
+            <div class="fg-title">Units 2 &amp; 4 — Deployment and Safety</div>
+            <div class="filelist">
+              <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/2.%20Deployment/1.%20Deployment%20Architectures.md">1. Deployment Architectures</a>
+              <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/2.%20Deployment/6.%20CI/CD%20for%20AI%20Systems.md">6. CI/CD for AI Systems</a>
+              <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/4.%20Safety%20%26%20Guardrails/4.%20Prompt%20Injection%20%26%20Jailbreak%20Defense.md">4. Prompt Injection &amp; Jailbreak Defense</a>
+              <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/3.%20Observability/2.%20Token%2C%20Cost%20%26%20Latency%20Monitoring.md">2. Token, Cost &amp; Latency Monitoring</a>
+            </div>
+          </div>
+        </details>
+      </div>
+    </article>
+
+    <!-- 105 -->
+    <article class="cur" style="--cc:var(--s105)">
+      <div class="cur-head">
+        <div class="badge">105</div>
+        <div>
+          <h3>AI Evaluation</h3>
+          <div class="tag">Evaluation fundamentals, LLM-as-a-Judge, agent benchmarks, RAG evaluation, eval engineering, datasets, online experimentation</div>
+        </div>
+        <span class="count-chip">52 files · 7 notes + full course</span>
+      </div>
+      <div class="cur-body">
+        <p class="learn"><b>You will learn:</b> evidence: proving your system works. Includes a complete 19-lecture course with notes, transcripts, glossary, quiz and cheat sheet — see the dedicated section below.</p>
+        <details class="filebox" open>
+          <summary><span class="tw">▶</span> The seven reference notes</summary>
+          <div class="filegroup">
+            <div class="filelist">
+              <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/01-evaluation-fundamentals.md">1. Evaluation fundamentals</a>
+              <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/02-llm-as-a-judge.md">2. LLM-as-a-Judge</a>
+              <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/03-agent-benchmarks.md">3. Agent benchmarks &amp; the integrity crisis</a>
+              <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/04-rag-evaluation.md">4. RAG evaluation</a>
+              <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/05-eval-engineering.md">5. Eval engineering (CI/CD gates)</a>
+              <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/06-evaluation-datasets.md">6. Evaluation dataset engineering</a>
+              <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/07-online-experimentation.md">7. Online experimentation</a>
+              <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/README.md">🎓 The LLM Evaluations course</a>
+            </div>
+          </div>
+        </details>
+      </div>
+    </article>
+
+    <!-- 106 -->
+    <article class="cur" style="--cc:var(--s106)">
+      <div class="cur-head">
+        <div class="badge">106</div>
+        <div>
+          <h3>AI Security &amp; Safety</h3>
+          <div class="tag">Threat modeling (OWASP LLM + Agentic Top 10), prompt injection defense, red teaming, agent &amp; MCP security, AI alignment, responsible AI governance</div>
+        </div>
+        <span class="count-chip">9 notes · 2 catalogs</span>
+      </div>
+      <div class="cur-body">
+        <p class="learn"><b>You will learn:</b> defense: threat modeling, prompt-injection defense, red teaming, alignment, responsible AI — plus catalogs of real security datasets and real incident databases.</p>
+        <details class="filebox" open>
+          <summary><span class="tw">▶</span> All eight notes</summary>
+          <div class="filegroup">
+            <div class="filelist">
+              <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/106_AI-Security-Safety/01-threat-modeling.md">1. Threat modeling</a>
+              <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/106_AI-Security-Safety/02-prompt-injection-defense.md">2. Prompt injection defense</a>
+              <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/106_AI-Security-Safety/03-red-teaming.md">3. Red teaming</a>
+              <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/106_AI-Security-Safety/04-agent-mcp-security.md">4. Agent &amp; MCP security</a>
+              <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/106_AI-Security-Safety/05-ai-alignment.md">5. AI alignment</a>
+              <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/106_AI-Security-Safety/06-responsible-ai.md">6. Responsible AI &amp; governance</a>
+              <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/106_AI-Security-Safety/07-security-safety-datasets.md">7. Security &amp; safety datasets</a>
+              <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/106_AI-Security-Safety/08-incident-databases.md">8. Incident databases</a>
+            </div>
+          </div>
+        </details>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ==================== COURSE ==================== -->
+<section id="course">
+  <div class="sec-head">
+    <div class="sec-eyebrow">Inside section 105 · The curriculum layer</div>
+    <h2>The 19-Lecture LLM Evaluations Course</h2>
+    <p class="sec-lede">A video-by-video, step-by-step English study companion for the <a href="https://www.youtube.com/playlist?list=PLEneLIDJFpcA" target="_blank" rel="noopener">"LLM Evaluations: The Step-by-Step Playlist for 2026"</a> course by CampusX (taught in Hindi by Nitish Singh). Every lecture transcribed, translated to English, and expanded into structured expert notes — with nothing skipped.</p>
+  </div>
+
+  <div class="course-hero">
+    <div class="ck">🎓 Complete course · 4 units · ~20 hours of video</div>
+    <h3>Evaluation is the single most underrated skill in AI engineering. This course builds it from zero to production.</h3>
+    <p>The course teaches the complete testing setup — not just metrics: model vs application evals, the end-to-end workflow, LLM-as-a-Judge, benchmark literacy (MMLU, GSM8K, SWE-bench…), RAG evaluation in practice, and production monitoring with LangSmith.</p>
+    <div class="meta">
+      <span class="m">📽 19 lectures</span>
+      <span class="m">⏱ ~20 h video · 34 h full study path</span>
+      <span class="m">📝 19 full-English note files</span>
+      <span class="m">💬 19 verbatim transcripts</span>
+      <span class="m">📖 120-term glossary</span>
+      <span class="m">❓ 60-question quiz</span>
+      <a class="m" style="color:#fff" href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/README.md">Open the course hub →</a>
+    </div>
+  </div>
+
+  <table class="lec">
+    <tr><th>#</th><th>Lecture</th><th>Duration</th><th>Study materials</th></tr>
+    <tr><td class="num">1</td><td>Master LLM Evaluations — playlist overview</td><td class="dur">23:24</td><td><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/01-course-overview.md">Notes</a> · <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/transcripts/01-course-overview.md">Transcript</a></td></tr>
+    <tr><td class="num">2</td><td>Introduction — Model Evals vs Application Evals</td><td class="dur">24:32</td><td><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/02-model-vs-application-evals.md">Notes</a> · <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/transcripts/02-model-vs-application-evals.md">Transcript</a></td></tr>
+    <tr><td class="num">3</td><td>How to Evaluate LLM Applications — the Complete Workflow</td><td class="dur">17:00</td><td><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/03-evaluation-workflow.md">Notes</a> · <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/transcripts/03-evaluation-workflow.md">Transcript</a></td></tr>
+    <tr><td class="num">4</td><td>Why Your AI Application Needs Multiple Eval Pipelines</td><td class="dur">28:06</td><td><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/04-multiple-eval-pipelines.md">Notes</a> · <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/transcripts/04-multiple-eval-pipelines.md">Transcript</a></td></tr>
+    <tr><td class="num">5</td><td>LLM Eval Methods — LLM-as-a-Judge, Reference-Based vs Reference-Free</td><td class="dur">53:10</td><td><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/05-eval-methods-reference-based-vs-free.md">Notes</a> · <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/transcripts/05-eval-methods-reference-based-vs-free.md">Transcript</a></td></tr>
+    <tr><td class="num">6</td><td>Offline Evals vs Online Evals</td><td class="dur">1:21:09</td><td><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/06-offline-vs-online-evals.md">Notes</a> · <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/transcripts/06-offline-vs-online-evals.md">Transcript</a></td></tr>
+    <tr><td class="num">7</td><td>LLM Model Evals &amp; Capabilities</td><td class="dur">37:52</td><td><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/07-model-evals-capabilities.md">Notes</a> · <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/transcripts/07-model-evals-capabilities.md">Transcript</a></td></tr>
+    <tr><td class="num">8</td><td>What is LLM Benchmarking — Saturation vs Contamination</td><td class="dur">51:20</td><td><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/08-benchmarking-saturation-contamination.md">Notes</a> · <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/transcripts/08-benchmarking-saturation-contamination.md">Transcript</a></td></tr>
+    <tr><td class="num">9</td><td>What are LLM Benchmarks — Evolution of AI Knowledge Benchmarks</td><td class="dur">1:50:47</td><td><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/09-llm-benchmarks-evolution.md">Notes</a> · <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/transcripts/09-llm-benchmarks-evolution.md">Transcript</a></td></tr>
+    <tr><td class="num">10</td><td>How to Use LLM Leaderboards</td><td class="dur">30:07</td><td><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/10-llm-leaderboards.md">Notes</a> · <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/transcripts/10-llm-leaderboards.md">Transcript</a></td></tr>
+    <tr><td class="num">11</td><td>Selecting the Right LLM — Running Custom Model Evals</td><td class="dur">1:56:53</td><td><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/11-model-selection-custom-evals.md">Notes</a> · <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/transcripts/11-model-selection-custom-evals.md">Transcript</a></td></tr>
+    <tr><td class="num">12</td><td>How to Answer "How Do You Evaluate Your RAG App?" in Interviews</td><td class="dur">46:20</td><td><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/12-rag-eval-interview-answer.md">Notes</a> · <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/transcripts/12-rag-eval-interview-answer.md">Transcript</a></td></tr>
+    <tr><td class="num">13</td><td>How to Test RAG Retrievers (Hands-On)</td><td class="dur">1:47:02</td><td><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/13-testing-rag-retrievers.md">Notes</a> · <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/transcripts/13-testing-rag-retrievers.md">Transcript</a></td></tr>
+    <tr><td class="num">14</td><td>Evaluating RAG — Generator &amp; Full Pipeline with the RAG Triad</td><td class="dur">1:21:29</td><td><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/14-rag-triad-generator-pipeline.md">Notes</a> · <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/transcripts/14-rag-triad-generator-pipeline.md">Transcript</a></td></tr>
+    <tr><td class="num">15</td><td>Mastering G-Eval — the Deterministic LLM-as-a-Judge Framework</td><td class="dur">1:26:52</td><td><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/15-geval-deterministic-judge.md">Notes</a> · <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/transcripts/15-geval-deterministic-judge.md">Transcript</a></td></tr>
+    <tr><td class="num">16</td><td>Securing Your RAG Application — Toxicity, Leakage &amp; Scope Drift</td><td class="dur">1:35:19</td><td><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/16-rag-security-toxicity-leakage-scope-drift.md">Notes</a> · <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/transcripts/16-rag-security-toxicity-leakage-scope-drift.md">Transcript</a></td></tr>
+    <tr><td class="num">17</td><td>RAG Operational Evals — Building Faster &amp; Cheaper RAG Systems</td><td class="dur">1:19:32</td><td><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/17-rag-operational-evals.md">Notes</a> · <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/transcripts/17-rag-operational-evals.md">Transcript</a></td></tr>
+    <tr><td class="num">18</td><td>RAG Regression Testing — Preventing Silent AI Failures</td><td class="dur">54:16</td><td><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/18-rag-regression-testing.md">Notes</a> · <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/transcripts/18-rag-regression-testing.md">Transcript</a></td></tr>
+    <tr><td class="num">19</td><td>Online Evaluation &amp; Monitoring with LangSmith</td><td class="dur">—</td><td><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/19-online-eval-langsmith-monitoring.md">Notes</a> · <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/transcripts/19-online-eval-langsmith-monitoring.md">Transcript</a></td></tr>
+  </table>
+
+  <div class="aids">
+    <a class="aid" style="color:inherit" href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/glossary.md"><span class="ic">📖</span><h4>Glossary — 120 terms</h4><p>All 120 course terms, defined and linked to the lecture that teaches each. Use it when a term is unfamiliar, or before an interview sweep.</p></a>
+    <a class="aid" style="color:inherit" href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/flashcards.md"><span class="ic">❓</span><h4>Self-assessment quiz — 60 Q&amp;A</h4><p>60 questions with verified answers, 15 per unit. Finished a unit? Check retention before moving on — miss more than 2 and re-read.</p></a>
+    <a class="aid" style="color:inherit" href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/cheatsheet.md"><span class="ic">📋</span><h4>Cheat sheet</h4><p>Every formula, number, and decision rule from all 19 lectures on one page. For revising after the course, or right before an interview.</p></a>
+    <a class="aid" style="color:inherit" href="https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/progress-tracker.md"><span class="ic">✅</span><h4>Progress tracker</h4><p>Per-lecture checklist with quiz checkpoints and time budgets — a structured plan through the 34-hour full path. Doubles as a project plan.</p></a>
+  </div>
+
+  <div class="callout">
+    <div class="t">💡 How to study this course</div>
+    Watch/read <b>in order the first time</b> — the course is deliberately cumulative (the model-vs-application distinction from lecture 2 powers every later lecture). Test yourself after each unit with the quiz, look up unfamiliar terms in the glossary, and follow each note's cross-links into the section-105 reference notes for research-grade depth. Lecture notes include <b>timestamps</b> like (12:18) and clearly-separated <b>expert commentary</b> blocks that add context the lecture didn't cover.
+  </div>
+</section>
+
+<!-- ==================== ROADMAPS ==================== -->
+<section id="roadmaps">
+  <div class="sec-head">
+    <div class="sec-eyebrow">Layer 2 · The schedule</div>
+    <h2>Two Roadmaps + the Interview Track</h2>
+    <p class="sec-lede">Structure adapted from the CampusX AI Engineering Roadmap 2026, with every learning resource replaced by free worldwide alternatives. Pick <b>one</b> roadmap as your schedule — not both.</p>
+  </div>
+
+  <div class="grid2">
+    <div class="card" style="border-top:4px solid var(--s101)">
+      <h4>🗺 Full Roadmap — <span style="color:var(--muted); font-weight:600">100% coverage, own pace</span></h4>
+      <p><b>16 levels · 7 phases · 286 sessions · 14 projects</b> — from software fundamentals to interview prep. Start here if you're new to programming or want maximum depth.</p>
+      <ul>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/full-roadmap/level-00-software-engineering-fundamentals.md">L0 · Software Engineering Fundamentals</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/full-roadmap/level-01-llm-101.md">L1 · LLM 101</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/full-roadmap/level-02-working-with-llm-apis.md">L2 · Working with LLM APIs</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/full-roadmap/level-03-prompt-engineering.md">L3 · Prompt Engineering</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/full-roadmap/level-04-rag.md">L4 · RAG</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/full-roadmap/level-05-ai-agents.md">L5 · AI Agents</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/full-roadmap/level-06-context-engineering.md">L6 · Context Engineering</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/full-roadmap/level-07-llm-evaluations.md">L7 · LLM Evaluations</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/full-roadmap/level-08-ai-security.md">L8 · AI Security</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/full-roadmap/level-09-ai-system-design.md">L9 · AI System Design</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/full-roadmap/level-10-llmops.md">L10 · LLMOps</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/full-roadmap/level-11-managed-ai-platforms.md">L11 · Managed AI Platforms</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/full-roadmap/level-12-multimodal-101.md">L12 · Multimodal 101</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/full-roadmap/level-13-fine-tuning.md">L13 · Fine-Tuning</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/full-roadmap/level-14-projects.md">L14 · Projects</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/full-roadmap/level-15-interview-prep.md">L15 · Interview Prep</a></li>
+      </ul>
+      <a class="go" href="https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/full-roadmap/README.md">Open the Full Roadmap →</a>
+    </div>
+
+    <div class="card" style="border-top:4px solid var(--s103)">
+      <h4>⚡ Accelerated Roadmap — <span style="color:var(--muted); font-weight:600">job-ready in 100 days</span></h4>
+      <p><b>6 modules · 100 days</b> — the core ~80% you need to land your first AI engineering job. Start here if you already program and want the shortest employable path.</p>
+      <ul>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/accelerated-roadmap/module-1-llm-fundamentals.md">Module 1 · LLM Fundamentals (days 1–15)</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/accelerated-roadmap/module-2-building-with-llm-apis.md">Module 2 · Building with LLM APIs</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/accelerated-roadmap/module-3-prompt-engineering.md">Module 3 · Prompt Engineering</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/accelerated-roadmap/module-4-rag.md">Module 4 · RAG</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/accelerated-roadmap/module-5-agents.md">Module 5 · Agents</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/accelerated-roadmap/module-6-shipping-to-production.md">Module 6 · Shipping to Production</a></li>
+      </ul>
+      <a class="go" href="https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/accelerated-roadmap/README.md">Open the Accelerated Roadmap →</a>
+      <p style="margin-top:14px; border-top:1px dashed var(--line); padding-top:12px"><b>Also in the roadmap folder:</b> the <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/accelerated-roadmap/interview-questions.md">100 GenAI / AI Engineer interview questions</a> (copied exactly, with strong-answer outlines and a practice loop), the matching <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/accelerated-roadmap/interview-answers.md">full model answers</a>, and <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/accelerated-roadmap/projects.md">12 portfolio project specs</a> with "done when" criteria and a target-role table. Not sure which roadmap fits? The <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/README.md">roadmap hub</a> compares them, including how important each topic is for interviews vs the real-world job.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== INTERVIEW ==================== -->
+<section id="interview">
+  <div class="sec-head">
+    <div class="sec-eyebrow">Layer 3 · The job</div>
+    <h2>Interview Preparation</h2>
+    <p class="sec-lede">The complete track: how the process works, 100 questions with worked expert answers (<b>every</b> question in the bank carries an answer), system design, take-homes, negotiation, and a resume playbook.</p>
+  </div>
+
+  <div class="grid3">
+    <div class="card">
+      <h4>🧭 The process</h4>
+      <ul>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/interview/01-interview-process.md">Interview process — patterns, steps, time estimates</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/interview/05-trends.md">Interview trends — AI-proctored rounds, context engineering</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/interview/04-after-the-interview.md">After the interview — offers, rejections, negotiation</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>📝 The question bank — all answered</h4>
+      <ul>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/interview/questions/01-theory.md">Theory — LLMs, RAG, agents, evals, safety, MCP</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/interview/questions/02-coding.md">Coding — formats, DSA, from-scratch ML</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/interview/questions/03-project-deep-dive.md">Project deep dive — follow-up probes</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/interview/questions/04-ai-system-design.md">AI system design</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/interview/questions/05-behavioral.md">Behavioral — values, leadership, problem-solving</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/interview/questions/06-home-assignments.md">Home assignments — prep and public examples</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>💼 Getting hired</h4>
+      <ul>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/interview/03-get-hired.md">Skills that get you hired — baselines &amp; differentiators</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/interview/07-global-compensation-and-job-market.md">Global compensation &amp; negotiation guide</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/interview/08-ai-engineer-resume-and-portfolio-playbook.md">Resume &amp; portfolio playbook — ATS, bullet formulas</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/interview/09-real-world-case-studies.md">Production system design case studies</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/interview/02-questions.md">Question bank hub — with evidence limits explained</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CAREER ==================== -->
+<section id="career">
+  <div class="sec-head">
+    <div class="sec-eyebrow">Layer 3 · The job</div>
+    <h2>The Role, Your Path In, and Your Portfolio</h2>
+    <p class="sec-lede">What the AI engineer role actually is, a personalized route from five adjacent careers, and the portfolio that proves you can do the work.</p>
+  </div>
+
+  <div class="grid3">
+    <div class="card">
+      <h4>👤 The AI engineer role</h4>
+      <ul>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/role/01-my-vision.md">My vision of the role — vs DS/ML/DE, CRISP-DM for AI</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/role/02-skills.md">Skills analysis — reproduced counts + rubric</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/role/03-responsibilities.md">Responsibilities — ownership &amp; deliverables</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/role/04-use-cases.md">Use cases — patterns, data needs, outcomes</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/role/05-reality-vs-postings.md">Reality vs job postings</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/role/06-worldwide-job-market-analysis.md">Worldwide job market analysis</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>🧭 Learning paths — pick your origin</h4>
+      <ul>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/learning-paths/README.md">General learning path — what &amp; in what order</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/learning-paths/from-ml-engineer.md">From ML Engineer — easiest transition</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/learning-paths/from-data-engineer.md">From Data Engineer — 3–4 months</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/learning-paths/from-data-scientist.md">From Data Scientist — evaluation is your superpower</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/learning-paths/from-backend-engineer.md">From Backend Engineer — 2–3 months</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/learning-paths/from-frontend-engineer.md">From Frontend Engineer — backend first, then AI</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/learning-paths/advanced-engineering.md">Advanced path — foundations → advanced engineering</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>🛠 Portfolio</h4>
+      <p style="margin-bottom:6px"><b>The highest-leverage 2026 portfolio project:</b> an AI application <i>with its own evaluation suite</i> — golden datasets, RAG Triad metrics, safety evals, regression gates. A RAG chatbot with a visible eval suite beats a fancier chatbot without one.</p>
+      <ul>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/portfolio/README.md">Portfolio guide — project ideas by level + the five built projects</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/accelerated-roadmap/projects.md">12 portfolio project specifications</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== RESEARCH ==================== -->
+<section id="research">
+  <div class="sec-head">
+    <div class="sec-eyebrow">Evidence &amp; extras</div>
+    <h2>Research, Evidence &amp; Resources</h2>
+    <p class="sec-lede">This repository separates <b>measurements</b> from <b>claims</b>. The research folder holds the reproduced job-market analysis and the audit trail of everything checked and corrected; the awesome list holds curated external resources.</p>
+  </div>
+
+  <div class="grid3">
+    <div class="card">
+      <h4>🔬 Research &amp; evidence policy</h4>
+      <ul>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/research/README.md">Evidence &amp; real datasets — reproduced job-posting analysis</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/research/evidence-policy.md">Evidence policy — measurements vs claims vs targets</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/research/audit-2026-10-09.md">Repository audit — what was checked, corrected, left unresolved</a></li>
+      </ul>
+      <p style="margin-top:10px; font-size:12.8px">The reproduced source contains <b>8,051 stored job observations</b> across nine scrape folders (1,086 in the September 23, 2026 folder) — counts from a selected job-board dataset, not worldwide demand estimates. The <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/research/job-market-summary.json">analysis fingerprint</a> makes counting reproducible.</p>
+    </div>
+    <div class="card">
+      <h4>🌟 Awesome AI Engineering</h4>
+      <p>Curated external resources compiled while researching this guide — every link fetched and verified in the October 9, 2026 review:</p>
+      <ul>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/awesome.md">awesome.md — the full curated list</a></li>
+      </ul>
+      <p style="margin-top:10px">Includes practitioner interview stories, AI system design guides, company engineering blogs, books &amp; courses, and case-study collections.</p>
+    </div>
+    <div class="card">
+      <h4>🎥 Webinars (supplemental)</h4>
+      <ul>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/webinars/01-a-day-of-ai-engineer.md">A Day of an AI Engineer — the practical reality</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/webinars/02-defining-the-role.md">Defining the AI Engineer Role</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/webinars/03-the-interview-process.md">The Interview Process — live hiring trends</a></li>
+        <li><a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/webinars/04-take-home-assignments.md">Take-Home Assignments — real examples analyzed</a></li>
+      </ul>
+      <p style="margin-top:10px; font-size:12.8px">⚠️ Recording, speaker and survey claims in these notes have <b>not</b> been independently verified — see their <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/webinars/README.md">evidence status</a>.</p>
+    </div>
+  </div>
+
+  <div class="card" style="border-top:4px solid var(--s106); background:linear-gradient(180deg,#fff, #fdf4f4)">
+    <h4>🛡 Sister repository: <a href="https://github.com/AdilShamim8/AI-Safety" target="_blank" rel="noopener">AdilShamim8/AI-Safety</a></h4>
+    <p>The deep curriculum behind section 106's dataset and incident catalogs: <b>24 chapters</b>, <b>10 runnable projects</b>, <b>47 verified dataset cards</b> with a machine-readable catalog, <b>261 registered sources</b>, and worked incident reviews — the evidence ladder this repository's security claims are checked against. Cross-verified October 27, 2026.</p>
+  </div>
+</section>
+
+<!-- ==================== ALL FILES ==================== -->
+<section id="files">
+  <div class="sec-head">
+    <div class="sec-eyebrow">The complete index</div>
+    <h2>Browse Every File in the Repository</h2>
+    <p class="sec-lede">Every note, transcript, dataset card, script and data file — <b id="fb-total">…</b> items, machine-generated from the repository tree, each linking straight to its rendered page on GitHub. Filter by section or search by name.</p>
+  </div>
+
+  <div class="fb-bar">
+    <input type="text" id="fb-q" placeholder="Filter files by name… (e.g. rag, injection, module-1)" aria-label="Filter files">
+    <select id="fb-sec" aria-label="Filter by section">
+      <option value="">All sections</option>
+    </select>
+  </div>
+  <div class="fb-count" id="fb-count"></div>
+  <div id="fb-list"></div>
+  <noscript>
+    <div class="callout" style="margin-top:14px">
+      <div class="t">⚠️ JavaScript is disabled</div>
+      The full file browser below needs JavaScript. You can still browse everything the classic way: open the <a href="https://github.com/AdilShamim8/AI-Engineering">repository root on GitHub</a> — every section above also links directly to its folders and key files.
+    </div>
+  </noscript>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h5>About this page</h5>
+        <p style="max-width:420px">This <code style="color:#a5b4fc">index.html</code> is the visual map of the <a href="https://github.com/AdilShamim8/AI-Engineering" target="_blank" rel="noopener">AI-Engineering repository</a>: every section, every course lecture, every study aid, and a searchable index of every file — organized so a complete beginner can find an entry point in under a minute.</p>
+        <p style="margin-top:10px">Generated October 27, 2026 from the repository tree at commit <code style="color:#a5b4fc">d4958b8</code> (700 commits). Every link on this page was machine-verified against the repository's file list.</p>
+      </div>
+      <div>
+        <h5>Repositories</h5>
+        <ul>
+          <li><a href="https://github.com/AdilShamim8/AI-Engineering" target="_blank" rel="noopener">AI-Engineering (this repo)</a></li>
+          <li><a href="https://github.com/AdilShamim8/AI-Safety" target="_blank" rel="noopener">AI-Safety (sister repo)</a></li>
+          <li><a href="https://github.com/AdilShamim8" target="_blank" rel="noopener">AdilShamim8 · GitHub profile</a></li>
+          <li><a href="https://github.com/AdilShamim8/AI-Engineering/issues" target="_blank" rel="noopener">Report an issue</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Verification</h5>
+        <ul>
+          <li>✅ 700/700 commits authored by AdilShamim8 (API-verified)</li>
+          <li>✅ References verified Oct 9 &amp; Oct 27, 2026</li>
+          <li>✅ Dataset figures checked against live sources</li>
+          <li>📜 MIT License · free forever</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-note"><b>Evidence discipline:</b> this guide separates measurements from source-reported claims and teaching illustrations — see the <a href="https://github.com/AdilShamim8/AI-Engineering/blob/main/research/evidence-policy.md">evidence policy</a>. The latest job-data snapshot inspected is September 23, 2026; the audit trail records everything checked, corrected, and left unresolved. Webinar notes carry unverified recording/speaker claims, flagged in place.</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var FILE_INDEX = [{"p":"awesome.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/awesome.md","t":"Awesome","s":"root","d":""},{"p":"LICENSE","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/LICENSE","t":"LICENSE (MIT)","s":"root","d":""},{"p":"README.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/README.md","t":"README","s":"root","d":""},{"p":"101_LLM-Literacy/README.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/101_LLM-Literacy/README.md","t":"README","s":"101_LLM-Literacy","d":""},{"p":"101_LLM-Literacy/01-LLM 101/1. What Is a Large Language Model (Conceptual Layer).md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/101_LLM-Literacy/01-LLM%20101/1.%20What%20Is%20a%20Large%20Language%20Model%20%28Conceptual%20Layer%29.md","t":"1 · What Is a Large Language Model (Conceptual Layer)","s":"101_LLM-Literacy","d":"01-LLM 101"},{"p":"101_LLM-Literacy/01-LLM 101/2. Transformer Architecture (System Layer).md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/101_LLM-Literacy/01-LLM%20101/2.%20Transformer%20Architecture%20%28System%20Layer%29.md","t":"2 · Transformer Architecture (System Layer)","s":"101_LLM-Literacy","d":"01-LLM 101"},{"p":"101_LLM-Literacy/01-LLM 101/3. Tokenization & Embeddings (Representation Layer).md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/101_LLM-Literacy/01-LLM%20101/3.%20Tokenization%20%26%20Embeddings%20%28Representation%20Layer%29.md","t":"3 · Tokenization & Embeddings (Representation Layer)","s":"101_LLM-Literacy","d":"01-LLM 101"},{"p":"101_LLM-Literacy/01-LLM 101/4. Training Paradigm (Learning Layer).md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/101_LLM-Literacy/01-LLM%20101/4.%20Training%20Paradigm%20%28Learning%20Layer%29.md","t":"4 · Training Paradigm (Learning Layer)","s":"101_LLM-Literacy","d":"01-LLM 101"},{"p":"101_LLM-Literacy/01-LLM 101/5. Inference Mechanics (Runtime Layer).md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/101_LLM-Literacy/01-LLM%20101/5.%20Inference%20Mechanics%20%28Runtime%20Layer%29.md","t":"5 · Inference Mechanics (Runtime Layer)","s":"101_LLM-Literacy","d":"01-LLM 101"},{"p":"101_LLM-Literacy/01-LLM 101/6. Model Ecosystem & Types.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/101_LLM-Literacy/01-LLM%20101/6.%20Model%20Ecosystem%20%26%20Types.md","t":"6 · Model Ecosystem & Types","s":"101_LLM-Literacy","d":"01-LLM 101"},{"p":"101_LLM-Literacy/01-LLM 101/7. Evaluation & Benchmarks.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/101_LLM-Literacy/01-LLM%20101/7.%20Evaluation%20%26%20Benchmarks.md","t":"7 · Evaluation & Benchmarks","s":"101_LLM-Literacy","d":"01-LLM 101"},{"p":"101_LLM-Literacy/01-LLM 101/8. Limitations & Failure Modes.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/101_LLM-Literacy/01-LLM%20101/8.%20Limitations%20%26%20Failure%20Modes.md","t":"8 · Limitations & Failure Modes","s":"101_LLM-Literacy","d":"01-LLM 101"},{"p":"101_LLM-Literacy/02-Prompt Engineering/1. Mental Model of Prompting (Foundation Layer).md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/101_LLM-Literacy/02-Prompt%20Engineering/1.%20Mental%20Model%20of%20Prompting%20%28Foundation%20Layer%29.md","t":"1 · Mental Model of Prompting (Foundation Layer)","s":"101_LLM-Literacy","d":"02-Prompt Engineering"},{"p":"101_LLM-Literacy/02-Prompt Engineering/2. Prompt Structure & Anatomy.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/101_LLM-Literacy/02-Prompt%20Engineering/2.%20Prompt%20Structure%20%26%20Anatomy.md","t":"2 · Prompt Structure & Anatomy","s":"101_LLM-Literacy","d":"02-Prompt Engineering"},{"p":"101_LLM-Literacy/02-Prompt Engineering/3. Instruction Design Patterns.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/101_LLM-Literacy/02-Prompt%20Engineering/3.%20Instruction%20Design%20Patterns.md","t":"3 · Instruction Design Patterns","s":"101_LLM-Literacy","d":"02-Prompt Engineering"},{"p":"101_LLM-Literacy/02-Prompt Engineering/4. Structured Output Prompting.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/101_LLM-Literacy/02-Prompt%20Engineering/4.%20Structured%20Output%20Prompting.md","t":"4 · Structured Output Prompting","s":"101_LLM-Literacy","d":"02-Prompt Engineering"},{"p":"101_LLM-Literacy/02-Prompt Engineering/5. Prompt Robustness & Reliability.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/101_LLM-Literacy/02-Prompt%20Engineering/5.%20Prompt%20Robustness%20%26%20Reliability.md","t":"5 · Prompt Robustness & Reliability","s":"101_LLM-Literacy","d":"02-Prompt Engineering"},{"p":"101_LLM-Literacy/02-Prompt Engineering/6. Prompt Evaluation & Metrics.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/101_LLM-Literacy/02-Prompt%20Engineering/6.%20Prompt%20Evaluation%20%26%20Metrics.md","t":"6 · Prompt Evaluation & Metrics","s":"101_LLM-Literacy","d":"02-Prompt Engineering"},{"p":"101_LLM-Literacy/02-Prompt Engineering/7. Security & Safety in Prompting.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/101_LLM-Literacy/02-Prompt%20Engineering/7.%20Security%20%26%20Safety%20in%20Prompting.md","t":"7 · Security & Safety in Prompting","s":"101_LLM-Literacy","d":"02-Prompt Engineering"},{"p":"101_LLM-Literacy/03-Context Engineering/1. Introduction to Context Engineering.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/101_LLM-Literacy/03-Context%20Engineering/1.%20Introduction%20to%20Context%20Engineering.md","t":"1 · Introduction to Context Engineering","s":"101_LLM-Literacy","d":"03-Context Engineering"},{"p":"101_LLM-Literacy/03-Context Engineering/2. What Constitutes Context.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/101_LLM-Literacy/03-Context%20Engineering/2.%20What%20Constitutes%20Context.md","t":"2 · What Constitutes Context","s":"101_LLM-Literacy","d":"03-Context Engineering"},{"p":"101_LLM-Literacy/03-Context Engineering/3. Techniques to Manage Context.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/101_LLM-Literacy/03-Context%20Engineering/3.%20Techniques%20to%20Manage%20Context.md","t":"3 · Techniques to Manage Context","s":"101_LLM-Literacy","d":"03-Context Engineering"},{"p":"102_AI-Application-Development/README.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/README.md","t":"README","s":"102_AI-Application-Development","d":""},{"p":"102_AI-Application-Development/01-Orchestration/1. Introduction to Orchestration.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/01-Orchestration/1.%20Introduction%20to%20Orchestration.md","t":"1 · Introduction to Orchestration","s":"102_AI-Application-Development","d":"01-Orchestration"},{"p":"102_AI-Application-Development/01-Orchestration/2. Core Orchestration Patterns.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/01-Orchestration/2.%20Core%20Orchestration%20Patterns.md","t":"2 · Core Orchestration Patterns","s":"102_AI-Application-Development","d":"01-Orchestration"},{"p":"102_AI-Application-Development/01-Orchestration/3. Structured Output.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/01-Orchestration/3.%20Structured%20Output.md","t":"3 · Structured Output","s":"102_AI-Application-Development","d":"01-Orchestration"},{"p":"102_AI-Application-Development/01-Orchestration/4. Tool Integration & Function Calling.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/01-Orchestration/4.%20Tool%20Integration%20%26%20Function%20Calling.md","t":"4 · Tool Integration & Function Calling","s":"102_AI-Application-Development","d":"01-Orchestration"},{"p":"102_AI-Application-Development/02-Vector Databases/1. Introduction to Vector Databases.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/02-Vector%20Databases/1.%20Introduction%20to%20Vector%20Databases.md","t":"1 · Introduction to Vector Databases","s":"102_AI-Application-Development","d":"02-Vector Databases"},{"p":"102_AI-Application-Development/02-Vector Databases/2. Embeddings & Vector Space Fundamentals.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/02-Vector%20Databases/2.%20Embeddings%20%26%20Vector%20Space%20Fundamentals.md","t":"2 · Embeddings & Vector Space Fundamentals","s":"102_AI-Application-Development","d":"02-Vector Databases"},{"p":"102_AI-Application-Development/02-Vector Databases/3. Ecosystem & Tools.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/02-Vector%20Databases/3.%20Ecosystem%20%26%20Tools.md","t":"3 · Ecosystem & Tools","s":"102_AI-Application-Development","d":"02-Vector Databases"},{"p":"102_AI-Application-Development/03-RAG/1. RAG Architecture & Foundations.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/03-RAG/1.%20RAG%20Architecture%20%26%20Foundations.md","t":"1 · RAG Architecture & Foundations","s":"102_AI-Application-Development","d":"03-RAG"},{"p":"102_AI-Application-Development/03-RAG/2. Document Ingestion & Chunking Strategies.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/03-RAG/2.%20Document%20Ingestion%20%26%20Chunking%20Strategies.md","t":"2 · Document Ingestion & Chunking Strategies","s":"102_AI-Application-Development","d":"03-RAG"},{"p":"102_AI-Application-Development/03-RAG/3. Dense, Sparse & Hybrid Retrieval.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/03-RAG/3.%20Dense%2C%20Sparse%20%26%20Hybrid%20Retrieval.md","t":"3 · Dense, Sparse & Hybrid Retrieval","s":"102_AI-Application-Development","d":"03-RAG"},{"p":"102_AI-Application-Development/03-RAG/4. Re-Ranking, Context Compression & Fusion.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/03-RAG/4.%20Re-Ranking%2C%20Context%20Compression%20%26%20Fusion.md","t":"4 · Re-Ranking, Context Compression & Fusion","s":"102_AI-Application-Development","d":"03-RAG"},{"p":"102_AI-Application-Development/03-RAG/5. Advanced RAG Patterns (GraphRAG, Self-RAG, Corrective RAG).md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/03-RAG/5.%20Advanced%20RAG%20Patterns%20%28GraphRAG%2C%20Self-RAG%2C%20Corrective%20RAG%29.md","t":"5 · Advanced RAG Patterns (GraphRAG, Self-RAG, Corrective RAG)","s":"102_AI-Application-Development","d":"03-RAG"},{"p":"102_AI-Application-Development/03-RAG/6. RAG Evaluation & Benchmarking (RAGAS, TruLens, DeepEval).md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/03-RAG/6.%20RAG%20Evaluation%20%26%20Benchmarking%20%28RAGAS%2C%20TruLens%2C%20DeepEval%29.md","t":"6 · RAG Evaluation & Benchmarking (RAGAS, TruLens, DeepEval)","s":"102_AI-Application-Development","d":"03-RAG"},{"p":"102_AI-Application-Development/03-RAG/7. Production RAG Architecture, Caching & Failure Modes.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/03-RAG/7.%20Production%20RAG%20Architecture%2C%20Caching%20%26%20Failure%20Modes.md","t":"7 · Production RAG Architecture, Caching & Failure Modes","s":"102_AI-Application-Development","d":"03-RAG"},{"p":"102_AI-Application-Development/03-RAG/README.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/03-RAG/README.md","t":"README","s":"102_AI-Application-Development","d":"03-RAG"},{"p":"102_AI-Application-Development/04-Memory/1. Introduction to Memory in AI Systems.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/04-Memory/1.%20Introduction%20to%20Memory%20in%20AI%20Systems.md","t":"1 · Introduction to Memory in AI Systems","s":"102_AI-Application-Development","d":"04-Memory"},{"p":"102_AI-Application-Development/04-Memory/2. Types of Memory.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/04-Memory/2.%20Types%20of%20Memory.md","t":"2 · Types of Memory","s":"102_AI-Application-Development","d":"04-Memory"},{"p":"102_AI-Application-Development/04-Memory/3. Memory Storage Mechanisms.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/04-Memory/3.%20Memory%20Storage%20Mechanisms.md","t":"3 · Memory Storage Mechanisms","s":"102_AI-Application-Development","d":"04-Memory"},{"p":"102_AI-Application-Development/04-Memory/4. Memory Retrieval Strategies.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/04-Memory/4.%20Memory%20Retrieval%20Strategies.md","t":"4 · Memory Retrieval Strategies","s":"102_AI-Application-Development","d":"04-Memory"},{"p":"102_AI-Application-Development/04-Memory/5. Memory Compression & Pruning.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/04-Memory/5.%20Memory%20Compression%20%26%20Pruning.md","t":"5 · Memory Compression & Pruning","s":"102_AI-Application-Development","d":"04-Memory"},{"p":"102_AI-Application-Development/04-Memory/6. Memory in Agentic Systems.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/04-Memory/6.%20Memory%20in%20Agentic%20Systems.md","t":"6 · Memory in Agentic Systems","s":"102_AI-Application-Development","d":"04-Memory"},{"p":"102_AI-Application-Development/04-Memory/7. Memory Failure Modes.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/04-Memory/7.%20Memory%20Failure%20Modes.md","t":"7 · Memory Failure Modes","s":"102_AI-Application-Development","d":"04-Memory"},{"p":"102_AI-Application-Development/04-Memory/8. Tools & Frameworks for Memory Management.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/04-Memory/8.%20Tools%20%26%20Frameworks%20for%20Memory%20Management.md","t":"8 · Tools & Frameworks for Memory Management","s":"102_AI-Application-Development","d":"04-Memory"},{"p":"102_AI-Application-Development/05-Fine-Tuning/1. Fine-Tuning Fundamentals.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/05-Fine-Tuning/1.%20Fine-Tuning%20Fundamentals.md","t":"1 · Fine-Tuning Fundamentals","s":"102_AI-Application-Development","d":"05-Fine-Tuning"},{"p":"102_AI-Application-Development/05-Fine-Tuning/2. Pretraining vs Fine-Tuning.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/05-Fine-Tuning/2.%20Pretraining%20vs%20Fine-Tuning.md","t":"2 · Pretraining vs Fine-Tuning","s":"102_AI-Application-Development","d":"05-Fine-Tuning"},{"p":"102_AI-Application-Development/05-Fine-Tuning/3. Supervised Fine-Tuning (SFT).md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/05-Fine-Tuning/3.%20Supervised%20Fine-Tuning%20%28SFT%29.md","t":"3 · Supervised Fine-Tuning (SFT)","s":"102_AI-Application-Development","d":"05-Fine-Tuning"},{"p":"102_AI-Application-Development/05-Fine-Tuning/4. Preference-Based Tuning (RLHF, DPO – Overview).md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/05-Fine-Tuning/4.%20Preference-Based%20Tuning%20%28RLHF%2C%20DPO%20%E2%80%93%20Overview%29.md","t":"4 · Preference-Based Tuning (RLHF, DPO – Overview)","s":"102_AI-Application-Development","d":"05-Fine-Tuning"},{"p":"102_AI-Application-Development/05-Fine-Tuning/5. Parameter-Efficient Fine-Tuning (PEFT).md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/05-Fine-Tuning/5.%20Parameter-Efficient%20Fine-Tuning%20%28PEFT%29.md","t":"5 · Parameter-Efficient Fine-Tuning (PEFT)","s":"102_AI-Application-Development","d":"05-Fine-Tuning"},{"p":"102_AI-Application-Development/05-Fine-Tuning/6. LoRA (Low-Rank Adaptation).md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/05-Fine-Tuning/6.%20LoRA%20%28Low-Rank%20Adaptation%29.md","t":"6 · LoRA (Low-Rank Adaptation)","s":"102_AI-Application-Development","d":"05-Fine-Tuning"},{"p":"102_AI-Application-Development/05-Fine-Tuning/7. QLoRA (Quantized LoRA).md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/05-Fine-Tuning/7.%20QLoRA%20%28Quantized%20LoRA%29.md","t":"7 · QLoRA (Quantized LoRA)","s":"102_AI-Application-Development","d":"05-Fine-Tuning"},{"p":"102_AI-Application-Development/05-Fine-Tuning/8. Data Preparation for Fine-Tuning.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/05-Fine-Tuning/8.%20Data%20Preparation%20for%20Fine-Tuning.md","t":"8 · Data Preparation for Fine-Tuning","s":"102_AI-Application-Development","d":"05-Fine-Tuning"},{"p":"102_AI-Application-Development/05-Fine-Tuning/9. Fine-Tuning vs RAG vs Prompt Engineering.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/05-Fine-Tuning/9.%20Fine-Tuning%20vs%20RAG%20vs%20Prompt%20Engineering.md","t":"9 · Fine-Tuning vs RAG vs Prompt Engineering","s":"102_AI-Application-Development","d":"05-Fine-Tuning"},{"p":"102_AI-Application-Development/05-Fine-Tuning/10. Evaluation of Fine-Tuned Models.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/05-Fine-Tuning/10.%20Evaluation%20of%20Fine-Tuned%20Models.md","t":"10 · Evaluation of Fine-Tuned Models","s":"102_AI-Application-Development","d":"05-Fine-Tuning"},{"p":"102_AI-Application-Development/05-Fine-Tuning/11. Overfitting & Catastrophic Forgetting.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/05-Fine-Tuning/11.%20Overfitting%20%26%20Catastrophic%20Forgetting.md","t":"11 · Overfitting & Catastrophic Forgetting","s":"102_AI-Application-Development","d":"05-Fine-Tuning"},{"p":"102_AI-Application-Development/05-Fine-Tuning/12. Adapter Management & Versioning.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/05-Fine-Tuning/12.%20Adapter%20Management%20%26%20Versioning.md","t":"12 · Adapter Management & Versioning","s":"102_AI-Application-Development","d":"05-Fine-Tuning"},{"p":"102_AI-Application-Development/05-Fine-Tuning/13. Deployment of Fine-Tuned Models.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/05-Fine-Tuning/13.%20Deployment%20of%20Fine-Tuned%20Models.md","t":"13 · Deployment of Fine-Tuned Models","s":"102_AI-Application-Development","d":"05-Fine-Tuning"},{"p":"102_AI-Application-Development/06-AI-Automation/1. Introduction to AI Automation.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/06-AI-Automation/1.%20Introduction%20to%20AI%20Automation.md","t":"1 · Introduction to AI Automation","s":"102_AI-Application-Development","d":"06-AI-Automation"},{"p":"102_AI-Application-Development/06-AI-Automation/2. Automation Design Patterns.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/06-AI-Automation/2.%20Automation%20Design%20Patterns.md","t":"2 · Automation Design Patterns","s":"102_AI-Application-Development","d":"06-AI-Automation"},{"p":"102_AI-Application-Development/06-AI-Automation/3. Tool Integration for Automation.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/06-AI-Automation/3.%20Tool%20Integration%20for%20Automation.md","t":"3 · Tool Integration for Automation","s":"102_AI-Application-Development","d":"06-AI-Automation"},{"p":"102_AI-Application-Development/06-AI-Automation/4. Workflow Orchestration Tools.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/102_AI-Application-Development/06-AI-Automation/4.%20Workflow%20Orchestration%20Tools.md","t":"4 · Workflow Orchestration Tools","s":"102_AI-Application-Development","d":"06-AI-Automation"},{"p":"103_Agentic AI/README.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/103_Agentic%20AI/README.md","t":"README","s":"103_Agentic AI","d":""},{"p":"103_Agentic AI/01-Planning & Reasoning/1. Foundations of Agentic Planning.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/103_Agentic%20AI/01-Planning%20%26%20Reasoning/1.%20Foundations%20of%20Agentic%20Planning.md","t":"1 · Foundations of Agentic Planning","s":"103_Agentic AI","d":"01-Planning & Reasoning"},{"p":"103_Agentic AI/01-Planning & Reasoning/2. Reasoning Patterns in LLM Systems.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/103_Agentic%20AI/01-Planning%20%26%20Reasoning/2.%20Reasoning%20Patterns%20in%20LLM%20Systems.md","t":"2 · Reasoning Patterns in LLM Systems","s":"103_Agentic AI","d":"01-Planning & Reasoning"},{"p":"103_Agentic AI/01-Planning & Reasoning/3. Single-Agent Planning.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/103_Agentic%20AI/01-Planning%20%26%20Reasoning/3.%20Single-Agent%20Planning.md","t":"3 · Single-Agent Planning","s":"103_Agentic AI","d":"01-Planning & Reasoning"},{"p":"103_Agentic AI/01-Planning & Reasoning/4. Task Decomposition Strategies.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/103_Agentic%20AI/01-Planning%20%26%20Reasoning/4.%20Task%20Decomposition%20Strategies.md","t":"4 · Task Decomposition Strategies","s":"103_Agentic AI","d":"01-Planning & Reasoning"},{"p":"103_Agentic AI/01-Planning & Reasoning/5. Iterative Reasoning Loops.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/103_Agentic%20AI/01-Planning%20%26%20Reasoning/5.%20Iterative%20Reasoning%20Loops.md","t":"5 · Iterative Reasoning Loops","s":"103_Agentic AI","d":"01-Planning & Reasoning"},{"p":"103_Agentic AI/01-Planning & Reasoning/6. Tool-Aware Reasoning.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/103_Agentic%20AI/01-Planning%20%26%20Reasoning/6.%20Tool-Aware%20Reasoning.md","t":"6 · Tool-Aware Reasoning","s":"103_Agentic AI","d":"01-Planning & Reasoning"},{"p":"103_Agentic AI/01-Planning & Reasoning/7. State-Aware Planning.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/103_Agentic%20AI/01-Planning%20%26%20Reasoning/7.%20State-Aware%20Planning.md","t":"7 · State-Aware Planning","s":"103_Agentic AI","d":"01-Planning & Reasoning"},{"p":"103_Agentic AI/01-Planning & Reasoning/8. Planning Constraints & Control.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/103_Agentic%20AI/01-Planning%20%26%20Reasoning/8.%20Planning%20Constraints%20%26%20Control.md","t":"8 · Planning Constraints & Control","s":"103_Agentic AI","d":"01-Planning & Reasoning"},{"p":"103_Agentic AI/01-Planning & Reasoning/9. Failure Modes in Planning Systems.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/103_Agentic%20AI/01-Planning%20%26%20Reasoning/9.%20Failure%20Modes%20in%20Planning%20Systems.md","t":"9 · Failure Modes in Planning Systems","s":"103_Agentic AI","d":"01-Planning & Reasoning"},{"p":"103_Agentic AI/01-Planning & Reasoning/10. Evaluation of Reasoning Systems.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/103_Agentic%20AI/01-Planning%20%26%20Reasoning/10.%20Evaluation%20of%20Reasoning%20Systems.md","t":"10 · Evaluation of Reasoning Systems","s":"103_Agentic AI","d":"01-Planning & Reasoning"},{"p":"103_Agentic AI/02-Agent Protocols/1. Introduction to Model Context Protocol (MCP).md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/103_Agentic%20AI/02-Agent%20Protocols/1.%20Introduction%20to%20Model%20Context%20Protocol%20%28MCP%29.md","t":"1 · Introduction to Model Context Protocol (MCP)","s":"103_Agentic AI","d":"02-Agent Protocols"},{"p":"103_Agentic AI/02-Agent Protocols/2. Tool Interface Standardization.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/103_Agentic%20AI/02-Agent%20Protocols/2.%20Tool%20Interface%20Standardization.md","t":"2 · Tool Interface Standardization","s":"103_Agentic AI","d":"02-Agent Protocols"},{"p":"103_Agentic AI/02-Agent Protocols/3. Client–Server Architecture for Agents.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/103_Agentic%20AI/02-Agent%20Protocols/3.%20Client%E2%80%93Server%20Architecture%20for%20Agents.md","t":"3 · Client–Server Architecture for Agents","s":"103_Agentic AI","d":"02-Agent Protocols"},{"p":"103_Agentic AI/02-Agent Protocols/4. Capability Discovery.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/103_Agentic%20AI/02-Agent%20Protocols/4.%20Capability%20Discovery.md","t":"4 · Capability Discovery","s":"103_Agentic AI","d":"02-Agent Protocols"},{"p":"103_Agentic AI/03-Agentic AI Frameworks/Frameworks & Libraries.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/103_Agentic%20AI/03-Agentic%20AI%20Frameworks/Frameworks%20%26%20Libraries.md","t":"Frameworks & Libraries","s":"103_Agentic AI","d":"03-Agentic AI Frameworks"},{"p":"103_Agentic AI/04-Multi-Agent Orchestration/1. Multi-Agent Collaboration Patterns.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/103_Agentic%20AI/04-Multi-Agent%20Orchestration/1.%20Multi-Agent%20Collaboration%20Patterns.md","t":"1 · Multi-Agent Collaboration Patterns","s":"103_Agentic AI","d":"04-Multi-Agent Orchestration"},{"p":"103_Agentic AI/04-Multi-Agent Orchestration/2. Human-in-the-Loop & Production Safety.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/103_Agentic%20AI/04-Multi-Agent%20Orchestration/2.%20Human-in-the-Loop%20%26%20Production%20Safety.md","t":"2 · Human-in-the-Loop & Production Safety","s":"103_Agentic AI","d":"04-Multi-Agent Orchestration"},{"p":"104_LLMOps/README.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/README.md","t":"README","s":"104_LLMOps","d":""},{"p":"104_LLMOps/1. UX &Product Design/1. AI Interaction Design.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/1.%20UX%20%26Product%20Design/1.%20AI%20Interaction%20Design.md","t":"1 · AI Interaction Design","s":"104_LLMOps","d":"1. UX &Product Design"},{"p":"104_LLMOps/1. UX &Product Design/2. Trust & Transparency.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/1.%20UX%20%26Product%20Design/2.%20Trust%20%26%20Transparency.md","t":"2 · Trust & Transparency","s":"104_LLMOps","d":"1. UX &Product Design"},{"p":"104_LLMOps/1. UX &Product Design/3. Latency & Responsiveness.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/1.%20UX%20%26Product%20Design/3.%20Latency%20%26%20Responsiveness.md","t":"3 · Latency & Responsiveness","s":"104_LLMOps","d":"1. UX &Product Design"},{"p":"104_LLMOps/1. UX &Product Design/4. Feedback & Control.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/1.%20UX%20%26Product%20Design/4.%20Feedback%20%26%20Control.md","t":"4 · Feedback & Control","s":"104_LLMOps","d":"1. UX &Product Design"},{"p":"104_LLMOps/2. Deployment/1. Deployment Architectures.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/2.%20Deployment/1.%20Deployment%20Architectures.md","t":"1 · Deployment Architectures","s":"104_LLMOps","d":"2. Deployment"},{"p":"104_LLMOps/2. Deployment/2. Backend Deployment.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/2.%20Deployment/2.%20Backend%20Deployment.md","t":"2 · Backend Deployment","s":"104_LLMOps","d":"2. Deployment"},{"p":"104_LLMOps/2. Deployment/3. Containerization & Infrastructure.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/2.%20Deployment/3.%20Containerization%20%26%20Infrastructure.md","t":"3 · Containerization & Infrastructure","s":"104_LLMOps","d":"2. Deployment"},{"p":"104_LLMOps/2. Deployment/4. Model Serving (Self-Hosted).md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/2.%20Deployment/4.%20Model%20Serving%20%28Self-Hosted%29.md","t":"4 · Model Serving (Self-Hosted)","s":"104_LLMOps","d":"2. Deployment"},{"p":"104_LLMOps/2. Deployment/5. Scaling & Performance.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/2.%20Deployment/5.%20Scaling%20%26%20Performance.md","t":"5 · Scaling & Performance","s":"104_LLMOps","d":"2. Deployment"},{"p":"104_LLMOps/2. Deployment/6. CI/CD for AI Systems.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/2.%20Deployment/6.%20CI/CD%20for%20AI%20Systems.md","t":"CD for AI Systems","s":"104_LLMOps","d":"2. Deployment/6. CI"},{"p":"104_LLMOps/3. Observability/1. Request & Trace Logging.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/3.%20Observability/1.%20Request%20%26%20Trace%20Logging.md","t":"1 · Request & Trace Logging","s":"104_LLMOps","d":"3. Observability"},{"p":"104_LLMOps/3. Observability/2. Token, Cost & Latency Monitoring.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/3.%20Observability/2.%20Token%2C%20Cost%20%26%20Latency%20Monitoring.md","t":"2 · Token, Cost & Latency Monitoring","s":"104_LLMOps","d":"3. Observability"},{"p":"104_LLMOps/3. Observability/3. Workflow-Level Monitoring.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/3.%20Observability/3.%20Workflow-Level%20Monitoring.md","t":"3 · Workflow-Level Monitoring","s":"104_LLMOps","d":"3. Observability"},{"p":"104_LLMOps/3. Observability/4. Quality & Behavior Monitoring.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/3.%20Observability/4.%20Quality%20%26%20Behavior%20Monitoring.md","t":"4 · Quality & Behavior Monitoring","s":"104_LLMOps","d":"3. Observability"},{"p":"104_LLMOps/3. Observability/5. Alerting & Incident Response.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/3.%20Observability/5.%20Alerting%20%26%20Incident%20Response.md","t":"5 · Alerting & Incident Response","s":"104_LLMOps","d":"3. Observability"},{"p":"104_LLMOps/4. Safety & Guardrails/1. Input Safety.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/4.%20Safety%20%26%20Guardrails/1.%20Input%20Safety.md","t":"1 · Input Safety","s":"104_LLMOps","d":"4. Safety & Guardrails"},{"p":"104_LLMOps/4. Safety & Guardrails/2. Output Filtering.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/4.%20Safety%20%26%20Guardrails/2.%20Output%20Filtering.md","t":"2 · Output Filtering","s":"104_LLMOps","d":"4. Safety & Guardrails"},{"p":"104_LLMOps/4. Safety & Guardrails/3. Tool Safety.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/4.%20Safety%20%26%20Guardrails/3.%20Tool%20Safety.md","t":"3 · Tool Safety","s":"104_LLMOps","d":"4. Safety & Guardrails"},{"p":"104_LLMOps/4. Safety & Guardrails/4. Prompt Injection & Jailbreak Defense.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/4.%20Safety%20%26%20Guardrails/4.%20Prompt%20Injection%20%26%20Jailbreak%20Defense.md","t":"4 · Prompt Injection & Jailbreak Defense","s":"104_LLMOps","d":"4. Safety & Guardrails"},{"p":"104_LLMOps/4. Safety & Guardrails/5. Policy & Usage Controls.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/4.%20Safety%20%26%20Guardrails/5.%20Policy%20%26%20Usage%20Controls.md","t":"5 · Policy & Usage Controls","s":"104_LLMOps","d":"4. Safety & Guardrails"},{"p":"104_LLMOps/4. Safety & Guardrails/6. Human-in-the-Loop Safeguards.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/4.%20Safety%20%26%20Guardrails/6.%20Human-in-the-Loop%20Safeguards.md","t":"6 · Human-in-the-Loop Safeguards","s":"104_LLMOps","d":"4. Safety & Guardrails"},{"p":"104_LLMOps/5. Governance/1. Data Governance.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/5.%20Governance/1.%20Data%20Governance.md","t":"1 · Data Governance","s":"104_LLMOps","d":"5. Governance"},{"p":"104_LLMOps/5. Governance/2. Access & Identity Management.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/5.%20Governance/2.%20Access%20%26%20Identity%20Management.md","t":"2 · Access & Identity Management","s":"104_LLMOps","d":"5. Governance"},{"p":"104_LLMOps/5. Governance/3. Model & Prompt Governance.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/5.%20Governance/3.%20Model%20%26%20Prompt%20Governance.md","t":"3 · Model & Prompt Governance","s":"104_LLMOps","d":"5. Governance"},{"p":"104_LLMOps/5. Governance/4. Compliance & Regulatory Considerations.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/5.%20Governance/4.%20Compliance%20%26%20Regulatory%20Considerations.md","t":"4 · Compliance & Regulatory Considerations","s":"104_LLMOps","d":"5. Governance"},{"p":"104_LLMOps/5. Governance/5. Risk Management & Documentation.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/5.%20Governance/5.%20Risk%20Management%20%26%20Documentation.md","t":"5 · Risk Management & Documentation","s":"104_LLMOps","d":"5. Governance"},{"p":"104_LLMOps/5. Governance/6. Auditability & Transparency.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/5.%20Governance/6.%20Auditability%20%26%20Transparency.md","t":"6 · Auditability & Transparency","s":"104_LLMOps","d":"5. Governance"},{"p":"104_LLMOps/6. Managed AI Platforms/1. What Managed AI Platforms Provide.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/6.%20Managed%20AI%20Platforms/1.%20What%20Managed%20AI%20Platforms%20Provide.md","t":"1 · What Managed AI Platforms Provide","s":"104_LLMOps","d":"6. Managed AI Platforms"},{"p":"104_LLMOps/6. Managed AI Platforms/2. Core Capabilities.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/6.%20Managed%20AI%20Platforms/2.%20Core%20Capabilities.md","t":"2 · Core Capabilities","s":"104_LLMOps","d":"6. Managed AI Platforms"},{"p":"104_LLMOps/6. Managed AI Platforms/3. Deployment & Scaling Features.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/6.%20Managed%20AI%20Platforms/3.%20Deployment%20%26%20Scaling%20Features.md","t":"3 · Deployment & Scaling Features","s":"104_LLMOps","d":"6. Managed AI Platforms"},{"p":"104_LLMOps/6. Managed AI Platforms/4. Security & Compliance.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/6.%20Managed%20AI%20Platforms/4.%20Security%20%26%20Compliance.md","t":"4 · Security & Compliance","s":"104_LLMOps","d":"6. Managed AI Platforms"},{"p":"104_LLMOps/6. Managed AI Platforms/5. Popular Managed AI Platforms.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/6.%20Managed%20AI%20Platforms/5.%20Popular%20Managed%20AI%20Platforms.md","t":"5 · Popular Managed AI Platforms","s":"104_LLMOps","d":"6. Managed AI Platforms"},{"p":"104_LLMOps/6. Managed AI Platforms/6. When to Use Managed Platforms.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/6.%20Managed%20AI%20Platforms/6.%20When%20to%20Use%20Managed%20Platforms.md","t":"6 · When to Use Managed Platforms","s":"104_LLMOps","d":"6. Managed AI Platforms"},{"p":"104_LLMOps/6. Managed AI Platforms/7. Trade-Offs.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/104_LLMOps/6.%20Managed%20AI%20Platforms/7.%20Trade-Offs.md","t":"7 · Trade Offs","s":"104_LLMOps","d":"6. Managed AI Platforms"},{"p":"105_AI-Evaluation/01-evaluation-fundamentals.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/01-evaluation-fundamentals.md","t":"01 · Evaluation Fundamentals","s":"105_AI-Evaluation","d":""},{"p":"105_AI-Evaluation/02-llm-as-a-judge.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/02-llm-as-a-judge.md","t":"02 · LLM as a Judge","s":"105_AI-Evaluation","d":""},{"p":"105_AI-Evaluation/03-agent-benchmarks.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/03-agent-benchmarks.md","t":"03 · Agent Benchmarks","s":"105_AI-Evaluation","d":""},{"p":"105_AI-Evaluation/04-rag-evaluation.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/04-rag-evaluation.md","t":"04 · RAG Evaluation","s":"105_AI-Evaluation","d":""},{"p":"105_AI-Evaluation/05-eval-engineering.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/05-eval-engineering.md","t":"05 · Eval Engineering","s":"105_AI-Evaluation","d":""},{"p":"105_AI-Evaluation/06-evaluation-datasets.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/06-evaluation-datasets.md","t":"06 · Evaluation Datasets","s":"105_AI-Evaluation","d":""},{"p":"105_AI-Evaluation/07-online-experimentation.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/07-online-experimentation.md","t":"07 · Online Experimentation","s":"105_AI-Evaluation","d":""},{"p":"105_AI-Evaluation/README.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/README.md","t":"README","s":"105_AI-Evaluation","d":""},{"p":"105_AI-Evaluation/course/01-course-overview.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/01-course-overview.md","t":"01 · Course Overview","s":"105_AI-Evaluation","d":"course"},{"p":"105_AI-Evaluation/course/02-model-vs-application-evals.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/02-model-vs-application-evals.md","t":"02 · Model vs Application Evals","s":"105_AI-Evaluation","d":"course"},{"p":"105_AI-Evaluation/course/03-evaluation-workflow.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/03-evaluation-workflow.md","t":"03 · Evaluation Workflow","s":"105_AI-Evaluation","d":"course"},{"p":"105_AI-Evaluation/course/04-multiple-eval-pipelines.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/04-multiple-eval-pipelines.md","t":"04 · Multiple Eval Pipelines","s":"105_AI-Evaluation","d":"course"},{"p":"105_AI-Evaluation/course/05-eval-methods-reference-based-vs-free.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/05-eval-methods-reference-based-vs-free.md","t":"05 · Eval Methods Reference Based vs Free","s":"105_AI-Evaluation","d":"course"},{"p":"105_AI-Evaluation/course/06-offline-vs-online-evals.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/06-offline-vs-online-evals.md","t":"06 · Offline vs Online Evals","s":"105_AI-Evaluation","d":"course"},{"p":"105_AI-Evaluation/course/07-model-evals-capabilities.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/07-model-evals-capabilities.md","t":"07 · Model Evals Capabilities","s":"105_AI-Evaluation","d":"course"},{"p":"105_AI-Evaluation/course/08-benchmarking-saturation-contamination.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/08-benchmarking-saturation-contamination.md","t":"08 · Benchmarking Saturation Contamination","s":"105_AI-Evaluation","d":"course"},{"p":"105_AI-Evaluation/course/09-llm-benchmarks-evolution.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/09-llm-benchmarks-evolution.md","t":"09 · LLM Benchmarks Evolution","s":"105_AI-Evaluation","d":"course"},{"p":"105_AI-Evaluation/course/10-llm-leaderboards.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/10-llm-leaderboards.md","t":"10 · LLM Leaderboards","s":"105_AI-Evaluation","d":"course"},{"p":"105_AI-Evaluation/course/11-model-selection-custom-evals.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/11-model-selection-custom-evals.md","t":"11 · Model Selection Custom Evals","s":"105_AI-Evaluation","d":"course"},{"p":"105_AI-Evaluation/course/12-rag-eval-interview-answer.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/12-rag-eval-interview-answer.md","t":"12 · RAG Eval Interview Answer","s":"105_AI-Evaluation","d":"course"},{"p":"105_AI-Evaluation/course/13-testing-rag-retrievers.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/13-testing-rag-retrievers.md","t":"13 · Testing RAG Retrievers","s":"105_AI-Evaluation","d":"course"},{"p":"105_AI-Evaluation/course/14-rag-triad-generator-pipeline.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/14-rag-triad-generator-pipeline.md","t":"14 · RAG Triad Generator Pipeline","s":"105_AI-Evaluation","d":"course"},{"p":"105_AI-Evaluation/course/15-geval-deterministic-judge.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/15-geval-deterministic-judge.md","t":"15 · G-Eval Deterministic Judge","s":"105_AI-Evaluation","d":"course"},{"p":"105_AI-Evaluation/course/16-rag-security-toxicity-leakage-scope-drift.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/16-rag-security-toxicity-leakage-scope-drift.md","t":"16 · RAG Security Toxicity Leakage Scope Drift","s":"105_AI-Evaluation","d":"course"},{"p":"105_AI-Evaluation/course/17-rag-operational-evals.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/17-rag-operational-evals.md","t":"17 · RAG Operational Evals","s":"105_AI-Evaluation","d":"course"},{"p":"105_AI-Evaluation/course/18-rag-regression-testing.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/18-rag-regression-testing.md","t":"18 · RAG Regression Testing","s":"105_AI-Evaluation","d":"course"},{"p":"105_AI-Evaluation/course/19-online-eval-langsmith-monitoring.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/19-online-eval-langsmith-monitoring.md","t":"19 · Online Eval LangSmith Monitoring","s":"105_AI-Evaluation","d":"course"},{"p":"105_AI-Evaluation/course/cheatsheet.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/cheatsheet.md","t":"Cheatsheet","s":"105_AI-Evaluation","d":"course"},{"p":"105_AI-Evaluation/course/flashcards.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/flashcards.md","t":"Flashcards","s":"105_AI-Evaluation","d":"course"},{"p":"105_AI-Evaluation/course/glossary.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/glossary.md","t":"Glossary","s":"105_AI-Evaluation","d":"course"},{"p":"105_AI-Evaluation/course/how-this-course-is-organized.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/how-this-course-is-organized.md","t":"How This Course Is Organized","s":"105_AI-Evaluation","d":"course"},{"p":"105_AI-Evaluation/course/progress-tracker.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/progress-tracker.md","t":"Progress Tracker","s":"105_AI-Evaluation","d":"course"},{"p":"105_AI-Evaluation/course/README.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/README.md","t":"README","s":"105_AI-Evaluation","d":"course"},{"p":"105_AI-Evaluation/course/transcripts/01-course-overview.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/transcripts/01-course-overview.md","t":"01 · Course Overview","s":"105_AI-Evaluation","d":"course/transcripts"},{"p":"105_AI-Evaluation/course/transcripts/02-model-vs-application-evals.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/transcripts/02-model-vs-application-evals.md","t":"02 · Model vs Application Evals","s":"105_AI-Evaluation","d":"course/transcripts"},{"p":"105_AI-Evaluation/course/transcripts/03-evaluation-workflow.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/transcripts/03-evaluation-workflow.md","t":"03 · Evaluation Workflow","s":"105_AI-Evaluation","d":"course/transcripts"},{"p":"105_AI-Evaluation/course/transcripts/04-multiple-eval-pipelines.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/transcripts/04-multiple-eval-pipelines.md","t":"04 · Multiple Eval Pipelines","s":"105_AI-Evaluation","d":"course/transcripts"},{"p":"105_AI-Evaluation/course/transcripts/05-eval-methods-reference-based-vs-free.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/transcripts/05-eval-methods-reference-based-vs-free.md","t":"05 · Eval Methods Reference Based vs Free","s":"105_AI-Evaluation","d":"course/transcripts"},{"p":"105_AI-Evaluation/course/transcripts/06-offline-vs-online-evals.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/transcripts/06-offline-vs-online-evals.md","t":"06 · Offline vs Online Evals","s":"105_AI-Evaluation","d":"course/transcripts"},{"p":"105_AI-Evaluation/course/transcripts/07-model-evals-capabilities.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/transcripts/07-model-evals-capabilities.md","t":"07 · Model Evals Capabilities","s":"105_AI-Evaluation","d":"course/transcripts"},{"p":"105_AI-Evaluation/course/transcripts/08-benchmarking-saturation-contamination.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/transcripts/08-benchmarking-saturation-contamination.md","t":"08 · Benchmarking Saturation Contamination","s":"105_AI-Evaluation","d":"course/transcripts"},{"p":"105_AI-Evaluation/course/transcripts/09-llm-benchmarks-evolution.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/transcripts/09-llm-benchmarks-evolution.md","t":"09 · LLM Benchmarks Evolution","s":"105_AI-Evaluation","d":"course/transcripts"},{"p":"105_AI-Evaluation/course/transcripts/10-llm-leaderboards.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/transcripts/10-llm-leaderboards.md","t":"10 · LLM Leaderboards","s":"105_AI-Evaluation","d":"course/transcripts"},{"p":"105_AI-Evaluation/course/transcripts/11-model-selection-custom-evals.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/transcripts/11-model-selection-custom-evals.md","t":"11 · Model Selection Custom Evals","s":"105_AI-Evaluation","d":"course/transcripts"},{"p":"105_AI-Evaluation/course/transcripts/12-rag-eval-interview-answer.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/transcripts/12-rag-eval-interview-answer.md","t":"12 · RAG Eval Interview Answer","s":"105_AI-Evaluation","d":"course/transcripts"},{"p":"105_AI-Evaluation/course/transcripts/13-testing-rag-retrievers.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/transcripts/13-testing-rag-retrievers.md","t":"13 · Testing RAG Retrievers","s":"105_AI-Evaluation","d":"course/transcripts"},{"p":"105_AI-Evaluation/course/transcripts/14-rag-triad-generator-pipeline.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/transcripts/14-rag-triad-generator-pipeline.md","t":"14 · RAG Triad Generator Pipeline","s":"105_AI-Evaluation","d":"course/transcripts"},{"p":"105_AI-Evaluation/course/transcripts/15-geval-deterministic-judge.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/transcripts/15-geval-deterministic-judge.md","t":"15 · G-Eval Deterministic Judge","s":"105_AI-Evaluation","d":"course/transcripts"},{"p":"105_AI-Evaluation/course/transcripts/16-rag-security-toxicity-leakage-scope-drift.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/transcripts/16-rag-security-toxicity-leakage-scope-drift.md","t":"16 · RAG Security Toxicity Leakage Scope Drift","s":"105_AI-Evaluation","d":"course/transcripts"},{"p":"105_AI-Evaluation/course/transcripts/17-rag-operational-evals.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/transcripts/17-rag-operational-evals.md","t":"17 · RAG Operational Evals","s":"105_AI-Evaluation","d":"course/transcripts"},{"p":"105_AI-Evaluation/course/transcripts/18-rag-regression-testing.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/transcripts/18-rag-regression-testing.md","t":"18 · RAG Regression Testing","s":"105_AI-Evaluation","d":"course/transcripts"},{"p":"105_AI-Evaluation/course/transcripts/19-online-eval-langsmith-monitoring.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/105_AI-Evaluation/course/transcripts/19-online-eval-langsmith-monitoring.md","t":"19 · Online Eval LangSmith Monitoring","s":"105_AI-Evaluation","d":"course/transcripts"},{"p":"106_AI-Security-Safety/01-threat-modeling.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/106_AI-Security-Safety/01-threat-modeling.md","t":"01 · Threat Modeling","s":"106_AI-Security-Safety","d":""},{"p":"106_AI-Security-Safety/02-prompt-injection-defense.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/106_AI-Security-Safety/02-prompt-injection-defense.md","t":"02 · Prompt Injection Defense","s":"106_AI-Security-Safety","d":""},{"p":"106_AI-Security-Safety/03-red-teaming.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/106_AI-Security-Safety/03-red-teaming.md","t":"03 · Red Teaming","s":"106_AI-Security-Safety","d":""},{"p":"106_AI-Security-Safety/04-agent-mcp-security.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/106_AI-Security-Safety/04-agent-mcp-security.md","t":"04 · Agent MCP Security","s":"106_AI-Security-Safety","d":""},{"p":"106_AI-Security-Safety/05-ai-alignment.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/106_AI-Security-Safety/05-ai-alignment.md","t":"05 · AI Alignment","s":"106_AI-Security-Safety","d":""},{"p":"106_AI-Security-Safety/06-responsible-ai.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/106_AI-Security-Safety/06-responsible-ai.md","t":"06 · Responsible AI","s":"106_AI-Security-Safety","d":""},{"p":"106_AI-Security-Safety/07-security-safety-datasets.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/106_AI-Security-Safety/07-security-safety-datasets.md","t":"07 · Security Safety Datasets","s":"106_AI-Security-Safety","d":""},{"p":"106_AI-Security-Safety/08-incident-databases.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/106_AI-Security-Safety/08-incident-databases.md","t":"08 · Incident Databases","s":"106_AI-Security-Safety","d":""},{"p":"106_AI-Security-Safety/README.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/106_AI-Security-Safety/README.md","t":"README","s":"106_AI-Security-Safety","d":""},{"p":"interview/01-interview-process.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/interview/01-interview-process.md","t":"01 · Interview Process","s":"interview","d":""},{"p":"interview/02-questions.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/interview/02-questions.md","t":"02 · Questions","s":"interview","d":""},{"p":"interview/03-get-hired.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/interview/03-get-hired.md","t":"03 · Get Hired","s":"interview","d":""},{"p":"interview/04-after-the-interview.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/interview/04-after-the-interview.md","t":"04 · After the Interview","s":"interview","d":""},{"p":"interview/05-trends.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/interview/05-trends.md","t":"05 · Trends","s":"interview","d":""},{"p":"interview/07-global-compensation-and-job-market.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/interview/07-global-compensation-and-job-market.md","t":"07 · Global Compensation and Job Market","s":"interview","d":""},{"p":"interview/08-ai-engineer-resume-and-portfolio-playbook.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/interview/08-ai-engineer-resume-and-portfolio-playbook.md","t":"08 · AI Engineer Resume and Portfolio Playbook","s":"interview","d":""},{"p":"interview/09-real-world-case-studies.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/interview/09-real-world-case-studies.md","t":"09 · Real World Case Studies","s":"interview","d":""},{"p":"interview/README.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/interview/README.md","t":"README","s":"interview","d":""},{"p":"interview/questions/01-theory.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/interview/questions/01-theory.md","t":"01 · Theory","s":"interview","d":"questions"},{"p":"interview/questions/02-coding.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/interview/questions/02-coding.md","t":"02 · Coding","s":"interview","d":"questions"},{"p":"interview/questions/03-project-deep-dive.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/interview/questions/03-project-deep-dive.md","t":"03 · Project Deep Dive","s":"interview","d":"questions"},{"p":"interview/questions/04-ai-system-design.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/interview/questions/04-ai-system-design.md","t":"04 · AI System Design","s":"interview","d":"questions"},{"p":"interview/questions/05-behavioral.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/interview/questions/05-behavioral.md","t":"05 · Behavioral","s":"interview","d":"questions"},{"p":"interview/questions/06-home-assignments.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/interview/questions/06-home-assignments.md","t":"06 · Home Assignments","s":"interview","d":"questions"},{"p":"interview/questions/questions.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/interview/questions/questions.md","t":"Questions","s":"interview","d":"questions"},{"p":"learning-paths/advanced-engineering.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/learning-paths/advanced-engineering.md","t":"Advanced Engineering","s":"learning-paths","d":""},{"p":"learning-paths/from-backend-engineer.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/learning-paths/from-backend-engineer.md","t":"From Backend Engineer","s":"learning-paths","d":""},{"p":"learning-paths/from-data-engineer.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/learning-paths/from-data-engineer.md","t":"From Data Engineer","s":"learning-paths","d":""},{"p":"learning-paths/from-data-scientist.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/learning-paths/from-data-scientist.md","t":"From Data Scientist","s":"learning-paths","d":""},{"p":"learning-paths/from-frontend-engineer.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/learning-paths/from-frontend-engineer.md","t":"From Frontend Engineer","s":"learning-paths","d":""},{"p":"learning-paths/from-ml-engineer.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/learning-paths/from-ml-engineer.md","t":"From Ml Engineer","s":"learning-paths","d":""},{"p":"learning-paths/README.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/learning-paths/README.md","t":"README","s":"learning-paths","d":""},{"p":"portfolio/README.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/portfolio/README.md","t":"README","s":"portfolio","d":""},{"p":"research/analyze_job_postings.py","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/research/analyze_job_postings.py","t":"Analyze Job Postings","s":"research","d":""},{"p":"research/audit-2026-10-09.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/research/audit-2026-10-09.md","t":"Audit 2026-10-09","s":"research","d":""},{"p":"research/audit-inventory.json","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/research/audit-inventory.json","t":"Audit Inventory","s":"research","d":""},{"p":"research/evidence-policy.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/research/evidence-policy.md","t":"Evidence Policy","s":"research","d":""},{"p":"research/job-market-summary.json","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/research/job-market-summary.json","t":"Job Market Summary","s":"research","d":""},{"p":"research/README.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/research/README.md","t":"README","s":"research","d":""},{"p":"research/requirements.txt","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/research/requirements.txt","t":"Requirements","s":"research","d":""},{"p":"research/sources.json","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/research/sources.json","t":"Sources","s":"research","d":""},{"p":"roadmap/README.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/README.md","t":"README","s":"roadmap","d":""},{"p":"roadmap/accelerated-roadmap/interview-answers.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/accelerated-roadmap/interview-answers.md","t":"Interview Answers","s":"roadmap","d":"accelerated-roadmap"},{"p":"roadmap/accelerated-roadmap/interview-questions.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/accelerated-roadmap/interview-questions.md","t":"Interview Questions","s":"roadmap","d":"accelerated-roadmap"},{"p":"roadmap/accelerated-roadmap/module-1-llm-fundamentals.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/accelerated-roadmap/module-1-llm-fundamentals.md","t":"Module 1 LLM Fundamentals","s":"roadmap","d":"accelerated-roadmap"},{"p":"roadmap/accelerated-roadmap/module-2-building-with-llm-apis.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/accelerated-roadmap/module-2-building-with-llm-apis.md","t":"Module 2 Building with LLM APIS","s":"roadmap","d":"accelerated-roadmap"},{"p":"roadmap/accelerated-roadmap/module-3-prompt-engineering.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/accelerated-roadmap/module-3-prompt-engineering.md","t":"Module 3 Prompt Engineering","s":"roadmap","d":"accelerated-roadmap"},{"p":"roadmap/accelerated-roadmap/module-4-rag.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/accelerated-roadmap/module-4-rag.md","t":"Module 4 RAG","s":"roadmap","d":"accelerated-roadmap"},{"p":"roadmap/accelerated-roadmap/module-5-agents.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/accelerated-roadmap/module-5-agents.md","t":"Module 5 Agents","s":"roadmap","d":"accelerated-roadmap"},{"p":"roadmap/accelerated-roadmap/module-6-shipping-to-production.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/accelerated-roadmap/module-6-shipping-to-production.md","t":"Module 6 Shipping to Production","s":"roadmap","d":"accelerated-roadmap"},{"p":"roadmap/accelerated-roadmap/projects.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/accelerated-roadmap/projects.md","t":"Projects","s":"roadmap","d":"accelerated-roadmap"},{"p":"roadmap/accelerated-roadmap/README.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/accelerated-roadmap/README.md","t":"README","s":"roadmap","d":"accelerated-roadmap"},{"p":"roadmap/full-roadmap/level-00-software-engineering-fundamentals.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/full-roadmap/level-00-software-engineering-fundamentals.md","t":"Level 00 Software Engineering Fundamentals","s":"roadmap","d":"full-roadmap"},{"p":"roadmap/full-roadmap/level-01-llm-101.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/full-roadmap/level-01-llm-101.md","t":"Level 01 LLM 101","s":"roadmap","d":"full-roadmap"},{"p":"roadmap/full-roadmap/level-02-working-with-llm-apis.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/full-roadmap/level-02-working-with-llm-apis.md","t":"Level 02 Working with LLM APIS","s":"roadmap","d":"full-roadmap"},{"p":"roadmap/full-roadmap/level-03-prompt-engineering.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/full-roadmap/level-03-prompt-engineering.md","t":"Level 03 Prompt Engineering","s":"roadmap","d":"full-roadmap"},{"p":"roadmap/full-roadmap/level-04-rag.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/full-roadmap/level-04-rag.md","t":"Level 04 RAG","s":"roadmap","d":"full-roadmap"},{"p":"roadmap/full-roadmap/level-05-ai-agents.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/full-roadmap/level-05-ai-agents.md","t":"Level 05 AI Agents","s":"roadmap","d":"full-roadmap"},{"p":"roadmap/full-roadmap/level-06-context-engineering.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/full-roadmap/level-06-context-engineering.md","t":"Level 06 Context Engineering","s":"roadmap","d":"full-roadmap"},{"p":"roadmap/full-roadmap/level-07-llm-evaluations.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/full-roadmap/level-07-llm-evaluations.md","t":"Level 07 LLM Evaluations","s":"roadmap","d":"full-roadmap"},{"p":"roadmap/full-roadmap/level-08-ai-security.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/full-roadmap/level-08-ai-security.md","t":"Level 08 AI Security","s":"roadmap","d":"full-roadmap"},{"p":"roadmap/full-roadmap/level-09-ai-system-design.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/full-roadmap/level-09-ai-system-design.md","t":"Level 09 AI System Design","s":"roadmap","d":"full-roadmap"},{"p":"roadmap/full-roadmap/level-10-llmops.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/full-roadmap/level-10-llmops.md","t":"Level 10 LLMOps","s":"roadmap","d":"full-roadmap"},{"p":"roadmap/full-roadmap/level-11-managed-ai-platforms.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/full-roadmap/level-11-managed-ai-platforms.md","t":"Level 11 Managed AI Platforms","s":"roadmap","d":"full-roadmap"},{"p":"roadmap/full-roadmap/level-12-multimodal-101.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/full-roadmap/level-12-multimodal-101.md","t":"Level 12 Multimodal 101","s":"roadmap","d":"full-roadmap"},{"p":"roadmap/full-roadmap/level-13-fine-tuning.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/full-roadmap/level-13-fine-tuning.md","t":"Level 13 Fine Tuning","s":"roadmap","d":"full-roadmap"},{"p":"roadmap/full-roadmap/level-14-projects.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/full-roadmap/level-14-projects.md","t":"Level 14 Projects","s":"roadmap","d":"full-roadmap"},{"p":"roadmap/full-roadmap/level-15-interview-prep.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/full-roadmap/level-15-interview-prep.md","t":"Level 15 Interview Prep","s":"roadmap","d":"full-roadmap"},{"p":"roadmap/full-roadmap/README.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/roadmap/full-roadmap/README.md","t":"README","s":"roadmap","d":"full-roadmap"},{"p":"role/01-my-vision.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/role/01-my-vision.md","t":"01 · My Vision","s":"role","d":""},{"p":"role/02-skills.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/role/02-skills.md","t":"02 · Skills","s":"role","d":""},{"p":"role/03-responsibilities.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/role/03-responsibilities.md","t":"03 · Responsibilities","s":"role","d":""},{"p":"role/04-use-cases.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/role/04-use-cases.md","t":"04 · Use Cases","s":"role","d":""},{"p":"role/05-reality-vs-postings.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/role/05-reality-vs-postings.md","t":"05 · Reality vs Postings","s":"role","d":""},{"p":"role/06-worldwide-job-market-analysis.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/role/06-worldwide-job-market-analysis.md","t":"06 · Worldwide Job Market Analysis","s":"role","d":""},{"p":"role/README.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/role/README.md","t":"README","s":"role","d":""},{"p":"tools/check_docs.py","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/tools/check_docs.py","t":"Check Docs","s":"tools","d":""},{"p":"webinars/01-a-day-of-ai-engineer.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/webinars/01-a-day-of-ai-engineer.md","t":"01 · A Day of AI Engineer","s":"webinars","d":""},{"p":"webinars/02-defining-the-role.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/webinars/02-defining-the-role.md","t":"02 · Defining the Role","s":"webinars","d":""},{"p":"webinars/03-the-interview-process.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/webinars/03-the-interview-process.md","t":"03 · The Interview Process","s":"webinars","d":""},{"p":"webinars/04-take-home-assignments.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/webinars/04-take-home-assignments.md","t":"04 · Take Home Assignments","s":"webinars","d":""},{"p":"webinars/README.md","u":"https://github.com/AdilShamim8/AI-Engineering/blob/main/webinars/README.md","t":"README","s":"webinars","d":""}];
+  var SECTIONS = {
+    "101_LLM-Literacy":              {label:"101 · LLM Literacy",                  color:"#2563eb"},
+    "102_AI-Application-Development":{label:"102 · AI Application Development",   color:"#7c3aed"},
+    "103_Agentic AI":                {label:"103 · Agentic AI",                    color:"#d97706"},
+    "104_LLMOps":                    {label:"104 · LLMOps",                        color:"#0d9488"},
+    "105_AI-Evaluation":             {label:"105 · AI Evaluation",                 color:"#db2777"},
+    "106_AI-Security-Safety":        {label:"106 · AI Security & Safety",          color:"#dc2626"},
+    "roadmap":                       {label:"Roadmaps (Full + Accelerated)",       color:"#4338ca"},
+    "interview":                     {label:"Interview Preparation",                color:"#be185d"},
+    "learning-paths":                {label:"Learning Paths",                      color:"#0369a1"},
+    "portfolio":                     {label:"Portfolio",                           color:"#65a30d"},
+    "research":                      {label:"Research & Evidence",                 color:"#7c2d12"},
+    "role":                          {label:"The AI Engineer Role",                color:"#334155"},
+    "tools":                         {label:"Tools",                               color:"#64748b"},
+    "webinars":                      {label:"Webinars",                            color:"#9333ea"},
+    "root":                          {label:"Repository root",                     color:"#0f172a"}
+  };
+  var ORDER = ["101_LLM-Literacy","102_AI-Application-Development","103_Agentic AI","104_LLMOps","105_AI-Evaluation","106_AI-Security-Safety","roadmap","interview","learning-paths","portfolio","research","role","tools","webinars","root"];
+
+  /* ---------- file browser ---------- */
+  var fbList = document.getElementById("fb-list");
+  var fbQ = document.getElementById("fb-q");
+  var fbSec = document.getElementById("fb-sec");
+  var fbCount = document.getElementById("fb-count");
+  var fbTotal = document.getElementById("fb-total");
+  fbTotal.textContent = String(FILE_INDEX.length);
+
+  // populate section dropdown
+  ORDER.forEach(function(s){
+    var n = FILE_INDEX.filter(function(f){return f.s===s}).length;
+    if(n===0) return;
+    var o = document.createElement("option");
+    o.value = s; o.textContent = SECTIONS[s].label + " (" + n + ")";
+    fbSec.appendChild(o);
+  });
+
+  function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}
+
+  function render(){
+    var q = fbQ.value.trim().toLowerCase();
+    var sec = fbSec.value;
+    var items = FILE_INDEX.filter(function(f){
+      if(sec && f.s!==sec) return false;
+      if(q && f.t.toLowerCase().indexOf(q)===-1 && f.p.toLowerCase().indexOf(q)===-1) return false;
+      return true;
+    });
+    fbCount.textContent = items.length + " of " + FILE_INDEX.length + " files" + (q||sec ? " shown" : " total");
+    if(items.length===0){ fbList.innerHTML = '<div class="fb-empty">No files match — try a shorter search term.</div>'; return; }
+    var html = "";
+    var groups = {};
+    items.forEach(function(f){ (groups[f.s] = groups[f.s] || []).push(f); });
+    ORDER.forEach(function(s){
+      if(!groups[s]) return;
+      var meta = SECTIONS[s];
+      html += '<details class="fb-group" open style="--gc:'+meta.color+'"><summary><span class="dot"></span>'+esc(meta.label)+' <span class="cnt">'+groups[s].length+' files</span></summary><div class="fb-list">';
+      groups[s].forEach(function(f){
+        var sub = f.d ? ' <span class="sub">· '+esc(f.d)+'</span>' : '';
+        html += '<a href="'+f.u+'" title="'+esc(f.p)+'">'+esc(f.t)+sub+'</a>';
+      });
+      html += '</div></details>';
+    });
+    fbList.innerHTML = html;
+  }
+  fbQ.addEventListener("input", render);
+  fbSec.addEventListener("change", render);
+  render();
+
+  /* ---------- nav search ---------- */
+  var q = document.getElementById("q");
+  var drop = document.getElementById("qdrop");
+  var res = document.getElementById("qresults");
+  var active = -1, matches = [];
+
+  function doSearch(){
+    var v = q.value.trim().toLowerCase();
+    if(!v){ drop.classList.remove("show"); return; }
+    matches = FILE_INDEX.filter(function(f){
+      return f.t.toLowerCase().indexOf(v)!==-1 || f.p.toLowerCase().indexOf(v)!==-1;
+    }).slice(0,12);
+    active = -1;
+    var html = "";
+    if(matches.length===0){
+      html = '<div class="none">No matches for “'+esc(q.value)+'”</div>';
+    } else {
+      matches.forEach(function(f,i){
+        html += '<a href="'+f.u+'" data-i="'+i+'">'+esc(f.t)+'<span class="pth">'+esc(f.p)+'</span></a>';
+      });
+    }
+    res.innerHTML = html;
+    drop.classList.add("show");
+  }
+  function move(d){
+    var links = res.querySelectorAll("a");
+    if(!links.length) return;
+    active = Math.min(Math.max(active+d,0), links.length-1);
+    links.forEach(function(a,i){ a.classList.toggle("active", i===active); });
+    links[active].scrollIntoView({block:"nearest"});
+  }
+  q.addEventListener("input", doSearch);
+  q.addEventListener("keydown", function(e){
+    if(e.key==="ArrowDown"){ e.preventDefault(); move(1); }
+    else if(e.key==="ArrowUp"){ e.preventDefault(); move(-1); }
+    else if(e.key==="Enter"){
+      var links = res.querySelectorAll("a");
+      if(links.length){ e.preventDefault(); (links[Math.max(active,0)]).click(); }
+    }
+    else if(e.key==="Escape"){ drop.classList.remove("show"); }
+  });
+  document.addEventListener("click", function(e){
+    if(!drop.contains(e.target) && e.target!==q){ drop.classList.remove("show"); }
+  });
+  q.addEventListener("focus", function(){ if(q.value.trim()) doSearch(); });
+})();
+</script>
+</body>
+</html>
