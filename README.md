@@ -2,6 +2,38 @@
 
 A curriculum and field guide for building, evaluating and operating AI systems.
 
+## New here? Start with this section
+
+**What this repository is:** a free, self-study library for becoming an AI engineer. It has three layers — a **technical curriculum** (sections 101–106, numbered in learning order), **roadmaps** (guided, day-by-day study plans through that same material), and **interview & career material** — all written from first principles so you can start from zero.
+
+**Prerequisites:** you can already program (Python is the most useful language here). No machine-learning background is required — section 101 teaches every concept from scratch.
+
+### Which part should you open first?
+
+| Your situation | Start here | What it is |
+|---|---|---|
+| "I'm completely new to LLMs and AI engineering" | [101 — LLM Literacy](101_LLM-Literacy/README.md) | The on-ramp: how LLMs work, prompting, context engineering — from zero |
+| "I want a day-by-day plan to become job-ready" | [Accelerated Roadmap (100 days)](roadmap/accelerated-roadmap/README.md) | 6 modules · 100 days · the core ~80% employers expect |
+| "I want full depth, at my own pace" | [Full Roadmap](roadmap/full-roadmap/README.md) | 16 levels · 286 sessions · 100% coverage from software fundamentals to interview prep |
+| "I need to learn one specific topic" | [Curriculum sections 101–106](#technical-curriculum-101106) | Reference knowledge base — open just the section you need |
+| "I'm switching from another engineering role" | [Learning Paths](learning-paths/README.md) | Transition guides from data / backend / frontend / ML engineering, with durations |
+| "I have an interview coming up" | [Interview Preparation](interview/README.md) | The process, 100 answered questions, system design, negotiation |
+
+### The curriculum, in learning order
+
+The six numbered sections build on each other — each assumes roughly what the previous ones taught, so read them in order the first time and use them as reference afterwards:
+
+| # | Section | You will learn… |
+|---|---|---|
+| 101 | [LLM Literacy](101_LLM-Literacy/README.md) | how LLMs actually work — and how to steer them with prompts and context |
+| 102 | [AI Application Development](102_AI-Application-Development/README.md) | building applications: orchestration, vector databases, RAG, memory, fine-tuning |
+| 103 | [Agentic AI](103_Agentic%20AI/README.md) | autonomy: planning loops, tool protocols (MCP), agent frameworks, multi-agent systems |
+| 104 | [LLMOps](104_LLMOps/README.md) | production: deployment, observability, safety guardrails, governance |
+| 105 | [AI Evaluation](105_AI-Evaluation/README.md) | evidence: proving your system works — includes a full 19-lecture course |
+| 106 | [AI Security & Safety](106_AI-Security-Safety/README.md) | defense: threat modeling, prompt-injection defense, red teaming, alignment, responsible AI |
+
+**Roadmaps vs. curriculum:** the [roadmaps](roadmap/README.md) are the guided tours — they tell you what to study and in what order. The curriculum sections are the reference library beneath them — deep notes on each topic. Follow a roadmap as your schedule, and open the matching curriculum section whenever you want the full explanation.
+
 > **Evidence review: October 9, 2026.** The latest job-data snapshot inspected is September 23, 2026. Review dates and source publication/collection dates are separate. Some long-form legacy claims still need source-level verification; see the [audit](research/audit-2026-10-09.md).
 >
 > **Section review: October 27, 2026.** The [AI Evaluation](105_AI-Evaluation/README.md) and [AI Security & Safety](106_AI-Security-Safety/README.md) sections were added with all references verified; the security section was extended on this date with a [dataset catalog](106_AI-Security-Safety/07-security-safety-datasets.md) and [incident databases](106_AI-Security-Safety/08-incident-databases.md), all figures verified against live sources.
