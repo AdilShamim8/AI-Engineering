@@ -54,7 +54,7 @@ Rank findings by *consequence × reachability*, then map each to a layer from th
 - [PyRIT](https://github.com/Azure/PyRIT) — Lopez Munoz et al., *PyRIT: A Framework for Security Risk Identification and Red Teaming of Generative AI Systems*, 2024 — [arXiv:2404.02144](https://arxiv.org/abs/2404.02144)
 - [garak](https://github.com/NVIDIA/garak) — Derczynski et al., 2024 — [arXiv:2406.11036](https://arxiv.org/abs/2406.11036)
 - [promptfoo red team documentation](https://www.promptfoo.dev/docs/red-team/) — includes the OWASP-mapped plugin list
-- *Redefining AI Red Teaming in the Agentic Era* (2026 survey of frameworks incl. PyRIT/garak/promptfoo) — [arXiv:2605.04019](https://arxiv.org/abs/2605.04019)
+- Dheekonda, Pearce & Landers, *Redefining AI Red Teaming in the Agentic Era: From Weeks to Hours*, 2026 — [arXiv:2605.04019](https://arxiv.org/abs/2605.04019)
 - Microsoft, [*AI red teaming with PyRIT*](https://learn.microsoft.com/en-us/security/ai-red-team) — practitioner guidance
 - [Roadmap Level 8, module M8.7](../roadmap/full-roadmap/level-08-ai-security.md) — the syllabus version of this note
 - Cross-cutting: [eval engineering](../105_AI-Evaluation/05-eval-engineering.md) — the CI machinery that retains findings
