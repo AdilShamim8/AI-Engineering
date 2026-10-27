@@ -107,8 +107,33 @@ Security-adjacent and safety-adjacent: stereotype reproduction is a failure mode
 
 1. **[BOLD](https://huggingface.co/datasets/AmazonScience/bold)** — 23,679 prompts for open-ended generation across profession/gender/race/religion/politics subgroups; measures *generation-level* disparity, not just classification ([arXiv:2101.11718](https://arxiv.org/abs/2101.11718)).
 2. **[BBQ](https://arxiv.org/abs/2110.08193)** — bias in question answering, with ambiguous and disambiguated contexts so you can separate reasoning failure from stereotype default.
-3. **[CrowS-Pairs](https://arxiv.org/abs/2010.24533)** — stereotype pairs tested as masked-preference contrasts; small, old, still the quick smoke test.
+3. **[CrowS-Pairs](https://arxiv.org/abs/2010.00133)** — stereotype pairs tested as masked-preference contrasts; small, old, still the quick smoke test.
 4. **[Winogender](https://arxiv.org/abs/1804.09301)** — gender bias in coreference resolution; the canonical "does your model default occupation pronouns by gender" check.
-5. **[StereoSet](https://arxiv.org/abs/2004.09070)** — intrasentence stereotypical associations in pretrained LMs.
+5. **[StereoSet](https://arxiv.org/abs/2004.09456)** — intrasentence stereotypical associations in pretrained LMs.
 
 The methodological warning that travels with this whole group: bias benchmarks measure *association patterns*, not downstream harm; scores are diagnostic signals for investigation, not compliance checkboxes. Pair any of them with a real-distribution set from Section 6 before drawing conclusions about your system in production.
+
+## 8. Working with these in practice
+
+**Map datasets to your toolchain.** The [red-teaming tools](03-red-teaming.md) consume these corpora directly: garak's probe library runs categories that correspond to the attack families above (injection, jailbreak, leakage, bias); PyRIT orchestrates them into multi-turn campaigns with its own scorers; DeepEval wraps toxicity/bias metrics usable against your own slice of WildChat or RealToxicityPrompts. The division of labor that works: *public corpora for breadth and comparability* (weekly, in CI, tracked as trends), *custom domain corpora for depth* (before each release, against your actual untrusted-content sources), *mined in-the-wild data for calibration* (quarterly, to check your rates against real distributions).
+
+**Version everything you report.** Attack corpora are public knowledge, models get patched, and benchmark contamination is documented — a number without a date and a model version is noise. This is the same discipline the [105 benchmark-integrity note](../105_AI-Evaluation/03-agent-benchmarks.md) demands for capability benchmarks, applied to security.
+
+**Never redistribute dataset content into your own artifacts.** The [AI-Safety repository's catalog policy](https://github.com/AdilShamim8/AI-Safety) states it plainly: describe categories, sizes, and licenses; link to canonical sources; do not copy prompts into your docs, tickets, or test fixtures beyond what license and good practice allow. Two of the most useful datasets here are non-commercial; several real-user corpora carry consent-derived license terms — the provenance you practice on dataset *cards* is the provenance you'll practice on your own data.
+
+**Expect the catalog to age.** The 2023 curated sets are already partially superseded; the 2026 frontier is dynamic, adaptive, and environment-based (AgentDojo's lineage). Review dates on every table in this note carry that intent — treat anything older than a year as "check upstream before quoting."
+
+## References
+
+- [AI-Safety repository — dataset catalog](https://github.com/AdilShamim8/AI-Safety): 43 verified cards (`datasets/cards/`), machine-readable catalog (`datasets/catalog.yaml`), each entry carrying provenance, access level, license, and page-verified size facts — the evidence base for every composition claim in this note
+- AdvBench: Zou et al., [Universal and Transferable Adversarial Attacks on Aligned Language Models](https://arxiv.org/abs/2307.15043) · canonical data at [`llm-attacks/llm-attacks`](https://github.com/llm-attacks/llm-attacks)
+- JailbreakBench: Chao et al., [arXiv:2404.01318](https://arxiv.org/abs/2404.01318) · dataset [`JailbreakBench/JBB-Behaviors`](https://huggingface.co/datasets/JailbreakBench/JBB-Behaviors)
+- HarmBench: Mazeika et al., [arXiv:2402.04249](https://arxiv.org/abs/2402.04249) · code [`centerforaisafety/HarmBench`](https://github.com/centerforaisafety/HarmBench)
+- StrongREJECT: Souly et al., [A StrongREJECT for Empty Jailbreaks](https://arxiv.org/abs/2402.10260)
+- WildJailbreak: Jiang et al., [WildTeaming at Scale](https://arxiv.org/abs/2406.18510) · dataset [`allenai/wildjailbreak`](https://huggingface.co/datasets/allenai/wildjailbreak)
+- AgentDojo: Debenedetti et al., [arXiv:2406.13352](https://arxiv.org/abs/2406.13352) · InjecAgent: Zhan et al., [arXiv:2403.02691](https://arxiv.org/abs/2403.02691) · AgentHarm: Andriushchenko et al., [arXiv:2410.09024](https://arxiv.org/abs/2410.09024)
+- WMDP: Li et al., [The WMDP Benchmark](https://arxiv.org/abs/2403.03218) · [wmdp.ai](https://wmdp.ai)
+- WildChat: the three verified releases at [`allenai/WildChat`](https://huggingface.co/datasets/allenai/WildChat), [`WildChat-1M`](https://huggingface.co/datasets/allenai/WildChat-1M), [`WildChat-4.8M`](https://huggingface.co/datasets/allenai/WildChat-4.8M) · [LMSYS-Chat-1M](https://arxiv.org/abs/2309.11998): Zheng et al.
+- Cross-cutting: [red teaming](03-red-teaming.md) (the harness that runs these) · [threat modeling](01-threat-modeling.md) (which of these matter for your system) · [105's dataset engineering](../105_AI-Evaluation/06-evaluation-datasets.md) (building your own golden sets) · [incident databases](08-incident-databases.md) (the real-world failure record)
+
+Previous: [Responsible AI & governance](06-responsible-ai.md) · Next: [Incident databases](08-incident-databases.md)
