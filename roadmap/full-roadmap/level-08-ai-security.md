@@ -137,7 +137,7 @@ an AI system designed to remain safe even when the model makes a bad decision or
 
 ## In this repository
 
-- **[106 — AI Security & Safety](../../106_AI-Security-Safety/README.md)** — the dedicated knowledge base for this level: [threat modeling](../../106_AI-Security-Safety/01-threat-modeling.md), [prompt injection defense](../../106_AI-Security-Safety/02-prompt-injection-defense.md), [red teaming](../../106_AI-Security-Safety/03-red-teaming.md), [agent & MCP security](../../106_AI-Security-Safety/04-agent-mcp-security.md), [AI alignment](../../106_AI-Security-Safety/05-ai-alignment.md), [responsible AI](../../106_AI-Security-Safety/06-responsible-ai.md)
+- **[106 — AI Security & Safety](../../106_AI-Security-Safety/README.md)** — the dedicated knowledge base for this level: [threat modeling](../../106_AI-Security-Safety/01-threat-modeling.md), [prompt injection defense](../../106_AI-Security-Safety/02-prompt-injection-defense.md), [red teaming](../../106_AI-Security-Safety/03-red-teaming.md), [agent & MCP security](../../106_AI-Security-Safety/04-agent-mcp-security.md), [AI alignment](../../106_AI-Security-Safety/05-ai-alignment.md), [responsible AI](../../106_AI-Security-Safety/06-responsible-ai.md), [security & safety datasets](../../106_AI-Security-Safety/07-security-safety-datasets.md), [incident databases](../../106_AI-Security-Safety/08-incident-databases.md)
 - [Safety & guardrails curriculum](../../104_LLMOps/4.%20Safety%20%26%20Guardrails/1.%20Input%20Safety.md)
 - [Prompt injection & jailbreak defense note](../../104_LLMOps/4.%20Safety%20%26%20Guardrails/4.%20Prompt%20Injection%20%26%20Jailbreak%20Defense.md)
 - [Governance curriculum](../../104_LLMOps/5.%20Governance/1.%20Data%20Governance.md)
