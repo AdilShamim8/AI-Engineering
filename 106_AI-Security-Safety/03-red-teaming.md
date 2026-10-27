@@ -37,6 +37,16 @@ A pragmatic pairing used in practice: **garak or promptfoo for breadth** (weekly
 
 Two selection notes: (1) match the tool to your *target type* — plain model endpoint vs HTTP app vs browser agent change what "execution" means; (2) every tool's attack corpus is public knowledge, so passing its scans is necessary and radically insufficient against adaptive adversaries — reserve budget for custom attacks specific to your domain and corpus.
 
+## The corpora: what to generate *from*
+
+Step 2 of the loop ("generate adversarial inputs") should not start from a blank page. The public ecosystem is cataloged in the [datasets note](07-security-safety-datasets.md); the red-teamer's selection problem is which layer to draw from:
+
+- **Fixed attack sets** (AdvBench's 520 behaviors, JailbreakBench's 100+100, HarmBench's 400 behaviors across 7 semantic categories) — for baseline sweeps and comparability across model versions. Cheap, standardized, aging: treat as the *control group* of any campaign.
+- **Mined adversarial behavior** (WildJailbreak: 262K prompt-response pairs from real user interactions, 5.7K distinct jailbreak-tactic clusters) — for realistic diversity, especially multi-turn and novel phrasings your team would never invent. This is the closest public analogue to what your production attackers actually do.
+- **Domain corpora you build** — payloads embedded in *your* document types, targeting *your* tools, using *your* terminology. The only layer an adversary cannot download; the only layer that measures your actual system rather than the average system.
+
+The discipline that separates a serious program from tool-waving: **attribute every case in your suite to its layer and source** (JailbreakBench's `Source` field design, applied internally), and re-baseline the fixed sets whenever you change model versions — attack-success rates on public corpora are only comparable within a fixed target.
+
 ## Metrics that matter
 
 - **Attack success rate (ASR)** per family and per strategy — the headline number; track its trend, not one snapshot.
