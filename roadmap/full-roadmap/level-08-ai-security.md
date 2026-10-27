@@ -133,7 +133,7 @@ an AI system designed to remain safe even when the model makes a bad decision or
 - [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) — free framework for governance, risk and trustworthy AI.
 - [EU AI Act — official portal](https://artificialintelligenceact.eu/) — free access to the regulation text and timelines.
 - [Microsoft AI Red Team guidance](https://learn.microsoft.com/en-us/security/ai-red-team) — provider guidance on AI red teaming and securing generative AI deployments.
-- [PyRIT (Python Risk Identification Toolkit, Microsoft)](https://github.com/Azure/PyRIT) — open-source red-teaming automation for LLM systems.
+- [PyRIT (Python Risk Identification Toolkit, Microsoft)](https://github.com/microsoft/pyrit) — open-source red-teaming automation for LLM systems.
 
 ## In this repository
 

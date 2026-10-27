@@ -121,7 +121,7 @@ Collections provide discovery, not independent verification of every deployment 
 - [OWASP Top 10 for LLM Applications](https://github.com/OWASP/www-project-top-10-for-large-language-model-applications) — LLM application risks and mitigations.
 - [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026) — Agentic-specific risks ASI01–ASI10 (goal hijack, tool misuse, memory poisoning, cascading failures).
 - [garak](https://github.com/NVIDIA/garak) — LLM vulnerability-scanning project.
-- [PyRIT](https://github.com/Azure/PyRIT) — Microsoft's red-teaming framework for multi-turn attack campaigns (Crescendo, TAP, Skeleton Key).
+- [PyRIT](https://github.com/microsoft/pyrit) — Microsoft's red-teaming framework for multi-turn attack campaigns (Crescendo, TAP, Skeleton Key).
 - [promptfoo red teaming](https://www.promptfoo.dev/docs/red-team/) — OWASP-mapped adversarial testing in CI; plugins cover 50+ vulnerability types.
 - [Simon Willison — prompt injection tag](https://simonwillison.net/tags/prompt-injection/) — The most consistently current practitioner record of injection attacks and defenses.
 - [Anthropic — Mitigating prompt injections in browser use](https://www.anthropic.com/research/prompt-injection-defenses) — Provider research on layered injection defense (Nov 2025).

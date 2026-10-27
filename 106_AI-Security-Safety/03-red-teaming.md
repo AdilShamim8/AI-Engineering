@@ -27,7 +27,7 @@ All open-source, all actively maintained, different centers of gravity:
 
 | Tool | Maintainer | Strength |
 |---|---|---|
-| [PyRIT](https://github.com/Azure/PyRIT) | Microsoft AI Red Team | Python framework for **multi-turn attack orchestration** — Crescendo, Tree of Attacks with Pruning (TAP), Skeleton Key — with pluggable scorers and memory across an engagement. The engine behind Microsoft's Azure red-teaming agent. |
+| [PyRIT](https://github.com/microsoft/pyrit) | Microsoft AI Red Team | Python framework for **multi-turn attack orchestration** — Crescendo, Tree of Attacks with Pruning (TAP), Skeleton Key — with pluggable scorers and memory across an engagement. The engine behind Microsoft's Azure red-teaming agent. |
 | [garak](https://github.com/NVIDIA/garak) | NVIDIA | **Vulnerability scanner** model: ~100 probe categories (injection, jailbreak, hallucination, bias, data leakage), CLI-driven, JSONL reports. Best for broad baseline sweeps. |
 | [promptfoo red team](https://www.promptfoo.dev/docs/red-team/) | promptfoo (acquired by OpenAI, March 2026) | **YAML-declared red-team configs in CI** — plugins mapped to OWASP LLM/ASI categories, strategies incl. multi-turn, integrated with its eval platform. 50+ vulnerability types. |
 | [DeepTeam](https://github.com/confident-ai/deepteam) | Confident AI | Red teaming alongside [DeepEval](https://github.com/confident-ai/deepeval) — OWASP/framework-aligned attack libraries as Python, sharing the same pytest-style harness as quality evals. |
