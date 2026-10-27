@@ -2,7 +2,7 @@
 
 *Securing AI systems against adversarial inputs, unsafe actions, and misuse — and aligning them with human intent in the first place.*
 
-> Reviewed October 27, 2026. Every reference in this section was checked on that date (incident-database figures — ATLAS, MIT tracker, OECD AIM — verified against the live sites; dataset facts checked against the [AI-Safety repository's](https://github.com/AdilShamim8/AI-Safety) verified catalog of 43 dataset cards). Like [105 — AI Evaluation](../105_AI-Evaluation/README.md), this is a **knowledge base**: concepts, research, tooling, and documented incidents, cross-linked to the deeper curriculum notes in 101–104.
+> Reviewed October 27, 2026. Every reference in this section was checked on that date (incident-database figures — ATLAS, MIT tracker, OECD AIM — verified against the live sites; dataset facts checked against the [AI-Safety repository's](https://github.com/AdilShamim8/AI-Safety) verified dataset catalog — 43 cards at the original check, since grown to 47 by the sister repository's own October 27 extension). Like [105 — AI Evaluation](../105_AI-Evaluation/README.md), this is a **knowledge base**: concepts, research, tooling, and documented incidents, cross-linked to the deeper curriculum notes in 101–104.
 
 ---
 
@@ -39,7 +39,7 @@ This section gives both halves — **security** (defending against adversaries) 
 - **[103 — Agentic AI](../103_Agentic%20AI/README.md)** covers agent architectures and [human-in-the-loop production safety](../103_Agentic%20AI/04-Multi-Agent%20Orchestration/2.%20Human-in-the-Loop%20%26%20Production%20Safety.md); note 4 here covers securing what those architectures connect to.
 - **[105 — AI Evaluation](../105_AI-Evaluation/README.md)** — red teaming *is* evaluation with an adversary; the [benchmark integrity crisis](../105_AI-Evaluation/03-agent-benchmarks.md) is the alignment story (note 5) told through measurements. For the hands-on version, the [LLM Evaluations course lecture 16](../105_AI-Evaluation/course/16-rag-security-toxicity-leakage-scope-drift.md) builds the safety eval suite end-to-end: attack-surface analysis → safety policy → toxicity/leakage/scope-drift evals with DeepEval.
 - **[Governance curriculum](../104_LLMOps/README.md)** in 104/5 pairs with note 6 here: 104 covers the operational controls, note 6 covers the regulatory frameworks they satisfy.
-- **[The AI-Safety repository](https://github.com/AdilShamim8/AI-Safety)** (sister repository) is the deep curriculum behind notes 7–8: 24 chapters, 10 runnable projects, 43 verified dataset cards with a machine-readable catalog, 251 registered sources, and worked incident reviews — the evidence ladder this section's claims are checked against.
+- **[The AI-Safety repository](https://github.com/AdilShamim8/AI-Safety)** (sister repository) is the deep curriculum behind notes 7–8: 24 chapters, 10 runnable projects, 47 verified dataset cards with a machine-readable catalog (43 at this section's original review, extended to 47 on October 27, 2026), 261 registered sources, and worked incident reviews — the evidence ladder this section's claims are checked against.
 
 ## The three ideas that organize everything here
 
