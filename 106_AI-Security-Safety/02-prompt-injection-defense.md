@@ -52,6 +52,8 @@ Defenses that have never faced an attacker are decorative. Minimum bar before re
 - **Tool-abuse scenarios** — injected instructions attempting privilege escalation, budget exhaustion, chain-of-attacks across tools.
 - Every confirmed vulnerability becomes a **permanent regression test** in the CI suite (see [eval engineering](../105_AI-Evaluation/05-eval-engineering.md)) — security regressions ship exactly like quality regressions, through the same gate.
 
+Don't hand-build every payload: the [public benchmark corpus](07-security-safety-datasets.md) covers the attack families this note describes. For indirect injection specifically, **AgentDojo** (97 tasks, dynamic environment, adaptive attacks against defenses), **InjecAgent** (injection against tool-integrated agents, scored on *actions taken* rather than text), and **BIPIA** (injection through external content types) are the reference instruments — and for the multi-turn escalation problem, **WildJailbreak's** 262K in-the-wild pairs include the real user behavior no synthetic corpus reproduces. For the modality boundary, **FigStep** and **MM-SafetyBench** carry image-borne payloads that text-side filters never see. The measurement warning stands: pair any attack-success number with an over-refusal number on the benign controls (JBB-Behaviors' 100-benign half, XSTest), or you have optimized a machine for saying no.
+
 ## References
 
 - [Prompt injection & jailbreak defense — the 104 deep note](../104_LLMOps/4.%20Safety%20%26%20Guardrails/4.%20Prompt%20Injection%20%26%20Jailbreak%20Defense.md) — first-principles curriculum
