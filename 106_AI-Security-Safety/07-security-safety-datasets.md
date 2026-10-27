@@ -83,3 +83,32 @@ The safety side of the section: what "behaves as intended" is measured against, 
 | [WMDP](https://wmdp.ai) | Hazardous-knowledge ceiling & unlearning benchmark | 3,668 MCQs across biosecurity, cybersecurity, chemical security; filtered for public release; paired with the RMU unlearning method | MIT |
 
 Two structural points. First, the **preference-data trio** (HH-RLHF, BeaverTails, PKU-SafeRLHF) is the concrete answer to "what is alignment *trained on*": pairs where one response is safer than another, labeled by dimension and severity. When an alignment claim interests you, ask which preference distribution it was optimized against — the datasets are small enough to inspect, and their harm taxonomies differ in ways that shape model behavior. Second, the **over-refusal quartet** (XSTest, OR-Bench, Do-Not-Answer, plus JBB's benign half from Section 1) exists because refusing everything is a trivial way to pass safety evals; every safety report should carry an over-refusal number from at least one of these. WMDP sits apart as the misuse-measurement instrument — its dual role as eval and unlearning benchmark is the template for [dangerous-capability governance](06-responsible-ai.md).
+
+## 6. Real-world distribution data — the worldwide layer
+
+Every corpus above is *constructed*. This group is **collected**: what real users, on real platforms, actually wrote and actually encountered. For distribution shift, for "is this a problem in practice," and for privacy/provenance reasoning, these are the instruments.
+
+| Dataset | What makes it real | Verified composition | License |
+|---|---|---|---|
+| [WildChat](https://huggingface.co/datasets/allenai/WildChat) | **Real user–ChatGPT conversations**, collected by offering free assistant access in exchange for research consent | Three releases: 650K → 1M → **3,199,860 conversations** (the "4.8M" release; non-toxic user inputs only) | ODC-BY (1M release, change effective 2024-06-26) |
+| [LMSYS-Chat-1M](https://arxiv.org/abs/2309.11998) | 1M real conversations with **25 LLMs**, from ~210K unique IP addresses — production usage distribution across models | 1M conversations; paper-stated license family | ODC-BY family |
+| [RealToxicityPrompts](https://huggingface.co/datasets/allenai/real-toxicity-prompts) | **Real web text** (English, scraped with prompts split at sentence boundaries) with toxicity scores | 99.4K rows; 8 toxicity subcategories in fields (threat, insult, severe_toxicity, profanity, sexually_explicit, identity_attack, flirtation, toxicity) | Apache-2.0 |
+| [Civil Comments](https://arxiv.org/abs/2301.11125) | Comments from a real commenting platform at **real-world class skew** — the antidote to balanced-benchmark thinking | Multi-label, highly skewed classes (the skew is the feature) | not verified |
+| [HateXplain](https://arxiv.org/abs/2012.10289) | Hate/offensive posts from real social platforms with **three-perspective annotation** (hate / offensive / normal) + target-community and rationale labels | Three-perspective design; rationale annotations for explainability | not verified |
+| [DynaHate](https://arxiv.org/abs/2012.15761) | **Adversarially collected over four rounds** — annotators perturbed hate to defeat the current detector, then it was retrained | ~40,000 entries; ~15,000 challenging perturbations; 54% hateful | not verified |
+
+WildChat deserves its own paragraph because it is simultaneously three teaching examples: (a) the realest **distribution-shift test** available publicly — run your safety pipeline on it and over-refusal/false-negative rates become population statistics instead of anecdotes; (b) a **privacy and consent case study** — free access exchanged for research consent is a real consent architecture with real limits, and the dataset itself is the artifact to reason about; (c) a **license-archaeology exercise** — the 1M release switched to ODC-BY retroactively, and the largest release is *filtered to non-toxic inputs*, meaning the biggest file is deliberately not the full distribution. Safety analyses that need the toxic tail must use the earlier releases under their terms. A dataset that teaches provenance discipline by its own version history is worth an hour of any team's time.
+
+The trio of Civil Comments / HateXplain / DynaHate carries a different lesson: **real-world harm data is imbalanced, contested, and adversarially dynamic**. Civil Comments brings the true skew (a 50/50 benchmark trains you to expect 50/50); HateXplain brings disagreement-as-data (three annotator perspectives, preserved, because harm classification is genuinely contested); DynaHate brings the arms race (perturbations specifically crafted against the then-current detector). A moderation pipeline validated only on balanced, static, single-label data is validated for a world that does not exist.
+
+## 7. Bias & fairness instruments
+
+Security-adjacent and safety-adjacent: stereotype reproduction is a failure mode of the same systems. The five public instruments, in the order you'd adopt them:
+
+1. **[BOLD](https://huggingface.co/datasets/AmazonScience/bold)** — 23,679 prompts for open-ended generation across profession/gender/race/religion/politics subgroups; measures *generation-level* disparity, not just classification ([arXiv:2101.11718](https://arxiv.org/abs/2101.11718)).
+2. **[BBQ](https://arxiv.org/abs/2110.08193)** — bias in question answering, with ambiguous and disambiguated contexts so you can separate reasoning failure from stereotype default.
+3. **[CrowS-Pairs](https://arxiv.org/abs/2010.24533)** — stereotype pairs tested as masked-preference contrasts; small, old, still the quick smoke test.
+4. **[Winogender](https://arxiv.org/abs/1804.09301)** — gender bias in coreference resolution; the canonical "does your model default occupation pronouns by gender" check.
+5. **[StereoSet](https://arxiv.org/abs/2004.09070)** — intrasentence stereotypical associations in pretrained LMs.
+
+The methodological warning that travels with this whole group: bias benchmarks measure *association patterns*, not downstream harm; scores are diagnostic signals for investigation, not compliance checkboxes. Pair any of them with a real-distribution set from Section 6 before drawing conclusions about your system in production.
