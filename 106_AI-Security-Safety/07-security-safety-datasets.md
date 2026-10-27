@@ -29,3 +29,31 @@ The workhorses: fixed sets of harmful instructions used to measure raw refusal r
 **The provenance lesson in this table.** Three generations are visible: curated lists (AdvBench, 2023) → standardized protocols with lineage fields (JailbreakBench, HarmBench, 2024) → mined-from-production distributions (WildJailbreak, 2024–25). For threat modeling, the third generation matters most: what real users actually try is the distribution you defend against, and it is broader than any curated list. For comparability, the second generation is the reference. And note the discrepancy discipline: AdvBench is commonly described as "500 harmful behaviors" from mirror pages, while the canonical CSV has 520 rows — the AI-Safety catalog records both numbers with their sources rather than picking the popular one. Do the same in your own reports.
 
 **JailbreakBench's `Source` field is the detail to steal.** Every behavior records where it came from (HarmBench, AdvBench, or original). This is provenance-in-design — the benchmark equivalent of a package lockfile — and it is what makes derivative benchmark suites auditable instead of folklore. When you build your internal attack corpus, give every case a source field from day one.
+
+## 2. Agent & indirect-injection benchmarks
+
+Direct jailbreaks test the chatbot; these test the *system* — what happens when the adversary lives in content the agent processes, or in the task it is asked to perform. This is where [agent security](04-agent-mcp-security.md) meets measurement.
+
+| Benchmark | Threat it measures | Verified composition | Source |
+|---|---|---|---|
+| [AgentDojo](https://github.com/eth-sri/agentdojo) | Prompt injection against tool-using agents: "data returned by external tools hijacks the agent to execute malicious tasks" | **97 realistic tasks**; explicitly *not a static test suite* but an extensible environment for tasks, defenses, **and adaptive attacks** — attack the defense, not just the model | Debenedetti et al., [arXiv:2406.13352](https://arxiv.org/abs/2406.13352) (ETH-SRI) |
+| [InjecAgent](https://arxiv.org/abs/2403.02691) | Indirect prompt injection (IPI) against tool-integrated agents — malicious instructions embedded in emails, web pages, documents the agent touches | Abstract-verified scope; the design property that matters: **success criteria are actions taken, not text produced** — a compromised agent that never says anything harmful but calls the wrong tool still fails | Zhan et al., arXiv:2403.02691 |
+| [AgentHarm](https://arxiv.org/abs/2410.09024) | Agent *misuse* — explicitly malicious multi-stage tasks for agents with tools, created because jailbreak research "has been studied primarily for LLMs acting as simple chatbots" while agent misuse "remains underexplored" | **110 explicitly malicious tasks, 440 with augmentations** — task *families*, so a defense can't pass by handling one phrasing; harm as a pipeline, not a single completion | Andriushchenko et al., arXiv:2410.09024 |
+| [BIPIA](https://arxiv.org/abs/2312.14197) | Indirect injection through external content types (email, web, documents) integrated into LLM applications | Headline abstract finding: evaluated LLMs **universally vulnerable**; magnitudes at body level | arXiv:2312.14197 |
+| [WebArena](https://arxiv.org/abs/2307.13854) | Realistic agent task execution in self-hosted web environments | Environment-first design with **executable success predicates** — success is a checked postcondition, not a judge's opinion | Zhou et al., arXiv:2307.13854 |
+
+**Why this table is the one to care about in 2026.** The [Claude Code espionage campaign](04-agent-mcp-security.md) and the MCP tool-poisoning wave demonstrated that production AI incidents are now *agent* incidents: multi-stage, tool-using, driven by content the system legitimately fetched. The benchmarks that model this reality share three design properties worth copying internally:
+
+1. **Action-level success criteria** (InjecAgent): score what the system *did*, not what it said. Text-level judges miss the dangerous class of failures entirely.
+2. **Task families with augmentations** (AgentHarm): one vulnerability, many phrasings. If your eval has one case per vulnerability, you're measuring memorization, not robustness.
+3. **Adaptive evaluation** (AgentDojo): the environment exists to attack *your defenses* — a static suite measures a snapshot that ages in months, because attack and defense techniques co-evolve.
+
+## 3. Multimodal attack surfaces
+
+Text-only security testing is incomplete for any vision-language system: the modality boundary is itself an attack surface.
+
+- **[FigStep](https://arxiv.org/abs/2311.05608)** — jailbreaks vision-language models with **typography embedded in images**: the harmful instruction rendered as pixels, where text-side filters never see it. The canonical demonstration that alignment trained on text does not automatically transfer across modalities.
+- **[MM-SafetyBench](https://arxiv.org/abs/2311.17600)** — scales the idea with **query-relevant image attacks**: images constructed to match and unlock a paired harmful textual query, giving a systematic multimodal safety evaluation rather than isolated tricks.
+- Complementary research result (not a dataset, but the reason these matter): visual adversarial examples were shown to jailbreak aligned LLMs where pure-text attacks failed ([arXiv:2306.13213](https://arxiv.org/abs/2306.13213)).
+
+The transfer lesson generalizes: every new input modality (images, audio, screen captures, tool outputs) resets the alignment work. Test the boundary explicitly, and prefer benchmarks whose payloads live *in the non-text modality* rather than text about it.
