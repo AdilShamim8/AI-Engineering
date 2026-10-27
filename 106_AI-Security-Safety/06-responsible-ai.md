@@ -1,6 +1,6 @@
 # Responsible AI & governance
 
-> Part of [106 — AI Security & Safety](README.md) · Reviewed October 17, 2026
+> Part of [106 — AI Security & Safety](README.md) · Reviewed October 27, 2026
 >
 > The [governance curriculum in 104](../104_LLMOps/README.md) covers the operational controls — data governance, access management, model & prompt governance, auditability. This note covers the frameworks those controls answer to: the risk-management standards and the regulation timeline, plus the documentation artifacts (model cards, incident records) that make a deployment reviewable.
 

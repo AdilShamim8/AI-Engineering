@@ -1,6 +1,6 @@
 # Threat modeling for AI systems
 
-> Part of [106 — AI Security & Safety](README.md) · Reviewed October 17, 2026
+> Part of [106 — AI Security & Safety](README.md) · Reviewed October 27, 2026
 
 Threat modeling is the exercise of enumerating *what can attack what* before adding defenses. For AI systems it starts from one structural observation: **the LLM sits between untrusted inputs and privileged actions**, which is a position no conventional component occupies.
 

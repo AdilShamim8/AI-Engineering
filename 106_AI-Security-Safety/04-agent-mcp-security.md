@@ -1,6 +1,6 @@
 # Agent & MCP security
 
-> Part of [106 — AI Security & Safety](README.md) · Reviewed October 17, 2026
+> Part of [106 — AI Security & Safety](README.md) · Reviewed October 27, 2026
 
 Agents concentrate every risk in this section into one system: untrusted inputs, tool access, persistent memory, and autonomous execution. This note covers the agentic threat record — what has actually been demonstrated and disclosed — and the engineering controls that respond to it. The [103 — Agentic AI curriculum](../103_Agentic%20AI/README.md) covers how agents are *built*; this note covers what must be true for them to be *safe to connect*.
 

@@ -1,6 +1,6 @@
 # Prompt injection defense
 
-> Part of [106 — AI Security & Safety](README.md) · Reviewed October 17, 2026
+> Part of [106 — AI Security & Safety](README.md) · Reviewed October 27, 2026
 >
 > The [deep curriculum note in 104](../104_LLMOps/4.%20Safety%20%26%20Guardrails/4.%20Prompt%20Injection%20%26%20Jailbreak%20Defense.md) teaches the mechanics of injection and jailbreak attacks from first principles — attack types, defense pillars, worked examples. Read it for the full treatment. This note covers what it can't: the honest state of the problem (unsolved), the current defense consensus, and the research frontier as of late 2026.
 

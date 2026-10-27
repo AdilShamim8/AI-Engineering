@@ -1,6 +1,6 @@
 # AI alignment
 
-> Part of [106 — AI Security & Safety](README.md) · Reviewed October 17, 2026
+> Part of [106 — AI Security & Safety](README.md) · Reviewed October 27, 2026
 >
 > Alignment is the discipline of making AI systems pursue what humans actually intend — not what the training signal literally rewards. For an AI engineer, two parts matter: understanding **why production models behave as they do** (the techniques below are the reason), and recognizing **alignment failures when they appear in your systems** (reward hacking is not hypothetical — it was measured at scale in 2025).
 

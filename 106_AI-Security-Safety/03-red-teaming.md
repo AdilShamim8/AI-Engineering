@@ -1,6 +1,6 @@
 # Red teaming AI systems
 
-> Part of [106 — AI Security & Safety](README.md) · Reviewed October 17, 2026
+> Part of [106 — AI Security & Safety](README.md) · Reviewed October 27, 2026
 
 Red teaming is [evaluation](../105_AI-Evaluation/README.md) with an adversary: systematic, preferably automated, adversarial testing of an AI system *before* someone else tests it for you. This note covers the methodology, the 2026 tooling landscape, and — the part most teams skip — converting findings into permanent regression tests.
 
