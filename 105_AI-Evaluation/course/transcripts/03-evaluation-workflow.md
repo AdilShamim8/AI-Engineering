@@ -60,3 +60,8 @@
 [15:55] So it's possible that you've built one RAG application but on that one RAG application, you're running multiple evaluations. Like, that was a single evaluation, right? But it's possible that on a single LLM application, you run multiple evals. For example, in RAG, you're running one evaluation to test the retriever's performance. You're running a separate evaluation to check the embedding model's performance. You're running a separate eval. You're running a separate eval to test the entire RAG workflow. You're running a separate one to check the entire system's latency.
 
 [16:36] So generally, what happens is that for an LLM-based application, you always run more than one evaluation. In the example I just gave you, I only talked about one eval. But generally, you'll see that multiple evals are run on a single application. This is a very important point. You need to remember this. You'll see more of it as you go forward.
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 02. Model vs Application Evals](02-model-vs-application-evals.md) · [Course hub](../README.md) · [04. Multiple Eval Pipelines →](04-multiple-eval-pipelines.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
