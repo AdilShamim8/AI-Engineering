@@ -316,3 +316,8 @@ The verdicts it can return: **promote** (take the change forward for deployment/
 - **Foundations:** [12 — RAG Eval Interview Answer](12-rag-eval-interview-answer.md) (where regression testing and the manual → MLflow → GitHub Actions maturity ladder was first sketched) · [03 — The Complete Evaluation Workflow](03-evaluation-workflow.md) (the improve → re-run loop this lecture industrializes).
 - **Deep background:** [13 — Testing RAG Retrievers](13-testing-rag-retrievers.md) and [14 — RAG Triad](14-rag-triad-generator-pipeline.md) (the contextual-relevancy metric the demo regresses, and chunk-size tuning) · [15 — G-Eval](15-geval-deterministic-judge.md) (the judge whose noise the threshold tames) · [16 — RAG Security](16-rag-security-toxicity-leakage-scope-drift.md) (the safety metrics that hard-gate the release).
 - [Course hub](README.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 17. RAG Operational Evals](17-rag-operational-evals.md) · [Course hub](README.md) · [19. Online Eval LangSmith Monitoring →](19-online-eval-langsmith-monitoring.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
