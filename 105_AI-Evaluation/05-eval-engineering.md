@@ -96,3 +96,8 @@ Use this to audit your own team's setup, or to answer the interview question "ho
 - [Roadmap Level 7](../roadmap/full-roadmap/level-07-llm-evaluations.md) — module M7.7 (eval suites & regression testing) is the syllabus for this note.
 
 Previous: [RAG evaluation](04-rag-evaluation.md) · [Back to section home](README.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 04. RAG Evaluation](04-rag-evaluation.md) · [Section hub](README.md) · [06. Evaluation Datasets →](06-evaluation-datasets.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
