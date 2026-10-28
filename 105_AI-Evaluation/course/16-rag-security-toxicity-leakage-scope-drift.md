@@ -451,3 +451,8 @@ In regression testing: after any small change (prompt, model, a different vector
 - **The security knowledge base:** [106 — AI Security & Safety](../../106_AI-Security-Safety/README.md): [threat modeling](../../106_AI-Security-Safety/01-threat-modeling.md) (the failure-mode → OWASP mapping), [prompt injection defense](../../106_AI-Security-Safety/02-prompt-injection-defense.md) (spotlighting/context tagging, the layered defense), [red teaming](../../106_AI-Security-Safety/03-red-teaming.md) (methodology, PyRIT/garak/promptfoo), [agent & MCP security](../../106_AI-Security-Safety/04-agent-mcp-security.md) (tool exploitation, the MCP STDIO flaw)
 - **Where safety evals meet monitoring:** [19 — Online Evaluation with LangSmith](19-online-eval-langsmith-monitoring.md) (the built-in toxicity evaluator running on production traces — lecture 16's offline toxicity metric, promoted online)
 - **Course hub:** [README.md](README.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 15. G-Eval Deterministic Judge](15-geval-deterministic-judge.md) · [Course hub](README.md) · [17. RAG Operational Evals →](17-rag-operational-evals.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
