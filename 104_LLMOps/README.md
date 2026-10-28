@@ -337,3 +337,8 @@ If this repository has helped you in your AI engineering journey, please conside
 
 > 💡 **2026 Production Engineering Takeaway (Production LLMOps):**
 > Treat every LLM interaction as a distributed systems RPC. Monitor p99 Time-to-First-Token (TTFT), prompt caching hit ratios, and guardrail latency, maintaining complete OpenTelemetry trace records for auditability and compliance.
+
+<!-- nav-footer -->
+---
+
+*Open the [interactive site index](https://adilshamim8.github.io/AI-Engineering/) — every note, course, and guide in this repository on one page.*
