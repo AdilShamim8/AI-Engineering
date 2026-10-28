@@ -71,3 +71,8 @@ Building end-to-end gives you the **instincts the job needs**, but once you’re
 ---
 
 [← Level 13 · Fine-Tuning](level-13-fine-tuning.md) | [Roadmap map](README.md) | [Level 15 · GenAI / AI Engineer Interview Prep →](level-15-interview-prep.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← Level 13 Fine Tuning](level-13-fine-tuning.md) · [Section hub](README.md) · [Level 15 Interview Prep →](level-15-interview-prep.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
