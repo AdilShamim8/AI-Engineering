@@ -248,3 +248,8 @@ Each stage of the process above has a matched, expert-answered practice file: [t
 [^15]: Goldman Sachs interview reports, Glassdoor, 2025–2026.
 [^16]: Google DeepMind interview experience reports, LeetCode Discuss and Blind, 2025–2026.
 [^17]: Anthropic interview reports, Blind and candidate blogs, 2025–2026.
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [Section hub](README.md) · [02. Questions →](02-questions.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
