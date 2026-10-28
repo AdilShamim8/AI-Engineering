@@ -92,3 +92,8 @@ MCP is the right *integration* standard and the wrong *trust* boundary. Practica
 - [104 — Safety & Guardrails](../104_LLMOps/README.md) — implementation notes for tool safety and HITL
 
 Previous: [Red teaming](03-red-teaming.md) · Next: [AI alignment](05-ai-alignment.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 03. Red Teaming](03-red-teaming.md) · [Section hub](README.md) · [05. AI Alignment →](05-ai-alignment.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
