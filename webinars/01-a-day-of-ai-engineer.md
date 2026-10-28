@@ -216,3 +216,8 @@ Jenny, who has worked at both:
 ---
 
 *This note is part of the AI Engineering Field Guide — Webinars section (Updated: September 16, 2026).*
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [Section hub](README.md) · [02. Defining the Role →](02-defining-the-role.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
