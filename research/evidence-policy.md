@@ -38,3 +38,8 @@ Legacy labels such as “Verified & Updated: September 16, 2026” are historica
 ## Contribution review
 
 For each changed file, explain the problem, the resulting behavior or interpretation, the supporting evidence, the checks run, and the remaining limits. Do not advance unrelated dates or rewrite correct material to make a change look larger. Add claim-level citations where the reader needs them, and retain negative results rather than replacing them with a success story.
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← Audit 2026-10-09](audit-2026-10-09.md) · [Section hub](README.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
