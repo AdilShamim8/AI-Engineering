@@ -82,3 +82,8 @@ The Air Canada case is the canonical cautionary tale for skipping this disciplin
 - [Evidence policy](../research/evidence-policy.md) — this repository's rules for what a measurement can and cannot claim.
 
 Next: [LLM-as-a-Judge →](02-llm-as-a-judge.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [Section hub](README.md) · [02. LLM as a Judge →](02-llm-as-a-judge.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
