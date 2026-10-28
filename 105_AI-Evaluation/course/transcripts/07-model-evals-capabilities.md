@@ -130,3 +130,8 @@
 [37:00] observe for yourself, with these two sessions. When we do things practically, you'll understand whatever you read; beyond that, you'll be able to ask a little more questions and explore a little more. This is the difference, and that's why I've opted for this method. While I'm initially covering a lot of theory and trying to make sure it's not too boring, I am covering a lot of theory compared to some other classes, companies, and YouTube channels, where you're taught practical
 
 [37:26] things from day one. And this is a conscious choice from my side. Now, if you want, abuse me for this, you can. But I think this works. I've seen this in the past with multiple courses. It's been done with MLPs, or even deep learning. So there I spent a good amount of time on theory which eventually translated into good practical experience. So you have to trust me on this.
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 06. Offline vs Online Evals](06-offline-vs-online-evals.md) · [Course hub](../README.md) · [08. Benchmarking Saturation Contamination →](08-benchmarking-saturation-contamination.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
