@@ -89,3 +89,8 @@ The instructor's framing is unapologetically practical: as an AI engineer you bu
 - [**102 — AI Application Development**](../../102_AI-Application-Development/README.md): the RAG curriculum whose evaluation layer this course deepens.
 - [**104 — LLMOps**](../../104_LLMOps/README.md): observability and monitoring — where online evaluation (lecture 19) hands off.
 - [**106 — AI Security & Safety**](../../106_AI-Security-Safety/README.md): red teaming and guardrails — the security testing of lecture 16 is its evaluation-side mirror.
+
+<!-- nav-footer -->
+---
+
+*Open the [interactive site index](https://adilshamim8.github.io/AI-Engineering/) — every note, course, and guide in this repository on one page.*
