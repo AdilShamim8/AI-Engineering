@@ -82,3 +82,8 @@ When you need to evaluate *your* agent (the application-eval case), the research
 - Anthropic Engineering, *Eval awareness in Claude Opus 4.6's BrowseComp performance*, Mar 2026 — [anthropic.com/engineering/eval-awareness-browsecomp](https://www.anthropic.com/engineering/eval-awareness-browsecomp)
 
 Previous: [LLM-as-a-Judge](02-llm-as-a-judge.md) · Next: [RAG evaluation](04-rag-evaluation.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 02. LLM as a Judge](02-llm-as-a-judge.md) · [Section hub](README.md) · [04. RAG Evaluation →](04-rag-evaluation.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
