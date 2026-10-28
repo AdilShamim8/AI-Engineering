@@ -134,3 +134,8 @@
 ---
 
 [← Module 2 · Building with LLM APIs](module-2-building-with-llm-apis.md) | [100 Days map](README.md) | [Module 4 · RAG →](module-4-rag.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← Module 2 Building with LLM APIS](module-2-building-with-llm-apis.md) · [Section hub](README.md) · [Module 4 RAG →](module-4-rag.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
