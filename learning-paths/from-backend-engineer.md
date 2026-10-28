@@ -120,3 +120,8 @@ An agent that reviews pull requests with full codebase context: reads the diff, 
 ---
 
 *You already ship reliable software. Now ship reliable AI software — the engineering discipline you have is what the AI industry needs most.*
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← Advanced Engineering](advanced-engineering.md) · [Section hub](README.md) · [From Data Engineer →](from-data-engineer.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
