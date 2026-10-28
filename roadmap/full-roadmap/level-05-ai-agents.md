@@ -233,3 +233,8 @@ a real agent that demonstrates planning + tools + state + recovery + controlled 
 ---
 
 [← Level 4 · RAG](level-04-rag.md) | [Roadmap map](README.md) | [Level 6 · Context Engineering →](level-06-context-engineering.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← Level 04 RAG](level-04-rag.md) · [Section hub](README.md) · [Level 06 Context Engineering →](level-06-context-engineering.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
