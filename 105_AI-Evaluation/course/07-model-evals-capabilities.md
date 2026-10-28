@@ -328,3 +328,8 @@ Covering a lot of theory up front — compared to other classes, companies, and 
 - **Where the case study becomes practice:** [11 — Selecting the Right LLM](11-model-selection-custom-evals.md) operationalizes the Zomato Model A/B pattern as custom model evals.
 - **Deeper on the agentic capability:** [Section 105 note 3 — Agent Benchmarks & the integrity crisis](../03-agent-benchmarks.md) — the harness-noise and reward-hacking evidence behind "the protocol is part of the measurement."
 - **Course hub:** [README.md](README.md) — the Unit 2 map (lectures 7–11).
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 06. Offline vs Online Evals](06-offline-vs-online-evals.md) · [Course hub](README.md) · [08. Benchmarking Saturation Contamination →](08-benchmarking-saturation-contamination.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
