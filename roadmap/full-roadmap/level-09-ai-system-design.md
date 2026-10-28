@@ -185,3 +185,8 @@ a design you could defend in an AI system-design interview or an engineering arc
 ---
 
 [← Level 8 · AI Security](level-08-ai-security.md) | [Roadmap map](README.md) | [Level 10 · LLMOps: From Development to Production →](level-10-llmops.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← Level 08 AI Security](level-08-ai-security.md) · [Section hub](README.md) · [Level 10 LLMOps →](level-10-llmops.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
