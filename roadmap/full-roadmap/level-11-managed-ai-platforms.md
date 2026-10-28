@@ -232,3 +232,8 @@ the same application, running where a regulated employer could actually run it, 
 ---
 
 [← Level 10 · LLMOps: From Development to Production](level-10-llmops.md) | [Roadmap map](README.md) | [Level 12 · Multimodal 101: Beyond Text →](level-12-multimodal-101.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← Level 10 LLMOps](level-10-llmops.md) · [Section hub](README.md) · [Level 12 Multimodal 101 →](level-12-multimodal-101.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
