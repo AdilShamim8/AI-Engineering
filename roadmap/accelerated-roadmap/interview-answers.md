@@ -1191,3 +1191,8 @@ The strong version of this answer is a **cost-of-complexity argument with number
 **A personal test set** — the anti-hype machine: a few dozen tasks from real work (the extraction job, the hard retrieval cases, latency-sensitive paths). Anything that trends — new model, new framework, new serving stack — gets one hour: **run it on my evals, compare quality, cost, and speed against my current default**. Announcements become data within hours; most things that trend hard fail this test quietly and get dropped without ceremony. **Adoption runs through the same pipeline as any change**: eval → shadow → gradual rollout → measure — "new" earns nothing; "measurably better on my tasks" earns production.
 
 **A real example, both directions** — because interviewers are listening for evidence the loop runs: *"Adopted: prompt caching — restructured our prompt layout, cache hit rate went to 70%, cost dropped by half; the eval suite confirmed quality was flat. Rejected: a heavily-hyped agent framework — benchmarked it against our hand-rolled loop and found equal task success at 2× cost and worse traceability; we stayed on the boring stack and wrote down why."* The one-liner version: I read announcements like everyone else — I just make them run the gauntlet before they touch production.
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [Section hub](README.md) · [Interview Questions →](interview-questions.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
