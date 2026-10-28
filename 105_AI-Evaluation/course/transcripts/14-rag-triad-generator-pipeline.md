@@ -250,3 +250,8 @@
 [01:20:32] understanding I hope is developing in you. That is very important. And more importantly, I think you will perform better in interviews because of this course's knowledge. It's not feeling boring, right? I mean, it's a metric so clearly it shows how many people are attending. Even from that, it's understood that very few people are there. So it might be boring but I am trying from my side that it's very logical, very narrative-driven. And the progression is very logical. I am trying this from my side. The rest you all tell. Even on YouTube, very few people are watching.
 
 [01:21:14] I have noticed hardly 3-5000 people are watching. So it's okay. Maybe slowly when the industry increases, people will watch. Right now it's a bit low. That many people right now are not serious about evaluations but they will become in one year.
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 13. Testing RAG Retrievers](13-testing-rag-retrievers.md) · [Course hub](../README.md) · [15. G-Eval Deterministic Judge →](15-geval-deterministic-judge.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
