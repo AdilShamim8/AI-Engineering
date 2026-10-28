@@ -421,3 +421,8 @@ The closing announcements:
 - **The metrics, online:** [14 — Generator & Pipeline with the RAG Triad](14-rag-triad-generator-pipeline.md) (the three quality metrics re-run here, including the weak contextual relevancy) and [16 — Toxicity, Leakage & Scope Drift](16-rag-security-toxicity-leakage-scope-drift.md) (the offline toxicity eval whose online twin LangSmith provides).
 - **Parent:** [104 — LLMOps](../../104_LLMOps/README.md), Module 3 (Observability) — request/trace logging, token-cost-latency dashboards, quality & behavior monitoring, alerting & incident response: where this lecture hands off.
 - **Course hub:** [README.md](README.md) — the full 19-lecture map. This is the finale of the course as captured; the instructor's announced next topic (agent evals) builds directly on everything here.
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 18. RAG Regression Testing](18-rag-regression-testing.md) · [Course hub](README.md) · [Cheatsheet →](cheatsheet.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
