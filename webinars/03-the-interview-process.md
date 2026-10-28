@@ -420,3 +420,8 @@ David Okonkwo's advice:
 ---
 
 *This note is part of the AI Engineering Field Guide — Webinars section (Updated: September 16, 2026).*
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 02. Defining the Role](02-defining-the-role.md) · [Section hub](README.md) · [04. Take Home Assignments →](04-take-home-assignments.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
