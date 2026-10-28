@@ -426,3 +426,8 @@ Which "basically forms a circle" — the **self-improving loop**:
 - **Reference depth:** [Section 105 note 1 — Evaluation Fundamentals](../01-evaluation-fundamentals.md) (the offline/online table and the proxy-vs-audited quality distinction) and [note 5 — Eval Engineering](../05-eval-engineering.md) (release gates, thresholds-as-config, the self-improving suite).
 - **The monitoring handoff:** [104 — LLMOps](../../104_LLMOps/README.md) — observability, dashboards, and alerting infrastructure.
 - **Course hub:** [README.md](README.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 05. Eval Methods Reference Based vs Free](05-eval-methods-reference-based-vs-free.md) · [Course hub](README.md) · [07. Model Evals Capabilities →](07-model-evals-capabilities.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
