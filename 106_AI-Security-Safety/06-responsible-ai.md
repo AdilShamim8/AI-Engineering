@@ -79,3 +79,8 @@ For a team shipping an LLM application without a compliance department, this is 
 - [Roadmap Level 8, module M8.8](../roadmap/full-roadmap/level-08-ai-security.md) — the syllabus entry for this topic
 
 Previous: [AI alignment](05-ai-alignment.md) · Next: [Security & safety datasets](07-security-safety-datasets.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 05. AI Alignment](05-ai-alignment.md) · [Section hub](README.md) · [07. Security Safety Datasets →](07-security-safety-datasets.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
