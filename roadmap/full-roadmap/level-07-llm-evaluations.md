@@ -190,3 +190,8 @@ Agent safety evaluation
 ---
 
 [← Level 6 · Context Engineering](level-06-context-engineering.md) | [Roadmap map](README.md) | [Level 8 · AI Security →](level-08-ai-security.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← Level 06 Context Engineering](level-06-context-engineering.md) · [Section hub](README.md) · [Level 08 AI Security →](level-08-ai-security.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
