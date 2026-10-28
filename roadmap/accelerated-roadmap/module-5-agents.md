@@ -339,3 +339,8 @@
 ---
 
 [← Module 4 · RAG](module-4-rag.md) | [100 Days map](README.md) | [Module 6 · Shipping to Production →](module-6-shipping-to-production.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← Module 4 RAG](module-4-rag.md) · [Section hub](README.md) · [Module 6 Shipping to Production →](module-6-shipping-to-production.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
