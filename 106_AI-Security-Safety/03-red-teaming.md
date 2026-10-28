@@ -70,3 +70,8 @@ Rank findings by *consequence × reachability*, then map each to a layer from th
 - Cross-cutting: [eval engineering](../105_AI-Evaluation/05-eval-engineering.md) — the CI machinery that retains findings
 
 Previous: [Prompt injection defense](02-prompt-injection-defense.md) · Next: [Agent & MCP security](04-agent-mcp-security.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 02. Prompt Injection Defense](02-prompt-injection-defense.md) · [Section hub](README.md) · [04. Agent MCP Security →](04-agent-mcp-security.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
