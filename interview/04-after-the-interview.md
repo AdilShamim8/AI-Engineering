@@ -187,3 +187,8 @@ Reference checks have become standard at top AI companies in 2026. Be prepared:
 ---
 
 > **Next**: [Interview Trends →](05-trends.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 03. Get Hired](03-get-hired.md) · [Section hub](README.md) · [05. Trends →](05-trends.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
