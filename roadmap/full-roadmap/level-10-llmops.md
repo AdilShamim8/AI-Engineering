@@ -245,3 +245,8 @@ a deployed LLM application where every change is versioned and evaluated before 
 ---
 
 [← Level 9 · AI System Design](level-09-ai-system-design.md) | [Roadmap map](README.md) | [Level 11 · Managed AI Platforms →](level-11-managed-ai-platforms.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← Level 09 AI System Design](level-09-ai-system-design.md) · [Section hub](README.md) · [Level 11 Managed AI Platforms →](level-11-managed-ai-platforms.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
