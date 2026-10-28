@@ -468,3 +468,8 @@ The method stays the same as seen today for every one of them. Closing the loop 
 - **The count-based metrics being contrasted:** [13 — Testing RAG Retrievers](13-testing-rag-retrievers.md) (recall/precision) and [14 — RAG Triad](14-rag-triad-generator-pipeline.md) (faithfulness/answer relevance)
 - **Where the eval suite goes next:** [18 — RAG Regression Testing](18-rag-regression-testing.md) and [19 — Online Evaluation with LangSmith](19-online-eval-langsmith-monitoring.md)
 - **Course hub:** [README.md](README.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 14. RAG Triad Generator Pipeline](14-rag-triad-generator-pipeline.md) · [Course hub](README.md) · [16. RAG Security Toxicity Leakage Scope Drift →](16-rag-security-toxicity-leakage-scope-drift.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
