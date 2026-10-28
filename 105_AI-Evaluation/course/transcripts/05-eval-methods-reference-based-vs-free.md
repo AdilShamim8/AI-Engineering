@@ -168,3 +168,8 @@
 [52:14] What I told you, so in the future, will you be able to classify? If I show you an evaluation pipeline, then can you say whether it's reference-free or reference-based? You simply have to ask whether your golden dataset has correct answers or not. If it's not provided, then it's a reference-free. If it is provided, then it's a reference-based. Very simple. That's the difference. That's why I had to read this, and that's why I gave you those three examples earlier, among which the human
 
 [52:46] example, we intentionally took an example where there was no reference. One very important topic is still left. Offline versus online evaluation. What we've been reading so far can be called a kind of offline evaluation. When the system goes into production, evaluation continues, which we call online evaluation, and we'll have to study that next. So, that was one topic that was left.
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 04. Multiple Eval Pipelines](04-multiple-eval-pipelines.md) · [Course hub](../README.md) · [06. Offline vs Online Evals →](06-offline-vs-online-evals.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
