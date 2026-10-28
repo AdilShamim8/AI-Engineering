@@ -2,6 +2,8 @@
 
 A curriculum and field guide for building, evaluating and operating AI systems.
 
+> **[Open the interactive site index](https://adilshamim8.github.io/AI-Engineering/)** — every section, course lecture, study aid, and all 251 files of this repository on one searchable page, styled as a companion to the [AI-Safety site](https://adilshamim8.github.io/AI-Safety/). Works on phone and desktop.
+
 ## New here? Start with this section
 
 **What this repository is:** a free, self-study library for becoming an AI engineer. It has three layers — a **technical curriculum** (sections 101–106, numbered in learning order), **roadmaps** (guided, day-by-day study plans through that same material), and **interview & career material** — all written from first principles so you can start from zero.
