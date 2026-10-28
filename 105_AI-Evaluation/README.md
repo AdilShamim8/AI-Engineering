@@ -52,3 +52,8 @@ The five notes above are the **reference layer** — concept maps for people who
 4. **"Did last week's prompt change make things better or worse?"** — your regression suite can answer, per metric, with uncertainty. *(note 5)*
 5. **"What happens in production when reality drifts from the eval set?"** — you have online evaluation feeding failures back into the offline suite. *(notes 1, 5, 7)*
 6. **"How many golden cases do you need — and how do you know they're not lying to you?"** — with size statistics, circularity controls, and drift audits on the dataset itself. *(note 6)*
+
+<!-- nav-footer -->
+---
+
+*Open the [interactive site index](https://adilshamim8.github.io/AI-Engineering/) — every note, course, and guide in this repository on one page.*
