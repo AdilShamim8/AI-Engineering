@@ -782,3 +782,8 @@ Reported by candidates:
 [^glassdoor-cognida]: [Glassdoor - Cognida.ai Software Engineer Interview](https://www.glassdoor.com/Interview/Cognida-ai-Software-Engineer-Interview-Questions-EI_IE7907039.0,10_KO11,28.htm) (Jan 2026)
 [^exponent-openai-ml]: [Exponent - OpenAI ML Engineer Questions](https://www.tryexponent.com/questions?role=ml-engineer&type=technical)
 [^reddit-llm-interview-prep]: [Reddit - LLM Interview Prep](https://www.reddit.com/r/MachineLearning/comments/1ein9vh/d_llm_interview_prep) (r/MachineLearning)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 06. Home Assignments](06-home-assignments.md) · [Section hub](../README.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
