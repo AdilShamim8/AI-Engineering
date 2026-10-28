@@ -74,3 +74,8 @@ Most levels end with a project. Together, they make your portfolio.
 3. **Finish by building.** A level is done when you've built its project and can do everything on its outcome list. Watching the videos is not enough.
 
 Every level page ends with two curated sections: **Free learning resources** (worldwide, free, verified October 2026 — no paid course links) and **In this repository** (the matching curriculum notes from this guide's 101–104 sections).
+
+<!-- nav-footer -->
+---
+
+*Open the [interactive site index](https://adilshamim8.github.io/AI-Engineering/) — every note, course, and guide in this repository on one page.*
