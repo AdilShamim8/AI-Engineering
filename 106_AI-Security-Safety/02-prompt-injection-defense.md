@@ -64,3 +64,8 @@ Don't hand-build every payload: the [public benchmark corpus](07-security-safety
 - Willison & Perez, *Prompt injection attacks against GPT-3* (2022, [simonwillison.net](https://simonwillison.net/2022/Sep/12/prompt-injection/)) — the original writeup that named the class
 
 Previous: [Threat modeling](01-threat-modeling.md) · Next: [Red teaming](03-red-teaming.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 01. Threat Modeling](01-threat-modeling.md) · [Section hub](README.md) · [03. Red Teaming →](03-red-teaming.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
