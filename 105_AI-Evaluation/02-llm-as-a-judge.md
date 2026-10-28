@@ -80,3 +80,8 @@ Anthropic's engineering posts on agent evals ([*Demystifying evals for AI agents
 - Tooling with first-class judge metrics: [DeepEval](https://github.com/confident-ai/deepeval) · [promptfoo](https://github.com/promptfoo/promptfoo) · [Ragas](https://github.com/vibrantlabsai/ragas) (RAG-specific judges)
 
 Previous: [Evaluation fundamentals](01-evaluation-fundamentals.md) · Next: [Agent benchmarks](03-agent-benchmarks.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 01. Evaluation Fundamentals](01-evaluation-fundamentals.md) · [Section hub](README.md) · [03. Agent Benchmarks →](03-agent-benchmarks.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
