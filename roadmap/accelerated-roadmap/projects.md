@@ -214,3 +214,8 @@ Your course project counts too. Pair it with two projects that show different sk
 - **High-risk uses without safeguards:** Automated résumé screening, medical or legal advice, and credit decisions can harm people. Avoid them unless you include bias testing, human review and clear limits.
 - **Thin wrappers:** An app that only forwards prompts to a model shows little engineering.
 - **Using data you don't have the right to use:** Check the license or terms of every dataset and website.
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← Module 6 Shipping to Production](module-6-shipping-to-production.md) · [Section hub](README.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
