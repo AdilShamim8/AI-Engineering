@@ -141,3 +141,8 @@ an agent that stays useful across a long, tool-heavy session because its context
 ---
 
 [← Level 5 · AI Agents](level-05-ai-agents.md) | [Roadmap map](README.md) | [Level 7 · LLM Evaluations →](level-07-llm-evaluations.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← Level 05 AI Agents](level-05-ai-agents.md) · [Section hub](README.md) · [Level 07 LLM Evaluations →](level-07-llm-evaluations.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
