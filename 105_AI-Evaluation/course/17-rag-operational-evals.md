@@ -449,3 +449,8 @@ The instructor's closing defense of the pace: "I know we took a lot of time on t
 - **Prompt-caching economics in a procurement decision:** [11 — Selecting the Right LLM](11-model-selection-custom-evals.md)
 - **Where these numbers get logged by default:** [19 — Online Evaluation with LangSmith](19-online-eval-langsmith-monitoring.md)
 - **Course hub:** [README.md](README.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 16. RAG Security Toxicity Leakage Scope Drift](16-rag-security-toxicity-leakage-scope-drift.md) · [Course hub](README.md) · [18. RAG Regression Testing →](18-rag-regression-testing.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
