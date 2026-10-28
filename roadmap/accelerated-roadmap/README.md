@@ -54,3 +54,8 @@ This track covers the core. For deeper or specialist topics, the [full roadmap](
 2. **Do the "Try it" exercises.** Every unit has one — the track is built on building, not watching.
 3. **Finish each module's outcome.** Move on when you can do everything in the module's "By the end" statement.
 4. **Then defend it.** The interview questions with full model answers and the portfolio projects are the proof that the 100 days worked.
+
+<!-- nav-footer -->
+---
+
+*Open the [interactive site index](https://adilshamim8.github.io/AI-Engineering/) — every note, course, and guide in this repository on one page.*
