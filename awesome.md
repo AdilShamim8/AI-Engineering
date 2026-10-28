@@ -158,3 +158,8 @@ These checked destinations replace unsupported social handles, placeholder threa
 Check the actual destination and title, follow redirects to the canonical location, and give a description supported by the content. Remove nonexistent references instead of inventing article titles or discussion identifiers. Keep publication dates separate from link-review dates and follow [the evidence policy](research/evidence-policy.md).
 
 This review checks this file's outbound destinations and local file targets. Links inside external collections need their own checking before reuse.
+
+<!-- nav-footer -->
+---
+
+*Open the [interactive site index](https://adilshamim8.github.io/AI-Engineering/) — every note, course, and guide in this repository on one page.*
