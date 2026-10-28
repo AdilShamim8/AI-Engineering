@@ -174,3 +174,8 @@ These protocols represent a maturation of the field. They take what was custom, 
 ---
 
 The AI Engineer role is still evolving. The tools change monthly, the patterns shift quarterly, and the frontier moves annually. But the core mission remains constant: **take powerful AI capabilities and make them work reliably for real people solving real problems**. Everything else is tactics.
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [Section hub](README.md) · [02. Skills →](02-skills.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
