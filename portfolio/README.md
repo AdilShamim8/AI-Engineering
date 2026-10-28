@@ -482,3 +482,8 @@ Treat these links as project directions, not proof of deployed behavior. For eac
 The [advanced path](../learning-paths/advanced-engineering.md) defines exit criteria. The [research guide](../research/README.md) provides an executed real-job dataset audit and dated references for retrieval and software-agent tasks. A project title or polished demo does not establish production readiness.
 
 For project **specifications with "done when" criteria** (as opposed to built repositories), see the [12 portfolio projects in the accelerated roadmap](../roadmap/accelerated-roadmap/projects.md).
+
+<!-- nav-footer -->
+---
+
+*Open the [interactive site index](https://adilshamim8.github.io/AI-Engineering/) — every note, course, and guide in this repository on one page.*
