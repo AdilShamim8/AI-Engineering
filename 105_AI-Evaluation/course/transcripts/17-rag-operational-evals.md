@@ -256,3 +256,8 @@
 [01:18:15] eval suite. If we look back, this entire thing is done. It took five sessions, but this entire thing is done . Now, what do we just have to do? We have to create a regression testing flow, and using that flow and this suite, we will always be able to tell if, after any given change, our system improved, stayed the same, or got worse . And then, based on that, you answer the question of whether or not to deploy the new version. So next, we will discuss regression testing, and after that, there is one session left
 
 [01:18:55] called online eval, so yeah, there are two more sessions. I know we took a lot of time on this whole thing. But you might agree that we didn't waste time anywhere. This entire RAG evaluation we studied, we consciously decided to study it very well, and we are studying it well. There is no time wastage anywhere. I hope you agree. So yeah, after that, we will start with agent evaluation. We can do that a bit faster . Because now your fundamentals are clear, right, so we might be able to cover agent evals in fewer sessions.
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 16. RAG Security Toxicity Leakage Scope Drift](16-rag-security-toxicity-leakage-scope-drift.md) · [Course hub](../README.md) · [18. RAG Regression Testing →](18-rag-regression-testing.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
