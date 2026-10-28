@@ -148,3 +148,8 @@ Golden datasets decay silently. Governance is what converts them from a one-time
 - [RAG evaluation](04-rag-evaluation.md) — which golden structure fits which RAG metric
 - Course lectures: [13 — retriever goldens](course/13-testing-rag-retrievers.md) · [14 — golden contexts](course/14-rag-triad-generator-pipeline.md) · [15 — judgment goldens](course/15-geval-deterministic-judge.md) · [16 — adversarial/benign/mixed design](course/16-rag-security-toxicity-leakage-scope-drift.md)
 - [106 — AI Security & Safety](../106_AI-Security-Safety/README.md) — incident-driven case promotion and red-team seeding
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 05. Eval Engineering](05-eval-engineering.md) · [Section hub](README.md) · [07. Online Experimentation →](07-online-experimentation.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
