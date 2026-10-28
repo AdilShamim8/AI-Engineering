@@ -466,3 +466,8 @@ From here it's the audience's homework — "I've taken you to this level; now it
 - **Foundations:** [03 — The Complete Evaluation Workflow](03-evaluation-workflow.md) (the improve-the-system loop this code-along instantiates) · [05 — Eval Methods](05-eval-methods-reference-based-vs-free.md) (reference-based vs reference-free and LLM-as-a-Judge — the axis this lecture applies to every metric) · [12 — How to Answer "How Do You Evaluate Your RAG App?"](12-rag-eval-interview-answer.md) (the roadmap these two hands-on lectures execute).
 - **Where the suite goes:** [16 — RAG Security Evals](16-rag-security-toxicity-leakage-scope-drift.md) · [17 — RAG Operational Evals](17-rag-operational-evals.md) · [18 — RAG Regression Testing](18-rag-regression-testing.md) — the eval suite's destination · [19 — Online Evaluation with LangSmith](19-online-eval-langsmith-monitoring.md).
 - **Course hub:** [README.md](README.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 13. Testing RAG Retrievers](13-testing-rag-retrievers.md) · [Course hub](README.md) · [15. G-Eval Deterministic Judge →](15-geval-deterministic-judge.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
