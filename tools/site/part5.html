@@ -1,0 +1,152 @@
+<!-- ==================== §08 LIBRARY ==================== -->
+<section id="library" class="rv">
+    <div class="sechead">
+      <div class="kicker">§08 · The complete index</div>
+      <h2>The library — every file in the repository</h2>
+      <p class="lede">Every note, transcript, dataset card, script and data file — <b>__FILE_COUNT__</b> items, machine-generated from the repository tree, each linking straight to its rendered page on GitHub. Filter by section or search by name.</p>
+    </div>
+
+    <div class="searchbar">
+      <input type="search" id="fb-q" placeholder="Filter files by name — e.g. rag, injection, module-1…" aria-label="filter files">
+      <span class="count" id="fb-count"></span>
+    </div>
+    <div id="fb-list"></div>
+    <noscript>
+      <p class="note" style="margin-top:14px">The file browser needs JavaScript. You can still browse the classic way: open the <a href="https://github.com/AdilShamim8/AI-Engineering">repository root on GitHub</a> — every section above also links directly to its folders and key files.</p>
+    </noscript>
+</section>
+
+<!-- ==================== §09 COLOPHON ==================== -->
+<section id="colophon" class="rv">
+    <div class="sechead">
+      <div class="kicker">§09 · Colophon</div>
+      <h2>How this page is made</h2>
+    </div>
+
+    <div class="colo">
+      <div class="cell">
+        <h4>Design</h4>
+        <p>A single-file editorial site in the same paper-and-ink monograph style as the sister site <a href="https://adilshamim8.github.io/AI-Safety/">adilshamim8.github.io/AI-Safety</a>: Georgia on paper, one oxblood accent, hairline rules, no frameworks, no external fonts, no network. Works offline; print styles included.</p>
+      </div>
+      <div class="cell">
+        <h4>Generation</h4>
+        <p>Rebuilt by <span style="font-family:var(--mono);font-size:12px">tools/build_site.py</span> from the repository's own file tree. The file index, the ledger counts, and every GitHub link are generated — never hand-typed — and each build verifies that every embedded repository link resolves to a real file.</p>
+      </div>
+      <div class="cell">
+        <h4>Verification</h4>
+        <ul>
+          <li>Every commit authored by <a href="https://github.com/AdilShamim8">AdilShamim8</a> (API-verified)</li>
+          <li>References verified October 9 &amp; October 27, 2026</li>
+          <li>Dataset figures checked against live primary sources</li>
+          <li>MIT License — free forever</li>
+        </ul>
+      </div>
+      <div class="cell">
+        <h4>Repositories</h4>
+        <ul>
+          <li><a href="https://github.com/AdilShamim8/AI-Engineering">AI-Engineering (this repo)</a></li>
+          <li><a href="https://github.com/AdilShamim8/AI-Safety">AI-Safety (sister repo)</a></li>
+          <li><a href="https://github.com/AdilShamim8/AI-Engineering/issues">Report an issue</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="genfoot" id="genFoot">
+      generated __BUILD_DATE__ from the AI-Engineering repository tree · __FILE_COUNT__ files indexed ·
+      __LINK_COUNT__ repository links verified, 0 broken · single file, no dependencies ·
+      regenerate: python tools/build_site.py
+    </div>
+</section>
+
+  </main>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var FILE_INDEX = __FILE_INDEX__;
+  var SECTIONS = {
+    "101_LLM-Literacy":              {label:"101 · LLM Literacy",                  color:"#2563eb"},
+    "102_AI-Application-Development":{label:"102 · AI Application Development",   color:"#7c3aed"},
+    "103_Agentic AI":                {label:"103 · Agentic AI",                    color:"#d97706"},
+    "104_LLMOps":                    {label:"104 · LLMOps",                        color:"#0d9488"},
+    "105_AI-Evaluation":             {label:"105 · AI Evaluation",                 color:"#db2777"},
+    "106_AI-Security-Safety":        {label:"106 · AI Security & Safety",          color:"#dc2626"},
+    "roadmap":                       {label:"Roadmaps (Full + Accelerated)",       color:"#4338ca"},
+    "interview":                     {label:"Interview Preparation",                color:"#be185d"},
+    "learning-paths":                {label:"Learning Paths",                      color:"#0369a1"},
+    "portfolio":                     {label:"Portfolio",                           color:"#65a30d"},
+    "research":                      {label:"Research & Evidence",                 color:"#7c2d12"},
+    "role":                          {label:"The AI Engineer Role",                color:"#334155"},
+    "tools":                         {label:"Tools",                               color:"#64748b"},
+    "webinars":                      {label:"Webinars",                            color:"#9333ea"},
+    "root":                          {label:"Repository root",                     color:"#0f172a"}
+  };
+  var ORDER = ["101_LLM-Literacy","102_AI-Application-Development","103_Agentic AI","104_LLMOps","105_AI-Evaluation","106_AI-Security-Safety","roadmap","interview","learning-paths","portfolio","research","role","tools","webinars","root"];
+
+  /* ---------- reveal on scroll ---------- */
+  if ("IntersectionObserver" in window){
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
+    }, {rootMargin:"0px 0px -8% 0px"});
+    document.querySelectorAll(".rv").forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll(".rv").forEach(function(el){ el.classList.add("in"); });
+  }
+
+  /* ---------- mobile contents toggle ---------- */
+  var toggle = document.getElementById("tocToggle");
+  var toc = document.getElementById("toc");
+  if (toggle){
+    toggle.addEventListener("click", function(){
+      var open = toc.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    toc.addEventListener("click", function(e){
+      if (e.target.closest("a")){ toc.classList.remove("open"); toggle.setAttribute("aria-expanded","false"); }
+    });
+  }
+
+  /* ---------- library file browser ---------- */
+  var fbList = document.getElementById("fb-list");
+  var fbQ = document.getElementById("fb-q");
+  var fbCount = document.getElementById("fb-count");
+  var fbSec = "";
+
+  function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}
+
+  function render(){
+    var q = fbQ.value.trim().toLowerCase();
+    var items = FILE_INDEX.filter(function(f){
+      if(fbSec && f.s!==fbSec) return false;
+      if(q && f.t.toLowerCase().indexOf(q)===-1 && f.p.toLowerCase().indexOf(q)===-1) return false;
+      return true;
+    });
+    fbCount.textContent = items.length + " / " + FILE_INDEX.length + " files";
+    if(items.length===0){ fbList.innerHTML = '<p class="fb-empty">No files match — try a shorter search term.</p>'; return; }
+    var html = "";
+    var groups = {};
+    items.forEach(function(f){ (groups[f.s] = groups[f.s] || []).push(f); });
+    ORDER.forEach(function(s){
+      if(!groups[s]) return;
+      var meta = SECTIONS[s];
+      html += '<details class="fgroup" open style="--gc:'+meta.color+'"><summary><span class="dot"></span>'+esc(meta.label)+' <span class="cnt">'+groups[s].length+'</span></summary><div class="flist">';
+      groups[s].forEach(function(f){
+        html += '<a href="'+f.u+'" title="'+esc(f.p)+'">'+esc(f.t)+'<span class="p">'+esc(f.d||'')+'</span></a>';
+      });
+      html += '</div></details>';
+    });
+    fbList.innerHTML = html;
+  }
+  fbQ.addEventListener("input", render);
+  render();
+
+  /* ---------- section filter chips (added in a later commit) ---------- */
+  var chipBar = document.createElement("div");
+  chipBar.className = "searchbar";
+  chipBar.setAttribute("role", "group");
+  chipBar.setAttribute("aria-label", "filter by section");
+})();
+</script>
+</body>
+</html>
