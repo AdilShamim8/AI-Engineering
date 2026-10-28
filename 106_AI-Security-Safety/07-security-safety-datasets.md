@@ -137,3 +137,8 @@ The methodological warning that travels with this whole group: bias benchmarks m
 - Cross-cutting: [red teaming](03-red-teaming.md) (the harness that runs these) · [threat modeling](01-threat-modeling.md) (which of these matter for your system) · [105's dataset engineering](../105_AI-Evaluation/06-evaluation-datasets.md) (building your own golden sets) · [incident databases](08-incident-databases.md) (the real-world failure record)
 
 Previous: [Responsible AI & governance](06-responsible-ai.md) · Next: [Incident databases](08-incident-databases.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 06. Responsible AI](06-responsible-ai.md) · [Section hub](README.md) · [08. Incident Databases →](08-incident-databases.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
