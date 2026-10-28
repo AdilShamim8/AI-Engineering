@@ -120,3 +120,8 @@
 ---
 
 [100 Days map](README.md) | [Module 2 · Building with LLM APIs →](module-2-building-with-llm-apis.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← Interview Questions](interview-questions.md) · [Section hub](README.md) · [Module 2 Building with LLM APIS →](module-2-building-with-llm-apis.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
