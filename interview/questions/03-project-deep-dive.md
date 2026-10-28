@@ -237,3 +237,8 @@ This is a new and increasingly common line of questioning in 2026. Interviewers 
 ---
 
 > **Next**: [AI System Design →](04-ai-system-design.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 02. Coding](02-coding.md) · [Section hub](../README.md) · [04. AI System Design →](04-ai-system-design.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
