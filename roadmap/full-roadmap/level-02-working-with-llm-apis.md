@@ -151,3 +151,8 @@ This is the **core of the daily work**: calling models, getting structured outpu
 ---
 
 [← Level 1 · LLM 101](level-01-llm-101.md) | [Roadmap map](README.md) | [Level 3 · Prompt Engineering →](level-03-prompt-engineering.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← Level 01 LLM 101](level-01-llm-101.md) · [Section hub](README.md) · [Level 03 Prompt Engineering →](level-03-prompt-engineering.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
