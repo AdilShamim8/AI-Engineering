@@ -194,3 +194,8 @@ a complete RAG application that goes substantially beyond a basic retrieve → s
 ---
 
 [← Level 3 · Prompt Engineering](level-03-prompt-engineering.md) | [Roadmap map](README.md) | [Level 5 · AI Agents →](level-05-ai-agents.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← Level 03 Prompt Engineering](level-03-prompt-engineering.md) · [Section hub](README.md) · [Level 05 AI Agents →](level-05-ai-agents.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
