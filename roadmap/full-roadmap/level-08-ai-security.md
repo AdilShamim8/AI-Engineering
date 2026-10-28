@@ -145,3 +145,8 @@ an AI system designed to remain safe even when the model makes a bad decision or
 ---
 
 [← Level 7 · LLM Evaluations](level-07-llm-evaluations.md) | [Roadmap map](README.md) | [Level 9 · AI System Design →](level-09-ai-system-design.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← Level 07 LLM Evaluations](level-07-llm-evaluations.md) · [Section hub](README.md) · [Level 09 AI System Design →](level-09-ai-system-design.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
