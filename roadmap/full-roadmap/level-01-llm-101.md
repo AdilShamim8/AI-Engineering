@@ -214,3 +214,8 @@ Post-training
 ---
 
 [← Level 0 · Software Engineering Fundamentals](level-00-software-engineering-fundamentals.md) | [Roadmap map](README.md) | [Level 2 · Working with LLM APIs (Orchestration) →](level-02-working-with-llm-apis.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← Level 00 Software Engineering Fundamentals](level-00-software-engineering-fundamentals.md) · [Section hub](README.md) · [Level 02 Working with LLM APIS →](level-02-working-with-llm-apis.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
