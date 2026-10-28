@@ -603,3 +603,8 @@ Testing how effectively you use AI tools:
 [^13]: "AI Fluency as a Competency", Microsoft and OpenAI hiring blog posts, 2025.
 [^14]: Exploitative take-home data from community surveys and discussion threads, 2025–2026.
 [^15]: Emerging interview formats from hiring manager discussions at AI Engineer Summit, 2025.
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 04. After the Interview](04-after-the-interview.md) · [Section hub](README.md) · [07. Global Compensation and Job Market →](07-global-compensation-and-job-market.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
