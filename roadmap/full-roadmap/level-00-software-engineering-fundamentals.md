@@ -185,3 +185,8 @@ a real service that another person can clone, run, test, call over HTTP, and ins
 ---
 
 [Roadmap map](README.md) | [Level 1 · LLM 101 →](level-01-llm-101.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [Section hub](README.md) · [Level 01 LLM 101 →](level-01-llm-101.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
