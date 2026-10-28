@@ -304,3 +304,8 @@ And the two major reasons, restated one final time:
 - **Where the course implements the catalog:** [13 — Testing RAG Retrievers](13-testing-rag-retrievers.md) (context relevance, recall), [14 — The RAG Triad](14-rag-triad-generator-pipeline.md) (faithfulness, end-to-end RAG), [16 — RAG Security: Toxicity, Leakage & Scope Drift](16-rag-security-toxicity-leakage-scope-drift.md) (the safety rows), [17 — RAG Operational Evals](17-rag-operational-evals.md) (the operations rows), [18 — Regression Testing](18-rag-regression-testing.md) (the multi-pipeline suite as a release gate).
 - **Reference depth:** [Evaluation Fundamentals](../01-evaluation-fundamentals.md) — the eval-target taxonomy is the formal version of the three levels; [Eval Engineering](../05-eval-engineering.md) — versioned suites, thresholds-as-config, and CI gates for many pipelines.
 - **Course hub:** [README.md](README.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 03. Evaluation Workflow](03-evaluation-workflow.md) · [Course hub](README.md) · [05. Eval Methods Reference Based vs Free →](05-eval-methods-reference-based-vs-free.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
