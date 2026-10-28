@@ -285,3 +285,8 @@ a working multimodal application that survives real inputs, whose latency and co
 ---
 
 [← Level 11 · Managed AI Platforms](level-11-managed-ai-platforms.md) | [Roadmap map](README.md) | [Level 13 · Fine-Tuning →](level-13-fine-tuning.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← Level 11 Managed AI Platforms](level-11-managed-ai-platforms.md) · [Section hub](README.md) · [Level 13 Fine Tuning →](level-13-fine-tuning.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
