@@ -257,3 +257,8 @@ What changed between trailer and shipped course:
 - [Course hub](README.md) — the full 19-lecture structure, study guide, and conventions for these notes.
 - [Parent section — 105 AI Evaluation](../README.md) — the concept-level knowledge base for depth beyond the course.
 - Promise → payoff pointers: [12 — the RAG-eval interview answer](12-rag-eval-interview-answer.md) and [19 — online evaluation with LangSmith](19-online-eval-langsmith-monitoring.md).
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [Course hub](README.md) · [02. Model vs Application Evals →](02-model-vs-application-evals.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
