@@ -66,3 +66,8 @@ The same structure generalizes to any course you want to internalize: **map → 
 - [Course hub](README.md) · [Progress tracker](progress-tracker.md) · [Glossary](glossary.md) · [Cheat sheet](cheatsheet.md)
 - [Section 105 — AI Evaluation](../README.md) — the reference layer
 - [Eval engineering](../05-eval-engineering.md) — where the course's hands-on track hands off to production practice
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← Glossary](glossary.md) · [Course hub](README.md) · [Progress Tracker →](progress-tracker.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
