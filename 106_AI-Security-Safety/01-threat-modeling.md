@@ -86,3 +86,8 @@ The ATLAS usage pattern that earns its keep is **coverage gap analysis**: list t
 - Simon Willison's [prompt injection archive](https://simonwillison.net/tags/prompt-injection/) — the most consistently current incident record
 
 Next: [Prompt injection defense →](02-prompt-injection-defense.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [Section hub](README.md) · [02. Prompt Injection Defense →](02-prompt-injection-defense.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
