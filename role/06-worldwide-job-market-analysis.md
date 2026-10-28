@@ -37,3 +37,8 @@ Useful questions for a hiring team:
 - What level and compensation band are approved for this location and employment arrangement?
 
 These questions support a more reliable job search than unsupported claims about universal AI premiums or framework-driven callback rates. See [skills and evidence](02-skills.md), [compensation comparison](../interview/07-global-compensation-and-job-market.md), and [research methodology](../research/README.md).
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 05. Reality vs Postings](05-reality-vs-postings.md) · [Section hub](README.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
