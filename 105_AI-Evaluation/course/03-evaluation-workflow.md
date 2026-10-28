@@ -230,3 +230,8 @@ Generally, an LLM application **always runs more than one eval** — remember th
 - **Next:** [04 — Multiple Eval Pipelines](04-multiple-eval-pipelines.md) expands the "several evals" closer into a full design discussion.
 - **Deeper:** [Section 105 note 1 — Evaluation Fundamentals](../01-evaluation-fundamentals.md) and [note 5 — Eval Engineering](../05-eval-engineering.md) (the CI/CD version of this loop).
 - The monitoring handoff: [Section 104 — Observability](../../104_LLMOps/README.md); the online-eval tooling: [19 — LangSmith](19-online-eval-langsmith-monitoring.md).
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 02. Model vs Application Evals](02-model-vs-application-evals.md) · [Course hub](README.md) · [04. Multiple Eval Pipelines →](04-multiple-eval-pipelines.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
