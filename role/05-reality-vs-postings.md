@@ -278,3 +278,8 @@ Most AI Engineers are at Level 2-3 today. Level 4-5 is where the differentiation
 8. **Context engineering is the next differentiator** — After evaluation, context engineering is the skill that will separate senior from junior AI Engineers. Start developing it now.
 
 9. **The reality is still exciting** — Despite the gaps and frustrations, AI Engineering remains one of the most impactful and in-demand roles in technology. You're building systems that didn't exist three years ago, solving problems that were previously impossible, and working at the frontier of what software can do. The gap between posting and reality doesn't diminish that — it just means you need to go in with your eyes open.
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 04. Use Cases](04-use-cases.md) · [Section hub](README.md) · [06. Worldwide Job Market Analysis →](06-worldwide-job-market-analysis.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
