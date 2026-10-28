@@ -18,3 +18,8 @@ The [pinned real-job dataset](../research/README.md) contains raw advertisements
 Application engineering often involves connecting models, data, tools and user interfaces; model engineering includes training, adaptation and inference systems; platform engineering makes these workflows reliable. These responsibilities can coexist in the same role. The upstream taxonomy is an analysis convention, not a universal boundary between professions.
 
 For development, learn software fundamentals, data handling, model limitations, evaluation and operations. Advance by producing evidence: reproducible experiments, permission tests, failure analysis, deployment measurements and architecture decisions. The [advanced learning path](../learning-paths/advanced-engineering.md) provides concrete exit criteria.
+
+<!-- nav-footer -->
+---
+
+*Open the [interactive site index](https://adilshamim8.github.io/AI-Engineering/) — every note, course, and guide in this repository on one page.*
