@@ -200,3 +200,8 @@ demonstrate that you can reason like an AI engineer under interview conditions, 
 ---
 
 [← Level 14 · Projects](level-14-projects.md) | [Roadmap map](README.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← Level 14 Projects](level-14-projects.md) · [Section hub](README.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
