@@ -44,3 +44,8 @@ Fine-tuning needs a measured limitation of prompting/retrieval, a licensed train
 Before adding complexity, record what would falsify the expected benefit. After the experiment, report improvements and regressions under the same evaluation protocol. Preserve useful baselines and failed runs.
 
 Use the [advanced path](../learning-paths/advanced-engineering.md) for projects, and the [evidence policy](../research/evidence-policy.md) for results and claims.
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 02. Skills](02-skills.md) · [Section hub](README.md) · [04. Use Cases →](04-use-cases.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
