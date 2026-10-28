@@ -69,3 +69,8 @@ Can you explain why a deterministic workflow was insufficient? Which failure doe
 Write an architecture decision record with context, alternatives, evidence, selected design, consequences, owner, and revisit trigger. Expert-level documentation makes uncertainty and tradeoffs inspectable; naming more frameworks does not replace that work.
 
 The [evidence policy](../research/evidence-policy.md) and [dated source manifest](../research/sources.json) apply to every deliverable.
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [Section hub](README.md) · [From Backend Engineer →](from-backend-engineer.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
