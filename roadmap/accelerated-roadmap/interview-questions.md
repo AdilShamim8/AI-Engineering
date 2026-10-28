@@ -464,3 +464,8 @@ Questions 97–100
 4. **Run a mock interview.** Ask a friend, mentor or an AI model to interview you with three rounds: **Round 1, scenarios and debugging:** three questions from questions 92–96 or the scenario questions in each module.**Round 2, system design:** one question from 86–91.**Round 3, project defense:** questions 97–99 about your own project, with follow-ups.
 5. **Score yourself after each round,** from 1 (weak) to 4 (strong), on: **Requirements and assumptions:** did you clarify before answering?**Trade-offs:** did you weigh quality, speed, cost and risk?**Measurement:** did you say how you'd know it worked?**Failure and security:** did you plan for what breaks and what can be attacked?**Communication:** was your answer clear and structured?
 6. **Repeat** until you score 3 or more on every point in every round.
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← Interview Answers](interview-answers.md) · [Section hub](README.md) · [Module 1 LLM Fundamentals →](module-1-llm-fundamentals.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
