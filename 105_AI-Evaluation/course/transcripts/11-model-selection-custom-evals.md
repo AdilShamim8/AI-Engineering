@@ -366,3 +366,8 @@
 [01:56:09] 
 
 [01:56:42] Let's focus on evaluations. You've learned how to select models. Now, I'll show you how to build applications. Alright? So, guys, I'm ending this session now. We'll meet in the next session. Bye, good night.
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 10. LLM Leaderboards](10-llm-leaderboards.md) · [Course hub](../README.md) · [12. RAG Eval Interview Answer →](12-rag-eval-interview-answer.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
