@@ -154,3 +154,8 @@ Use a real licensed corpus/workflow, record provenance and task IDs, implement a
 For any architecture with cache reuse, derive identity and effective permissions before cache lookup. Include source and policy revisions and test revocation/deletion. For writes, test idempotency and ambiguous timeouts. An availability target requires measured service behavior and recovery exercises, not a diagram.
 
 See [the advanced path](../learning-paths/advanced-engineering.md), [production RAG controls](../102_AI-Application-Development/03-RAG/7.%20Production%20RAG%20Architecture%2C%20Caching%20%26%20Failure%20Modes.md), and [the evidence policy](../research/evidence-policy.md).
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 08. AI Engineer Resume and Portfolio Playbook](08-ai-engineer-resume-and-portfolio-playbook.md) · [Section hub](README.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
