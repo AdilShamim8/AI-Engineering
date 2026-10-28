@@ -68,3 +68,8 @@ Begin with the simplest implementation that meets the workflow: a deterministic 
 Choose one implementation stack to learn deeply. Tool selection depends on team skills, integration needs, data residency, licensing, latency and cost. No framework ranking in this page establishes a universally correct stack.
 
 Use the [advanced learning path](../learning-paths/advanced-engineering.md) to turn these competencies into inspectable artifacts. Follow the [evidence policy](../research/evidence-policy.md) before quoting market percentages or benchmark improvements.
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 01. My Vision](01-my-vision.md) · [Section hub](README.md) · [03. Responsibilities →](03-responsibilities.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
