@@ -82,3 +82,8 @@ For labs, alignment work is inseparable from risk at the frontier: as capability
 - Cross-links: [benchmark integrity](../105_AI-Evaluation/03-agent-benchmarks.md) · [LLM-as-a-Judge](../105_AI-Evaluation/02-llm-as-a-judge.md) · [red teaming](03-red-teaming.md)
 
 Previous: [Agent & MCP security](04-agent-mcp-security.md) · Next: [Responsible AI & governance](06-responsible-ai.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 04. Agent MCP Security](04-agent-mcp-security.md) · [Section hub](README.md) · [06. Responsible AI →](06-responsible-ai.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
