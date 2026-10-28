@@ -246,3 +246,8 @@
 ---
 
 [← Module 5 · Agents](module-5-agents.md) | [100 Days map](README.md) | [Portfolio projects →](projects.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← Module 5 Agents](module-5-agents.md) · [Section hub](README.md) · [Projects →](projects.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
