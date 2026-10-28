@@ -112,3 +112,8 @@ You **write and revise prompts constantly**. Small changes to instructions often
 ---
 
 [← Level 2 · Working with LLM APIs (Orchestration)](level-02-working-with-llm-apis.md) | [Roadmap map](README.md) | [Level 4 · RAG →](level-04-rag.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← Level 02 Working with LLM APIS](level-02-working-with-llm-apis.md) · [Section hub](README.md) · [Level 04 RAG →](level-04-rag.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
