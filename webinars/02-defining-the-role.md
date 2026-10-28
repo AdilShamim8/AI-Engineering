@@ -333,3 +333,8 @@ Ryan McDowell: "I've never checked a degree requirement when hiring. I check if 
 ---
 
 *This note is part of the AI Engineering Field Guide — Webinars section (Updated: September 16, 2026).*
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 01. A Day of AI Engineer](01-a-day-of-ai-engineer.md) · [Section hub](README.md) · [03. The Interview Process →](03-the-interview-process.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
