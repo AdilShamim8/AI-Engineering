@@ -236,3 +236,8 @@ These set you apart and are expected for senior roles:
 ---
 
 *Last updated: September 16, 2026*
+
+<!-- nav-footer -->
+---
+
+*Open the [interactive site index](https://adilshamim8.github.io/AI-Engineering/) — every note, course, and guide in this repository on one page.*
