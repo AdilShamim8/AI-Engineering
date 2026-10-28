@@ -845,3 +845,8 @@ You are free to use, share, adapt, and build upon this curriculum — commercial
 
 > 💡 **2026 Production Engineering Takeaway (Core Principles):**
 > Robust AI engineering requires deterministic software engineering surrounding probabilistic model outputs. Focus on evaluation suites, reproducible benchmarking, and production monitoring to ensure reliable business outcomes.
+
+<!-- nav-footer -->
+---
+
+*Open the [interactive site index](https://adilshamim8.github.io/AI-Engineering/) — every note, course, and guide in this repository on one page.*
