@@ -86,3 +86,8 @@
 [23:30] I wanted to make this clear upfront. I really hope I was able to. Going forward also, when you watch any videos on YouTube and it's written there 'LLM evaluation,' you can assume that it's teaching you application evaluation, not model evaluation. Most likely 99% of the time. That's what you need to read. So okay. If we summarize the entire flow so far. What have we done in this lecture? First, we discussed why. Why are we studying this topic? Then we discussed what are LLM evaluations and their types? We've read two types. Model evaluations and application evaluations. So why and what should be clear to you by now. Now we move to how. How are LLM evaluations done? And here again, there's a disclaimer that whatever I'm going to teach you, I'll teach it from the perspective of application evaluation, not from the perspective of model evaluation.
 
 [24:02] Right? For example, if you're building a chatbot for Campus X, then application evaluations will give us answers to these questions: Did the student's question get answered correctly? Was the course material used properly? Was the answer faithful? Was the answer easy for a beginner? Did hallucination happen or not? Did the answer come quickly or not? Is our chatbot safe or not? I hope you understand. What is application evaluation? And what is model evaluation? And why we're going to talk about application evaluation in this entire course. Is this entire discussion clear?
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 01. Course Overview](01-course-overview.md) · [Course hub](../README.md) · [03. Evaluation Workflow →](03-evaluation-workflow.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
