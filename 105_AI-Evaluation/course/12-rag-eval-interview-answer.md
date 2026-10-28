@@ -340,3 +340,8 @@ Follow-up angles to be ready for:
 - **The hands-on arc:** [14 — RAG Triad](14-rag-triad-generator-pipeline.md) · [16 — Security: Toxicity, Leakage & Scope Drift](16-rag-security-toxicity-leakage-scope-drift.md) (step 8) · [17 — Operational Evals](17-rag-operational-evals.md) (step 9) · [18 — Regression Testing](18-rag-regression-testing.md) · [19 — Online Eval with LangSmith](19-online-eval-langsmith-monitoring.md) · [Section 105 note 5 — Eval Engineering](../05-eval-engineering.md) (the CI/CD release gate).
 - **Interview practice:** [Interview questions bank](../../interview/questions/questions.md) — rehearse this framework answer against the real question list.
 - **Course hub:** [README.md](README.md).
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 11. Model Selection Custom Evals](11-model-selection-custom-evals.md) · [Course hub](README.md) · [13. Testing RAG Retrievers →](13-testing-rag-retrievers.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
