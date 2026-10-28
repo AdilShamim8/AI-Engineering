@@ -99,3 +99,8 @@ RAG's unique attack surface is that **the corpus is an input channel**. The safe
 - [Roadmap Level 7, module 8 — RAG evals](../roadmap/full-roadmap/level-07-llm-evaluations.md) — the session-level syllabus for this topic
 
 Previous: [Agent benchmarks](03-agent-benchmarks.md) · Next: [Eval engineering](05-eval-engineering.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 03. Agent Benchmarks](03-agent-benchmarks.md) · [Section hub](README.md) · [05. Eval Engineering →](05-eval-engineering.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
