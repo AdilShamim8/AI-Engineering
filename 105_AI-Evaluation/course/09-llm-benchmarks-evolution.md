@@ -515,3 +515,8 @@ Read the table as one more lesson: **"benchmark score" is never just a number �
 - **Deeper on benchmark integrity:** [Section 105 note 3 — Agent Benchmarks & the integrity crisis](../03-agent-benchmarks.md) — the harness-noise and reward-hacking evidence behind "the protocol is part of the measurement."
 - **From literacy to practice:** [11 — Selecting the Right LLM](11-model-selection-custom-evals.md) turns benchmark reading into custom model evals for your own task.
 - **Course hub:** [README.md](README.md) — the Unit 2 map (lectures 7–11).
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 08. Benchmarking Saturation Contamination](08-benchmarking-saturation-contamination.md) · [Course hub](README.md) · [10. LLM Leaderboards →](10-llm-leaderboards.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
