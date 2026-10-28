@@ -105,3 +105,8 @@ Tracing (`@traceable`) → dashboards (P95 latency, cost) → alerts → built-i
 
 - [Course hub](README.md) · [Glossary](glossary.md) · [Self-assessment quiz](flashcards.md)
 - [Section 105 — AI Evaluation](../README.md) — the reference layer beneath this course
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 19. Online Eval LangSmith Monitoring](19-online-eval-langsmith-monitoring.md) · [Course hub](README.md) · [Flashcards →](flashcards.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
