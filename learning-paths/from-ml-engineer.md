@@ -119,3 +119,8 @@ An agent that ingests production alerts, correlates with deployment history and 
 ---
 
 *You already build production systems with models. Now build them with APIs — it's faster, cheaper, and more capable than you expect.*
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← From Frontend Engineer](from-frontend-engineer.md) · [Section hub](README.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
