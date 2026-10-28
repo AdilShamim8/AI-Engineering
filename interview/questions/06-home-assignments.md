@@ -423,3 +423,8 @@ The best companies in 2026 are moving toward:
 ---
 
 > **Next**: [Get Hired →](../03-get-hired.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 05. Behavioral](05-behavioral.md) · [Section hub](../README.md) · [Questions →](questions.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
