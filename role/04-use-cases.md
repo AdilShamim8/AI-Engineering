@@ -35,3 +35,8 @@ Define the user's decision and the cost of a wrong answer or action before choos
 The final artifact should include data provenance, an executable experiment, per-item results, failures and an architecture decision record. An attractive interface or a list of frameworks is insufficient evidence that the use case works.
 
 See [responsibilities](03-responsibilities.md), [the advanced path](../learning-paths/advanced-engineering.md), and [the source manifest](../research/sources.json).
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 03. Responsibilities](03-responsibilities.md) · [Section hub](README.md) · [05. Reality vs Postings →](05-reality-vs-postings.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
