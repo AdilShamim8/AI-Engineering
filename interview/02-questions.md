@@ -31,3 +31,8 @@ The biggest shifts from 2024 to 2026:
 ---
 
 > **Next**: Start with [Theory Questions →](questions/01-theory.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 01. Interview Process](01-interview-process.md) · [Section hub](README.md) · [03. Get Hired →](03-get-hired.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
