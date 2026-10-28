@@ -232,3 +232,8 @@ a served fine-tuned model that beats a strong prompted baseline on a stated metr
 ---
 
 [← Level 12 · Multimodal 101: Beyond Text](level-12-multimodal-101.md) | [Roadmap map](README.md) | [Level 14 · Projects →](level-14-projects.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← Level 12 Multimodal 101](level-12-multimodal-101.md) · [Section hub](README.md) · [Level 14 Projects →](level-14-projects.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
