@@ -491,3 +491,8 @@ One very important topic is still left: **offline versus online evaluation**. Wh
 - **Where the course takes these methods hands-on:** [13 — Testing RAG Retrievers](13-testing-rag-retrievers.md) (recall@k in code), [14 — The RAG Triad](14-rag-triad-generator-pipeline.md) and [15 — G-Eval](15-geval-deterministic-judge.md) (judge-based metrics), [19 — Online Evaluation with LangSmith](19-online-eval-langsmith-monitoring.md) (A/B testing and monitoring in production).
 - **Reference depth:** [LLM-as-a-Judge](../02-llm-as-a-judge.md) — MT-Bench lineage, documented judge biases, and the calibration protocol (this lecture's course-level companion); [Evaluation Fundamentals](../01-evaluation-fundamentals.md) — the eval-target taxonomy and golden-dataset discipline.
 - **Course hub:** [README.md](README.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 04. Multiple Eval Pipelines](04-multiple-eval-pipelines.md) · [Course hub](README.md) · [06. Offline vs Online Evals →](06-offline-vs-online-evals.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
