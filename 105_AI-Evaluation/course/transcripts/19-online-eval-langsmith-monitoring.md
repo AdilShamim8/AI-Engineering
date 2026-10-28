@@ -230,3 +230,8 @@
 [01:13:23] evaluation. I didn't show you how to build everything, but I gave you an idea of everything. Now, based on this idea, you can create any complex online eval system using any tool. I guess. I mean, because the concept remains the same. Whether you are using LangChain or LangFuse. The concept will stay the same. You just need to know the concept . Okay? With that, I am super happy to announce that our RAG eval part is complete. It took some time. I am really sorry about that. I fell ill in between. Otherwise, we would have
 
 [01:13:53] finished this session a week ago. So yeah, these seven or eight sessions from RAG Eval Part 1 to RAG Eval Part 8 . If you watch them, I am pretty sure you will be able to impress any interviewer who asks you RAG eval questions. That is my guarantee. Okay? Yeah, that's it. So, that's all for today's lesson. From the next session, we will start with agent evals, which will be easier now because we have studied this entire thing. So, it won't take that much time.
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 18. RAG Regression Testing](18-rag-regression-testing.md) · [Course hub](../README.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
