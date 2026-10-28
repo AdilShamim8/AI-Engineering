@@ -465,3 +465,8 @@ The big-picture close, in the instructor's words: maybe for the first time you b
 - **Foundations:** [03 — The Complete Evaluation Workflow](03-evaluation-workflow.md) (the golden dataset and improve-the-system loop this code-along instantiates) · [05 — Eval Methods](05-eval-methods-reference-based-vs-free.md) (where recall@k, LLM-as-a-Judge, and reference-based vs reference-free were introduced) · [04 — Multiple Eval Pipelines](04-multiple-eval-pipelines.md) (the three-level architecture and the reranker fix).
 - **Where the suite gets used:** [18 — RAG Regression Testing](18-rag-regression-testing.md) — the eval suite's destination · [19 — Online Evaluation with LangSmith](19-online-eval-langsmith-monitoring.md) — production-log mining of golden entries (way 4).
 - **Course hub:** [README.md](README.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 12. RAG Eval Interview Answer](12-rag-eval-interview-answer.md) · [Course hub](README.md) · [14. RAG Triad Generator Pipeline →](14-rag-triad-generator-pipeline.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
