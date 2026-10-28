@@ -83,3 +83,8 @@ Three simple rules, from the original source:
 1. **Start where you are.** Each level lists what you need to know first. If you already know it, skip ahead.
 2. **Do one level at a time.** Each level has a few modules, and most end with a project. Go in order, because each level builds on the last.
 3. **Finish by building.** A level is done when you've built its project and can do everything on its outcome list. Watching videos is not enough.
+
+<!-- nav-footer -->
+---
+
+*Open the [interactive site index](https://adilshamim8.github.io/AI-Engineering/) — every note, course, and guide in this repository on one page.*
