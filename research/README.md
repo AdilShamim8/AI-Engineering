@@ -58,3 +58,8 @@ See [the evidence policy](evidence-policy.md), [the repository audit](audit-2026
 ## Offline documentation checks
 
 After installing `research/requirements.txt`, run `python tools/check_docs.py` from the repository root. This checks rendered Python-fence syntax and relative file targets. It does not execute application examples, verify anchor fragments, check external URLs, or certify factual claims.
+
+<!-- nav-footer -->
+---
+
+*Open the [interactive site index](https://adilshamim8.github.io/AI-Engineering/) — every note, course, and guide in this repository on one page.*
