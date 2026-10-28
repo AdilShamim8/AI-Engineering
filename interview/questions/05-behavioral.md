@@ -255,3 +255,8 @@ You should have 6–8 stories ready, each covering a different theme:
 ---
 
 > **Next**: [Home Assignments →](06-home-assignments.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 04. AI System Design](04-ai-system-design.md) · [Section hub](../README.md) · [06. Home Assignments →](06-home-assignments.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
