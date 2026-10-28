@@ -401,3 +401,8 @@ The previous salary ranges were not supported by traceable records. Use [the com
 ---
 
 > **Next**: [After the Interview →](04-after-the-interview.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 02. Questions](02-questions.md) · [Section hub](README.md) · [04. After the Interview →](04-after-the-interview.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
