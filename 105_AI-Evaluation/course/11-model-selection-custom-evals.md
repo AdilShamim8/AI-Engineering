@@ -480,3 +480,8 @@ The instructor's summary of the session: "It really feels like we're colleagues,
 - **Unit 2 context:** [07 — Model Evals & Capabilities](07-model-evals-capabilities.md) · [08 — Benchmarking: Saturation vs Contamination](08-benchmarking-saturation-contamination.md) · [09 — Benchmark Evolution](09-llm-benchmarks-evolution.md) (why leaderboard claims need stage-3 verification).
 - **Where the hands-on continues:** [13 — Testing RAG Retrievers](13-testing-rag-retrievers.md) and [17 — Operational Evals](17-rag-operational-evals.md) (latency and cost become first-class metrics).
 - **Course hub:** [README.md](README.md).
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 10. LLM Leaderboards](10-llm-leaderboards.md) · [Course hub](README.md) · [12. RAG Eval Interview Answer →](12-rag-eval-interview-answer.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
