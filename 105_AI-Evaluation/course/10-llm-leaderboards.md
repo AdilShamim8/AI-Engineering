@@ -316,3 +316,8 @@ The upcoming classes turn practical: the next session is **how to run your own c
 - **Deeper on benchmark integrity:** [Section 105 note 3 — Agent Benchmarks and the integrity crisis](../03-agent-benchmarks.md) — reward hacking, benchmark exploits, and harness noise: the documented record behind "don't trust blindly."
 - **Related lectures:** [08 — Benchmarking: Saturation vs Contamination](08-benchmarking-saturation-contamination.md) (who runs benchmarks, the four problems) · [07 — Model Evals & Capabilities](07-model-evals-capabilities.md) (the capability map leaderboards summarize) · [13 — Testing RAG Retrievers](13-testing-rag-retrievers.md) (what to do *after* MTEB).
 - [Course hub](README.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 09. LLM Benchmarks Evolution](09-llm-benchmarks-evolution.md) · [Course hub](README.md) · [11. Model Selection Custom Evals →](11-model-selection-custom-evals.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
