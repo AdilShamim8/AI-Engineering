@@ -100,3 +100,8 @@
 [27:31] application, but it has an eval pipeline for latency, an eval pipeline for safety, and an eval pipeline for correctness. So, this entire discussion so far is simply telling you that because of these reasons, whenever you build an LLM application, most of the time (99.99% of the time), you'll have more than one evaluation pipeline. That's what I wanted to reinforce, and I've given you two major reasons for that. The first reason is because there are multiple failure points. The second
 
 [28:03] reason is because there are multiple risk categories.
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 03. Evaluation Workflow](03-evaluation-workflow.md) · [Course hub](../README.md) · [05. Eval Methods Reference Based vs Free →](05-eval-methods-reference-based-vs-free.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
