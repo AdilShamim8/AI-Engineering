@@ -110,3 +110,8 @@
 [29:05] not a decision tool. That means, going to the leaderboard, you will not decide that I will use this model for my application. No, that is the wrong strategy. You will use the leaderboard to shortlist the top four to five models, and then run your own custom evaluation on all of them and select one model for your application. I hope you understand and that is what we will do in the next session. As I had said that the upcoming classes will be practical. So the next session will be about how you will run your own
 
 [29:36] custom evaluation on an LLM. We will learn that in the next class. So, this whole process that I told you, you will see it done by hand in the next class. We have finished benchmarks, it doesn't mean that everything is finished. But at least conceptually we have seen what happens and we have also completed the leaderboards. Now we will do custom evals. Once custom evals are done. Then we will move towards application evals, where we will cover both RAG evals and agent evals.
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 09. LLM Benchmarks Evolution](09-llm-benchmarks-evolution.md) · [Course hub](../README.md) · [11. Model Selection Custom Evals →](11-model-selection-custom-evals.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
