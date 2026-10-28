@@ -318,3 +318,8 @@
 [01:34:39] You cannot do that. Okay? Now it's coming to 99. So in regression testing, you learn that even if you make small changes. Small changes in the prompt, changes in the model. You have used a different vector database. So you run the entire eval suite to see which metrics went up, which ones went down, and whether you should make this change or not. Now we are doing this casually. But in a production setup, you don't do that. You connect it with CI/CD. And if there are positive
 
 [01:35:09] changes, only then you push, deploy the changes, and we will learn about that in the next class. Okay? So yeah, that's it. That's all for today guys.
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 15. G-Eval Deterministic Judge](15-geval-deterministic-judge.md) · [Course hub](../README.md) · [17. RAG Operational Evals →](17-rag-operational-evals.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
