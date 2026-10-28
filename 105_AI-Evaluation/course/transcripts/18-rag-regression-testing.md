@@ -172,3 +172,8 @@
 [53:36] So think about it, where crores of rupees are at risk, how important this regression testing is there. There they try to handle all uncertainties using all those statistical concepts. So from that perspective, a lot of study is required here. A lot of experts are needed here. We have only discussed this at a basic or surface level. So that you can crack the interviews. We have studied only up to that level. Anyway, this is a session and we are not studying anything more. So if you have no
 
 [54:08] doubts, then you can leave the session, and if there are any questions, then I am here. Let me know.
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 17. RAG Operational Evals](17-rag-operational-evals.md) · [Course hub](../README.md) · [19. Online Eval LangSmith Monitoring →](19-online-eval-langsmith-monitoring.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
