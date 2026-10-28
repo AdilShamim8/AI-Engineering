@@ -302,3 +302,8 @@ Next lecture moves to **How**: how LLM evaluations are actually done — taught,
 - **Deeper on benchmarks:** [09 — LLM Benchmarks Evolution](09-llm-benchmarks-evolution.md) and [Section 105 note 3 — Agent Benchmarks](../03-agent-benchmarks.md).
 - **Deeper on judging methods:** [05 — Eval Methods](05-eval-methods-reference-based-vs-free.md) and [Section 105 note 2 — LLM-as-a-Judge](../02-llm-as-a-judge.md).
 - **RAG application of these ideas:** [Section 105 note 4 — RAG Evaluation](../04-rag-evaluation.md).
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 01. Course Overview](01-course-overview.md) · [Course hub](README.md) · [03. Evaluation Workflow →](03-evaluation-workflow.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
