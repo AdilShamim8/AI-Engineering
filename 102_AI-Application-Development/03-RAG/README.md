@@ -63,3 +63,8 @@ This module provides a **first-principles, production-ready curriculum** coverin
 
 > 💡 **2026 Production Engineering Takeaway (RAG Architecture):**
 > Naive vector search fails at enterprise scale without hybrid keyword fusion (BM25 + Dense) and cross-encoder re-ranking. Always isolate chunk retrieval from generation, implement reciprocal rank fusion, and track context precision metrics in production.
+
+<!-- nav-footer -->
+---
+
+*Open the [interactive site index](https://adilshamim8.github.io/AI-Engineering/) — every note, course, and guide in this repository on one page.*
