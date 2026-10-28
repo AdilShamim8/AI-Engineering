@@ -118,3 +118,8 @@ Build a system that monitors data streams, detects anomalies using LLM reasoning
 ---
 
 *Your data engineering instincts are an asset — pipeline thinking, data quality obsession, and infrastructure skills are exactly what AI systems need. Just add the LLM layer on top.*
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← From Backend Engineer](from-backend-engineer.md) · [Section hub](README.md) · [From Data Scientist →](from-data-scientist.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
