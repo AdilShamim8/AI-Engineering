@@ -43,3 +43,8 @@ repayment conditions in writing. I can respond by [real decision date].
 ```
 
 These are decision-making guidelines, not a guarantee of a compensation outcome. Follow the [evidence policy](../research/evidence-policy.md) when publishing salary research.
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 05. Trends](05-trends.md) · [Section hub](README.md) · [08. AI Engineer Resume and Portfolio Playbook →](08-ai-engineer-resume-and-portfolio-playbook.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
