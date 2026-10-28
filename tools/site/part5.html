@@ -141,6 +141,37 @@
   fbQ.addEventListener("input", render);
   render();
 
+  /* ---------- TOC scroll-spy ---------- */
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.toc a[href^="#"]'));
+  var spyMap = {};
+  tocLinks.forEach(function(a){ spyMap[a.getAttribute('href').slice(1)] = a; });
+  var spyTargets = tocLinks.map(function(a){ return document.getElementById(a.getAttribute('href').slice(1)); }).filter(Boolean);
+  function setOn(id){
+    tocLinks.forEach(function(a){ a.classList.remove('on'); });
+    if (spyMap[id]) spyMap[id].classList.add('on');
+  }
+  if ("IntersectionObserver" in window && spyTargets.length){
+    var visible = {};
+    var spy = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if (e.isIntersecting){ visible[e.target.id] = e.intersectionRatio; }
+        else { delete visible[e.target.id]; }
+      });
+      var best = null, bestR = -1;
+      for (var id in visible){ if (visible[id] > bestR){ bestR = visible[id]; best = id; } }
+      if (best) setOn(best);
+    }, {rootMargin:"-70px 0px -55% 0px", threshold:[0, .1, .25, .5, 1]});
+    spyTargets.forEach(function(t){ spy.observe(t); });
+  }
+  /* bottom-edge fallback: at the very bottom, the last section wins */
+  var lastId = spyTargets.length ? spyTargets[spyTargets.length - 1].id : null;
+  window.addEventListener("scroll", function(){
+    if (!lastId) return;
+    if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4){
+      setOn(lastId);
+    }
+  }, {passive:true});
+
   /* ---------- section filter chips (added in a later commit) ---------- */
   var chipBar = document.createElement("div");
   chipBar.className = "searchbar";
