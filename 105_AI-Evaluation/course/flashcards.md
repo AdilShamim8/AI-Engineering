@@ -159,3 +159,8 @@
 ## Cross-references
 
 - [Course hub](README.md) · [Glossary](glossary.md) · [Section 105 — AI Evaluation](../README.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← Cheatsheet](cheatsheet.md) · [Course hub](README.md) · [Glossary →](glossary.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
