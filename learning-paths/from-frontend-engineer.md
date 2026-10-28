@@ -156,3 +156,8 @@ Build a complete AI-powered SaaS product: user auth, subscription billing, AI fe
 ---
 
 *You already know how to build what users see. Now learn to build what makes it smart — and become the rare engineer who can do both.*
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← From Data Scientist](from-data-scientist.md) · [Section hub](README.md) · [From Ml Engineer →](from-ml-engineer.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
