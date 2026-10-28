@@ -96,3 +96,8 @@ Would you be open to a 10-minute chat next Tuesday at 2 PM PST to discuss?
 Best,
 [Your Name]
 ```
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 07. Global Compensation and Job Market](07-global-compensation-and-job-market.md) · [Section hub](README.md) · [09. Real World Case Studies →](09-real-world-case-studies.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
