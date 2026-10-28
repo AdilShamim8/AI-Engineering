@@ -20,3 +20,8 @@ Individual references in [the consolidated question collection](questions/questi
 - [System-design exercises](09-real-world-case-studies.md) — illustrative architectures and validation requirements, not verified production deployments.
 
 For advanced preparation, use [the competency progression](../learning-paths/advanced-engineering.md). Bring dataset provenance, a reproducible baseline, failed experiments, authorization tests and operational measurements to a project discussion. Do not claim years of experience, benchmark performance or deployment outcomes that you cannot demonstrate.
+
+<!-- nav-footer -->
+---
+
+*Open the [interactive site index](https://adilshamim8.github.io/AI-Engineering/) — every note, course, and guide in this repository on one page.*
