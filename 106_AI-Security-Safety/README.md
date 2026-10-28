@@ -46,3 +46,8 @@ This section gives both halves — **security** (defending against adversaries) 
 1. **The model is not a security boundary.** Anything the model reads — retrieved documents, web pages, tool outputs, file contents — is untrusted input; anything it emits is untrusted output until validated. Defenses that rely on the model *itself* resisting manipulation (instructions like "ignore malicious instructions") are prompt-shaped hopes, not controls. Real controls live outside the model: authorization, sandboxing, validation, human approval.
 2. **Capability cuts both ways.** The same autonomy that makes agents useful (plan → act → observe → adapt) is what made the November 2025 espionage campaign possible. Every capability you add to an agent is attack surface you must defend; least privilege is the discipline that keeps the two in balance.
 3. **Safety is measured, not declared.** Alignment techniques (note 5) reduce misbehavior probabilistically; red teaming (note 3) quantifies what remains; governance (note 6) makes the residual risk explicit and owned. The [evidence policy](../research/evidence-policy.md) applies to safety claims the same way it applies to benchmark claims: a vendor's assurance is not a measurement.
+
+<!-- nav-footer -->
+---
+
+*Open the [interactive site index](https://adilshamim8.github.io/AI-Engineering/) — every note, course, and guide in this repository on one page.*
