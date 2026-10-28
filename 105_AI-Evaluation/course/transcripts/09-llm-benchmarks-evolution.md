@@ -364,3 +364,8 @@
 [01:49:45] is the URL. Here, we are documenting our entire teaching journey. So, how many benchmarks have we covered on this website so far? We have covered 23 benchmarks. Seven of these are the ones that I have taught you. Apart from that , we have also added the reasoning and math ones here. You can go into any of these. We have even categorized them. Which ones are active, which are nearing saturation, which are saturated , and which are deprecated. And you can filter them out from here as well, and everything has been explained in great
 
 [01:50:18] detail. Right? I might have shown you this in the last class too, but now we have deployed it and added even more new benchmarks. And in the next two weeks, we will keep adding the additional 20-25 benchmarks that we will teach you here. So, if you don't want to spend your time watching long lectures about these benchmarks, what you can do is simply go to this website and read about whichever benchmarks you would like to learn about.
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 08. Benchmarking Saturation Contamination](08-benchmarking-saturation-contamination.md) · [Course hub](../README.md) · [10. LLM Leaderboards →](10-llm-leaderboards.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
