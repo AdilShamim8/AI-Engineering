@@ -377,3 +377,8 @@ Each unit in this part tackles a specific way simple RAG fails.
 ---
 
 [← Module 3 · Prompt Engineering](module-3-prompt-engineering.md) | [100 Days map](README.md) | [Module 5 · Agents →](module-5-agents.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← Module 3 Prompt Engineering](module-3-prompt-engineering.md) · [Section hub](README.md) · [Module 5 Agents →](module-5-agents.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
