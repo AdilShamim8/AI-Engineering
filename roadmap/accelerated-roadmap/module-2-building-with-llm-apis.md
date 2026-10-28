@@ -156,3 +156,8 @@
 ---
 
 [← Module 1 · LLM Fundamentals](module-1-llm-fundamentals.md) | [100 Days map](README.md) | [Module 3 · Prompt Engineering →](module-3-prompt-engineering.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← Module 1 LLM Fundamentals](module-1-llm-fundamentals.md) · [Section hub](README.md) · [Module 3 Prompt Engineering →](module-3-prompt-engineering.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
