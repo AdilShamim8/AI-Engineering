@@ -78,3 +78,8 @@ One discipline note: incident counts are *reporting rates*, not harm rates. Cove
 - Cross-cutting: [threat modeling](01-threat-modeling.md) (where the record feeds in) · [red teaming](03-red-teaming.md) (where incidents become tests) · [security & safety datasets](07-security-safety-datasets.md) (the lab-side counterpart) · [AI-Safety repository's incident reviews](https://github.com/AdilShamim8/AI-Safety) (14 worked incident analyses in its research notes)
 
 Previous: [Security & safety datasets](07-security-safety-datasets.md) · [Back to section home](README.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 07. Security Safety Datasets](07-security-safety-datasets.md) · [Section hub](README.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
