@@ -365,3 +365,8 @@ Since benchmarks can hide many things — contamination, saturation, configurati
 - **The payoff:** [11 — Selecting the Right LLM with Custom Model Evals](11-model-selection-custom-evals.md) — "apply your own method" made operational
 - **Deeper on judging:** [05 — Eval Methods](05-eval-methods-reference-based-vs-free.md) and [Section 105 note 2 — LLM-as-a-Judge](../02-llm-as-a-judge.md) (the open-ended-comparison half of scoring)
 - [Course hub](README.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 07. Model Evals Capabilities](07-model-evals-capabilities.md) · [Course hub](README.md) · [09. LLM Benchmarks Evolution →](09-llm-benchmarks-evolution.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
