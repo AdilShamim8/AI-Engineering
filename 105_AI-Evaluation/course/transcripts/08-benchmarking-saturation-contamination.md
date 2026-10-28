@@ -178,3 +178,8 @@
 [50:41] that can be hidden. So you couldn't know about it and this happened to you. Therefore, you should look at these four major reasons and be cautious with benchmarks; don't blindly trust the numbers thrown in front of you. You need to apply your own method and based on that, decide which model will work for you and which won't. We will discuss this more ahead. Okay? As much as I wanted to cover, it hasn't been covered yet. We will discuss this more in the next session. How to handle this issue practically, but for today, this much was supposed to be covered.
 
 [51:15] that we will talk about, but for today, this much was all that was supposed to be covered.
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 07. Model Evals Capabilities](07-model-evals-capabilities.md) · [Course hub](../README.md) · [09. LLM Benchmarks Evolution →](09-llm-benchmarks-evolution.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
