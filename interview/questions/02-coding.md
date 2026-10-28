@@ -356,3 +356,8 @@ def rag_query(query, documents):
 3. **Ignoring AI-assisted coding practice.** If your target company allows AI tools, practice using them under time pressure.
 4. **Not verbalizing your thought process.** In live coding, communication is as important as correctness.
 5. **Freezing on API syntax.** Interviewers don't expect you to memorize APIs. Ask to look up documentation — it's how you'd work on the job.
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 01. Theory](01-theory.md) · [Section hub](../README.md) · [03. Project Deep Dive →](03-project-deep-dive.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
