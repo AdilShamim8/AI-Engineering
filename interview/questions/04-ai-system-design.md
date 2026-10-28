@@ -326,3 +326,8 @@ Understanding what companies actually build helps you anticipate their system de
 ---
 
 > **Next**: [Behavioral Questions →](05-behavioral.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 03. Project Deep Dive](03-project-deep-dive.md) · [Section hub](../README.md) · [05. Behavioral →](05-behavioral.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
