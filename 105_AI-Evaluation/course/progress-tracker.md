@@ -69,3 +69,8 @@
 
 - [Course hub](README.md) · [Glossary](glossary.md) · [Self-assessment quiz](flashcards.md) · [Cheat sheet](cheatsheet.md)
 - [Section 105 — AI Evaluation](../README.md)
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← How This Course Is Organized](how-this-course-is-organized.md) · [Course hub](README.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
