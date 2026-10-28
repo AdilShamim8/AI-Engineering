@@ -278,3 +278,8 @@
 [01:25:38] create many such custom metrics. Helpfulness, for instance. In fact, let me show you the list. If you go to the DeepEval G-Eval page, they have a very good page where they have explained G-Eval. It's exactly the same things we discussed in today's class. Here they have listed what other things we can measure. How is it calculated, examples . So, we have already done correctness. Coherence is one thing. It can be measured. Tonality can be measured. We measured style. Tonality can be measured. We will study safety in the
 
 [01:26:19] next class. G-Eval will be used there as well. So yeah, you can create many types of custom metrics with the help of G-Eval, but the method is the same as we saw today. So yeah, that's the class guys. If we go back to the start, to the very first slide, according to our plan of action, we have completed this part as well. This is done. What remains next is the safety and operations part. We will do that in the next class.
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 14. RAG Triad Generator Pipeline](14-rag-triad-generator-pipeline.md) · [Course hub](../README.md) · [16. RAG Security Toxicity Leakage Scope Drift →](16-rag-security-toxicity-leakage-scope-drift.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
