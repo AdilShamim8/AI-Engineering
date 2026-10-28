@@ -258,3 +258,8 @@
 [01:20:10] benchmarks there, etc., and then we'll move on to the application evaluations. Okay? So that's the plan. Today is the 8th. My goal is to complete this playlist for you this month. Okay? It could be plus or minus one week. Sir, I have one more question. If offline evaluation increases from 92 to 99, is it good for online production? A. C. Shiv depends; the question isn't complete. Which quantity are you talking about, 92 to 99? And isn't it the case that in going from 92 to 99, the other quantities went down?
 
 [01:20:49] If everything is improving, then obviously it's a good thing, but the improvement of one thing shouldn't be a detriment to something else. Because that's what happens in LLM-based systems. You try to improve one thing and you encounter regression. Everything else falls apart. That shouldn't be happening. Okay, guys? Then I guess, no more questions. See you in the next class. Okay? Okay, bye, good night.
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 05. Eval Methods Reference Based vs Free](05-eval-methods-reference-based-vs-free.md) · [Course hub](../README.md) · [07. Model Evals Capabilities →](07-model-evals-capabilities.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
