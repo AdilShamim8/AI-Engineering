@@ -669,3 +669,8 @@
 [^13]: "Mixture of Experts Explained", various sources including Mistral AI blog and DeepSeek technical reports, 2024–2025.
 [^14]: A2A Protocol: Google DeepMind and community specification, 2025–2026.
 [^15]: Cost and latency data from LangChain production surveys, Anthropic usage reports, and OpenAI API documentation, 2025–2026.
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [Section hub](../README.md) · [02. Coding →](02-coding.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
