@@ -1298,3 +1298,8 @@ A real engineer asks these questions before picking a framework:
 
 > 💡 **2026 Production Engineering Takeaway (Multi-Agent Systems):**
 > In multi-agent swarms, coordination overhead scales quadratically without a designated orchestrator. Use supervisor topologies with typed handoff contracts and isolated ephemeral sandboxes for untrusted tool execution.
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [Section hub](../README.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
