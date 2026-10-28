@@ -987,11 +987,33 @@ section{padding-top:64px;margin-top:26px;border-top:1px solid var(--rule-2);scro
     }
   }, {passive:true});
 
-  /* ---------- section filter chips (added in a later commit) ---------- */
-  var chipBar = document.createElement("div");
-  chipBar.className = "searchbar";
-  chipBar.setAttribute("role", "group");
-  chipBar.setAttribute("aria-label", "filter by section");
+  /* ---------- section filter chips ---------- */
+  var chipHost = document.createElement("div");
+  chipHost.className = "searchbar";
+  chipHost.setAttribute("role", "group");
+  chipHost.setAttribute("aria-label", "filter files by section");
+  var firstChip = null;
+  function makeChip(key, label){
+    var c = document.createElement("button");
+    c.type = "button";
+    c.className = "chip" + (key ? "" : " on");
+    c.textContent = label;
+    c.addEventListener("click", function(){
+      fbSec = key;
+      chipHost.querySelectorAll(".chip").forEach(function(x){ x.classList.remove("on"); });
+      c.classList.add("on");
+      render();
+    });
+    chipHost.appendChild(c);
+    return c;
+  }
+  firstChip = makeChip("", "All sections");
+  ORDER.forEach(function(s){
+    var n = FILE_INDEX.filter(function(f){return f.s===s}).length;
+    if (n === 0) return;
+    makeChip(s, SECTIONS[s].label.split(" · ").pop() + " (" + n + ")");
+  });
+  fbQ.parentNode.insertBefore(chipHost, fbQ.nextSibling);
 })();
 </script>
 </body>
