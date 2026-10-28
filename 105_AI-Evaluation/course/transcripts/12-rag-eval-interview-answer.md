@@ -163,3 +163,8 @@
 [45:32] 
 
 [46:01]
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 11. Model Selection Custom Evals](11-model-selection-custom-evals.md) · [Course hub](../README.md) · [13. Testing RAG Retrievers →](13-testing-rag-retrievers.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
