@@ -334,3 +334,8 @@
 [01:46:15] along with building it, now you also have an important piece of information about how its retrieval quality is. You can actually say that the retrieval quality of my retriever is actually good. Recall is above 95 and precision is around 85. So you can move forward with some confidence and build the generator, which we will also do in the next class. But yeah, that was the main idea of today's class, to build a retriever and to evaluate it and improve it. According to the plan we made, we are here now; we went ahead
 
 [01:46:53] with this plan of doing the components, right? So, the retriever part is done. Generator is left.
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 12. RAG Eval Interview Answer](12-rag-eval-interview-answer.md) · [Course hub](../README.md) · [14. RAG Triad Generator Pipeline →](14-rag-triad-generator-pipeline.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
