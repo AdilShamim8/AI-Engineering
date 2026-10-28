@@ -10,3 +10,8 @@ Evidence status reviewed October 9, 2026. These pages contain legacy summaries a
 | Assignments | [Take-home assignments](04-take-home-assignments.md) | Preparation examples; not a verified assignment-frequency dataset |
 
 For source-backed counts and current benchmark references, use [research](../research/README.md). For practical learning, use [the advanced path](../learning-paths/advanced-engineering.md). Do not attribute speakers, dates, recordings or employer practices from these notes without checking the original source.
+
+<!-- nav-footer -->
+---
+
+*Open the [interactive site index](https://adilshamim8.github.io/AI-Engineering/) — every note, course, and guide in this repository on one page.*
