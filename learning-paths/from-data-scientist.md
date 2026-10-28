@@ -114,3 +114,8 @@ An agent that reads ML experiment logs, analyzes model performance across runs, 
 ---
 
 *You already know how to measure quality. Now build the systems that deliver it reliably.*
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← From Data Engineer](from-data-engineer.md) · [Section hub](README.md) · [From Frontend Engineer →](from-frontend-engineer.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
