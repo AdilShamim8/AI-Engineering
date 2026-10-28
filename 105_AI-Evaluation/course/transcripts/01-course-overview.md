@@ -78,3 +78,8 @@
 [22:51] others are not covering right now, and if you study them, you'll get an edge over your competition. Alright? So that's it for this video. This was our agenda. Ah, and we've achieved it. The rest, you can write in the comments and tell how excited you are for this playlist. If any of your friends wants to watch this playlist. Wants to cover this topic. You can share this video with that friend. If you liked this video, then please like it, and if you haven't subscribed to this channel yet, then please do subscribe. We'll meet in the next video
 
 [23:23] Bye.
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [Course hub](../README.md) · [02. Model vs Application Evals →](02-model-vs-application-evals.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
