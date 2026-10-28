@@ -114,3 +114,8 @@ The pattern from [lecture 19](course/19-online-eval-langsmith-monitoring.md): sa
 - [Evaluation dataset engineering](06-evaluation-datasets.md) — where promoted production traces land
 - Course lectures: [06 — offline vs online](course/06-offline-vs-online-evals.md) · [19 — LangSmith monitoring](course/19-online-eval-langsmith-monitoring.md)
 - [104 — LLMOps](../104_LLMOps/README.md) — tracing, observability, and the infrastructure this runs on
+
+<!-- nav-footer -->
+---
+
+**Navigate:** [← 06. Evaluation Datasets](06-evaluation-datasets.md) · [Section hub](README.md) · [Site index](https://adilshamim8.github.io/AI-Engineering/)
